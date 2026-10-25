@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "type": "markets",
-  "date": "2026-10-25",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
-  "title": "Markets: Sunday 25 October",
-  "edition": "weekend",
+  "date": "2026-10-26",
+  "generated_at_utc": "2026-10-25T21:41:01Z",
+  "title": "Markets: Monday 26 October",
+  "edition": "weekday",
   "morning": {
-    "cutoff_local": "2026-10-25T07:30:00+11:00",
-    "session_note": "Sunday edition · what's new since Saturday, and the week ahead. Markets were shut on Saturday; dashboard prices are Friday's closes.",
+    "cutoff_local": "2026-10-26T07:30:00+11:00",
+    "session_note": "Weekday ASX edition · before the 10:00 open",
     "summary": [
-      "US officials gave mixed signals on Iran. On Friday envoy Tom Barrack said a US strike \"this weekend\" was \"absolutely\" possible, Trump told a Florida rally the US \"may do another little Epic Fury, or they'll agree\", and, asked about Barrack's remark, said \"If that's the case, I don't know anything about it\"; the White House had said on Thursday there would be no strikes before the 3 November midterms ([CBS News](https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/), [Epoch Times](https://www.theepochtimes.com/world/trump-says-us-may-do-another-little-epic-fury-targeting-iran-6108171), [Ynet](https://www.ynetnews.com/article/hj0xogyhfg)). On Saturday the Houthis said they targeted Saudi oil sites including Yanbu and the East-West pipeline; Saudi authorities have not confirmed any hits. Brent settled at US$116.72 on Friday, before these developments.",
-      "Moody's left France at Aa3 with a negative outlook after a periodic review late on Friday, when bond markets had been pricing in a downgrade, saying the rating assumes a deficit-reducing 2027 budget is adopted ([CNBC](https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html), [franceinfo/AFP](https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html)). Monday is the first bond trading session since the decision; France's 10-year yield hit 5.14% on Thursday, its highest since July 2002 ([Reuters](https://www.investing.com/news/stock-market-news/unresthit-france-poised-for-moodys-ratings-verdict-4968793)).",
-      "This week brings Australian CPI (11:30am Wednesday), the Fed (5am Thursday Sydney time), the ECB and BoJ, and results from Alphabet, Microsoft and Amazon. CBA expects September-quarter trimmed mean inflation of 1.0%, above the RBA's 0.8% forecast, with ASX rate futures implying a 56% chance of a 3 November hike at Friday's close ([CommBank](https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html), [RBA Watch](https://rbawatch.com/rba-meeting/november-2026))."
+      "ASX 200 futures pointed 43 points (0.5%) lower to 8,774 before the open, after Friday's 1.2% fall in the Dow and a 3.1% rise in Brent futures to a US$116.72 settle, its highest settlement since 29 April. Over the weekend, Saudi Arabia said it intercepted Houthi missiles and drones, and President Trump said there would be no US strike on Iran on Sunday while weighing a deal ([AFR](https://www.afr.com/markets/equity-markets/asx-to-fall-after-oil-resurgence-ahead-of-huge-week-for-investors-20261025-p618d6), [CNBC](https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html), [Anadolu](https://www.aa.com.tr/en/americas/-trump-rules-out-sunday-military-strikes-on-iran/4100333)).",
+      "For Australia, RBA Assistant Governor Sarah Hunter said in a 60 Minutes interview aired on Sunday that inflation is \"not quite yet\" beaten and that government spending is \"part of demand\". ASX 30-day interbank futures put the chance of a 3 November hike at 56% at Friday's close, down from 62% on Thursday ([RBA](https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-25.html), [RBA Watch](https://rbawatch.com/rba-meeting/november-2026)).",
+      "Next: Israel votes on Tuesday, the RBA's senior team appears before the Senate at 11:15am Wednesday, September-quarter CPI follows at 11:30am (market forecast 1.3% headline, 1.0% trimmed mean), the RBNZ decides at noon, and the Fed announces at 5am Thursday Sydney time ([RBA Coming Up](https://www.rba.gov.au/coming-up/), [Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf))."
     ],
     "prices": {
-      "retrieved_at_utc": "2026-10-24 21:34Z",
-      "cutoff_utc": "2026-10-24T20:30:00Z",
+      "retrieved_at_utc": "2026-10-25 21:37Z",
+      "cutoff_utc": "2026-10-25T20:30:00Z",
       "quotes": [
         {
           "id": "asx200",
@@ -43,14 +43,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 8793.200195,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": 2.0,
           "change_pct": 0.02,
-          "display_change": "+0.0%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 8806.700195,
-          "week_change_pct": -0.13,
-          "display_week_change": "−0.1% wk"
+          "display_change": "+0.0%"
         },
         {
           "id": "sp500",
@@ -78,14 +74,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 7663.430176,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -39.8,
           "change_pct": -0.52,
-          "display_change": "−0.5%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 7659.439941,
-          "week_change_pct": -0.47,
-          "display_week_change": "−0.5% wk"
+          "display_change": "−0.5%"
         },
         {
           "id": "audusd",
@@ -114,14 +106,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 0.7018,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -0.0012,
           "change_pct": -0.17,
-          "display_change": "−0.17%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 0.6947,
-          "week_change_pct": 0.85,
-          "display_week_change": "+0.8% wk"
+          "display_change": "−0.17%"
         },
         {
           "id": "au10y",
@@ -150,13 +138,9 @@
           "comparison_date": "2026-10-20",
           "comparison_value": 5.25,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_bp": 2.7,
-          "display_change": "+3 bp",
-          "week_comparison_date": "2026-10-14",
-          "week_comparison_value": 5.313,
-          "week_change_bp": -3.6,
-          "display_week_change": "−4 bp wk"
+          "display_change": "+3 bp"
         },
         {
           "id": "brent_spot",
@@ -185,14 +169,10 @@
           "comparison_date": "2026-10-19",
           "comparison_value": 118.82,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -3.6,
           "change_pct": -3.03,
-          "display_change": "−3.0%",
-          "week_comparison_date": "2026-10-13",
-          "week_comparison_value": 125.78,
-          "week_change_pct": -8.4,
-          "display_week_change": "−8.4% wk"
+          "display_change": "−3.0%"
         },
         {
           "id": "vix",
@@ -220,14 +200,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 19.03,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": 0.42,
           "change_pct": 2.21,
-          "display_change": "+0.42 pts",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 19.99,
-          "week_change_abs": -0.54,
-          "display_week_change": "−0.54 pts wk"
+          "display_change": "+0.42 pts"
         },
         {
           "id": "nasdaq",
@@ -255,14 +231,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 26008.859375,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -53.5,
           "change_pct": -0.21,
           "display_change": "−0.2%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 26140.029297,
-          "week_change_pct": -0.71,
-          "display_week_change": "−0.7% wk",
           "cross_checks": [
             {
               "provider": "FRED NASDAQCOM (Nasdaq)",
@@ -297,13 +269,9 @@
           "comparison_date": "2026-10-20",
           "comparison_value": 4.855,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_bp": 6.2,
-          "display_change": "+6 bp",
-          "week_comparison_date": "2026-10-14",
-          "week_comparison_value": 4.917,
-          "week_change_bp": 0.0,
-          "display_week_change": "±0 bp wk"
+          "display_change": "+6 bp"
         },
         {
           "id": "au_curve",
@@ -333,7 +301,7 @@
           "change_bp": -3.5,
           "display_change": "−4 bp",
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "note": "Derived from lagged RBA F2 legs; not a live curve mark."
         },
         {
@@ -362,13 +330,9 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 4.96,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_bp": 4.0,
-          "display_change": "+4 bp",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 5.09,
-          "week_change_bp": -9.0,
-          "display_week_change": "−9 bp wk"
+          "display_change": "+4 bp"
         },
         {
           "id": "us2y",
@@ -396,13 +360,9 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 4.65,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_bp": 4.0,
-          "display_change": "+4 bp",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 4.74,
-          "week_change_bp": -5.0,
-          "display_week_change": "−5 bp wk"
+          "display_change": "+4 bp"
         },
         {
           "id": "brent_fut",
@@ -423,22 +383,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 116.720001,
-          "display_value": "116.72",
+          "value": 111.699997,
+          "display_value": "111.70",
           "market_session_date": "2026-10-23",
           "observation_timestamp_utc": "2026-10-23T20:59:19Z",
           "as_of_sydney": "24 Oct 2026, 07:59 AEDT",
           "comparison_date": "2026-10-22",
           "comparison_value": 113.169998,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
-          "change_abs": 3.55,
-          "change_pct": 3.14,
-          "display_change": "+3.1%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 109.860001,
-          "week_change_pct": 6.24,
-          "display_week_change": "+6.2% wk"
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
+          "change_abs": -1.47,
+          "change_pct": -1.3,
+          "display_change": "−1.3%"
         },
         {
           "id": "gold_fut",
@@ -467,14 +423,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 4060.399902,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -52.5,
           "change_pct": -1.29,
-          "display_change": "−1.3%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 4181.100098,
-          "week_change_pct": -4.14,
-          "display_week_change": "−4.1% wk"
+          "display_change": "−1.3%"
         },
         {
           "id": "rba_cash",
@@ -502,7 +454,7 @@
           "comparison_date": "2026-09-29",
           "comparison_value": 4.35,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_bp": 25.0,
           "display_change": "last move +25 bp (30 Sep)"
         },
@@ -572,14 +524,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 2.07,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -0.61,
           "change_pct": -29.47,
           "display_change": "−29.5%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 2.17,
-          "week_change_pct": -32.72,
-          "display_week_change": "−32.7% wk",
           "ticker": "ZIP"
         },
         {
@@ -608,14 +556,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 196.139999,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": 0.56,
           "change_pct": 0.29,
           "display_change": "+0.3%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 192.199997,
-          "week_change_pct": 2.34,
-          "display_week_change": "+2.3% wk",
           "ticker": "CSL"
         },
         {
@@ -644,14 +588,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 11.42,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -0.17,
           "change_pct": -1.49,
           "display_change": "−1.5%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 10.46,
-          "week_change_pct": 7.55,
-          "display_week_change": "+7.6% wk",
           "ticker": "FLT"
         },
         {
@@ -680,14 +620,10 @@
           "comparison_date": "2026-10-22",
           "comparison_value": 2.25,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-10-24 21:34Z",
+          "source_vintage": "retrieved 2026-10-25 21:37Z",
           "change_abs": -0.04,
           "change_pct": -1.78,
           "display_change": "−1.8%",
-          "week_comparison_date": "2026-10-16",
-          "week_comparison_value": 2.25,
-          "week_change_pct": -1.78,
-          "display_week_change": "−1.8% wk",
           "ticker": "IEL"
         }
       ]
@@ -697,39 +633,100 @@
         "id": "market-drivers",
         "cards": [
           {
-            "id": "megacap-results-fed-week",
-            "headline": "Alphabet, Microsoft and Amazon report in the same week as the Fed",
-            "takeaway": "Alphabet, Microsoft and Amazon report in the same week as the Fed, GDP and PCE, after an October selloff in chip and AI shares.",
+            "id": "oil-weekend-risk-reopen",
+            "headline": "Oil reopens after a weekend of Saudi and Iran headlines",
+            "takeaway": "Brent ended last week at a six-month high, and the weekend brought more Houthi launches at Saudi Arabia but no confirmed damage to oil sites and no US strike.",
             "tags": [
-              "US equities",
-              "AI",
-              "Earnings"
+              "Oil",
+              "Commodities",
+              "Middle East"
             ],
-            "new_since_last_issue": "Saturday covered last week's selloff. The week-ahead previews from Reuters and Saxo, and the reporting schedule, are new.",
-            "key_figure": "About 890 US companies report this week, including 34 worth more than US$100 billion (Saxo)",
-            "what_happened": "Microsoft, Alphabet, ServiceNow and Ford report on Wednesday US time, and Amazon, Eli Lilly, Intel and SanDisk on Thursday, with Exxon Mobil and Chevron on Friday ([Saxo](https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026)). About a third of S&P 500 companies report this week, and Reuters said investors will gauge whether the results can extend the AI rally after growing wary of the risks of data-centre spending ([Reuters Take Five via Investing.com](https://www.investing.com/news/economy-news/take-five-ai-trade-meets-the-fed-4968194)). The SOXX semiconductor ETF is down about 16% in October and the Nasdaq-100 about 5%, according to Saxo.",
-            "why_it_matters": "The results come after a week in which investors moved into Treasuries on worries about the debt tech companies are taking on to build AI networks ([CNBC](https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html)). Saxo said Wall Street is demanding \"proof of monetisation\" from AI spending.",
-            "market_reaction": "Dashboard (Friday close): S&P 500 7,623.7 (−0.5% week); Nasdaq 25,955.3 (−0.7% week); VIX 19.45.",
-            "what_to_watch": "Microsoft and Alphabet results land on Thursday morning Sydney time, a few hours after the Fed; Amazon on Friday morning.",
+            "key_figure": "Brent settle US$116.72 (+3.1%) on Fri 23 Oct · +6.2% for the week (CNBC)",
+            "new_since_last_issue": "Sunday's issue covered Friday's settle and Saturday's Houthi claims. New are Sunday's Saudi interceptions and a data issue: our snapshot's Brent futures line has rolled to a later contract (see the comparison below).",
+            "what_happened": "Brent futures settled 3.1% higher at US$116.72 a barrel on Friday, the highest settlement since 29 April and a third straight weekly gain; WTI settled 3.8% higher at US$103.27 ([CNBC](https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html)). Brent started October below US$97 ([AP via SMH](https://www.smh.com.au/business/markets/asx-set-to-fall-wall-street-loses-ground-as-oil-prices-rise-20261026-p618gx.html)), which described Friday's level as the highest since June 2022; we use CNBC's settlement comparison. The S&P 500 energy sector rose 2.5% to a record on Friday ([ABC](https://www.abc.net.au/news/2026-10-26/asx-markets-business-live-news-october-26/107306820)).",
+            "why_it_matters": "Australian CPI is due on Wednesday, and RBA Assistant Governor Sarah Hunter said in an interview aired on Sunday that higher fuel costs are \"starting to come through in our data\" and that \"there's a bit more of that to come\" ([RBA](https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-25.html)).",
+            "market_reaction": "No Monday oil trade was captured before our 7:30am cutoff. Gold futures fell 1.3% to US$4,007.9 on Friday (snapshot, delayed).",
+            "competing_views": [
+              {
+                "who": "Amrita Sen, Energy Aspects",
+                "view": "Said further US strikes on Iran are \"more likely after the midterms than before\".",
+                "source": {
+                  "label": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html",
+                  "claim_type": "opinion",
+                  "date": "23 Oct 2026"
+                }
+              },
+              {
+                "who": "Westpac Economics",
+                "view": "Expects the Fed to hold this week, noting Brent \"has risen back to around USD110\", and sees the market pricing a December hike rather than an October one.",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
+                  "claim_type": "forecast",
+                  "date": "26 Oct 2026"
+                }
+              }
+            ],
+            "comparison": {
+              "title": "Did Brent rise 3.1% or fall 1.3% on Friday?",
+              "why_different": "Different contracts. The December Brent contract settled at US$116.72, up 3.1%. Our snapshot's continuous series (Yahoo BZ=F) switched to the January contract for Friday's bar (US$111.70) but still compares it with December's Thursday close of US$113.17, so its −1.3% is a contract-roll artefact, not a price fall. The January contract itself rose from US$108.66 to US$111.70. Don't use the snapshot's −1.3%.",
+              "resolution": "explained",
+              "rows": [
+                {
+                  "source": "CNBC (front-month settle)",
+                  "url": "https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html",
+                  "figure": "US$116.72, +3.1%",
+                  "measure": "Front-month (December) Brent futures settlement",
+                  "timestamp": "23 Oct 2026 settle",
+                  "method": "Exchange settlement, as reported",
+                  "status": "independently reported"
+                },
+                {
+                  "source": "Yahoo (BZZ26.NYM, December contract)",
+                  "url": "https://finance.yahoo.com/quote/BZZ26.NYM/",
+                  "figure": "US$116.72 vs US$113.17 on 22 Oct",
+                  "measure": "December Brent last-day financial futures, daily close",
+                  "timestamp": "23 Oct 2026 close",
+                  "method": "Delayed daily close",
+                  "status": "primary measured"
+                },
+                {
+                  "source": "Snapshot (Yahoo BZ=F)",
+                  "url": "https://finance.yahoo.com/quote/BZ%3DF/",
+                  "figure": "US$111.70, −1.3%",
+                  "measure": "Continuous front-month series after roll to January",
+                  "timestamp": "24 Oct 2026, 7:59am AEDT",
+                  "method": "January close vs December's prior close (mixed contracts)",
+                  "status": "primary measured"
+                }
+              ]
+            },
+            "what_to_watch": "The first trade in oil futures on Monday, and whether Brent's December contract expiry at the end of the month adds to the swings in quoted prices.",
             "sources": [
               {
-                "label": "Saxo week ahead",
-                "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026",
-                "claim_type": "reporting",
-                "perspective": "Broker research (marketing material)",
-                "date": "23 Oct 2026"
-              },
-              {
-                "label": "Reuters Take Five via Investing.com",
-                "url": "https://www.investing.com/news/economy-news/take-five-ai-trade-meets-the-fed-4968194",
-                "claim_type": "reporting",
-                "date": "23 Oct 2026"
-              },
-              {
                 "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html",
+                "url": "https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html",
                 "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "date": "25 Oct 2026"
+              },
+              {
+                "label": "AP via SMH",
+                "url": "https://www.smh.com.au/business/markets/asx-set-to-fall-wall-street-loses-ground-as-oil-prices-rise-20261026-p618gx.html",
+                "claim_type": "reporting",
+                "date": "26 Oct 2026"
+              },
+              {
+                "label": "ABC markets live",
+                "url": "https://www.abc.net.au/news/2026-10-26/asx-markets-business-live-news-october-26/107306820",
+                "claim_type": "reporting",
+                "date": "26 Oct 2026"
+              },
+              {
+                "label": "RBA (Hunter interview transcript)",
+                "url": "https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-25.html",
+                "claim_type": "official_statement",
+                "date": "25 Oct 2026"
               }
             ]
           }
@@ -739,66 +736,37 @@
         "id": "australia-asx",
         "cards": [
           {
-            "id": "zip-after-fraud-analyst-views",
-            "headline": "RBC and Morningstar stayed positive on Zip after its 29.5% fall",
-            "takeaway": "RBC kept an outperform rating and Morningstar called the shares materially undervalued; RBC also flagged higher loss rates, and US bad debts rose.",
+            "id": "asx-set-to-open-lower",
+            "headline": "ASX set to open 0.5% lower into a heavy week",
+            "takeaway": "Futures point to a fall after Friday's US losses, with CPI, the RBA's Senate appearance and the Fed all due by Thursday morning.",
             "tags": [
-              "ASX",
-              "ZIP",
-              "Fintech"
+              "Equities",
+              "ASX"
             ],
-            "new_since_last_issue": "Saturday reported the fall and the A$10.1 million fraud cost. The analyst views and the bad-debt and leadership details are new.",
-            "key_figure": "Zip US net bad debts: 1.93% of transaction volume, up from 1.51% (AAP)",
-            "what_happened": "Zip said it had \"identified and contained\" a coordinated US fraud, in which people opened new accounts with legitimate credentials to make unpaid transactions. US net bad debts rose to 1.93% of transaction volume from 1.51%, and its US president Joe Heck resigned, as announced on 16 October ([AAP](https://aapnews.aap.com.au/news/buy-now-pay-later-company-s-shares-plunge-on-us-fraud)). Zip kept its FY27 guidance of more than 30% US transaction-volume growth and, Capital Brief reported, group cash EBITDA of A$340 million ([Capital Brief](https://www.capitalbrief.com/briefing/zip-reaffirms-fy27-guidance-after-posting-17-growth-in-q1-income-956f9ced-5461-4d66-b74d-e5f060ed37ff/)).",
-            "why_it_matters": "RBC's Julian Mulcahy noted the stock also sold off steeply when loss rates jumped in the second quarter of FY26. Chief executive Cynthia Scott said customers were using Zip more often and the company was well positioned for the holiday season. AAP reported the shares are down 63.6% this year.",
-            "market_reaction": "Dashboard: ZIP A$1.460 (−29.5% day, −32.7% week); ASX 200 8,795.2 (−0.1% week).",
-            "competing_views": [
-              {
-                "who": "Julian Mulcahy, RBC Capital Markets",
-                "view": "Kept an outperform rating and A$2.07 target, saying the quarter beat on most metrics but loss rates were higher and the fraud would hit profit.",
-                "source": {
-                  "label": "Capital Brief",
-                  "url": "https://www.capitalbrief.com/briefing/zip-reaffirms-fy27-guidance-after-posting-17-growth-in-q1-income-956f9ced-5461-4d66-b74d-e5f060ed37ff/",
-                  "claim_type": "opinion",
-                  "date": "23 Oct 2026"
-                }
-              },
-              {
-                "who": "Morningstar (Nathan Zaia, Oriana Pham)",
-                "view": "Said the shares are \"materially undervalued\" and described the fraud, credit and funding headwinds as temporary, with guidance holding.",
-                "source": {
-                  "label": "Morningstar",
-                  "url": "https://www.morningstar.com/company-reports/1504348-zip-shares-materially-undervalued-amid-temporary-fraud-credit-and-funding-headwinds?listing=0P0000MQTK",
-                  "claim_type": "opinion",
-                  "date": "23 Oct 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Monday's trading; the AGM on Thursday 19 November, which will vote on a proposed five-for-one share consolidation.",
+            "key_figure": "ASX 200 futures 8,774 (−43 points, −0.5%) · cash index closed Friday at 8,795.2",
+            "new_since_last_issue": "Sunday's issue had Friday's closes. The futures indication for today's open is new.",
+            "what_happened": "ASX 200 futures pointed 43 points, or 0.5%, lower to 8,774, and the Nasdaq 100 had its worst two-week fall since April last year ([AFR](https://www.afr.com/markets/equity-markets/asx-to-fall-after-oil-resurgence-ahead-of-huge-week-for-investors-20261025-p618d6)). On Friday the Dow fell 652.82 points, or 1.2%, to 52,215.16 ([AP via SMH](https://www.smh.com.au/business/markets/asx-set-to-fall-wall-street-loses-ground-as-oil-prices-rise-20261026-p618gx.html)), though it still ended the week 0.4% higher. LME copper rose 1.8% to US$14,098 a tonne, according to NAB figures quoted in ABC's corrected update, and iron ore rose 0.5% to US$90.40 a tonne ([ABC](https://www.abc.net.au/news/2026-10-26/asx-markets-business-live-news-october-26/107306820)).",
+            "why_it_matters": "ABC said oil and inflation, more than AI stocks, drove Friday's US losses, and the US 10-year Treasury yield ended the week at 5.00% (snapshot, delayed).",
+            "market_reaction": "Dashboard: S&P 500 −0.5% to 7,623.7, Nasdaq −0.2% to 25,955.3, VIX 19.45, AUD US$0.7006 (Friday closes, delayed). ASX SPI futures are not in our data feed.",
+            "what_to_watch": "The 10am open, then the RBA at the Senate at 11:15am and CPI at 11:30am Wednesday.",
             "sources": [
               {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/buy-now-pay-later-company-s-shares-plunge-on-us-fraud",
+                "label": "AFR",
+                "url": "https://www.afr.com/markets/equity-markets/asx-to-fall-after-oil-resurgence-ahead-of-huge-week-for-investors-20261025-p618d6",
                 "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Capital Brief",
-                "url": "https://www.capitalbrief.com/briefing/zip-reaffirms-fy27-guidance-after-posting-17-growth-in-q1-income-956f9ced-5461-4d66-b74d-e5f060ed37ff/",
+                "label": "AP via SMH",
+                "url": "https://www.smh.com.au/business/markets/asx-set-to-fall-wall-street-loses-ground-as-oil-prices-rise-20261026-p618gx.html",
                 "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "date": "26 Oct 2026"
               },
               {
-                "label": "Morningstar",
-                "url": "https://www.morningstar.com/company-reports/1504348-zip-shares-materially-undervalued-amid-temporary-fraud-credit-and-funding-headwinds?listing=0P0000MQTK",
-                "claim_type": "opinion",
-                "date": "23 Oct 2026"
-              },
-              {
-                "label": "ASX announcements (ZIP)",
-                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/ZIP/announcements",
-                "claim_type": "official_statement",
-                "date": "16 Oct 2026"
+                "label": "ABC markets live",
+                "url": "https://www.abc.net.au/news/2026-10-26/asx-markets-business-live-news-october-26/107306820",
+                "claim_type": "reporting",
+                "date": "26 Oct 2026"
               }
             ]
           }
@@ -808,74 +776,88 @@
         "id": "rates-expectations",
         "cards": [
           {
-            "id": "au-cpi-rba-hike-test",
-            "headline": "Wednesday's CPI is the test for a 3 November RBA hike",
-            "takeaway": "The big four banks expect trimmed mean inflation of 0.9–1.0% for the quarter, above the RBA's 0.8% forecast; rate futures and prediction markets put different odds on a hike.",
+            "id": "hunter-60-minutes",
+            "headline": "RBA's Hunter says inflation fight is \"not quite\" done",
+            "takeaway": "RBA Assistant Governor (Economic) Sarah Hunter said higher rates are working but need more time, and that government spending is part of the demand the RBA is trying to cool.",
             "tags": [
               "RBA",
-              "CPI",
+              "Inflation",
               "Australia"
             ],
-            "new_since_last_issue": "Saturday covered the futures pricing, the big four's calls and tonight's Sarah Hunter interview. CBA's headline, fuel and services forecasts, the prediction-market odds and the Wednesday timing of Governor Bullock's Senate appearance are new.",
-            "key_figure": "CBA forecast: trimmed mean +1.0% q/q, 3.6% y/y; headline +1.3% q/q, 3.9% y/y",
-            "what_happened": "CBA's Trent Saunders expects trimmed mean inflation of 1.0% in the September quarter, compared with the RBA's August forecast of 0.8%, and headline CPI of 1.3%. CBA forecasts fuel prices rose 9.8% in September and annual market services inflation rose to 4.3% from 4.1%. It still expects a hold but called the meeting \"live\" ([CommBank](https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html)). ASX 30-day interbank futures put the chance of a hike at 56% at Friday's close, while prediction markets Polymarket and Kalshi put it at 68% ([RBA Watch](https://rbawatch.com/rba-meeting/november-2026)).",
-            "why_it_matters": "A hike would take the cash rate from 4.60% to 4.85%, the fifth increase this year. CBA said the decision will depend on both the headline result and what drives it, including whether price pressures look more broad-based or persistent, particularly in services. Governor Bullock and other RBA executives appear before a Senate committee at 11:15am Wednesday, 15 minutes before the CPI release ([RBA Coming Up](https://www.rba.gov.au/coming-up/)).",
-            "market_reaction": "Dashboard: AU 2Y 4.92% (±0 bp week) and AU 10Y 5.28% (−4 bp week), both as at 21 Oct, the latest RBA data; curve +36 bp; AUD/USD 0.7006 (+0.8% week).",
-            "priced_in": "Futures imply an expected cash rate of 4.74% after the meeting, about halfway to a full 25 bp hike (RBA Watch, 23 Oct close).",
-            "comparison": {
-              "title": "Chance of a 3 November RBA hike",
-              "why_different": "The futures figure is derived from the expected cash rate priced into ASX 30-day interbank futures; the prediction-market figure reflects bets placed on Polymarket and Kalshi, weighted by money traded, and is not derived from interest-rate pricing.",
-              "resolution": "explained",
-              "rows": [
-                {
-                  "source": "ASX 30-day interbank futures (via RBA Watch)",
-                  "url": "https://rbawatch.com/rba-meeting/november-2026",
-                  "figure": "56%",
-                  "measure": "Implied probability of a 25 bp hike",
-                  "timestamp": "23 Oct 2026, ASX close",
-                  "method": "Implied post-meeting rate of 4.74% against 4.60% now",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Polymarket and Kalshi (via RBA Watch)",
-                  "url": "https://rbawatch.com/rba-meeting/november-2026",
-                  "figure": "68%",
-                  "measure": "Prediction-market probability of a hike",
-                  "timestamp": "As shown 25 Oct 2026",
-                  "method": "Weighted by money traded",
-                  "status": "estimate"
-                }
-              ]
-            },
+            "key_figure": "Cash rate 4.60% after four hikes this year",
+            "new_since_last_issue": "Sunday's issue previewed the interview; what she said is new. It aired on Sunday night and was recorded on 21 October.",
+            "what_happened": "Asked whether the RBA had done enough, Hunter said \"Unfortunately, not quite yet\", noting the Board has \"put through four rate hikes this year\". She said demand is \"a bit too much\" relative to supply, that the oil shock is spreading into other prices such as construction, and that government spending \"is part of demand. It's contributing to demand\", while adding it is not the RBA's place to say what governments should spend. She said the RBA sees no signs of recession in its data or business liaison ([RBA](https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-25.html), [AFR](https://www.afr.com/policy/economy/government-spending-definitely-part-of-economic-outlook-rba-20261025-p618et)).",
+            "why_it_matters": "She spoke three days before Wednesday's CPI and the RBA's Senate appearance, saying higher rates \"do work\" but the RBA needs \"a bit more time\".",
             "competing_views": [
               {
-                "who": "CBA (Trent Saunders)",
-                "view": "Baseline is a hold, but the decision will depend heavily on the outcome and composition of the CPI.",
+                "who": "Westpac (Luci Ellis, chief economist)",
+                "view": "Responding to Deputy Governor Hauser's comments that the household cash-flow channel is a small one, wrote that this \"implies a lot of pain for a small group, for little effect on inflation\".",
                 "source": {
-                  "label": "CommBank",
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
+                  "claim_type": "opinion",
+                  "date": "26 Oct 2026"
+                }
+              }
+            ],
+            "what_to_watch": "The Senate Estimates appearance by Governor Bullock and her team at 11:15am Wednesday, just before CPI.",
+            "sources": [
+              {
+                "label": "RBA (interview transcript)",
+                "url": "https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-25.html",
+                "claim_type": "official_statement",
+                "date": "25 Oct 2026"
+              },
+              {
+                "label": "AFR",
+                "url": "https://www.afr.com/policy/economy/government-spending-definitely-part-of-economic-outlook-rba-20261025-p618et",
+                "claim_type": "reporting",
+                "date": "25 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "cpi-consensus-hike-odds",
+            "headline": "Market expects 1.3% quarterly CPI as hike odds ease to 56%",
+            "takeaway": "Forecasters' median for Wednesday's CPI points to a hot quarter, while futures pricing for a November hike eased on Friday.",
+            "tags": [
+              "CPI",
+              "RBA"
+            ],
+            "key_figure": "Q3 CPI forecast 1.3% q/q (prior 0.6%) · trimmed mean 1.0% (prior 0.8%)",
+            "new_since_last_issue": "Sunday's issue had CBA's forecast and the 56% pricing. New are the market median and range from Westpac's forecast table, and Westpac's own trimmed-mean call of 0.9%.",
+            "what_happened": "The market median expects headline CPI of 1.3% for the September quarter (range 0.6% to 1.4%) and 0.6% for September alone; for the trimmed mean it is 1.0% for the quarter (range 0.9% to 1.0%). Westpac forecasts 1.3% and 0.9% and says that, if inflation prints broadly in line, the RBA is likely to hike by 25 bp in November ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf)). ASX 30-day interbank futures implied a 56% chance of a hike at Friday's close, down from 62% on Thursday; prediction markets put it at 68% ([RBA Watch](https://rbawatch.com/rba-meeting/november-2026)).",
+            "why_it_matters": "The quarterly trimmed mean is the RBA's preferred core measure. Westpac ties its hike call to CPI printing broadly in line, while CommBank's baseline is a hold.",
+            "priced_in": "About a 56% chance of a 25 bp hike on 3 November (ASX futures, 23 Oct close).",
+            "competing_views": [
+              {
+                "who": "Westpac",
+                "view": "Expects a 25 bp hike in November to 4.85%, provided CPI is broadly in line with its forecast.",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
+                  "claim_type": "forecast",
+                  "date": "26 Oct 2026"
+                }
+              },
+              {
+                "who": "CommBank",
+                "view": "Forecasts a 1.0% trimmed mean for the quarter, above the RBA's 0.8% forecast, but its baseline is a hold in November, calling the meeting \"live\".",
+                "source": {
+                  "label": "CommBank CPI preview",
                   "url": "https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html",
                   "claim_type": "forecast",
                   "date": "22 Oct 2026"
                 }
-              },
-              {
-                "who": "ANZ and Westpac",
-                "view": "Expect a 25 bp hike in November.",
-                "source": {
-                  "label": "Savings.com.au",
-                  "url": "https://www.savings.com.au/news/stubborn-inflation-seen-ahead-of-key-rba-rates-decision",
-                  "claim_type": "forecast",
-                  "date": "23 Oct 2026"
-                }
               }
             ],
-            "what_to_watch": "Sarah Hunter on 60 Minutes at 8:40pm tonight (pre-recorded on 21 October); Bullock at the Senate committee at 11:15am and CPI at 11:30am Wednesday.",
+            "what_to_watch": "CPI at 11:30am Wednesday; ASX pricing moves through the day on RBA Watch's tracker.",
             "sources": [
               {
-                "label": "CommBank",
-                "url": "https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html",
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
                 "claim_type": "forecast",
-                "date": "22 Oct 2026"
+                "date": "26 Oct 2026"
               },
               {
                 "label": "RBA Watch",
@@ -884,81 +866,31 @@
                 "date": "23 Oct 2026"
               },
               {
-                "label": "Savings.com.au",
-                "url": "https://www.savings.com.au/news/stubborn-inflation-seen-ahead-of-key-rba-rates-decision",
+                "label": "CommBank CPI preview",
+                "url": "https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html",
                 "claim_type": "forecast",
-                "date": "23 Oct 2026"
-              },
-              {
-                "label": "RBA Coming Up",
-                "url": "https://www.rba.gov.au/coming-up/",
-                "claim_type": "official_statement",
-                "date": "25 Oct 2026"
+                "date": "22 Oct 2026"
               }
             ]
           },
           {
-            "id": "us-yields-fed-hold",
-            "headline": "The Fed is expected to hold this week and keep a December hike open",
-            "takeaway": "Treasury yields fell over the week, and markets put only a small chance on a move on Wednesday but most on a December hike.",
+            "id": "rbnz-hike-expected",
+            "headline": "RBNZ expected to lift its cash rate to 3% on Wednesday",
+            "takeaway": "Westpac and the market median both expect a 25 bp RBNZ hike at noon Wednesday Sydney time, half an hour after Australian CPI.",
             "tags": [
-              "Fed",
-              "Treasuries",
-              "US"
+              "RBNZ",
+              "New Zealand"
             ],
-            "new_since_last_issue": "Saturday reported CNBC's FedWatch figure. Saxo's odds for this week's meeting and its preview are new.",
-            "key_figure": "Fed funds range: 3.75–4.00%; hike odds about 10% this week, about 75% for December (Saxo, Friday)",
-            "what_happened": "The Fed meets on Tuesday and Wednesday US time after raising rates in September. Saxo said market odds of a hike this week were about 10% by Friday and about 75% for December, and that falling yields and the AI selloff had weakened the case for back-to-back moves ([Saxo](https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026)). CNBC, citing CME FedWatch, put the December chance at about 71% ([CNBC](https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html)).",
-            "why_it_matters": "There are no new Fed projections at this meeting, so PIMCO said Chair Kevin Warsh's framing of the hold and the number of dissents matter more than the decision itself. The decision lands hours before Microsoft and Alphabet report, and US GDP and September PCE inflation follow the next day ([BEA](https://www.bea.gov/news/schedule)).",
-            "market_reaction": "Dashboard: US 10Y 5.00% (−9 bp week); US 2Y 4.69% (−5 bp week); gold futures 4,007.9 (−4.1% week).",
-            "competing_views": [
-              {
-                "who": "Christopher Rupkey, FWDBONDS",
-                "view": "Does not expect Chair Warsh to \"green light a December meeting rate hike\".",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html",
-                  "claim_type": "forecast",
-                  "date": "23 Oct 2026"
-                }
-              },
-              {
-                "who": "Tiffany Wilding, PIMCO",
-                "view": "Expects a hold with \"a clear tightening bias\", and a 25 bp hike in December as the most likely next move.",
-                "source": {
-                  "label": "PIMCO Fed preview",
-                  "url": "https://www.pimco.com/us/en/insights/october-fed-meeting-preview-a-pause-is-still-a-recalibration",
-                  "claim_type": "forecast",
-                  "date": "22 Oct 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Decision and statement at 5am Thursday Sydney time; GDP and PCE at 11:30pm Thursday.",
+            "key_figure": "OCR 2.75% now · forecast 3.00% (Westpac and market median)",
+            "what_happened": "Westpac now expects the RBNZ to raise the official cash rate 25 bp to 3.00% on 28 October, having previously expected a pause, citing firm core inflation, higher fuel prices and a New Zealand dollar 3.6% below the RBNZ's trade-weighted assumption. The market median also expects 3.00%. Westpac puts the chance of a hold at about 20% and says a vote \"seems very possible\" ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf)).",
+            "why_it_matters": "The decision lands half an hour after Australian CPI, so the two biggest local events of the week come in the same hour.",
+            "what_to_watch": "The RBNZ statement and any vote split, noon Wednesday Sydney time; New Zealand votes on 7 November.",
             "sources": [
               {
-                "label": "Saxo week ahead",
-                "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026",
-                "claim_type": "reporting",
-                "date": "23 Oct 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html",
-                "claim_type": "reporting",
-                "date": "23 Oct 2026"
-              },
-              {
-                "label": "PIMCO Fed preview",
-                "url": "https://www.pimco.com/us/en/insights/october-fed-meeting-preview-a-pause-is-still-a-recalibration",
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
                 "claim_type": "forecast",
-                "perspective": "Asset manager",
-                "date": "22 Oct 2026"
-              },
-              {
-                "label": "BEA release schedule",
-                "url": "https://www.bea.gov/news/schedule",
-                "claim_type": "official_statement",
-                "date": "25 Oct 2026"
+                "date": "26 Oct 2026"
               }
             ]
           }
@@ -966,241 +898,137 @@
       },
       {
         "id": "global-risk",
-        "note": "Weekend developments after Friday's close are not yet reflected in any market price.",
         "cards": [
           {
-            "id": "iran-strike-signals",
-            "headline": "US officials gave mixed signals on new strikes on Iran",
-            "takeaway": "A US envoy said a strike this weekend was possible and Trump mentioned \"another little Epic Fury\", after the White House ruled out strikes before the midterms; Iran said it offered to reopen Hormuz if the US lifts its blockade.",
+            "id": "trump-iran-deal-or-strike",
+            "headline": "Trump says no Sunday strike on Iran, weighs deal",
+            "takeaway": "Trump framed the choice as a deal or further strikes, Iran said messages are still passing through intermediaries, and the US added forces in the region.",
             "tags": [
               "Iran",
-              "Hormuz",
-              "Oil"
+              "US",
+              "Geopolitics"
             ],
-            "new_since_last_issue": "Saturday covered Trump's \"end it quickly or let it wind down\" remarks. Barrack's comments, Trump's rally remarks, Iran's Saturday statements and Friday's Istanbul meeting are new.",
-            "what_happened": "Asked by podcast host Mario Nawfal on Friday whether a strike could come this weekend, US Ambassador to Turkey Tom Barrack said \"Absolutely\", adding that Trump is \"open and available and accessible to a deal\"; Barrack has no direct role on Iran policy ([CBS News](https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/), [Epoch Times](https://www.theepochtimes.com/world/trump-says-us-may-do-another-little-epic-fury-targeting-iran-6108171)). The White House said on Thursday the US would not resume attacks before the 3 November midterms ([Ynet](https://www.ynetnews.com/article/hj0xogyhfg)). At a Florida rally on Friday Trump said \"We may do another little Epic Fury, or they'll agree\", and asked about Barrack's remark he said \"If that's the case, I don't know anything about it\" (Epoch Times). On Saturday Iran's armed forces chief of staff Ali Abdollahi said \"We will not allow U.S. military ships in the Persian Gulf under any circumstances\", and Iran's ambassador to Pakistan said Tehran had offered to reopen the Strait of Hormuz if the US lifted its naval blockade, a proposal he said Trump rejected (CBS News). On Friday in Istanbul, Türkiye, Saudi Arabia, Pakistan and Egypt called in a joint statement for unrestricted passage through the strait ([Al Jazeera](https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks)).",
-            "why_it_matters": "French foreign minister Jean-Noël Barrot, speaking in Istanbul after meeting counterparts including from the UK, Germany and Saudi Arabia, said further escalation between Iran and the US \"would leave no winners and would likely have very serious consequences\" for hydrocarbon prices (CBS News, AFP). None of the weekend developments is reflected in Friday's closing prices.",
-            "competing_views": [
-              {
-                "who": "President Trump",
-                "view": "\"If they're smart, they'll just say, 'Let's get down to business.' But, you know, I doubt they'll do that because perhaps they're not smart.\"",
-                "source": {
-                  "label": "Fox News clip via Ynet",
-                  "url": "https://www.ynetnews.com/article/hj0xogyhfg",
-                  "claim_type": "official_statement",
-                  "date": "23 Oct 2026"
-                }
-              },
-              {
-                "who": "Hakan Fidan, Türkiye's foreign minister",
-                "view": "\"A new attack on Iran would widen the war and spread the conflict across the region.\"",
-                "source": {
-                  "label": "Al Jazeera",
-                  "url": "https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks",
-                  "claim_type": "official_statement",
-                  "date": "24 Oct 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Any strike or US statement before oil futures reopen on Monday morning Sydney time; Israel's election on Tuesday.",
+            "new_since_last_issue": "Sunday's issue covered mixed signals on timing. Trump's Sunday remarks, Iran's response and the CENTCOM update are new.",
+            "what_happened": "On Fox News on Sunday, Trump said \"do I make a deal with them, or do I finish them off?\" and \"we now control the Hormuz Strait\"; he later told reporters \"there will not be a strike today\" and referred to \"two very different sets of intelligence reports\" ([CBS](https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/), [Anadolu](https://www.aa.com.tr/en/americas/-trump-rules-out-sunday-military-strikes-on-iran/4100333)). Iranian foreign ministry spokesperson Esmaeil Baghaei said messages are still being exchanged through intermediaries and that \"complete surrender\" is not acceptable ([CBS](https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/)). Qatari mediators were in Tehran ([Al Jazeera](https://www.aljazeera.com/news/liveblog/2026/10/25/iran-war-live-trump-hints-at-possible-sunday-iran-attack-or-deal-reached)). CENTCOM said US forces had cleared Hormuz's international shipping lanes of mines; separately, the US has sent a third carrier group towards the Gulf in recent weeks, and the US embassy in Saudi Arabia restricted staff travel to several areas, including Yanbu ([The National](https://www.thenationalnews.com/news/us/2026/10/25/trump-iran-strike/)). An unnamed US official told i24NEWS that strikes no longer appear to be \"a question of if, but of when\"; that report is single-sourced ([Anadolu](https://www.aa.com.tr/en/americas/-trump-rules-out-sunday-military-strikes-on-iran/4100333)).",
+            "why_it_matters": "Strike timing is the main swing factor for oil, and through fuel prices for Australian inflation and the RBA.",
+            "what_to_watch": "Any statement from Washington or Tehran on the talks, and the 3 November US midterms.",
             "sources": [
               {
-                "label": "CBS News live updates",
+                "label": "CBS News live",
                 "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/",
                 "claim_type": "reporting",
                 "perspective": "US network",
-                "date": "24 Oct 2026"
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks",
+                "label": "Anadolu",
+                "url": "https://www.aa.com.tr/en/americas/-trump-rules-out-sunday-military-strikes-on-iran/4100333",
                 "claim_type": "reporting",
-                "perspective": "Qatar-based, Tehran correspondent",
-                "date": "24 Oct 2026"
+                "perspective": "Turkish state agency",
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Epoch Times",
-                "url": "https://www.theepochtimes.com/world/trump-says-us-may-do-another-little-epic-fury-targeting-iran-6108171",
+                "label": "Al Jazeera live",
+                "url": "https://www.aljazeera.com/news/liveblog/2026/10/25/iran-war-live-trump-hints-at-possible-sunday-iran-attack-or-deal-reached",
                 "claim_type": "reporting",
-                "perspective": "US right-leaning",
-                "date": "24 Oct 2026"
+                "perspective": "Qatar-based",
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Fox News clip via Ynet",
-                "url": "https://www.ynetnews.com/article/hj0xogyhfg",
-                "claim_type": "official_statement",
-                "date": "23 Oct 2026"
+                "label": "The National",
+                "url": "https://www.thenationalnews.com/news/us/2026/10/25/trump-iran-strike/",
+                "claim_type": "reporting",
+                "perspective": "UAE-based",
+                "date": "25 Oct 2026"
               }
             ]
           },
           {
-            "id": "houthi-saudi-oil-sites-saturday",
-            "headline": "Houthis say they targeted Saudi oil sites, including the Hormuz bypass pipeline",
-            "takeaway": "The group named Yanbu, the Rabigh refinery and the East-West pipeline; the coalition said it shot down two missiles, and it was not clear if any hit.",
+            "id": "houthi-saudi-interceptions",
+            "headline": "Saudi Arabia says it intercepted Houthi missiles aimed at Riyadh",
+            "takeaway": "The Houthis said they targeted Riyadh's airport and Aramco's Yanbu facilities; Saudi Arabia reported interceptions, and no damage from Sunday's launches has been confirmed.",
             "tags": [
-              "Oil",
               "Saudi Arabia",
-              "Yemen"
+              "Oil",
+              "Middle East"
             ],
-            "new_since_last_issue": "Saturday covered attacks on Dammam and Shaybah. The Houthis' Saturday statement naming the Rabigh refinery, the East-West pipeline and Riyadh airport, and the coalition's interceptions, are new; the group had also said it targeted Yanbu earlier in the week (CNBC).",
-            "key_figure": "Brent futures: US$116.72 at Friday's settle, the highest settlement since 29 April (snapshot, CNBC)",
-            "what_happened": "The Houthis said they targeted King Khalid airport in Riyadh, Aramco's Yanbu facilities, the Rabigh refinery, crude pumping stations on the East-West pipeline and King Fahd airport in Dammam. The Saudi-led coalition said it intercepted two missiles heading for Yanbu and Taif, and Saudi civil defence reported falling debris in the Mecca and Medina regions. Saudi authorities did not comment directly on the Houthi statements, and it was not clear if any hit ([Reuters via ThePrint](https://theprint.in/world/houthis-say-they-attacked-saudi-oil-sites-strikes-reported-in-aden/3080805/), [CNBC](https://www.cnbc.com/2026/10/24/saudi-led-coalition-says-it-intercepted-houthi-ballistic-missiles-.html)).",
-            "why_it_matters": "The East-West pipeline carries Saudi crude to Yanbu on the Red Sea, letting Riyadh send much of its exports around the Strait of Hormuz; Aramco chief executive Amin Nasser has said its volume rose from 2 million to 7 million barrels a day (CBS News). Friday's 3.1% rise in Brent followed the earlier Houthi attacks and an oil spill off the UAE (Reuters via The Star).",
-            "market_reaction": "Dashboard (Friday close, before the weekend attacks): Brent futures 116.72 (+3.1% day, +6.2% week); FRED Brent spot 115.22 as at 20 Oct, lagged.",
-            "what_to_watch": "Any Aramco or Saudi statement on damage; Brent's open on Monday morning Sydney time.",
-            "sources": [
-              {
-                "label": "Reuters via ThePrint",
-                "url": "https://theprint.in/world/houthis-say-they-attacked-saudi-oil-sites-strikes-reported-in-aden/3080805/",
-                "claim_type": "reporting",
-                "date": "24 Oct 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/10/24/saudi-led-coalition-says-it-intercepted-houthi-ballistic-missiles-.html",
-                "claim_type": "reporting",
-                "date": "24 Oct 2026"
-              },
-              {
-                "label": "Reuters via The Star",
-                "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/24/middle-east-mayhem-oil-prices-jump-us3-on-houthi-attacks-oil-spill-highest-settlement-since-april",
-                "claim_type": "reporting",
-                "date": "24 Oct 2026"
-              },
-              {
-                "label": "CBS News live updates",
-                "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/",
-                "claim_type": "reporting",
-                "perspective": "US network",
-                "date": "24 Oct 2026"
-              }
-            ]
-          },
-          {
-            "id": "hormuz-tanker-attacks",
-            "headline": "Marisks says October is the most intense month for Hormuz attacks since March",
-            "takeaway": "Iran's Revolutionary Guards said two supertankers hit mines, after claiming seven ship incidents on Thursday; none had been corroborated, and Trump said Iran was \"making up fake hits\".",
-            "tags": [
-              "Shipping",
-              "Hormuz",
-              "Oil"
-            ],
-            "new_since_last_issue": "The Revolutionary Guards' supertanker statement, the route dispute and the Marisks and UKMTO tallies are new since Saturday.",
-            "what_happened": "Iran's Revolutionary Guards said seven tankers were attacked or hit mines overnight into Thursday, and on Friday that two supertankers struck mines ([Al Jazeera](https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks), [CGTN](https://news.cgtn.com/news/2026-10-24/Iran-reports-tanker-blasts-in-Hormuz-as-Trump-hints-at-renewed-strikes-1RuSG1ODy0M/p.html)). None of Thursday's claimed incidents had been corroborated, according to CBS News and AFP, and Trump wrote on Truth Social that Iran was \"making up fake hits, mines, and everything else\" ([CBS News](https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/)). Greece-based consultancy Marisks told Reuters October is \"the most intense period of maritime attacks\" around the strait since March, and UKMTO, the UK maritime security agency, had logged 135 incidents linked to the conflict as of 16 October (CGTN).",
-            "why_it_matters": "The claims sit on a dispute over routes: Iran demands that ships seek its authorisation and use a northern route near its coast, while the US has encouraged a southern route near Oman and escorted tankers along it. Iran said all the ships it reported on Thursday had used the US-backed lanes (CBS News).",
-            "what_to_watch": "Confirmation of the vessels and any UK Maritime Trade Operations (UKMTO) advisories.",
-            "sources": [
-              {
-                "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks",
-                "claim_type": "reporting",
-                "date": "24 Oct 2026"
-              },
-              {
-                "label": "CGTN",
-                "url": "https://news.cgtn.com/news/2026-10-24/Iran-reports-tanker-blasts-in-Hormuz-as-Trump-hints-at-renewed-strikes-1RuSG1ODy0M/p.html",
-                "claim_type": "reporting",
-                "perspective": "Chinese state media",
-                "date": "24 Oct 2026"
-              },
-              {
-                "label": "CBS News live updates",
-                "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/",
-                "claim_type": "reporting",
-                "perspective": "US network",
-                "date": "23 Oct 2026"
-              }
-            ]
-          },
-          {
-            "id": "france-moodys-holds-aa3",
-            "headline": "Moody's left France at Aa3 when bond markets had priced in a cut",
-            "takeaway": "The rating stays one notch above S&P and Fitch, with a negative outlook tied to political fragmentation and the 2027 budget.",
-            "tags": [
-              "Europe",
-              "Bonds",
-              "France"
-            ],
-            "new_since_last_issue": "Saturday's issue went out before the decision. The outcome and reactions are new.",
-            "key_figure": "Moody's: Aa3, negative outlook (unchanged), 23 Oct",
-            "what_happened": "In a periodic review that it said was not a rating action, Moody's said the rating \"assumes that a deficit-reducing budget for 2027 will be adopted, while financing costs and social tensions will abate somewhat\", and that the negative outlook reflects the risk that political fragmentation \"will continue to impair the functioning\" of parliament ([CNBC](https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html), [Reuters via Investing.com](https://www.investing.com/news/stock-market-news/unresthit-france-poised-for-moodys-ratings-verdict-4968793)). Prime Minister Lecornu said the decision shows lenders \"there is a path\", and the finance ministry credited the budget's credibility ([franceinfo/AFP](https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html)).",
-            "why_it_matters": "France's 10-year yield hit 5.14% on Thursday, its highest since July 2002, and its spread over German bonds was the widest in 15 years (Reuters). The government is struggling to pass the 2027 budget, which targets a deficit of 5% of output, and the finance ministry has forecast debt of 121.7% of GDP in 2027 (CNBC).",
-            "competing_views": [
-              {
-                "who": "Rushabh Amin, Allspring Global Investments",
-                "view": "\"You want to wait and see how the narrative evolves over the next six months into the election. That's going to have a more meaningful impact on the spread.\"",
-                "source": {
-                  "label": "Reuters via Investing.com",
-                  "url": "https://www.investing.com/news/stock-market-news/unresthit-france-poised-for-moodys-ratings-verdict-4968793",
-                  "claim_type": "forecast",
-                  "date": "23 Oct 2026"
-                }
-              },
-              {
-                "who": "Mike Bell, RBC BlueBay Asset Management",
-                "view": "Said pressure could grow after the presidential vote if Moody's, S&P and Fitch all cut France to BBB, potentially forcing sales by investors with rating limits.",
-                "source": {
-                  "label": "Reuters via Investing.com",
-                  "url": "https://www.investing.com/news/stock-market-news/unresthit-france-poised-for-moodys-ratings-verdict-4968793",
-                  "claim_type": "forecast",
-                  "date": "23 Oct 2026"
-                }
-              }
-            ],
-            "what_to_watch": "French yields and the spread over Germany on Monday; whether Lagarde addresses French spreads at the ECB on Thursday.",
+            "new_since_last_issue": "Sunday's issue covered Saturday's claims. Sunday's launches and the reopening of Riyadh's main airport are new.",
+            "what_happened": "The Saudi-led coalition said two drones and a ballistic missile heading for Riyadh, 10 ballistic missiles aimed at the south and a cruise missile aimed at Khamis Mushait were intercepted. The Houthis said they carried out seven operations, including on King Khalid International Airport and Aramco facilities in Yanbu. The airport said it was resuming operations on Sunday after suspending them on 10 October ([CNBC](https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html), [CBS](https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/)). No damage from Sunday's launches has been confirmed, and Aramco did not respond to CNBC. After earlier Houthi attacks on 19–20 October, a source told Argus that Yanbu and Shaybah were not damaged ([World Ports Organization](https://www.worldports.org/no-damage-at-aramco-yanbu-shaybah-facilities-source/)).",
+            "why_it_matters": "Yanbu on the Red Sea is Saudi Arabia's main export route that avoids Hormuz, so any damage there would matter more for supply than strikes elsewhere.",
+            "what_to_watch": "Any Aramco statement on Yanbu operations.",
             "sources": [
               {
                 "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html",
+                "url": "https://www.cnbc.com/2026/10/25/saudi-arabia-houthi-missile-drone-interceptions.html",
                 "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Reuters via Investing.com",
-                "url": "https://www.investing.com/news/stock-market-news/unresthit-france-poised-for-moodys-ratings-verdict-4968793",
+                "label": "CBS News live",
+                "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/",
                 "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "date": "25 Oct 2026"
               },
               {
-                "label": "franceinfo/AFP",
-                "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html",
+                "label": "World Ports Organization (Argus)",
+                "url": "https://www.worldports.org/no-damage-at-aramco-yanbu-shaybah-facilities-source/",
                 "claim_type": "reporting",
-                "perspective": "French public broadcaster",
-                "date": "23 Oct 2026"
+                "date": "21 Oct 2026"
               }
             ]
           },
           {
-            "id": "brazil-israel-elections",
-            "headline": "Elections in Brazil and Israel bracket the week",
-            "takeaway": "Brazil's presidential runoff is on Sunday local time, and Israel votes on Tuesday.",
+            "id": "brazil-runoff-count",
+            "headline": "Brazil's runoff count was under way at our cutoff",
+            "takeaway": "No result had been declared at 7:30am Sydney time; the first-round leader was Flávio Bolsonaro, and only a tiny share of the vote had been counted.",
             "tags": [
-              "Elections",
               "Brazil",
-              "Israel"
+              "Elections"
             ],
-            "new_since_last_issue": "Israel's election was in Saturday's calendar. Brazil's runoff, Reuters' read on the Israeli polls and the West Bank lockdown are new.",
-            "what_happened": "Brazil holds a runoff on Sunday between President Luiz Inácio Lula da Silva and Senator Flávio Bolsonaro ([Saxo](https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026)). In Israel, Prime Minister Netanyahu faces an opposition led by former military chief Gadi Eisenkot on Tuesday in a race Reuters described as a coin toss in the polls ([Reuters Take Five via Investing.com](https://www.investing.com/news/economy-news/take-five-ai-trade-meets-the-fed-4968194)). Israel locked down the West Bank after an attack in Hebron killed two soldiers ([Al Jazeera](https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks)).",
-            "why_it_matters": "Brazilian stocks hit a record high after Flávio Bolsonaro's first-round performance, and markets are hoping he wins, according to Reuters. Saxo said investor attention on Israel's vote should focus on what it signals about escalation risks.",
-            "what_to_watch": "Brazil's result from Monday morning Sydney time.",
+            "new_since_last_issue": "Voting has closed and counting has begun; the result is still pending.",
+            "what_happened": "With about 0.2% of sections counted, Lula had 57.66% and Flávio Bolsonaro 42.34%, too early to indicate a winner ([Guardian](https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results)). In the first round, Flávio Bolsonaro won 47.03% to Lula's 45.16% ([TSE](https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica)). Voting was extended by two hours, to 7pm Brasília time ([Guardian](https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results)). The winner takes office on 5 January.",
+            "why_it_matters": "Brazil is a major iron ore and commodities competitor for Australia, and the result will set the direction of its fiscal policy and its relations with the US.",
+            "what_to_watch": "The electoral court's (TSE) declaration, likely during the ASX session, and the real's reaction.",
             "sources": [
               {
-                "label": "Saxo week ahead",
-                "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026",
-                "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "label": "Guardian live results",
+                "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results",
+                "claim_type": "measurement",
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Reuters Take Five via Investing.com",
-                "url": "https://www.investing.com/news/economy-news/take-five-ai-trade-meets-the-fed-4968194",
+                "label": "TSE (first round)",
+                "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          {
+            "id": "israel-election-final-polls",
+            "headline": "Final Israeli polls show neither bloc reaching a majority",
+            "takeaway": "Israel votes on Tuesday, and the last polls give neither Netanyahu's bloc nor the opposition the 61 seats needed to govern.",
+            "tags": [
+              "Israel",
+              "Elections"
+            ],
+            "new_since_last_issue": "Sunday's issue flagged the vote. The final pre-election polls are new.",
+            "what_happened": "Public broadcaster KAN projected 50 seats for Netanyahu's bloc and 52 for the opposition ([Anadolu](https://www.aa.com.tr/en/world/netanyahu-bloc-trailing-opposition-with-projected-50-seats-to-52-in-final-israeli-election-polls/4099160)). Reports of Channel 12's poll differ (50 v 52 per Anadolu, 50 v 56 per the Jerusalem Post). An average of four polls (Channels 12, 13 and 14 and Maariv) gave the opposition 54 seats and Netanyahu's bloc 49.5, with Gadi Eisenkot's Yashar on 22 seats and Likud on 19.75 ([Jerusalem Post](https://www.jpost.com/israel-election-2026/article-912743)).",
+            "why_it_matters": "A drawn-out coalition process would leave Israel's position on Iran and Gaza uncertain while US strike timing is in question.",
+            "what_to_watch": "Exit polls when voting closes, about 7am Wednesday Sydney time.",
+            "sources": [
+              {
+                "label": "Anadolu",
+                "url": "https://www.aa.com.tr/en/world/netanyahu-bloc-trailing-opposition-with-projected-50-seats-to-52-in-final-israeli-election-polls/4099160",
                 "claim_type": "reporting",
-                "date": "23 Oct 2026"
+                "perspective": "Turkish state agency",
+                "date": "25 Oct 2026"
               },
               {
-                "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks",
+                "label": "Jerusalem Post",
+                "url": "https://www.jpost.com/israel-election-2026/article-912743",
                 "claim_type": "reporting",
-                "date": "24 Oct 2026"
+                "perspective": "Israeli, centre-right",
+                "date": "25 Oct 2026"
               }
             ]
           }
@@ -1210,7 +1038,7 @@
     "rates": {
       "rba": {
         "status": "available",
-        "summary": "ASX 30-day interbank futures implied a 56% chance of a 25 bp hike on 3 November at Friday's close (expected rate 4.74%). Prediction markets showed 68%. No trading since.",
+        "summary": "A 56% chance of a 25 bp hike on 3 November in ASX 30-day interbank futures at Friday's close (expected rate 4.74%), down from 62% on Thursday. Prediction markets show 68%.",
         "as_of": "23 Oct 2026 (ASX close)",
         "source": {
           "label": "RBA Watch",
@@ -1219,55 +1047,45 @@
         },
         "forecasts": [
           {
-            "who": "CBA and NAB",
-            "view": "Expect a hold in November; CBA calls the meeting \"live\".",
+            "who": "Westpac",
+            "view": "Expects a 25 bp hike in November to 4.85% if CPI is broadly in line with its forecast.",
             "source": {
-              "label": "CommBank",
-              "url": "https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html",
+              "label": "Westpac Weekly",
+              "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
               "claim_type": "forecast",
-              "date": "22 Oct 2026"
+              "date": "26 Oct 2026"
             }
           },
           {
-            "who": "ANZ and Westpac",
-            "view": "Expect a 25 bp hike in November.",
+            "who": "CommBank",
+            "view": "Expects the RBA to hold in November.",
             "source": {
-              "label": "Savings.com.au",
-              "url": "https://www.savings.com.au/news/stubborn-inflation-seen-ahead-of-key-rba-rates-decision",
+              "label": "CommBank CPI preview",
+              "url": "https://www.commbank.com.au/articles/newsroom/2026/10/inflation-cpi-rba-interest-rates-november.html",
               "claim_type": "forecast",
-              "date": "23 Oct 2026"
+              "date": "22 Oct 2026"
             }
           }
         ]
       },
       "fed": {
         "status": "available",
-        "summary": "The Fed is expected to hold its 3.75–4.00% range this week. Saxo put hike odds at about 10% for this meeting and about 75% for December; CNBC, citing CME FedWatch, put December at about 71%.",
-        "as_of": "23 Oct 2026 (Friday)",
+        "summary": "Markets price a hold at 3.75–4.00% this week and about a 71% chance of a hike by December (CME FedWatch, reported by CNBC).",
+        "as_of": "23 Oct 2026",
         "source": {
-          "label": "Saxo week ahead",
-          "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026",
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html",
           "claim_type": "reporting"
         },
         "forecasts": [
           {
-            "who": "PIMCO",
-            "view": "Expects a hold with a tightening bias and one or two more hikes to come.",
+            "who": "Westpac",
+            "view": "Expects a hold this week and a 25 bp hike in December (midpoint 4.125%).",
             "source": {
-              "label": "PIMCO Fed preview",
-              "url": "https://www.pimco.com/us/en/insights/october-fed-meeting-preview-a-pause-is-still-a-recalibration",
+              "label": "Westpac Weekly",
+              "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf",
               "claim_type": "forecast",
-              "date": "Oct 2026"
-            }
-          },
-          {
-            "who": "Christopher Rupkey, FWDBONDS",
-            "view": "Does not expect a December hike to be signalled.",
-            "source": {
-              "label": "CNBC",
-              "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html",
-              "claim_type": "forecast",
-              "date": "23 Oct 2026"
+              "date": "26 Oct 2026"
             }
           }
         ]
@@ -1276,14 +1094,8 @@
     "watchlist": [
       {
         "ticker": "ZIP",
-        "note": "No new company announcement since Friday's 29.5% fall to A$1.46. RBC kept an outperform rating and Morningstar called the shares undervalued (see card).",
-        "next_catalyst": "AGM on Thursday 19 November, including a vote on a five-for-one share consolidation.",
+        "note": "No new verified news. The latest announcement is the 1Q FY27 update on 23 October, after which the shares fell 29.5% to A$1.460.",
         "sources": [
-          {
-            "label": "AAP",
-            "url": "https://aapnews.aap.com.au/news/buy-now-pay-later-company-s-shares-plunge-on-us-fraud",
-            "claim_type": "reporting"
-          },
           {
             "label": "ASX announcements (ZIP)",
             "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/ZIP/announcements",
@@ -1293,7 +1105,7 @@
       },
       {
         "ticker": "CSL",
-        "note": "No new verified news since Saturday. Ended the week at A$196.70, up 2.3%.",
+        "note": "No new verified news. The shares rose 0.3% to A$196.70 on Friday; the latest announcements are the CEO appointment and class-action notice of 21–22 October.",
         "sources": [
           {
             "label": "ASX announcements (CSL)",
@@ -1304,7 +1116,7 @@
       },
       {
         "ticker": "FLT",
-        "note": "No new verified news. Ended the week at A$11.25, up 7.6%.",
+        "note": "No new verified news. The shares fell 1.5% to A$11.25 on Friday.",
         "sources": [
           {
             "label": "ASX announcements (FLT)",
@@ -1315,8 +1127,8 @@
       },
       {
         "ticker": "IEL",
-        "note": "No new verified news. Ended the week at A$2.21, down 1.8%.",
-        "next_catalyst": "AGM at 10am on Tuesday 27 October.",
+        "note": "No new verified news. The shares fell 1.8% to A$2.21 on Friday.",
+        "next_catalyst": "AGM on Tuesday 27 October at 10am AEDT.",
         "sources": [
           {
             "label": "ASX announcements (IEL)",
@@ -1328,8 +1140,8 @@
     ],
     "calendar": [
       {
-        "when": "Sun 25 Oct, 8:40pm",
-        "event": "RBA Assistant Governor Sarah Hunter interviewed on 60 Minutes (pre-recorded 21 Oct)",
+        "when": "Mon 26 Oct, 8:10am",
+        "event": "RBA Assistant Governor Brad Jones, panel at the AFR Super and Wealth Summit (Westpac lists 8:40am)",
         "country": "AU",
         "importance": "low",
         "source": {
@@ -1338,38 +1150,41 @@
         }
       },
       {
-        "when": "Mon 26 Oct, morning",
-        "event": "Brazil presidential runoff result (Lula v Flávio Bolsonaro)",
+        "when": "Mon 26 Oct, during the ASX session (no set time)",
+        "event": "Brazil presidential runoff result expected from the electoral court",
         "country": "BR",
         "importance": "medium",
         "source": {
-          "label": "Saxo week ahead",
-          "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026"
+          "label": "Guardian live results",
+          "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results"
         }
       },
       {
-        "when": "Mon 26 Oct – Thu 29 Oct",
-        "event": "China's Communist Party Fifth Plenum (focus on party discipline)",
+        "when": "Mon 26 Oct to Thu 29 Oct",
+        "event": "China Communist Party Central Committee plenum (focus on party discipline)",
         "country": "CN",
         "importance": "low",
         "source": {
-          "label": "Reuters Take Five via Investing.com",
-          "url": "https://www.investing.com/news/economy-news/take-five-ai-trade-meets-the-fed-4968194"
+          "label": "CNA",
+          "url": "https://www.channelnewsasia.com/east-asia/china-fifth-plenum-2026-party-discipline-6461861"
         }
       },
       {
-        "when": "Tue 27 Oct",
-        "event": "Israel general election",
-        "country": "IL",
-        "importance": "medium",
+        "when": "Mon 26 Oct, evening",
+        "event": "Germany Ifo business climate (October)",
+        "country": "DE",
+        "importance": "low",
+        "prior": "89.9",
+        "consensus": "90.0",
+        "consensus_source": "Westpac Weekly market forecast table (week beginning 26 Oct)",
         "source": {
-          "label": "Saxo week ahead",
-          "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026"
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
         }
       },
       {
-        "when": "Tue 27 Oct, 10am",
-        "event": "IDP Education (IEL) AGM",
+        "when": "Tue 27 Oct, 10:00am",
+        "event": "IDP Education AGM",
         "country": "AU",
         "importance": "low",
         "source": {
@@ -1378,8 +1193,44 @@
         }
       },
       {
+        "when": "Tue 27 Oct (exit polls about 7am Wed Sydney time)",
+        "event": "Israel general election",
+        "country": "IL",
+        "importance": "medium",
+        "source": {
+          "label": "Jerusalem Post",
+          "url": "https://www.jpost.com/israel-election-2026/article-912743"
+        }
+      },
+      {
+        "when": "Tue 27 Oct, late evening",
+        "event": "US durable goods orders (September)",
+        "country": "US",
+        "importance": "low",
+        "prior": "−0.1% m/m",
+        "consensus": "1.4% m/m",
+        "consensus_source": "Westpac Weekly market forecast table (week beginning 26 Oct)",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
+        }
+      },
+      {
+        "when": "Wed 28 Oct, early morning",
+        "event": "US Conference Board consumer confidence (October)",
+        "country": "US",
+        "importance": "low",
+        "prior": "81.9",
+        "consensus": "80.4",
+        "consensus_source": "Westpac Weekly market forecast table (week beginning 26 Oct)",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
+        }
+      },
+      {
         "when": "Wed 28 Oct, 11:15am",
-        "event": "Governor Bullock and RBA executives before the Senate Economics Legislation Committee",
+        "event": "RBA Governor Bullock and senior team at Senate Economics Legislation Committee (Estimates)",
         "country": "AU",
         "importance": "high",
         "source": {
@@ -1389,74 +1240,58 @@
       },
       {
         "when": "Wed 28 Oct, 11:30am",
-        "event": "Australia CPI (September quarter and September month)",
+        "event": "Australia CPI, September quarter and September month",
         "country": "AU",
         "importance": "high",
-        "prior": "Trimmed mean 3.6% y/y (August monthly)",
-        "consensus": "Trimmed mean +1.0% q/q, 3.6% y/y; headline +1.3% q/q, 3.9% y/y",
-        "consensus_source": "CBA forecast (22 Oct), not a market consensus; NAB and ANZ also forecast a 1.0% trimmed mean and Westpac 0.9% (Savings.com.au, 23 Oct)",
+        "prior": "Quarter: headline 0.6%, trimmed mean 0.8%",
+        "consensus": "Quarter: headline 1.3%, trimmed mean 1.0%; month: headline 0.6%",
+        "consensus_source": "Westpac Weekly market forecast table (week beginning 26 Oct)",
         "source": {
-          "label": "ABS release calendar",
-          "url": "https://www.abs.gov.au/release-calendar/future-releases"
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
         }
       },
       {
-        "when": "Wed 28 Oct, night",
-        "event": "UK Autumn Budget",
-        "country": "UK",
+        "when": "Wed 28 Oct, about noon",
+        "event": "RBNZ official cash rate decision",
+        "country": "NZ",
         "importance": "medium",
+        "prior": "2.75%",
+        "consensus": "3.00%",
+        "consensus_source": "Westpac Weekly market forecast table (week beginning 26 Oct)",
         "source": {
-          "label": "Saxo week ahead",
-          "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026"
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
         }
       },
       {
-        "when": "Thu 29 Oct, 5am",
-        "event": "US Federal Reserve rate decision",
+        "when": "Thu 29 Oct, early morning",
+        "event": "Bank of Canada rate decision",
+        "country": "CA",
+        "importance": "low",
+        "prior": "2.25%",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
+        }
+      },
+      {
+        "when": "Thu 29 Oct, 5:00am",
+        "event": "Fed rate decision (current range 3.75–4.00%)",
         "country": "US",
         "importance": "high",
         "prior": "3.75–4.00%",
-        "consensus": "Hold (Saxo put hike odds at about 10%, 23 Oct)",
-        "consensus_source": "Saxo week ahead, 23 Oct",
+        "consensus": "Hold",
+        "consensus_source": "Westpac Weekly market forecast table (week beginning 26 Oct)",
         "source": {
-          "label": "CNBC",
-          "url": "https://www.cnbc.com/2026/10/23/bonds-yields-us-treasurys.html"
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261026.pdf"
         }
       },
       {
-        "when": "Thu 29 Oct and Fri 30 Oct, mornings",
-        "event": "Results from Microsoft and Alphabet (Thursday), then Amazon, Intel and SanDisk (Friday)",
+        "when": "Thu 29 Oct, morning",
+        "event": "Alphabet and Microsoft results (Wednesday US time)",
         "country": "US",
-        "importance": "high",
-        "source": {
-          "label": "Saxo week ahead",
-          "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026"
-        }
-      },
-      {
-        "when": "Thu 29 Oct, 11:30pm",
-        "event": "US advance Q3 GDP and September PCE inflation",
-        "country": "US",
-        "importance": "high",
-        "source": {
-          "label": "BEA release schedule",
-          "url": "https://www.bea.gov/news/schedule"
-        }
-      },
-      {
-        "when": "Fri 30 Oct, 12:15am",
-        "event": "European Central Bank rate decision",
-        "country": "EU",
-        "importance": "medium",
-        "source": {
-          "label": "Saxo week ahead",
-          "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-26-30-oct-23102026"
-        }
-      },
-      {
-        "when": "Fri 30 Oct",
-        "event": "Bank of Japan rate decision",
-        "country": "JP",
         "importance": "medium",
         "source": {
           "label": "Saxo week ahead",
@@ -1467,10 +1302,10 @@
   },
   "close": null,
   "watchlist_data": {
-    "retrieved_at_utc": "2026-10-24T21:35Z",
+    "retrieved_at_utc": "2026-10-25T21:39Z",
     "editions": {
       "morning": {
-        "cutoff_local": "2026-10-25T07:30:00+11:00",
+        "cutoff_local": "2026-10-26T07:30:00+11:00",
         "session_date": "2026-10-23",
         "stocks": {
           "A2M": {
@@ -1712,7 +1547,7 @@
               "provider_url": "https://finance.yahoo.com/quote/CSL.AX/",
               "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
             },
-            "note": "No new verified news since Saturday. Ended the week at A$196.70, up 2.3%.",
+            "note": "No new verified news. The shares rose 0.3% to A$196.70 on Friday; the latest announcements are the CEO appointment and class-action notice of 21–22 October.",
             "sources": [
               {
                 "label": "ASX announcements (CSL)",
@@ -1760,7 +1595,7 @@
               "provider_url": "https://finance.yahoo.com/quote/FLT.AX/",
               "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
             },
-            "note": "No new verified news. Ended the week at A$11.25, up 7.6%.",
+            "note": "No new verified news. The shares fell 1.5% to A$11.25 on Friday.",
             "sources": [
               {
                 "label": "ASX announcements (FLT)",
@@ -1833,7 +1668,7 @@
               "provider_url": "https://finance.yahoo.com/quote/IEL.AX/",
               "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
             },
-            "note": "No new verified news. Ended the week at A$2.21, down 1.8%.",
+            "note": "No new verified news. The shares fell 1.8% to A$2.21 on Friday.",
             "sources": [
               {
                 "label": "ASX announcements (IEL)",
@@ -1841,7 +1676,7 @@
                 "claim_type": "official_statement"
               }
             ],
-            "next_catalyst": "AGM at 10am on Tuesday 27 October."
+            "next_catalyst": "AGM on Tuesday 27 October at 10am AEDT."
           },
           "IPH": {
             "ticker": "IPH",
@@ -2382,20 +2217,14 @@
               "provider_url": "https://finance.yahoo.com/quote/ZIP.AX/",
               "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
             },
-            "note": "No new company announcement since Friday's 29.5% fall to A$1.46. RBC kept an outperform rating and Morningstar called the shares undervalued (see card).",
+            "note": "No new verified news. The latest announcement is the 1Q FY27 update on 23 October, after which the shares fell 29.5% to A$1.460.",
             "sources": [
-              {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/buy-now-pay-later-company-s-shares-plunge-on-us-fraud",
-                "claim_type": "reporting"
-              },
               {
                 "label": "ASX announcements (ZIP)",
                 "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/ZIP/announcements",
                 "claim_type": "official_statement"
               }
-            ],
-            "next_catalyst": "AGM on Thursday 19 November, including a vote on a five-for-one share consolidation."
+            ]
           }
         }
       }
