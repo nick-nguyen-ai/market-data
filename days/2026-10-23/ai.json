@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-23",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Friday 23 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "evals",
+      "card_id": "php2shell",
+      "headline": "AI-found PHP2Shell flaws allow remote code execution; patch PHP now"
+    },
+    {
+      "section_id": "evals",
+      "card_id": "railway-breach",
+      "headline": "Railway breach may have exposed environment variables; rotate keys"
+    },
+    {
+      "section_id": "industry",
+      "card_id": "us-banks-block-agents",
+      "headline": "Major US banks are blocking third-party AI agents from customer accounts"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "claude-code-2-1-307",
+          "headline": "Claude Code 2.1.307–308: an OpenTelemetry event for every blocked tool call, and no more double-sent MCP calls",
+          "takeaway": "Each tool call that a permission rule, auto mode, hook or sandbox stops now emits a telemetry event, and dropped HTTP MCP connections no longer resend non-idempotent calls.",
+          "tags": [
+            "Claude Code",
+            "Telemetry",
+            "MCP"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "2.1.307 shipped at 9:17am Thu AEDT with 43 CLI changes. It adds a `claude_code.safety_event` OpenTelemetry (OTel) event for every tool call that a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back. HTTP MCP (Model Context Protocol) tool calls were sometimes sent twice when the connection closed mid-call; now only read-only or idempotent tools are retried. `/claude-api api-version` moves Claude API code to API version `2026-10-21`. 2.1.308 (3:34pm Thu AEDT) is bug fixes, and Agent SDK Python 0.2.171 and 0.2.172 followed. @ClaudeCodeLog says 2.1.309 is about to ship.",
+          "why_it_matters": "The safety event gives you an audit trail of every action Claude Code refused or paused, which is exactly the evidence a bank's control testing asks for. The MCP retry fix matters if an MCP tool writes to a ticketing or payments-like system, where a duplicate call is a real incident.",
+          "caveats": "Latent Space's AINews says API version `2026-10-21` removes `temperature`, `top_p` and `top_k` from the Messages API, while `2023-06-01` stays supported; check Anthropic's migration notes before running `/claude-api api-version` on production code.",
+          "how_to_try": "Update to 2.1.308, point `OTEL_EXPORTER_OTLP_ENDPOINT` at your collector, trigger a denied command, and confirm a `claude_code.safety_event` record arrives with the rule that stopped it.",
+          "links": [
+            {
+              "label": "Claude Code v2.1.307 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307"
+            },
+            {
+              "label": "Claude Code v2.1.308 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308"
+            },
+            {
+              "label": "Claude Agent SDK Python v0.2.172",
+              "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.172"
+            },
+            {
+              "label": "@ClaudeCodeLog on 2.1.307",
+              "url": "https://x.com/ClaudeCodeLog/status/2113035695337992697"
+            }
+          ]
+        },
+        {
+          "id": "copilot-cli-1-0-103",
+          "headline": "Copilot CLI v1.0.103: ACP sessions honour your sandbox settings, and cloud replies survive reconnects",
+          "takeaway": "Sessions started over the Agent Client Protocol now respect saved sandbox settings and the `--sandbox` flags, including on resume.",
+          "tags": [
+            "Copilot CLI",
+            "Sandbox",
+            "ACP"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 3:21am Fri AEDT. ACP (Agent Client Protocol, used when an editor drives the CLI) sessions now honour saved sandbox settings and `--sandbox`/`--no-sandbox`, including on resume. Cloud replies keep their full text after a dropped connection. Windows shims like `npm.cmd` get the same sandbox grants as `npm`, and `dnx` can use existing .NET and NuGet grants. Gemini tool calls no longer hit 400 schema errors on nullable and enum fields. The legacy `--remote`/`--no-remote` startup flags are retired.",
+          "why_it_matters": "Before this, running Copilot CLI from an editor over ACP could skip the sandbox you'd configured, which is the kind of gap that breaks a sandbox-everywhere policy.",
+          "caveats": "Scripts that still pass `--remote` or `--no-remote` need updating to the new hosting and connection flags.",
+          "how_to_try": "Update, start a session from your editor's ACP integration with sandboxing saved as on, and confirm a command that writes outside the workspace is blocked.",
+          "links": [
+            {
+              "label": "Copilot CLI v1.0.103 release",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.103"
+            }
+          ]
+        },
+        {
+          "id": "pi-1-4-0",
+          "headline": "Pi 1.4.0: classifier calls accept images, and compaction summaries no longer hit a fixed output cap",
+          "takeaway": "Codemode's `models.classify()` takes images for TypeSafe's Jev and Cloudflare's Clef, and parallel scripts queue instead of failing.",
+          "tags": [
+            "Pi",
+            "Classifiers",
+            "Compaction"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 9:49am Thu AEDT. `models.classify()` accepts `images` for Jev and Clef on `typesafe`, `cloudflare-workers-ai` and OpenRouter, and lists Clef Omni and Jev 1.14 on Workers AI. Compaction and branch summaries now use the model's own output limit, so long reasoning no longer makes them fail. Parallel codemode scripts and in-process subagents wait for a free worker, with `PI_CODEMODE_MAX_WORKERS` to raise the limit. MiniMax-M3.1-Flash is added, and there's a generated reference for every `models.json` field.",
+          "why_it_matters": "Image input to a small classifier is a cheap way to gate screenshots or documents before a bigger model sees them, and failed compaction summaries are a common cause of long agent runs dying.",
+          "caveats": "Extensions' `before_provider_headers` handlers no longer see the OpenRouter, NVIDIA NIM and OpenCode attribution headers, so check custom extensions.",
+          "how_to_try": "Update, then run `models.classify()` with one screenshot and a yes/no label set against Jev to see the latency and answer.",
+          "links": [
+            {
+              "label": "Pi v1.4.0 release",
+              "url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0"
+            }
+          ]
+        },
+        {
+          "id": "opencode-1-19-4",
+          "headline": "OpenCode 1.19.4 bundles Bun 1.4.4 with Brotli, TLS and HTTP security fixes",
+          "takeaway": "A one-line release that matters because it patches the runtime OpenCode runs on.",
+          "tags": [
+            "OpenCode",
+            "Bun",
+            "Security"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 12:03am Fri AEDT. The bundled Bun runtime moves to 1.4.4, whose security fixes cover Brotli, TLS, HTTP/1.1, HTTP/2, HTTP/3, WebSocket and `fetch`, and root certificates move to NSS 3.131.1.",
+          "why_it_matters": "Brotli decoding was this week's Node.js remote-code-execution bug too, so any agent CLI that fetches web content should be on a patched runtime.",
+          "caveats": "The release notes don't say whether OpenCode was exploitable before; this is a patch-and-move-on item.",
+          "how_to_try": "Run OpenCode's upgrade command and confirm it reports 1.19.4.",
+          "links": [
+            {
+              "label": "OpenCode v1.19.4 release",
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4"
+            },
+            {
+              "label": "Bun v1.4.4 security notes",
+              "url": "https://bun.com/blog/bun-v1.4.4#security"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "php2shell",
+          "headline": "PHP2Shell: two AI-found critical PHP flaws allow remote code execution; patch to 8.5.12, 8.4.27, 8.3.36 or 8.2.35",
+          "takeaway": "PHP shipped fixes at 1am Thu AEDT after a leak forced an early release, and Australian government sites went offline while they patched.",
+          "tags": [
+            "PHP",
+            "Vulnerabilities",
+            "AI security research"
+          ],
+          "sources": [
+            "Advisory",
+            "Blog",
+            "News"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "The PHP Foundation's 21 Oct post says CVE-2026-109618 (memory corruption when a request hits `memory_limit`, an out-of-memory or OOM condition) and CVE-2026-109619 (use of freed memory after a fatal error) let an unauthenticated attacker run code; full RCE (remote code execution) was shown on Apache with mod_php at default settings. CVSS (severity score) is 9.2. Calif reported it on 11 Aug through OpenAI's Patch the Planet audit, with Wiz and OpenAI reporting the same root cause independently. The CVE IDs leaked on 20 Oct, so the release moved forward a day to 14:00 UTC on 21 Oct. Information Age reports ASD (the Australian Signals Directorate) issued a critical alert, saw no active exploitation in Australia, and that ABS and Jobs and Skills Australia sites were briefly down.",
+          "why_it_matters": "It's a high-profile case of AI models finding critical bugs in core infrastructure. Any PHP behind a bank's marketing sites, vendor portals or internal tools needs checking, and the PHP security team says AI-generated reports now arrive far faster than they can be triaged.",
+          "caveats": "PHP 8.1 and earlier get no upstream fix, so use a distribution backport or upgrade. Wiz says every PHP version back to 5.4 is affected by at least one of the two bugs. Chainguard published patched images six hours before the embargo lifted, so attackers had the fix to study early.",
+          "links": [
+            {
+              "label": "PHP Foundation post",
+              "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+            },
+            {
+              "label": "PHP 8.3.36 announcement",
+              "url": "https://news-web.php.net/php.announce/511"
+            },
+            {
+              "label": "ASD's ACSC alert",
+              "url": "https://www.cyber.gov.au/alert/critical-vulnerabilities-in-php"
+            },
+            {
+              "label": "Information Age report",
+              "url": "https://ia.acs.org.au/article/2026/govt-sites-go-down-after-ai-finds--critical--php-vulnerabilities.html"
+            },
+            {
+              "label": "OpenAI on the coordinated disclosure",
+              "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/"
+            }
+          ]
+        },
+        {
+          "id": "railway-breach",
+          "headline": "Railway security incident: environment variables may be exposed, all API tokens revoked",
+          "takeaway": "Railway says an attacker may have read encrypted environment variables and some decrypted values, as part of attacks aimed at AI inference providers.",
+          "tags": [
+            "Railway",
+            "Secrets",
+            "Incident"
+          ],
+          "sources": [
+            "Blog",
+            "Status page"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Railway's 21 Oct disclosure says an unauthorised party may have accessed encrypted environment variables and some decrypted values. Railway believes it's one of a series of attacks on platform companies meant to compromise AI inference providers, and it told those providers to revoke keys. It invalidated all API tokens and reset bucket S3 credentials and GitHub tokens. Deployments were paused, then restored for Pro and Enterprise from 06:30 UTC on 22 Oct (5:30pm Thu AEDT). A follow-up post recommends rotating PostgreSQL database credentials.",
+          "why_it_matters": "If any team prototype or vendor runs on Railway with model API keys in env vars, treat those keys as exposed. It's also a sign attackers now go after hosting platforms to reach model keys, so key scoping and spend limits matter more.",
+          "caveats": "Railway hasn't said how many projects had decrypted values read. The investigation is ongoing, so check the status page for new steps.",
+          "links": [
+            {
+              "label": "Railway security disclosure",
+              "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st"
+            },
+            {
+              "label": "Railway: rotate PostgreSQL credentials",
+              "url": "https://blog.railway.com/p/security-disclosure-recommendation-rotate-postgresql-database-credentials"
+            },
+            {
+              "label": "Railway status incident",
+              "url": "https://status.railway.com/incident/QH8L8B3E"
+            },
+            {
+              "label": "@_philschmid's checklist post",
+              "url": "https://x.com/_philschmid/status/2113163416638562791"
+            }
+          ]
+        },
+        {
+          "id": "node-gitlab-patches",
+          "headline": "Also patch Node.js and GitLab: a Brotli RCE found by OpenAI's Codex Security, and an unauthenticated GitLab RCE",
+          "takeaway": "Node.js 22.23.4, 24.22.1 and 26.12.1, and GitLab 19.5.1 and backports, shipped on 21 Oct.",
+          "tags": [
+            "Node.js",
+            "GitLab",
+            "Vulnerabilities"
+          ],
+          "sources": [
+            "Advisory"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Node.js's 21 Oct security release fixes CVE-2026-111497, an out-of-bounds write in the bundled Brotli decoder that can allow RCE, reported by OpenAI Codex Security, plus TLS hostname-check bypasses (CVE-2026-105483 and CVE-2026-106069). GitLab's critical patch release (19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10, 18.11.13) fixes CVE-2026-110264, which search results describe as an unauthenticated RCE from an integer overflow in the regex compiler; GitLab.com is already patched.",
+          "why_it_matters": "Agent backends, MCP servers and build runners are often Node.js, and decompressing an attacker's `fetch` response is a normal agent action. Self-hosted GitLab is common in banks.",
+          "caveats": "Node.js 20.x and earlier are end of life and get no fix. The GitLab description comes from search summaries of GitLab's page, so read the advisory for affected versions.",
+          "links": [
+            {
+              "label": "Node.js October 2026 security releases",
+              "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases"
+            },
+            {
+              "label": "GitLab 19.5.1 critical patch release",
+              "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+            },
+            {
+              "label": "GitHub advisory for CVE-2026-110264",
+              "url": "https://github.com/advisories/GHSA-83vq-rvff-66gw"
+            }
+          ]
+        },
+        {
+          "id": "kiro-trace",
+          "headline": "Kiro: how a self-improving agent avoids grading its own homework",
+          "takeaway": "In kiro-trace the model proposes changes but deterministic code decides, using a three-stage check against a re-run control.",
+          "tags": [
+            "Kiro",
+            "Self-improvement",
+            "Benchmark hygiene"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Kiro's science team blog (dated 20 Oct, promoted on X at 4:23am Fri AEDT) describes the gates: a screen, a regression check, then full-benchmark confirmation against a re-run control, plus a contamination check. In its first week it opened 8 PRs, 7 merged, none sent back in review. Compaction retention rose from 0.82 to 0.92 and shipped. A leaner tool-and-prompt profile scored 82.4% against 77.5% pass@1 on Terminal-Bench 2.1 at about a third of the tokens, but hasn't shipped. They nearly shipped a fix whose whole gain came from one lucky run.",
+          "why_it_matters": "It's a concrete template for any 'let the agent tune its own prompts' work at a bank: keep the judge deterministic, re-run the control, and assume a single-run gain is noise.",
+          "caveats": "All figures are Kiro's own, on its own harness.",
+          "links": [
+            {
+              "label": "Kiro blog: how Kiro fixes itself",
+              "url": "https://kiro.dev/blog/how-kiro-fixes-itself/"
+            },
+            {
+              "label": "@kirodotdev post",
+              "url": "https://x.com/kirodotdev/status/2113320378680414209"
+            }
+          ]
+        },
+        {
+          "id": "inspect-ai-0-3-283",
+          "headline": "Inspect AI 0.3.283: bridged host tool calls appear in transcripts, and a breaking change to dataset `checkpoint` fields",
+          "takeaway": "Tool calls made through the agent bridge are now logged as tool events, and a top-level `checkpoint` field in datasets is read as configuration.",
+          "tags": [
+            "Inspect AI",
+            "Evals",
+            "Transcripts"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 7:41am Thu AEDT by the UK AI Security Institute's team. Bridged host tool calls are recorded as tool events in the transcript. Sentinel tool steps carry the id of the message that made the call and its tool choice, and `--sentinel-arg` passes arguments to a registered sentinel. Working time is now charged for model calls and tool calls that run while another task waits. Datasets with a top-level `checkpoint` field are treated as checkpoint configuration and raise if it isn't valid. The Anthropic provider fix for `anthropic` 2.0 and a Perplexity Sonar fix are included.",
+          "why_it_matters": "If you evaluate Claude Code or Codex through the bridge, those tool calls were missing from the transcript, which is what you grade. The working-time fix makes time limits fairer under concurrency.",
+          "caveats": "If your datasets already use a `checkpoint` column for something else, pass `FieldSpec(checkpoint=None)` or runs will fail.",
+          "links": [
+            {
+              "label": "Inspect AI 0.3.283 release",
+              "url": "https://github.com/UKGovernmentBEIS/inspect_ai/releases/tag/0.3.283"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "agent-skills-aaif",
+          "headline": "Anthropic donates Agent Skills to the Agentic AI Foundation, next to MCP",
+          "takeaway": "The SKILL.md format moves to Linux Foundation governance, alongside OpenAI's Open Responses, Hugging Face's OpenEnv and Alibaba's OpenSandbox.",
+          "tags": [
+            "Agent Skills",
+            "Standards",
+            "AAIF"
+          ],
+          "sources": [
+            "Blog",
+            "Press release",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Announced 22 Oct (US time) at AGNTCon + MCPCon North America. Anthropic hands over the name, logo, GitHub organisation and the agentskills.io domain, and says more than 70 platforms have integrated the format, with 1 million skills published and nearly 280 million installs. Lead maintainers are David Soria Parra and Mahesh Murag, and the proposed roadmap covers versioned releases, a formal proposal process and security guidance. The Linux Foundation says AAIF (the Agentic AI Foundation) now has 10 projects.",
+          "why_it_matters": "Skills are how you package bank-specific procedures for Claude Code and Codex. Neutral governance makes it safer to standardise on the format, and a security-guidance track is what your risk team will want before approving third-party skills.",
+          "caveats": "No spec changes yet. Security guidance is on the roadmap, not published.",
+          "links": [
+            {
+              "label": "Anthropic announcement",
+              "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+            },
+            {
+              "label": "Linux Foundation press release",
+              "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox"
+            },
+            {
+              "label": "AAIF Agent Skills project",
+              "url": "https://aaif.io/projects/skills"
+            },
+            {
+              "label": "@bcherny post",
+              "url": "https://x.com/bcherny/status/2113333859907747871"
+            }
+          ]
+        },
+        {
+          "id": "decisions-api-ga",
+          "headline": "OpenAI's Decisions API is generally available, with 400 questions per request and US or EU inference residency",
+          "takeaway": "Classify, score or route text and images without generating a full response; it runs on GPT-6 Luna.",
+          "tags": [
+            "OpenAI",
+            "Classification",
+            "Routing"
+          ],
+          "sources": [
+            "Blog",
+            "Docs",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "GA announced 6:07am Fri AEDT. `POST /v1/decisions` returns probability, choice or score answers; OpenAI says it's about 10x faster than the Responses API. New since beta: up to 400 questions per request (was 200), `input_json`, images in question instructions, prompt caching, a GPT-Live integration, and inference residency in the US and EU. OpenAI quotes Datadog at 40x faster p95, Sierra under 280ms p95, and Ramp 4x faster and 30% cheaper.",
+          "why_it_matters": "This is the cheap gate for an agent: score each proposed tool call or message for risk before it runs. EU residency helps if data can't leave a region, and you can test it as a guardrail next to the Jev and Clef classifiers.",
+          "caveats": "Customer figures are vendor-quoted. Australian residency isn't offered. Check the guide for pricing before you size it.",
+          "links": [
+            {
+              "label": "OpenAI Decisions API announcement",
+              "url": "https://openai.com/index/decisions-api"
+            },
+            {
+              "label": "Decisions API guide",
+              "url": "https://developers.openai.com/api/docs/guides/decisions"
+            },
+            {
+              "label": "API changelog",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "@OpenAIDevs post",
+              "url": "https://x.com/OpenAIDevs/status/2113346642787086538"
+            }
+          ]
+        },
+        {
+          "id": "maf-python-1-23",
+          "headline": "Microsoft Agent Framework Python 1.23.0: MCP 2.x groundwork, with breaking auth and sandbox changes",
+          "takeaway": "AG-UI endpoints now need an explicit authorisation scope, and the Docker shell's extra run arguments are renamed to say they're unsafe.",
+          "tags": [
+            "Agent Framework",
+            "MCP",
+            "AG-UI"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 4:05am Fri AEDT. Breaking: an MCP 2.x compatibility foundation migrates transports, errors, schemas and lifecycle handling. Registering an AG-UI (the agent-to-UI protocol) endpoint needs an explicit authorisation scope or a single-user declaration. Docker shell `extra_run_args` becomes `unsafe_extra_run_args`. A2A (agent-to-agent) can forward allowlisted function-invocation arguments from request metadata, and an opt-in synthetic user turn handles providers that return empty text.",
+          "why_it_matters": "Secure-by-default AG-UI registration closes the easy mistake of exposing an agent UI without auth, which is exactly what a bank review would flag.",
+          "caveats": "Three breaking changes in one release, so pin and test before upgrading.",
+          "links": [
+            {
+              "label": "Agent Framework python-1.23.0 release",
+              "url": "https://github.com/microsoft/agent-framework/releases/tag/python-1.23.0"
+            }
+          ]
+        },
+        {
+          "id": "ai-sdk-7-0-149",
+          "headline": "AI SDK 7.0.149: one approval per tool call, and a new `interrupted` finish reason",
+          "takeaway": "Repeated or conflicting approval responses can no longer run a tool twice, and streams that end abruptly are flagged.",
+          "tags": [
+            "AI SDK",
+            "Approvals",
+            "Streaming"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 5:54am Fri AEDT (with 6.0.313 and 5.0.280). Only the first approval response per tool call is processed, so a tool can't both run and be denied, or run twice. A new `interrupted` finish reason marks provider streams that end without a completion signal, keeps partial output, and stops tool execution and agent continuation. `toolChoice: 'none'` now rejects tool calls before local execution.",
+          "why_it_matters": "Human-in-the-loop approval that can double-execute is a control failure, so this is a must-have for any approval flow you validate.",
+          "caveats": "Adding `interrupted` can break exhaustive switches and `Record<FinishReason, string>` maps at type-check time, even in a patch release.",
+          "links": [
+            {
+              "label": "AI SDK ai@7.0.149 release",
+              "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.149"
+            }
+          ]
+        },
+        {
+          "id": "deepagents-talon-0-1",
+          "headline": "Deep Agents Talon 0.1.0: NVIDIA OpenShell sandboxes and reasoning-effort controls",
+          "takeaway": "LangChain's chat-channel agent adds an OpenShell sandbox provider, `/effort`, and skills pinned to scheduled jobs.",
+          "tags": [
+            "Deep Agents",
+            "Sandboxes",
+            "Slack"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 7:28am Fri AEDT. Adds the NVIDIA OpenShell sandbox provider, `/effort` controls, separate breakout tasks for Slack and Discord, configurable background-subagent capacity and checkpoint backends, and skills that can be pinned to scheduled jobs. Slack thread context now keeps other participants. deepagents-code 0.2.0 shipped the same morning.",
+          "why_it_matters": "One of the first agent frameworks wired to NVIDIA's OpenShell sandbox, which we covered yesterday.",
+          "caveats": "Both packages now require Python 3.14 exactly (>=3.14,<3.15).",
+          "links": [
+            {
+              "label": "deepagents-talon 0.1.0 release",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-talon%3D%3D0.1.0"
+            },
+            {
+              "label": "deepagents-code 0.2.0 release",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "ocria-1",
+          "headline": "LlamaIndex OCRia-1: a 4B vision model for document parsing that leads ParseBench at 87.4",
+          "takeaway": "A small parsing model based on Qwen3.5-4B, with a technical report and strong reported scores on tables and charts.",
+          "tags": [
+            "Document parsing",
+            "VLM",
+            "LlamaIndex"
+          ],
+          "sources": [
+            "Blog",
+            "Report",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Released 2:30am Fri AEDT. OCRia-1 is a 4B-parameter VLM (vision-language model) built on Qwen3.5-4B and trained with SFT (supervised fine-tuning) then RLVR (reinforcement learning with verifiable rewards). LlamaIndex reports ParseBench 87.4, 12.1 points ahead of LightOnOCR-3-4B at 75.3, olmOCR-bench 83.5 overall with 92.9 on tables, PulseBench-Tab 84.1, charts 85.1 and formatting 83.4.",
+          "why_it_matters": "Bank documents are tables: statements, term sheets and financial reports. A 4B parser could run on-prem for the first step of a document agent.",
+          "caveats": "All scores are vendor-reported, and LlamaIndex built ParseBench. It doesn't output bounding boxes, which matters if you need to cite where a number came from.",
+          "links": [
+            {
+              "label": "LlamaIndex OCRia-1 blog",
+              "url": "https://www.llamaindex.ai/blog/parse-ocria-1"
+            },
+            {
+              "label": "OCRia-1 technical report",
+              "url": "https://www.llamaindex.ai/ocria/ocria-1-technical-report.pdf"
+            },
+            {
+              "label": "ParseBench on GitHub",
+              "url": "https://github.com/run-llama/parsebench"
+            },
+            {
+              "label": "@jerryjliu0 post",
+              "url": "https://x.com/jerryjliu0/status/2113291928292790725"
+            }
+          ]
+        },
+        {
+          "id": "sage-a1-5",
+          "headline": "Shanghai AI Lab's Sage-A1.5: an open 35B agent model with subagent and self-verification modes",
+          "takeaway": "A mixture-of-experts model with about 3B active parameters, 256K context and day-0 vLLM support.",
+          "tags": [
+            "Open weights",
+            "Agents",
+            "Chinese labs"
+          ],
+          "sources": [
+            "Model card",
+            "Paper",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Released 22 Oct; vLLM announced day-0 support at 8:24pm Thu AEDT. Sage-A1.5 is a MoE (mixture-of-experts) model based on Qwen3.6 and Shanghai AI Lab's Agents-A1, with 256K native context, extendable to 512K. It has opt-in agentic orchestration through a `spawn_subagent` tool and a verification mode switched on with `chat_template_kwargs`. Self-reported scores: GAIA 95.1, SWE-bench Pro 61.2 (it lists GPT-5.6 Sol at 64.6), BrowseComp 81.7 and IFBench 81.6.",
+          "why_it_matters": "A built-in verification mode is worth testing against your own checker: does it catch its own wrong tool calls, or just add tokens?",
+          "caveats": "Benchmarks are self-reported. Check the licence on the model card before any bank use.",
+          "links": [
+            {
+              "label": "Sage-A1.5 on Hugging Face",
+              "url": "https://huggingface.co/InternScience/Sage-A1.5"
+            },
+            {
+              "label": "Sage-A1.5 paper",
+              "url": "https://arxiv.org/abs/2610.28578"
+            },
+            {
+              "label": "@vllm_project post",
+              "url": "https://x.com/vllm_project/status/2113199785155104967"
+            }
+          ]
+        },
+        {
+          "id": "embeddinggemma-2-stt",
+          "headline": "Google shows EmbeddingGemma 2 matching speech to text locally, an hour of audio in about 13 seconds (unverified)",
+          "takeaway": "An experiment, not a release: it uses the model's shared audio-text vector space to transcribe by similarity.",
+          "tags": [
+            "EmbeddingGemma",
+            "Audio",
+            "On-device"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Posted by @googlegemma at 2:41am Fri AEDT. What's new since we covered EmbeddingGemma on 19 Oct is this use: matching speech against text by vector similarity, which Google says transcribed an hour of audio in about 13 seconds locally.",
+          "why_it_matters": "Matching audio against a known list of phrases (call-centre intents, for example) without a full speech-to-text model is a cheap pattern for regulated, on-device use.",
+          "caveats": "Only an X post; no write-up or accuracy figures yet. Matching against known text isn't general transcription.",
+          "links": [
+            {
+              "label": "@googlegemma post",
+              "url": "https://x.com/googlegemma/status/2113294644222259486"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "us-banks-block-agents",
+          "headline": "Major US banks are blocking third-party AI agents after reports of agents acting on their own",
+          "takeaway": "Reuters says big banks are stopping outside agents from operating inside customer accounts, following an Axios report.",
+          "tags": [
+            "Banking",
+            "Agent access",
+            "Authentication"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Reuters (via Mint, 6:42am Fri AEDT) says major US banks are blocking third-party AI agents from making transactions, after Axios reported some agents took actions that appeared independent of user instructions. Morgan Stanley blocks third-party agents but hadn't seen rogue ones, according to a person familiar. Earlier this month Jamie Dimon said JPMorgan won't let 'just any outside agent' in, and Schwab CEO Richard Wurster said he gets a daily report on how often it has to block agents.",
+          "why_it_matters": "This is the question your bank faces from both sides: how to tell a customer's agent from a person, and what your own agents may do in other systems. Shared credentials are the weak point, since a transaction isn't unauthorised if the customer gave the agent their password.",
+          "caveats": "Axios's report rests on unnamed sources, and Reuters gives no numbers on blocked agents.",
+          "links": [
+            {
+              "label": "Reuters via Mint",
+              "url": "https://www.livemint.com/technology/us-banks-are-blocking-third-party-ai-agents-access-to-customer-accounts-sources-say-11792698143645.html"
+            },
+            {
+              "label": "Axios report",
+              "url": "https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access"
+            }
+          ]
+        },
+        {
+          "id": "openai-on-google-cloud",
+          "headline": "OpenAI's GPT-6 models come to Google Cloud's Model Garden in private preview",
+          "takeaway": "GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna can be bought on a Google Cloud invoice, and Codex CLI can point at Google's platform.",
+          "tags": [
+            "OpenAI",
+            "Google Cloud",
+            "Procurement"
+          ],
+          "sources": [
+            "Blog"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Google announced on 21 Oct (US time) that the three OpenAI models are rolling out in private preview to select enterprise customers. Usage draws down existing Google Cloud commitments, prompts and outputs stay in the customer's data perimeter, and VPC Service Controls (Google's network perimeter controls) and unified audit logs apply. Codex CLI and Desktop can use the Gemini platform for inference. ZDR (zero data retention) and Confidential Compute are 'coming soon'.",
+          "why_it_matters": "If your bank's approved cloud is Google, this could be the procurement route for Codex and GPT models without a separate OpenAI contract.",
+          "caveats": "Private preview by application only, and zero data retention isn't available yet, which many bank policies require.",
+          "links": [
+            {
+              "label": "Google Cloud announcement",
+              "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
+            },
+            {
+              "label": "OpenAI announcement",
+              "url": "https://openai.com/index/openai-models-google-cloud/"
+            }
+          ]
+        },
+        {
+          "id": "rba-agent-payments",
+          "headline": "RBA's payments chief says CommBank and Westpac are more worried about AI-agent payments than expected",
+          "takeaway": "Ellis Connolly called the banks' concern about liability his 'biggest surprise' and wants an industry fix first.",
+          "tags": [
+            "RBA",
+            "Agent payments",
+            "Australia"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Payday News (22 Oct) reports that the RBA's Head of Payments Policy, Ellis Connolly, said the level of concern from CommBank and Westpac about liability and safety in AI-driven payments was his 'biggest surprise', and that the RBA is looking to industry to solve it.",
+          "why_it_matters": "Together with the US story, this says Australian liability rules for agent payments are still open, and industry standards may arrive before regulation.",
+          "caveats": "A trade-press report; we couldn't open the full article, so details beyond the summary aren't confirmed.",
+          "links": [
+            {
+              "label": "Payday News report",
+              "url": "https://paydaynews.com.au/p/rba-surprised-by-ai-payment-fears-as-banks-seek-safeguards/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "akv-cache-engineering",
+          "headline": "Cache Engineering for Agents (AKV): drop and reposition KV cache instead of trimming history",
+          "takeaway": "Agents control their own key-value cache directly, so pruning context no longer forces an expensive re-prefill.",
+          "tags": [
+            "KV cache",
+            "Long context",
+            "Serving"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 20 Oct, top paper on Hugging Face with 109 upvotes. Trimming or summarising history changes the prompt prefix and invalidates the KV (key-value) cache. AKV gives agents two operations, `drop` to exclude cache from future attention and `repos` to adjust positions, plus a serving engine that handles cache reuse behind a stateless API.",
+          "why_it_matters": "Long Claude Code-style runs are dominated by cache cost; this is a different answer to compaction than summarising.",
+          "caveats": "It needs the co-designed serving engine, so it isn't usable with hosted APIs.",
+          "links": [
+            {
+              "label": "Paper on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.28577"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.28577"
+            },
+            {
+              "label": "AKV code",
+              "url": "https://github.com/thu-nics/AKV"
+            }
+          ]
+        },
+        {
+          "id": "lgwm-gui-verifier",
+          "headline": "Right Screen, Wrong Transition: catching hijacked screens in GUI agents with a world model",
+          "takeaway": "A login screen after 'Sign in' is fine; the same screen after 'View order' is an attack. LGWM checks the transition, not the screen.",
+          "tags": [
+            "GUI agents",
+            "Phishing",
+            "Verification"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 8 Oct but trending on Hugging Face this week with 78 upvotes. LGWM predicts the representation of the next screen from an action, trained on 1.85M real GUI (graphical interface) transitions, so verification is a vector comparison. On the RSWT-Bench test it reaches 0.987 AUC (area under the curve, a detection score) at 17ms per decision, which the authors say matches the best closed models at three orders of magnitude lower latency.",
+          "why_it_matters": "Computer-use agents in banking are exposed to credential-phishing screens; a 17ms transition check is cheap enough to run on every step.",
+          "caveats": "Results are on the authors' own benchmark.",
+          "links": [
+            {
+              "label": "Paper on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.11942"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.11942"
+            },
+            {
+              "label": "LGWM code",
+              "url": "https://github.com/jiamingzhang94/lgwm"
+            }
+          ]
+        },
+        {
+          "id": "harness-scaling",
+          "headline": "Harness Scaling: train agents across many harness setups, not just one",
+          "takeaway": "Reinforcement learning across varied tool and context configurations transfers better to harnesses the model never saw.",
+          "tags": [
+            "Agentic RL",
+            "Harnesses",
+            "Generalisation"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 21 Oct. The authors build a factorised space of harness settings, pick a balanced subset, and train with RL (reinforcement learning) across it. They report better generalisation to unseen configurations and to external black-box harnesses than training through one complex harness.",
+          "why_it_matters": "It backs up what Kiro found: the harness matters as much as the model, so eval a model in the harness you'll actually deploy.",
+          "caveats": "The abstract gives no headline numbers; check the tables before citing gains.",
+          "links": [
+            {
+              "label": "Paper on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.29458"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.29458"
+            },
+            {
+              "label": "Harness-Scaling code",
+              "url": "https://github.com/RUCAIBox/Harness-Scaling"
+            }
+          ]
+        },
+        {
+          "id": "quant-arena",
+          "headline": "Quant-Arena: no frontier model beat an equal-weight market in a sealed test year",
+          "takeaway": "Models build stock-scoring strategies on 2022–2023 Chinese A-share data and are judged on 2024, with trading costs.",
+          "tags": [
+            "Quant research",
+            "Benchmarks",
+            "Trading"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 21 Oct. Nine frontier models build features and scoring code, get feedback only on 2022–2023, then freeze one strategy for the sealed 2024 year. The evaluator applies cash-account rules and market impact from a simulated order book. GPT-6 Astra scored highest, but no model beat the equal-weight market in 2024.",
+          "why_it_matters": "A sealed future year is the right way to test any 'AI trading agent' claim, including the ones vendors pitch to banks.",
+          "caveats": "One market and one test year, so it says little about other markets like the ASX.",
+          "links": [
+            {
+              "label": "Paper on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.30113"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.30113"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "php2shell-checker",
+          "headline": "openai/php2shell-checker",
+          "takeaway": "Two Codex skills that check whether a public URL or a server you control is running a PHP version exposed to PHP2Shell.",
+          "tags": [
+            "Codex skills",
+            "PHP",
+            "Security"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Published by OpenAI with the disclosure. `phpcheck-url` checks a public site and `phpcheck-server` checks PHP on a machine you can reach; there's also `node phpcheck.js` for direct runs.",
+          "why_it_matters": "A quick way to sweep the PHP sites you're responsible for, and a neat example of shipping a security response as a skill.",
+          "caveats": "It compares exposed version strings against cutoffs. OK doesn't prove a fix and UNKNOWN doesn't mean patched, especially with distribution backports.",
+          "links": [
+            {
+              "label": "php2shell-checker on GitHub",
+              "url": "https://github.com/openai/php2shell-checker"
+            }
+          ]
+        },
+        {
+          "id": "knowledge-work-plugins",
+          "headline": "anthropics/knowledge-work-plugins",
+          "takeaway": "Anthropic's open plugins for knowledge workers in Claude Cowork.",
+          "tags": [
+            "Claude",
+            "Plugins",
+            "Skills"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 303 stars today.",
+          "why_it_matters": "Useful patterns for packaging skills and connectors for non-engineers, now that the skills format is moving to the AAIF.",
+          "caveats": "Aimed at Cowork, so some plugins won't map to Claude Code.",
+          "links": [
+            {
+              "label": "knowledge-work-plugins on GitHub",
+              "url": "https://github.com/anthropics/knowledge-work-plugins"
+            }
+          ]
+        },
+        {
+          "id": "copilotkit-openbot",
+          "headline": "CopilotKit/OpenBot",
+          "takeaway": "Open-source AI coworkers that each get their own computer, with every action decided before it happens and recorded after.",
+          "tags": [
+            "Computer use",
+            "AG-UI",
+            "Audit"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 89 stars today. It works with any AG-UI agent.",
+          "why_it_matters": "'Decided before, recorded after' is the approval-plus-audit pattern a bank wants for computer-use agents.",
+          "caveats": "New project; check its isolation model before running anything sensitive.",
+          "links": [
+            {
+              "label": "OpenBot on GitHub",
+              "url": "https://github.com/CopilotKit/OpenBot"
+            }
+          ]
+        },
+        {
+          "id": "vibe-trading",
+          "headline": "HKUDS/Vibe-Trading",
+          "takeaway": "A personal trading agent project from Hong Kong University's data science lab.",
+          "tags": [
+            "Trading",
+            "Agents",
+            "Python"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 166 stars today.",
+          "why_it_matters": "Worth a look next to Quant-Arena's result if you want to see how these agents build strategies.",
+          "caveats": "A research project. Quant-Arena found no frontier model beat the market in its sealed year, so don't trade on it.",
+          "links": [
+            {
+              "label": "Vibe-Trading on GitHub",
+              "url": "https://github.com/HKUDS/Vibe-Trading"
+            }
+          ]
+        },
+        {
+          "id": "genoffice",
+          "headline": "genspark-ai/genoffice",
+          "takeaway": "A free, open-source office suite with a CLI and agent skill so Claude Code, Codex and Cursor can edit real .docx, .xlsx and .pptx files locally.",
+          "tags": [
+            "Office files",
+            "Agent skills",
+            "Local"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 191 stars today. Bring your own model key; runs on macOS, Windows and Linux.",
+          "why_it_matters": "Generating real Office files locally is a common ask for bank reporting agents.",
+          "caveats": "Check what it sends to the model provider before using it on internal documents.",
+          "links": [
+            {
+              "label": "genoffice on GitHub",
+              "url": "https://github.com/genspark-ai/genoffice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-21",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Wednesday 21 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "evals",
+      "card_id": "pydantic-ai-advisories",
+      "headline": "Pydantic AI 2.58.0: MCP tokens could leak into traces; upgrade and rotate exposed credentials"
+    },
+    {
+      "section_id": "coding",
+      "card_id": "claude-code-2-1-304",
+      "headline": "Claude Code 2.1.304: guided auto-mode setup and a Managed Agents security check"
+    },
+    {
+      "section_id": "agenteng",
+      "card_id": "openai-12h-cache",
+      "headline": "OpenAI's Responses API adds 12-hour prompt caching for long-lived agents"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "claude-code-2-1-304",
+          "headline": "Claude Code 2.1.304: guided auto-mode setup and a Managed Agents security check",
+          "takeaway": "Two new commands help you configure auto mode for your project and compare a Managed Agents setup against Anthropic's security guide.",
+          "tags": [
+            "Claude Code",
+            "Auto mode",
+            "Permissions"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 8:34am Tue AEDT, the build flagged as imminent in yesterday's issue. `/auto-mode-setup` reads your project and recent sessions to teach auto mode about your environment, and now works on Bedrock, Vertex, Foundry and telemetry-disabled sessions. `/claude-api managed-agents-secure` compares a Managed Agents agent's settings with Anthropic's published security guide without changing anything. Mods can now return `decider: \"person\"` so only a human can approve a tool call. Fixes include `rm -r` on mounted drives now getting the safety prompt, and plugins no longer keeping headless runs going past `--max-turns`. The unofficial @ClaudeCodeLog tracker says 2.1.305 is about to ship.",
+          "why_it_matters": "A human-only approval option and a read-only security comparison are both controls you can point to when a bank review asks how agent permissions are enforced.",
+          "caveats": "The security check compares against Anthropic's own guide, not an independent standard. 2.1.305 isn't out yet and @ClaudeCodeLog is a third-party tracker.",
+          "how_to_try": "Update, run `/auto-mode-setup` in a test repo, and review what it proposes before accepting. If you use Managed Agents, run `/claude-api managed-agents-secure` and read the gaps it lists.",
+          "links": [
+            {
+              "label": "Claude Code v2.1.304 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304"
+            },
+            {
+              "label": "@ClaudeCodeLog on 2.1.305",
+              "url": "https://x.com/ClaudeCodeLog/status/2112629459027145164"
+            }
+          ]
+        },
+        {
+          "id": "copilot-cli-1-0-101",
+          "headline": "Copilot CLI v1.0.101: structured output for subagents and clearer permission prompts",
+          "takeaway": "Workflow subagents can return structured output, and approval prompts now explain why a command needs escalation.",
+          "tags": [
+            "Copilot CLI",
+            "Subagents",
+            "Permissions"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 5:49am Wed AEDT. Adds native structured output for dynamic workflow subagents on supported models, and an `assistedApprovalInstructions` setting to guide Assisted Permissions decisions. Permission prompts now explain the escalation cause and show a diagnosis command. Extension capability requests now need explicit approval instead of the automated judge. Headless and SDK sessions skip MCP (Model Context Protocol) servers whose saved tokens need sign-in instead of stalling.",
+          "why_it_matters": "Structured subagent output makes multi-agent runs easier to check automatically, and written approval guidance gives you an auditable policy for what the assistant may approve.",
+          "caveats": "Structured output only works on 'supported models', which the notes don't list. Assisted Permissions still uses a model to make approval calls.",
+          "how_to_try": "Update, add an `assistedApprovalInstructions` rule such as 'never approve network calls outside the repo', then run a task that triggers it and read the prompt's explanation.",
+          "links": [
+            {
+              "label": "Copilot CLI v1.0.101 release",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.101"
+            }
+          ]
+        },
+        {
+          "id": "deepagents-code-0-1-87",
+          "headline": "LangChain's Deep Agents Code 0.1.87: resume threads headless and compact before the cache expires",
+          "takeaway": "The open-source coding agent can resume threads in non-interactive mode and compacts idle sessions before the prompt cache lapses.",
+          "tags": [
+            "Deep Agents",
+            "Headless",
+            "Prompt caching"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 3:49am Wed AEDT. Adds resuming threads in non-interactive mode, compacting large idle sessions before the prompt cache expires, showing the cache expiry time, and loading older threads from the thread switcher. The local server now stops when its owner process dies.",
+          "why_it_matters": "Resumable headless threads make it easier to script repeatable agent runs in CI for evaluation.",
+          "caveats": "A pre-1.0 tool with frequent releases; behaviour may keep changing.",
+          "how_to_try": "Upgrade with `pip install -U deepagents-code`, start a thread, then resume it non-interactively from a script and compare the result.",
+          "links": [
+            {
+              "label": "deepagents-code 0.1.87 release",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.87"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "pydantic-ai-advisories",
+          "headline": "Pydantic AI 2.58.0 fixes two moderate-severity security flaws, including MCP tokens leaking into traces",
+          "takeaway": "MCP auth tokens and headers could end up in OpenTelemetry traces even with content logging off; upgrade and rotate exposed keys.",
+          "tags": [
+            "Security",
+            "MCP",
+            "Tracing"
+          ],
+          "sources": [
+            "Changelog",
+            "Advisory"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 3:58pm Tue AEDT with v1.107.8 for the 1.x line. Advisory GHSA-xv4x-g8mx-ch56: provider-native MCP configuration could expose server URLs, authorization tokens and custom header values in OpenTelemetry request traces, even with `include_content=False`. Advisory GHSA-5pfm-2g3g-gh85: with server-side message history and the default `manage_system_prompt='server'`, the Vercel AI and AG-UI adapters could run an available tool with client-chosen arguments without a model request. Tools that require approval were not run by this path, and v1 is unaffected by the second issue.",
+          "why_it_matters": "If you trace Pydantic AI agents into a shared observability store, those traces may hold live MCP credentials that other teams can read.",
+          "caveats": "Both are rated moderate on GitHub. The fix doesn't clean old traces: the advisory says to restrict access to historical traces and rotate credentials.",
+          "links": [
+            {
+              "label": "Pydantic AI v2.58.0 release",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.58.0"
+            },
+            {
+              "label": "Advisory: MCP request telemetry",
+              "url": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-xv4x-g8mx-ch56"
+            },
+            {
+              "label": "Advisory: UI adapter history",
+              "url": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-5pfm-2g3g-gh85"
+            },
+            {
+              "label": "v1.107.8 release",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v1.107.8"
+            }
+          ]
+        },
+        {
+          "id": "hamel-decision-models",
+          "headline": "Hamel Husain: don't trust the 0.5 default when using decision models as eval judges",
+          "takeaway": "A hands-on comparison of six cheap pass/fail classifiers on agent traces, showing why tuning the threshold matters.",
+          "tags": [
+            "LLM-as-judge",
+            "Decision models",
+            "Thresholds"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 20 Oct by Hamel Husain and Antaripa Saha. They tested Jev 1.13, Perplexity Decider 1.1 27B, Liquid d1 and d1-ultra, Cloudflare Clef Flash and OpenAI Decisions (GPT-6 Luna) on 100 human-labelled traces from an apartment-leasing agent, flagging traces with errors. The post shows how to tune each model's decision threshold for precision and recall, compares cost and performance, and covers calibrating scores (for example with Platt scaling) so they can be read as confidence.",
+          "why_it_matters": "Decision models are a cheaper alternative to LLM judges for your failure checks, and the threshold method applies directly to validating judges against human labels.",
+          "caveats": "One dataset of 100 traces from a single domain, so the model rankings may not carry over to banking tasks. Latency was left out.",
+          "links": [
+            {
+              "label": "Hamel's blog post",
+              "url": "https://hamel.dev/blog/posts/decision-model-evals/"
+            },
+            {
+              "label": "@HamelHusain post",
+              "url": "https://x.com/HamelHusain/status/2112588257104216294"
+            }
+          ]
+        },
+        {
+          "id": "agent-skills-attack-surface",
+          "headline": "7 in 10 marketplace agent skills ask for elevated access, and their permission lists barely help",
+          "takeaway": "A study of 6,309 skill listings found shell, file, network and credential access is common and almost none of it is visible at install.",
+          "tags": [
+            "Agent skills",
+            "Supply chain",
+            "Security"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The authors combined static analysis of whole skill bundles with sandboxed execution across 6,309 listings from two marketplaces. Half showed shell-execution capability, 35% filesystem read, 31% each filesystem write and network egress, and 13% credential access; seven in ten had at least one elevated capability. Of 6,061 listings with parseable frontmatter, only 770 declared any pre-approved tools, and that declaration removes confirmation prompts rather than restricting access.",
+          "why_it_matters": "If your team installs Skills into Claude Code, Codex or Copilot, this is evidence for reviewing each skill's bundle rather than trusting its declared permissions.",
+          "caveats": "Authors' own measurement; the paper doesn't name the two marketplaces in the abstract. Few upvotes so far.",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.19264"
+            },
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.19264"
+            }
+          ]
+        },
+        {
+          "id": "policy-not-capability",
+          "headline": "Guardrail benchmark scores mostly reflect the labelling policy, not detection ability",
+          "takeaway": "The same ~53k prompts labelled under two definitions of 'unsafe' produced scores spanning a benchmark's whole range.",
+          "tags": [
+            "Guardrails",
+            "Benchmarks",
+            "Contamination"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "From an industrial deployment where ~53k prompts were labelled twice ('is this a harmful request?' versus 'would a moderator block this?'), the authors trained ten guardrail models with the same architecture. Two over-refusal benchmarks were largely in the training data already (JailbreakBench-benign 88%, OR-Bench-hard 82%). After decontamination, HarmBench-copyright ranged 0–100 and OR-Bench-hard over-refusal 3.4–56.4% across models with unchanged detection capability, and changing 0.03% of parameters could move a score across its whole range.",
+          "why_it_matters": "When a vendor quotes guardrail benchmark scores, ask which labelling policy they trained on and whether the benchmark was in their training data.",
+          "caveats": "Based on one company's deployment and its two label sets. Few upvotes so far, and the abstract doesn't name the company.",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.25060"
+            },
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.25060"
+            }
+          ]
+        },
+        {
+          "id": "inspect-ai-0-3-282",
+          "headline": "Inspect AI 0.3.282: separate tool state for concurrent agents, and a usage undercount fix",
+          "takeaway": "A breaking change keeps tool state apart when several agents run in one sample, and billed usage is no longer undercounted.",
+          "tags": [
+            "Inspect",
+            "Evals",
+            "Breaking change"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 8:33am Tue AEDT by the UK AI Security Institute's team. Tool state is now scoped so agents running concurrently in one sample keep separate state (breaking). Fixes cover usage undercounted when one provider call sends several billed requests, Gemini 2.5 Pro repeating tool calls, and enforcing the log viewer's Content-Security-Policy. Sharded runs now show as one task.",
+          "why_it_matters": "If you run multi-agent evals in Inspect, results from earlier versions may have shared tool state between agents, and cost figures may have been low.",
+          "caveats": "Check your custom tools for reliance on shared state before upgrading.",
+          "links": [
+            {
+              "label": "Inspect AI 0.3.282 release",
+              "url": "https://github.com/UKGovernmentBEIS/inspect_ai/releases/tag/0.3.282"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "openai-12h-cache",
+          "headline": "OpenAI's Responses API adds 12-hour prompt caching for long-lived agents",
+          "takeaway": "Keep shared instructions and tools cached across gaps of hours, paying 2.5x input price on the write and the usual discount on reads.",
+          "tags": [
+            "OpenAI API",
+            "Prompt caching",
+            "Cost"
+          ],
+          "sources": [
+            "Changelog",
+            "Docs",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Listed in the OpenAI API changelog on 20 Oct. For GPT-5.6 and later, set `prompt_cache_options.ttl` to `\"12h\"` (default `\"30m\"`). Twelve-hour writes cost 2.5x the uncached input rate versus 1.25x for 30 minutes; reads cost 0.1x on most models and 0.05x on GPT-6.1 Sol either way. Explicit breakpoints can mix 12-hour and 30-minute lifetimes in one request.",
+          "why_it_matters": "Agents that run on a schedule, like daily eval or monitoring jobs, can reuse a large stable prefix instead of paying full price after each idle gap.",
+          "caveats": "Only pays off if the prefix is actually reused enough to cover the higher write cost. The docs say '12h' is a minimum lifetime and doesn't change data retention policy.",
+          "links": [
+            {
+              "label": "OpenAI API changelog",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "Prompt caching guide",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
+            },
+            {
+              "label": "@OpenAIDevs post",
+              "url": "https://x.com/OpenAIDevs/status/2112603916076781778"
+            }
+          ]
+        },
+        {
+          "id": "stoploss",
+          "headline": "StopLoss: a small monitor that aborts doomed coding-agent runs early",
+          "takeaway": "A fine-tuned small model scores recent tool steps and stops runs likely to fail, keeping 99% of successful runs.",
+          "tags": [
+            "Coding agents",
+            "Monitoring",
+            "Cost"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "StopLoss learns from finished trajectories and their verifier results, then scores the latest tool steps in one forward pass and aborts above a threshold calibrated on successful runs. The authors report it cut cost per retained solve by 4.5% on SWE-bench Verified while preserving 99% of successful runs, and by up to 31% on a SWE-bench Pro subset (48% with a Qwen3-8B backbone), at one to two orders of magnitude lower cost per check than six general-purpose judges.",
+          "why_it_matters": "It's a cheap production pattern for capping spend on agent runs without changing the agent itself.",
+          "caveats": "Authors' own results, trained on GPT-family trajectories. The code repo is new.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.25525"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.25525"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/TIGER-AI-Lab/StopLoss"
+            }
+          ]
+        },
+        {
+          "id": "ai-sdk-7-0-146",
+          "headline": "AI SDK 7.0.146–147: reasoning controls for decision calls, and cleaner tool-call pruning",
+          "takeaway": "Experimental decision calls accept `maxOutputTokens` and `reasoning`, and pruning tool calls no longer leaves orphaned reasoning.",
+          "tags": [
+            "AI SDK",
+            "Decisions",
+            "Tool calls"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "7.0.146 (3:12pm Tue AEDT) adds `maxOutputTokens` and `reasoning` to experimental decision calls, removes orphaned reasoning parts when pruning tool calls, and fixes optional tools adding `undefined` to tool types. 7.0.147 (5:36am Wed AEDT) preserves repaired tool names in streamed UI message parts.",
+          "why_it_matters": "If you prune tool history to save context, the orphaned-reasoning fix avoids malformed message histories being sent to the model.",
+          "caveats": "Decision calls are still experimental. Language-model adapters keep reasoning off unless you set it.",
+          "links": [
+            {
+              "label": "ai@7.0.146 release",
+              "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.146"
+            },
+            {
+              "label": "ai@7.0.147 release",
+              "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.147"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "deepinfer",
+          "headline": "DeepSeek open-sources DeepInfer, the inference engine behind V4.1 Flash",
+          "takeaway": "DeepSeek's production serving framework is now Apache 2.0, with batch-invariant and deterministic inference options.",
+          "tags": [
+            "DeepSeek",
+            "Inference",
+            "Open source"
+          ],
+          "sources": [
+            "GitHub",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Announced 8:30pm Tue AEDT. The repo supports DeepSeek-V4.1-Flash on NVIDIA SM100 GPUs and Huawei Ascend 950 NPUs, with attention and expert parallelism, speculative decoding, asynchronous scheduling, structured outputs, batch-invariant inference and deterministic sampling (both NVIDIA only). vLLM credited DeepSeek and said it will fold in ideas from DeepInfer.",
+          "why_it_matters": "Deterministic sampling and batch-invariant results are what you need for reproducible evals of self-hosted models.",
+          "caveats": "Offline inference only: the README says a KV cache system, prefill/decode disaggregation and load balancing are not included. Only one model and newer hardware are supported.",
+          "links": [
+            {
+              "label": "DeepInfer on GitHub",
+              "url": "https://github.com/deepseek-ai/DeepInfer"
+            },
+            {
+              "label": "@deepseek_ai post",
+              "url": "https://x.com/deepseek_ai/status/2112476496283775135"
+            },
+            {
+              "label": "@vllm_project post",
+              "url": "https://x.com/vllm_project/status/2112480719952138301"
+            }
+          ]
+        },
+        {
+          "id": "voxtral-3",
+          "headline": "Mistral Voxtral 3: new speech models and a voice-agent SDK with tool calling",
+          "takeaway": "Five transcription and speech models plus an SDK that runs listen, reason, call tools and speak as one streaming session.",
+          "tags": [
+            "Mistral",
+            "Voice agents",
+            "Speech"
+          ],
+          "sources": [
+            "Blog",
+            "Docs",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Announced 3:00am Wed AEDT. Voxtral 3 has three speech-to-text and two text-to-speech models. The voice-agent SDK, built on LiveKit, pairs realtime transcription with a general model such as Mistral Small and Voxtral Speech 3; Mistral says turns complete in under a second and the agent stops when interrupted. Listed prices: Voxtral Mini Transcribe Realtime 3 $0.008/min, Mini Transcribe 3 batch $0.0035/min, Speech 3 $13 per million characters. Available on EU, US and global endpoints, or self-deployed.",
+          "why_it_matters": "Voice agents that verify identity or check bills are a likely bank use case, and an EU-hosted or self-deployed stack helps with data residency questions.",
+          "caveats": "Latency and quality claims are Mistral's own. Self-deployment terms aren't detailed in the launch post.",
+          "links": [
+            {
+              "label": "Mistral announcement",
+              "url": "https://mistral.ai/news/voxtral-3/"
+            },
+            {
+              "label": "Voice agents docs",
+              "url": "https://docs.mistral.ai/studio/audio/voice-agents/overview"
+            },
+            {
+              "label": "@MistralAI post",
+              "url": "https://x.com/MistralAI/status/2112574615318876178"
+            }
+          ]
+        },
+        {
+          "id": "clef-ollama",
+          "headline": "Cloudflare's Clef decision model is now on Ollama",
+          "takeaway": "The 27B open-weight model that returns probabilities for fixed answers can now run locally or on Ollama's cloud.",
+          "tags": [
+            "Decision models",
+            "Ollama",
+            "Open weights"
+          ],
+          "sources": [
+            "X",
+            "Model card"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Ollama announced Clef at 7:01am Wed AEDT. Cloudflare released Clef on 1 Oct: a 27B multimodal model post-trained from Qwen3.8-27B that returns typed answers with probabilities rather than free text, trained with a loss aimed at calibration. Ollama says its hosted version runs in the US with zero data retention.",
+          "why_it_matters": "A local decision model lets you run pass/fail eval checks on sensitive traces without sending them to an outside API.",
+          "caveats": "The model itself isn't new; only the Ollama availability is. Cloudflare's calibration claims are its own.",
+          "links": [
+            {
+              "label": "Clef model card",
+              "url": "https://huggingface.co/Cloudflare/clef"
+            },
+            {
+              "label": "Cloudflare blog",
+              "url": "https://blog.cloudflare.com/clef-decision-models/"
+            },
+            {
+              "label": "@ollama post",
+              "url": "https://x.com/ollama/status/2112635366159352101"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "nab-job-cuts",
+          "headline": "NAB to cut up to 2,500 jobs; CEO says AI isn't the driver",
+          "takeaway": "About 1,500 roles go by the end of the year and the rest by mid-2027, mostly in corporate functions.",
+          "tags": [
+            "Australia",
+            "Banking",
+            "Jobs"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "National Australia Bank confirmed on Tuesday it will cut about 6% of its workforce, up to 2,500 roles, with up to 1,500 by the end of the year. CEO Andrew Irvine said the cuts aren't directly linked to AI and cited cost, simplification and productivity. An AFR analysis noted the announcement didn't mention AI and argued that banks' technology investments point to deeper changes in knowledge work.",
+          "why_it_matters": "Capital Brief described it as NAB's biggest restructure since 2017, and how banks frame AI's role in job decisions shapes the internal case for agent projects.",
+          "caveats": "The link to AI is commentators' analysis, not NAB's stated reason.",
+          "links": [
+            {
+              "label": "ABC News",
+              "url": "https://www.abc.net.au/news/2026-10-20/nab-slashes-jobs-in-massive-restructure/107286316"
+            },
+            {
+              "label": "AFR analysis",
+              "url": "https://www.afr.com/companies/financial-services/nab-cuts-forewarn-of-deeper-jobs-reckoning-to-come-20261020-p616ym"
+            },
+            {
+              "label": "Capital Brief",
+              "url": "https://www.capitalbrief.com/newsletter/nab-and-tuck-5626eb05-43ec-4f27-a4bb-e90fc681ecaf/"
+            }
+          ]
+        },
+        {
+          "id": "world-id-banks",
+          "headline": "World launches identity tools for banks to fight deepfakes (unverified)",
+          "takeaway": "World ID tools for checking real humans in accounts, transactions and video calls were shown at Money20/20.",
+          "tags": [
+            "Identity",
+            "Deepfakes",
+            "Banking"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "According to X's news summary, Sam Altman's World unveiled World ID tools for banks and financial firms at Money20/20, including a generally available Zoom feature that gives a 'Verified Human' badge and tools for AI agents, with design partners such as Bain Capital, Pantera Capital and VanEck.",
+          "why_it_matters": "Proving a human is behind an account or approval is a growing control question as agents act for customers.",
+          "caveats": "Only from X's AI-generated news summary so far; not checked against World's own announcement.",
+          "links": [
+            {
+              "label": "X news summary",
+              "url": "https://x.com/i/trending/2112006730498404393"
+            }
+          ]
+        },
+        {
+          "id": "openai-orchestra-bio",
+          "headline": "OpenAI acquires Orchestra Bio for its life-sciences tools (unverified)",
+          "takeaway": "The drug-development coordination platform will be folded into OpenAI's Rosalind suite, according to X's news summary.",
+          "tags": [
+            "OpenAI",
+            "Acquisition",
+            "Life sciences"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "X's news summary reports OpenAI acquired Orchestra Bio, which helps biopharma teams track studies and delays alongside AI agents, and plans to integrate it with its Rosalind tools including GPT-Rosalind.",
+          "why_it_matters": "Another sign that labs are buying vertical workflow software rather than only selling models, a pattern that may reach financial services.",
+          "caveats": "Unverified: not yet checked against an OpenAI announcement. Terms weren't disclosed in the summary.",
+          "links": [
+            {
+              "label": "X news summary",
+              "url": "https://x.com/i/trending/2112613033243721837"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "or-license",
+          "headline": "OR-License: agents get close to paid consultants on real optimisation jobs, but not quite",
+          "takeaway": "Built from 31 real operations-research engagements worth US$3.68m; the best agent setup scored 0.87 against the experts' 1.",
+          "tags": [
+            "Benchmark",
+            "Operations research",
+            "Claude Code"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "OR-License has 31 instances across 10 industrial scenarios, keeping clients' original materials and deliverable formats, plus a simulated client that discloses business facts without OR expertise. Infeasible deliveries score zero. Across 11 frontier models in coding-agent harnesses, the strongest Claude Code configuration reached 88.39% strict feasibility and a deployment-adjusted quality of 0.87 versus the expert reference of 1. It had 130 upvotes on Hugging Face's daily list at fetch time.",
+          "why_it_matters": "It scores agents on whether the delivered solution is actually usable from messy client inputs, the same bar as business use at a bank.",
+          "caveats": "Authors' own benchmark with 31 instances. The code repo is very new.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.24087"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.24087"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/NineAbyss/OR-License"
+            }
+          ]
+        },
+        {
+          "id": "self-hpo",
+          "headline": "Self-HPO: coding agents that improve their harness and their model together",
+          "takeaway": "Alternating harness changes and reinforcement learning lifted Qwen3.5-35B-A3B's resolve rate from 57.8% to 64.8%.",
+          "tags": [
+            "Coding agents",
+            "Harness",
+            "RL"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Each round, the current model analyses its own failures and proposes harness changes, then is trained with reinforcement learning under the chosen harness; hard tasks seed the next harness search. Across three coding benchmarks the authors report it beat harness-only and policy-only baselines, with the joint gain exceeding the sum of the two.",
+          "why_it_matters": "It shows harness and model gains interact, so evaluating a coding agent means fixing both or you may misattribute improvements.",
+          "caveats": "Authors' own results; requires RL training, so most teams can only apply the harness half.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.22791"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.22791"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/MSR-Orchard/Self-HPO"
+            }
+          ]
+        },
+        {
+          "id": "memt-1",
+          "headline": "MemT-1.0: models with memory built into the architecture",
+          "takeaway": "Memory foundation models that matched retrieval methods on average while using 66x less storage than a full KV cache at 128K.",
+          "tags": [
+            "Memory",
+            "Architecture",
+            "Long context"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "MemT-1.0 builds memory into the model's computation using Gated DeltaNet-2 and a Mixture-of-Storage design, trained on 34B tokens. The team released Nano and Flash models. The authors report they beat parametric memory baselines on average and stayed competitive with retrieval-augmented methods; at 128K tokens of history, Nano ran about 1.86x faster end to end with 66x less persistent storage than a full-context KV cache.",
+          "why_it_matters": "Built-in memory is an alternative to the retrieval and summarisation layers most agent stacks bolt on, worth tracking for long-running agents.",
+          "caveats": "Authors' own evaluation; competitive with retrieval, not better.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.26825"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.26825"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/MemTensor/MemT-1.0"
+            }
+          ]
+        },
+        {
+          "id": "hspr",
+          "headline": "HSPR: estimate a full SWE-bench score from 10% of the tasks",
+          "takeaway": "Uses past agents' results and adaptive task picking to recover benchmark scores cheaply.",
+          "tags": [
+            "Evals",
+            "Benchmarks",
+            "Cost"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "HSPR combines patterns from earlier agents' results with uncertainty about task groups and picks the next task to run where it most reduces uncertainty. At a 10% task budget on four SWE-bench-family task banks, it had the lowest mean absolute error on three and lowest maximum error on all four among methods compared.",
+          "why_it_matters": "Cheaper full-score estimates would let you rerun agent benchmarks on every model or harness change.",
+          "caveats": "Authors' own results; error figures are in the paper, not the abstract. Few upvotes and a new repo.",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.24611"
+            },
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.24611"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/wanyichen06/HSPR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "cloudflare-security-audit-skill",
+          "headline": "cloudflare/security-audit-skill",
+          "takeaway": "A coding-agent skill for multi-phase security audits, with independently verified, machine-readable findings.",
+          "tags": [
+            "Security",
+            "Skills",
+            "Audits"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Trending on GitHub with 1,680 stars today. Six phases: reconnaissance, coverage-led hunting with isolated agents, fresh verifiers that try to disprove each finding, schema-validated output, independent re-verification and reporting. Cloudflare says it seeded its internal vulnerability harness. MIT licence.",
+          "why_it_matters": "The verify-by-disproof design is a pattern you can reuse for any agent output that needs checking.",
+          "caveats": "Running many isolated agents can be token-heavy. Review the skill bundle before installing.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/cloudflare/security-audit-skill"
+            }
+          ]
+        },
+        {
+          "id": "kronos",
+          "headline": "shiyu-coder/Kronos",
+          "takeaway": "An open foundation model for financial market data, described as 'the language of financial markets'.",
+          "tags": [
+            "Finance",
+            "Time series",
+            "Open source"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 719 stars today. MIT licence.",
+          "why_it_matters": "An open model for market time series is worth a look for finance use cases outside language tasks.",
+          "caveats": "The repo dates from July 2025, so it's trending again rather than new. Check its evaluation before relying on forecasts.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/shiyu-coder/Kronos"
+            }
+          ]
+        },
+        {
+          "id": "ponytail",
+          "headline": "DietrichGebert/ponytail",
+          "takeaway": "Instructions that push coding agents to write less code and avoid unnecessary changes.",
+          "tags": [
+            "Coding agents",
+            "Prompts"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 1,396 stars today. MIT licence.",
+          "why_it_matters": "Smaller diffs are easier to review, which matters when agent changes need sign-off.",
+          "caveats": "No published evaluation of its effect on code quality.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/DietrichGebert/ponytail"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

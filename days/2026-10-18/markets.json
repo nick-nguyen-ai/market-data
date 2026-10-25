@@ -1,0 +1,1134 @@
+{
+  "schema_version": 1,
+  "type": "markets",
+  "date": "2026-10-18",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Weekend global briefing: Sunday 18 October",
+  "edition": "weekend",
+  "morning": {
+    "cutoff_local": "2026-10-18T07:30:00+11:00",
+    "session_note": "Weekend edition · what's new since Saturday, plus the week ahead",
+    "summary": [
+      "Over the week the ASX 200 rose 1.0% while the S&P 500 fell 1.9% and the Nasdaq 4.5%, as investors sold AI stocks and bought bonds; the US 10-year yield fell 15 bp.",
+      "New on Saturday: Iran's Revolutionary Guards said a supertanker hit a mine in the Strait of Hormuz; the US said the mines are cleared and ships are being hit by Iranian projectiles.",
+      "Next: China's September-quarter GDP on Monday, BHP's quarterly update on Tuesday, and speeches by the RBA's Kent and Hauser before the November decision."
+    ],
+    "prices": {
+      "retrieved_at_utc": "2026-10-18 01:38Z",
+      "cutoff_utc": "2026-10-17T20:30:00Z",
+      "quotes": [
+        {
+          "id": "asx200",
+          "display_name": "S&P/ASX 200",
+          "tier": "primary",
+          "instrument_type": "equity_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "AUD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (^AXJO)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EAXJO/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 8806.700195,
+          "display_value": "8,806.7",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T05:56:44Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 8719.700195,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 87.0,
+          "change_pct": 1.0,
+          "display_change": "+1.0%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 8716.599609,
+          "week_change_pct": 1.03,
+          "display_week_change": "+1.0% wk"
+        },
+        {
+          "id": "sp500",
+          "display_name": "S&P 500",
+          "tier": "primary",
+          "instrument_type": "equity_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "USD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "Yahoo Finance (^GSPC)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EGSPC/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 7659.439941,
+          "display_value": "7,659.4",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T13:30:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 7744.060059,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": -84.6,
+          "change_pct": -1.09,
+          "display_change": "−1.1%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 7811.540039,
+          "week_change_pct": -1.95,
+          "display_week_change": "−1.9% wk",
+          "cross_checks": [
+            {
+              "provider": "FRED SP500 (S&P Dow Jones Indices)",
+              "value": 7659.44,
+              "session_date": "2026-10-16"
+            }
+          ]
+        },
+        {
+          "id": "audusd",
+          "display_name": "AUD/USD",
+          "tier": "primary",
+          "instrument_type": "fx",
+          "quote_kind": "spot",
+          "unit": "USD",
+          "currency": "USD",
+          "decimals": 4,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "note": "RBA 4pm Sydney rate (WM/Reuters); not the overnight move.",
+          "status": "ok",
+          "provider": "RBA F11.1 (4pm AEST/AEDT)",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 0.6947,
+          "display_value": "0.6947",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T05:00:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 0.6955,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": -0.0008,
+          "change_pct": -0.12,
+          "display_change": "−0.12%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 0.6979,
+          "week_change_pct": -0.46,
+          "display_week_change": "−0.5% wk"
+        },
+        {
+          "id": "au10y",
+          "display_name": "Australia 10Y",
+          "tier": "primary",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "note": "RBA interpolated 10-year yield; published with a lag of about two business days.",
+          "status": "ok",
+          "provider": "RBA F2 capital market yields",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 5.314,
+          "display_value": "5.31%",
+          "market_session_date": "2026-10-14",
+          "observation_timestamp_utc": "2026-10-14T05:30:00Z",
+          "comparison_date": "2026-10-13",
+          "comparison_value": 5.288,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_bp": 2.6,
+          "display_change": "+3 bp",
+          "week_comparison_date": "2026-10-07",
+          "week_comparison_value": 5.404,
+          "week_change_bp": -9.0,
+          "display_week_change": "−9 bp wk"
+        },
+        {
+          "id": "brent_spot",
+          "display_name": "Brent (spot)",
+          "tier": "primary",
+          "instrument_type": "commodity",
+          "quote_kind": "spot",
+          "unit": "USD/bbl",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "note": "EIA Europe Brent spot assessment via FRED. Not the futures price quoted in most news reports.",
+          "status": "ok",
+          "provider": "FRED DCOILBRENTEU (EIA)",
+          "provider_url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+          "licence_note": "FRED DCOILBRENTEU; source US EIA (public data). Spot assessment, published with a lag of several days.",
+          "official": true,
+          "source_label": "official",
+          "value": 126.55,
+          "display_value": "126.55",
+          "market_session_date": "2026-10-14",
+          "observation_timestamp_utc": "2026-10-14T18:30:00Z",
+          "comparison_date": "2026-10-13",
+          "comparison_value": 125.78,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 0.77,
+          "change_pct": 0.61,
+          "display_change": "+0.6%",
+          "week_comparison_date": "2026-10-07",
+          "week_comparison_value": 126.0,
+          "week_change_pct": 0.44,
+          "display_week_change": "+0.4% wk"
+        },
+        {
+          "id": "vix",
+          "display_name": "VIX",
+          "tier": "primary",
+          "instrument_type": "volatility_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "",
+          "decimals": 2,
+          "change_unit": "pts",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "Yahoo Finance (^VIX)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EVIX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 19.99,
+          "display_value": "19.99",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T07:00:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 16.459999,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 3.53,
+          "change_pct": 21.45,
+          "display_change": "+3.53 pts",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 14.84,
+          "week_change_abs": 5.15,
+          "display_week_change": "+5.15 pts wk"
+        },
+        {
+          "id": "nasdaq",
+          "display_name": "Nasdaq Composite",
+          "tier": "expanded",
+          "instrument_type": "equity_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "USD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "Yahoo Finance (^IXIC)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EIXIC/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 26140.029297,
+          "display_value": "26,140.0",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T13:30:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 26713.029297,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": -573.0,
+          "change_pct": -2.15,
+          "display_change": "−2.1%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 27366.169922,
+          "week_change_pct": -4.48,
+          "display_week_change": "−4.5% wk"
+        },
+        {
+          "id": "au2y",
+          "display_name": "Australia 2Y",
+          "tier": "expanded",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "RBA F2 capital market yields",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 4.919,
+          "display_value": "4.92%",
+          "market_session_date": "2026-10-14",
+          "observation_timestamp_utc": "2026-10-14T05:30:00Z",
+          "comparison_date": "2026-10-13",
+          "comparison_value": 4.886,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_bp": 3.3,
+          "display_change": "+3 bp",
+          "week_comparison_date": "2026-10-07",
+          "week_comparison_value": 4.94,
+          "week_change_bp": -2.1,
+          "display_week_change": "−2 bp wk"
+        },
+        {
+          "id": "au_curve",
+          "display_name": "AU 10Y–2Y curve",
+          "tier": "expanded",
+          "instrument_type": "spread",
+          "quote_kind": "spread",
+          "unit": "bp",
+          "currency": "AUD",
+          "decimals": 0,
+          "change_unit": "bp",
+          "observation_timezone": "Australia/Sydney",
+          "expected_session_date": "2026-10-16",
+          "status": "ok",
+          "provider": "Derived from RBA F2 (10Y minus 2Y)",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 39.5,
+          "display_value": "+40 bp",
+          "market_session_date": "2026-10-14",
+          "observation_timestamp_utc": "2026-10-14T05:30:00Z",
+          "comparison_date": "2026-10-13",
+          "comparison_value": 40.2,
+          "change_bp": -0.7,
+          "display_change": "−1 bp",
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)"
+        },
+        {
+          "id": "us10y",
+          "display_name": "US 10Y",
+          "tier": "expanded",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "US Treasury par yield curve",
+          "provider_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+          "licence_note": "US Treasury daily par yield curve; US-government public data.",
+          "official": true,
+          "source_label": "official",
+          "value": 5.09,
+          "display_value": "5.09%",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T19:30:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 5.1,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_bp": -1.0,
+          "display_change": "−1 bp",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 5.24,
+          "week_change_bp": -15.0,
+          "display_week_change": "−15 bp wk"
+        },
+        {
+          "id": "us2y",
+          "display_name": "US 2Y",
+          "tier": "expanded",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "US Treasury par yield curve",
+          "provider_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+          "licence_note": "US Treasury daily par yield curve; US-government public data.",
+          "official": true,
+          "source_label": "official",
+          "value": 4.74,
+          "display_value": "4.74%",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T19:30:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 4.77,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_bp": -3.0,
+          "display_change": "−3 bp",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 4.8,
+          "week_change_bp": -6.0,
+          "display_week_change": "−6 bp wk"
+        },
+        {
+          "id": "brent_fut",
+          "display_name": "Brent (futures)",
+          "tier": "expanded",
+          "instrument_type": "commodity",
+          "quote_kind": "futures_last",
+          "unit": "USD/bbl",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "note": "Yahoo BZ=F: front-month Brent last-day financial futures (NYMEX), daily close. Differs from the spot assessment.",
+          "status": "ok",
+          "provider": "Yahoo Finance (BZ=F)",
+          "provider_url": "https://finance.yahoo.com/quote/BZ%3DF/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 109.860001,
+          "display_value": "109.86",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T04:00:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 105.919998,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 3.94,
+          "change_pct": 3.72,
+          "display_change": "+3.7%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 104.720001,
+          "week_change_pct": 4.91,
+          "display_week_change": "+4.9% wk"
+        },
+        {
+          "id": "gold_fut",
+          "display_name": "Gold (COMEX futures)",
+          "tier": "expanded",
+          "instrument_type": "commodity",
+          "quote_kind": "futures_last",
+          "unit": "USD/oz",
+          "currency": "USD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "note": "Yahoo GC=F: active COMEX gold futures contract, not the spot or LBMA price.",
+          "status": "ok",
+          "provider": "Yahoo Finance (GC=F)",
+          "provider_url": "https://finance.yahoo.com/quote/GC%3DF/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 4181.100098,
+          "display_value": "4,181.1",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T04:00:00Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 4170.100098,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 11.0,
+          "change_pct": 0.26,
+          "display_change": "+0.3%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 4216.299805,
+          "week_change_pct": -0.83,
+          "display_week_change": "−0.8% wk"
+        },
+        {
+          "id": "rba_cash",
+          "display_name": "RBA cash rate target",
+          "tier": "expanded",
+          "instrument_type": "policy_rate",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "RBA F1 cash rate target",
+          "provider_url": "https://www.rba.gov.au/statistics/cash-rate/",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 4.6,
+          "display_value": "4.60%",
+          "market_session_date": "2026-10-15",
+          "observation_timestamp_utc": "2026-10-15T05:00:00Z",
+          "comparison_date": "2026-09-29",
+          "comparison_value": 4.35,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_bp": 25.0,
+          "display_change": "last move +25 bp (30 Sep)"
+        },
+        {
+          "id": "asx200_fut",
+          "display_name": "ASX SPI 200 futures",
+          "tier": "expanded",
+          "instrument_type": "equity_index_future",
+          "quote_kind": "futures_last",
+          "unit": "pts",
+          "currency": "AUD",
+          "decimals": 0,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "unavailable_reason": "No free, permitted feed for ASX 24 SPI 200 futures (licensed exchange data).",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null
+        },
+        {
+          "id": "iron_ore",
+          "display_name": "Iron ore 62% Fe",
+          "tier": "expanded",
+          "instrument_type": "commodity",
+          "quote_kind": "futures_last",
+          "unit": "USD/t",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "America/New_York",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "unavailable_reason": "No free, permitted daily benchmark (SGX/Platts are licensed); the only free series (IMF via FRED) is monthly.",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null
+        },
+        {
+          "id": "wl_zip",
+          "display_name": "ZIP · Zip Co",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 3,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (ZIP.AX)",
+          "provider_url": "https://finance.yahoo.com/quote/ZIP.AX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 2.17,
+          "display_value": "2.170",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T05:10:06Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 2.12,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 0.05,
+          "change_pct": 2.36,
+          "display_change": "+2.4%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 2.16,
+          "week_change_pct": 0.46,
+          "display_week_change": "+0.5% wk",
+          "ticker": "ZIP"
+        },
+        {
+          "id": "wl_csl",
+          "display_name": "CSL · CSL",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (CSL.AX)",
+          "provider_url": "https://finance.yahoo.com/quote/CSL.AX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 192.199997,
+          "display_value": "192.20",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T05:10:08Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 186.899994,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 5.3,
+          "change_pct": 2.84,
+          "display_change": "+2.8%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 183.839996,
+          "week_change_pct": 4.55,
+          "display_week_change": "+4.5% wk",
+          "ticker": "CSL"
+        },
+        {
+          "id": "wl_flt",
+          "display_name": "FLT · Flight Centre",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (FLT.AX)",
+          "provider_url": "https://finance.yahoo.com/quote/FLT.AX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 10.46,
+          "display_value": "10.46",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T05:10:08Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 10.24,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 0.22,
+          "change_pct": 2.15,
+          "display_change": "+2.1%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 10.26,
+          "week_change_pct": 1.95,
+          "display_week_change": "+1.9% wk",
+          "ticker": "FLT"
+        },
+        {
+          "id": "wl_iel",
+          "display_name": "IEL · IDP Education",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-16",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (IEL.AX)",
+          "provider_url": "https://finance.yahoo.com/quote/IEL.AX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 2.25,
+          "display_value": "2.25",
+          "market_session_date": "2026-10-16",
+          "observation_timestamp_utc": "2026-10-16T05:10:08Z",
+          "comparison_date": "2026-10-15",
+          "comparison_value": 2.22,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-18 01:38Z (historical backfill: value cut at the issue cutoff, retrieved later)",
+          "change_abs": 0.03,
+          "change_pct": 1.35,
+          "display_change": "+1.4%",
+          "week_comparison_date": "2026-10-09",
+          "week_comparison_value": 2.2,
+          "week_change_pct": 2.27,
+          "display_week_change": "+2.3% wk",
+          "ticker": "IEL"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "market-drivers",
+        "cards": [
+          {
+            "id": "ai-vs-oil-week",
+            "headline": "Investors weighed an AI-stock sell-off against rising oil",
+            "takeaway": "Money moved from debt-funded AI stocks into bonds while oil climbed towards US$110.",
+            "tags": [
+              "Cross-asset",
+              "AI",
+              "Oil"
+            ],
+            "key_figure": "Week: S&P 500 −1.9% · Nasdaq −4.5% · US 10Y −15 bp",
+            "what_happened": "Over the week, investors sold debt-funded AI stocks and bought bonds, while oil climbed back towards US$110 as attacks in the Gulf spread ([AMP](https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp)).",
+            "why_it_matters": "The balance between growth worries and inflation worries drives bond yields, which affect equity valuations and the RBA outlook.",
+            "competing_views": [
+              {
+                "who": "My Bui, AMP",
+                "view": "The bond rally shows investors now fear an AI bust more than inflation.",
+                "source": {
+                  "label": "AMP",
+                  "url": "https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp",
+                  "claim_type": "opinion"
+                }
+              },
+              {
+                "who": "Chris Watling, Longview Economics",
+                "view": "Expects a \"big, chunky sell-off\" of 10–20% in US shares as tighter liquidity hits credit; a mid-cycle correction, not a recession.",
+                "source": {
+                  "label": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/09/market-correction-chris-watling.html",
+                  "claim_type": "forecast"
+                }
+              },
+              {
+                "who": "AMP",
+                "view": "Flags CoreWeave's bonds at distressed levels and contagion risk through credit, but still favours shares over 12 months: the AI spending boom can run two to three more years and investment-grade credit is calm.",
+                "source": {
+                  "label": "AMP",
+                  "url": "https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp",
+                  "claim_type": "forecast"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "label": "AMP",
+                "url": "https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/10/09/market-correction-chris-watling.html",
+                "claim_type": "forecast"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "australia-asx",
+        "cards": []
+      },
+      {
+        "id": "rates-expectations",
+        "cards": [
+          {
+            "id": "bonds-week",
+            "headline": "US and Australian yields fell over the week",
+            "takeaway": "US 10-year yields fell despite hot inflation; Australian yields fell after the September jobs data.",
+            "tags": [
+              "Bonds",
+              "Fed",
+              "RBA"
+            ],
+            "key_figure": "US 10Y 5.09%, −15 bp wk · AU 10Y 5.31%, −9 bp wk to 14 Oct",
+            "what_happened": "US 10-year yields fell despite hot inflation, as investors moved out of AI stocks and Fed officials signalled no rush to act ([WSJ](https://www.wsj.com/finance/most-jgbs-rise-tracking-gains-in-u-s-treasurys-80602aa7)). Australian yields fell further after September's unexpected fall in employment ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WBC_MorningReport16Oct2026.pdf)).",
+            "why_it_matters": "Lower yields reduce borrowing costs and tend to support rate-sensitive stocks.",
+            "market_reaction": "Dashboard: US 10Y −15 bp over the week to 16 Oct (US Treasury); AU 10Y −9 bp over the week to 14 Oct (RBA, published with a lag).",
+            "sources": [
+              {
+                "label": "WSJ",
+                "url": "https://www.wsj.com/finance/most-jgbs-rise-tracking-gains-in-u-s-treasurys-80602aa7",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "Westpac",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WBC_MorningReport16Oct2026.pdf",
+                "claim_type": "reporting"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "global-risk",
+        "cards": [
+          {
+            "id": "hormuz-mine",
+            "headline": "Iran and the US gave different accounts of a tanker fire",
+            "takeaway": "Iran's Revolutionary Guards said a supertanker hit a mine; the US said the mines are cleared.",
+            "tags": [
+              "Oil",
+              "Hormuz",
+              "Geopolitics"
+            ],
+            "new_since_last_issue": "The tanker incident happened on Saturday 17 October, after the previous edition.",
+            "what_happened": "Iran's Revolutionary Guards said a supertanker carrying more than 2 million barrels hit a mine and caught fire on Saturday. The US said the mines have been cleared and that ships are being hit by Iranian projectiles ([Euronews](https://www.euronews.com/2026/10/17/super-tanker-ablaze-after-striking-mine-in-strait-of-hormuz-irgc-says), [Al Jazeera](https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels)).",
+            "why_it_matters": "Either account points to continued risk to tankers in the strait. That supports ASX energy stocks but keeps inflation and airfares high.",
+            "competing_views": [
+              {
+                "who": "Iran's Revolutionary Guards (official claim)",
+                "view": "The supertanker struck a mine.",
+                "source": {
+                  "label": "Euronews",
+                  "url": "https://www.euronews.com/2026/10/17/super-tanker-ablaze-after-striking-mine-in-strait-of-hormuz-irgc-says",
+                  "claim_type": "official_statement"
+                }
+              },
+              {
+                "who": "US government (official claim)",
+                "view": "Mines in the strait have been cleared; ships are being hit by Iranian projectiles.",
+                "source": {
+                  "label": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+                  "claim_type": "official_statement"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "label": "Euronews",
+                "url": "https://www.euronews.com/2026/10/17/super-tanker-ablaze-after-striking-mine-in-strait-of-hormuz-irgc-says",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "Al Jazeera",
+                "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+                "claim_type": "reporting"
+              }
+            ]
+          },
+          {
+            "id": "hormuz-flows",
+            "headline": "Estimates of oil flows through Hormuz differ",
+            "takeaway": "Kpler estimates about two-thirds of pre-war flows; US Central Command cites 100 million barrels last week.",
+            "tags": [
+              "Oil",
+              "Hormuz",
+              "Data"
+            ],
+            "what_happened": "Kpler estimates flows at about two-thirds of pre-war levels. US Central Command said 100 million barrels passed last week. The UK maritime monitor said most attacked ships no longer report, so the true count is likely higher ([Al Jazeera](https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels), [CBS](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-yemen-houthis-saudi-arabia/)).",
+            "why_it_matters": "Flow volumes determine how much Gulf oil reaches the market, which matters for Brent and inflation.",
+            "chart": {
+              "type": "bar",
+              "label": "Oil through Hormuz",
+              "labels": [
+                "Pre-war",
+                "Now (about two-thirds)"
+              ],
+              "values": [
+                17,
+                11.3
+              ],
+              "unit": "m bbl/day",
+              "caption": "Kpler puts Hormuz oil flows at roughly two-thirds of the 17m barrels a day before the war (approximate).",
+              "source": "Kpler via Al Jazeera; BBC Verify",
+              "source_url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels"
+            },
+            "comparison": {
+              "title": "Oil flows through the Strait of Hormuz",
+              "why_different": "The figures measure different things: Kpler's is a share of pre-war daily flows from vessel tracking; CENTCOM's is a weekly total stated by a party to the conflict; UKMTO notes that ships which stop transmitting are missed by tracking. 100 million barrels in 7 days would average about 14m b/d (our arithmetic), above Kpler's estimate. The gap is not resolved.",
+              "resolution": "unresolved",
+              "rows": [
+                {
+                  "source": "Kpler (via Al Jazeera)",
+                  "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+                  "figure": "~2/3 of pre-war (~11m b/d)",
+                  "measure": "Daily oil flows vs the pre-war 17m b/d",
+                  "timestamp": "Reported 17 Oct",
+                  "method": "Vessel tracking estimate",
+                  "status": "estimate"
+                },
+                {
+                  "source": "US Central Command (via Al Jazeera)",
+                  "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+                  "figure": "100m barrels",
+                  "measure": "Oil passed through the strait last week",
+                  "timestamp": "Week to ~17 Oct",
+                  "method": "Official statement",
+                  "status": "official claim"
+                },
+                {
+                  "source": "UK maritime monitor (via CBS)",
+                  "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-yemen-houthis-saudi-arabia/",
+                  "figure": "Undercount likely",
+                  "measure": "Coverage of tracking data",
+                  "timestamp": "Reported 17 Oct",
+                  "method": "Statement on reporting gaps",
+                  "status": "official claim"
+                }
+              ]
+            },
+            "sources": [
+              {
+                "label": "Al Jazeera",
+                "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "CBS",
+                "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-yemen-houthis-saudi-arabia/",
+                "claim_type": "reporting"
+              }
+            ]
+          },
+          {
+            "id": "iran-plan",
+            "headline": "Iran said it sent the US a seven-day plan to reopen Hormuz",
+            "takeaway": "The plan was passed via Qatar; no breakthrough is expected soon.",
+            "tags": [
+              "Iran",
+              "US",
+              "Diplomacy"
+            ],
+            "what_happened": "Iran said it sent Washington, via Qatar, a seven-day plan to reopen the strait if its conditions are met: \"The choice is now America's\" ([Iran International](https://www.iranintl.com/en/202610179732)). US media reported that Trump has told the military to be ready for larger strikes after the 3 November midterms ([Al Jazeera](https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels)).",
+            "why_it_matters": "A reopening would ease oil supply; larger strikes would raise supply risk.",
+            "sources": [
+              {
+                "label": "Iran International",
+                "url": "https://www.iranintl.com/en/202610179732",
+                "claim_type": "official_statement"
+              },
+              {
+                "label": "Al Jazeera",
+                "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+                "claim_type": "reporting"
+              }
+            ]
+          },
+          {
+            "id": "houthis-aramco",
+            "headline": "Houthis struck Aramco's Dhahran headquarters",
+            "takeaway": "The Bab el-Mandeb, the main bypass route for Gulf oil, is reported to be under Houthi control; Aramco's shipping kept running.",
+            "tags": [
+              "Oil",
+              "Saudi Arabia",
+              "Shipping"
+            ],
+            "what_happened": "The Houthis struck Aramco's Dhahran headquarters and now hold the Bab el-Mandeb, the main bypass for Gulf oil ([CBC/Reuters](https://www.cbc.ca/news/world/saudi-arabia-aramco-houthis-missile-9.7379854)). Aramco's shipping kept running ([TradeWinds](https://www.tradewindsnews.com/tankers/aramco-shipping-keeps-rolling-after-houthi-strike-on-dhahran-headquarters/2-1-2059031)).",
+            "why_it_matters": "Disruption to the bypass route would add to supply risk from Hormuz.",
+            "sources": [
+              {
+                "label": "CBC/Reuters",
+                "url": "https://www.cbc.ca/news/world/saudi-arabia-aramco-houthis-missile-9.7379854",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "TradeWinds",
+                "url": "https://www.tradewindsnews.com/tankers/aramco-shipping-keeps-rolling-after-houthi-strike-on-dhahran-headquarters/2-1-2059031",
+                "claim_type": "reporting"
+              }
+            ]
+          },
+          {
+            "id": "russia-sanctions",
+            "headline": "Trump suspended sanctions and tariffs on buyers of Russian energy",
+            "takeaway": "The Graham Act measures were suspended days before they were due to start.",
+            "tags": [
+              "Russia",
+              "Sanctions",
+              "China"
+            ],
+            "what_happened": "Trump suspended the Graham Act sanctions and tariffs on buyers of Russian energy days before they were due to start; Investing.com linked the move to his diesel deal with Putin ([Investing.com](https://www.yahoo.com/news/politics/articles/trump-suspends-sweeping-russia-tariffs-015245423.html)). Members of both parties in Congress criticised the decision ([AP via PBS](https://www.pbs.org/newshour/politics/trumps-decision-to-waive-russian-sanctions-outrages-congress-but-no-quick-counter-seen)). AMP notes the diesel covers only about a day of world demand.",
+            "why_it_matters": "The suspension removes the threat of large US tariffs on China and India. China is Australia's biggest customer.",
+            "sources": [
+              {
+                "label": "Investing.com",
+                "url": "https://www.yahoo.com/news/politics/articles/trump-suspends-sweeping-russia-tariffs-015245423.html",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "AP via PBS",
+                "url": "https://www.pbs.org/newshour/politics/trumps-decision-to-waive-russian-sanctions-outrages-congress-but-no-quick-counter-seen",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "AMP",
+                "url": "https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp",
+                "claim_type": "forecast"
+              }
+            ]
+          },
+          {
+            "id": "ukraine-grid",
+            "headline": "Russia launched one of its largest attacks on Ukraine's grid",
+            "takeaway": "Putin said a \"security zone\" inside Ukraine is not negotiable.",
+            "tags": [
+              "Ukraine",
+              "Russia",
+              "Energy"
+            ],
+            "what_happened": "Russia carried out one of its biggest attacks yet on Ukraine's power grid. Putin said a \"security zone\" inside Ukraine is not negotiable ([Kyiv Independent](https://kyivindependent.com/russian-attacks-kill-7-injure-dozens-across-ukraine-amid-continued-strikes-on-energy-infrastructure/), [The Independent](https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-starlink-b3068450.html)).",
+            "why_it_matters": "A longer conflict keeps diesel markets tight.",
+            "sources": [
+              {
+                "label": "Kyiv Independent",
+                "url": "https://kyivindependent.com/russian-attacks-kill-7-injure-dozens-across-ukraine-amid-continued-strikes-on-energy-infrastructure/",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "The Independent",
+                "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-starlink-b3068450.html",
+                "claim_type": "reporting"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rates": {
+      "rba": {
+        "status": "available",
+        "summary": "About a one-in-eight chance of a hike in November.",
+        "as_of": "16 Oct 2026",
+        "source": {
+          "label": "Westpac Morning Report",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WBC_MorningReport16Oct2026.pdf",
+          "claim_type": "reporting"
+        },
+        "forecasts": [
+          {
+            "who": "Westpac",
+            "view": "Still expects a November hike because inflation risks dominate.",
+            "source": {
+              "label": "Westpac Weekly",
+              "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261019.pdf",
+              "claim_type": "forecast"
+            }
+          },
+          {
+            "who": "AMP",
+            "view": "Expects a hold, with firm language.",
+            "source": {
+              "label": "AMP",
+              "url": "https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp",
+              "claim_type": "forecast"
+            }
+          }
+        ]
+      },
+      "fed": {
+        "status": "available",
+        "summary": "Traders expect a hold on 28 October and a hike in December.",
+        "as_of": "16 Oct 2026",
+        "source": {
+          "label": "FXStreet",
+          "url": "https://www.fxstreet.com/news/australian-dollar-pares-gains-as-us-dollar-steadies-rba-hike-bets-ease-202610161740",
+          "claim_type": "reporting"
+        }
+      }
+    },
+    "watchlist": [
+      {
+        "ticker": "ZIP",
+        "note": "No new verified news this weekend.",
+        "next_catalyst": "Quarterly update due Friday."
+      },
+      {
+        "ticker": "CSL",
+        "note": "No new verified news this weekend."
+      },
+      {
+        "ticker": "FLT",
+        "note": "No new verified news this weekend."
+      },
+      {
+        "ticker": "IEL",
+        "note": "No new verified news this weekend."
+      }
+    ],
+    "calendar": [
+      {
+        "when": "Sun 18 Oct",
+        "event": "RBA Assistant Governor Kent speaks",
+        "country": "AU",
+        "importance": "medium",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261019.pdf"
+        }
+      },
+      {
+        "when": "Mon 19 Oct",
+        "event": "RBA's Kent speaks again",
+        "country": "AU",
+        "importance": "medium",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261019.pdf"
+        }
+      },
+      {
+        "when": "Mon 19 Oct",
+        "event": "China September-quarter GDP",
+        "country": "CN",
+        "importance": "high",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261019.pdf"
+        }
+      },
+      {
+        "when": "Tue 20 Oct",
+        "event": "BHP quarterly update; Woodside, Fortescue and Santos follow",
+        "country": "AU",
+        "importance": "medium",
+        "source": {
+          "label": "CommSec",
+          "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/October/ECO_Insights_161026-Week-Ahead.pdf"
+        }
+      },
+      {
+        "when": "Tue (US time)",
+        "event": "Meta and Tesla results",
+        "country": "US",
+        "importance": "medium",
+        "source": {
+          "label": "AMP",
+          "url": "https://www.amp.com.au/resources/insights-hub/weekly-market-update-16-10-2026-amp"
+        }
+      },
+      {
+        "when": "Wed 21 Oct",
+        "event": "RBA Deputy Governor Hauser speaks",
+        "country": "AU",
+        "importance": "medium",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/10/WestpacWeekly20261019.pdf"
+        }
+      },
+      {
+        "when": "Wed 28 Oct",
+        "event": "Fed policy decision",
+        "country": "US",
+        "importance": "high",
+        "source": {
+          "label": "FXStreet",
+          "url": "https://www.fxstreet.com/news/australian-dollar-pares-gains-as-us-dollar-steadies-rba-hike-bets-ease-202610161740"
+        }
+      }
+    ]
+  },
+  "close": null,
+  "watchlist_data": null,
+  "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
+}

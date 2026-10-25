@@ -1,0 +1,716 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-19",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Monday 19 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "evals",
+      "card_id": "opencode-breach",
+      "headline": "OpenCode breach may have exposed linked AI provider keys"
+    },
+    {
+      "section_id": "agenteng",
+      "card_id": "harness2",
+      "headline": "Google's Harness² tunes an agent's own prompts, tools and skills"
+    },
+    {
+      "section_id": "industry",
+      "card_id": "anthropic-pbf",
+      "headline": "Anthropic puts 5% of its shares into a Public Benefit Fund"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "ollama-claude-deepseek",
+          "headline": "Ollama Cloud now serves DeepSeek-V4.1-Flash-1017, and Claude Code can run on it",
+          "takeaway": "A one-line launcher points Claude Code at DeepSeek's new model on US/EU-hosted, zero-retention servers.",
+          "tags": [
+            "Claude Code",
+            "DeepSeek",
+            "Ollama"
+          ],
+          "sources": [
+            "Docs",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Live 8:53am Sun AEDT. `ollama run deepseek-v4.1-flash:1017-cloud` runs it on Ollama Cloud, and `ollama launch claude --model ...` starts Claude Code against it. Ollama says its cloud keeps zero data retention (ZDR), hosts in the US and EU, and doesn't train on prompts.",
+          "why_it_matters": "It's a cheap way to A/B the same Claude Code task on Opus and on DeepSeek, without sending code to a China-hosted endpoint.",
+          "caveats": "Ollama's retention and hosting claims are its own; check them against your bank's vendor rules before using real code. The model itself was covered yesterday; what's new is this hosting.",
+          "how_to_try": "Run `ollama launch claude` with the 1017-cloud model on a throwaway repo, then rerun the same task on your usual model and compare diffs.",
+          "links": [
+            {
+              "label": "Ollama model page",
+              "url": "https://ollama.com/library/deepseek-v4.1-flash"
+            },
+            {
+              "label": "@ollama launch post",
+              "url": "https://x.com/ollama/status/2111576482879553726"
+            },
+            {
+              "label": "@ollama on retention",
+              "url": "https://x.com/ollama/status/2111587278271426605"
+            }
+          ]
+        },
+        {
+          "id": "pocock-precommit",
+          "headline": "A pre-commit hook that blocks agent-written files over 5,000 tokens",
+          "takeaway": "Matt Pocock's prompt makes your agent build a guard that keeps files small enough to edit well.",
+          "tags": [
+            "Prompt",
+            "Git hooks",
+            "Context"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Posted 5:38pm Sun AEDT (3,173 likes and 4,370 bookmarks at fetch time). The prompt asks for a hook that runs only on staged files, estimates tokens as bytes/4, skips files agents didn't write (lockfiles, codegen), and tells the agent how to split the file in the error message.",
+          "why_it_matters": "Huge files are where Claude Code and Codex start doing partial, lossy edits. A hard limit with a fix-it message turns that into something the agent corrects by itself.",
+          "caveats": "A practitioner tip shared on X only (unverified), not a tool release. Bytes/4 is a rough token estimate, and the limit needs tuning per repo.",
+          "how_to_try": "Paste the prompt into Claude Code in a sandbox repo, commit an oversized file, and check the agent splits it when the hook fails.",
+          "links": [
+            {
+              "label": "@mattpocockuk post",
+              "url": "https://x.com/mattpocockuk/status/2111708560715292675"
+            }
+          ]
+        },
+        {
+          "id": "codex-0164-alpha",
+          "headline": "Codex CLI 0.164.0 is in alpha, with three builds and no notes yet",
+          "takeaway": "The next Codex CLI release is close, but OpenAI hasn't said what's in it.",
+          "tags": [
+            "Codex CLI",
+            "Pre-release"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "rust-v0.164.0-alpha.1 to alpha.3 went out between 1:49am and 3:03pm Sat AEDT, each with only a title. It follows 0.163.0 (mid-turn steering), covered yesterday.",
+          "why_it_matters": "If you pin Codex in your agent evals, a new minor version is coming that may change behaviour.",
+          "caveats": "Alpha builds with empty release notes. Wait for the stable 0.164.0 changelog.",
+          "how_to_try": "Nothing to try yet. Keep evals pinned to 0.163.0 until the stable notes are out.",
+          "links": [
+            {
+              "label": "Codex releases",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "opencode-breach",
+          "headline": "OpenCode Console breach: linked AI provider keys may be exposed",
+          "takeaway": "1.4% of Console users with external providers linked were hit; affected users are told to rotate keys.",
+          "tags": [
+            "Security",
+            "API keys",
+            "OpenCode"
+          ],
+          "sources": [
+            "X",
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "OpenCode said at 4:56am Sun AEDT that a breach 'related to a large scale distillation attack' hit 1.4% of OpenCode Console users, all emailed, and that it is working with Anthropic, OpenAI and Google. The reported email says a legacy system being decommissioned was accessed and saved provider keys 'may have been exposed'. Some users report unauthorised charges.",
+          "why_it_matters": "It's a live example of the risk in letting a hosted agent service store your model API keys, the kind of third-party dependency your bank's controls should cover.",
+          "caveats": "The incident is ongoing, with no root cause published. The email text and charge reports come from press and Reddit, not OpenCode directly. The CLI alone isn't named as affected.",
+          "links": [
+            {
+              "label": "@opencode statement",
+              "url": "https://x.com/opencode/status/2111519637049319818"
+            },
+            {
+              "label": "On The Wire",
+              "url": "https://onthewire.ai/article/opencode-says-a-breach-hit-1-4-of-its-console-users-an-email-shared-online-tells"
+            },
+            {
+              "label": "Notebookcheck",
+              "url": "https://www.notebookcheck.net/OpenCode-hacked-users-urged-to-revoke-their-API-keys.1426957.0.html"
+            }
+          ]
+        },
+        {
+          "id": "vercel-gateway-sessions",
+          "headline": "Vercel AI Gateway logs now group Claude Code, Codex and Cursor runs into sessions",
+          "takeaway": "Each session shows cost, models, providers and how much of the prompt was served from cache.",
+          "tags": [
+            "Observability",
+            "Cost",
+            "Prompt caching"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Published 18 Oct. A new Sessions view groups requests by conversation and names the client (Claude Code, Codex, Cursor). Session affinity, on by default, keeps each turn on the provider that served the last one so its prompt cache is reused. You can group requests yourself with `x-session-id` or `providerOptions.gateway.sessionId`.",
+          "why_it_matters": "Cache hit rate per agent session is a direct cost and latency metric for the agentic apps you validate, and it's now visible without custom tracing.",
+          "caveats": "Vercel-hosted gateway only. Requests without a session id are grouped by a fingerprint of the conversation's opening, which can mis-group.",
+          "links": [
+            {
+              "label": "Vercel changelog",
+              "url": "https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity"
+            },
+            {
+              "label": "Session affinity docs",
+              "url": "https://vercel.com/docs/ai-gateway/models-and-providers/session-affinity"
+            }
+          ]
+        },
+        {
+          "id": "dataworld-bench",
+          "headline": "DataWorld-Bench: frontier models compute well but miss the insight",
+          "takeaway": "A synthetic benchmark for data agents, built so every finding can be checked against a known ground truth.",
+          "tags": [
+            "Benchmark",
+            "Data agents",
+            "Rubrics"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Data World first specifies the 'world' behind a set of files, then generates the files, tasks and grading rubrics, with audits that the answer is recoverable. DataWorld-Bench has 100 tasks across 16 domains. Ten frontier models show a consistent gap between doing the computation and finding the insight. The authors' RL-trained DataWorld-35B-A3B gains 7.06 points on it.",
+          "why_it_matters": "Synthetic worlds with known answers are a way to eval analytics agents without touching real customer data, a common blocker in banking.",
+          "caveats": "Authors' own benchmark and numbers. Listed on Hugging Face Papers on 15 Oct; there was no new daily list over the weekend.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.21656"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.21656"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Zhanli-Li/Data-World"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "harness2",
+          "headline": "Google's Harness²: an agent that tunes its own prompts, tools and skills",
+          "takeaway": "Open-source, Apache 2.0, and it improves the harness around a fixed model rather than the model.",
+          "tags": [
+            "Harness",
+            "Self-improvement",
+            "Codex"
+          ],
+          "sources": [
+            "GitHub",
+            "Paper"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Google Cloud AI Research released the code (5,537 stars). It edits eight parts of the harness (system prompt, guardrails, memory, tool guidance, subagents, skills, scripts, plugins). A Propose–Probe–Compose step tries edits on the same task and keeps what behaved better, with no ground-truth checker. It supports OpenCode and Codex executors. The paper reports one step adding up to 11.5 points on WorkBuddy-Bench for GLM-5 and Gemini 3.5 Flash.",
+          "why_it_matters": "It automates the prompt-and-skill tuning you do by hand, and the edit history is an audit trail of why the harness changed.",
+          "caveats": "'Up to' numbers are best cases on the authors' chosen benchmarks. Self-modifying guardrails need human sign-off in a bank. Not an officially supported Google product.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/google-research/harness2"
+            },
+            {
+              "label": "arXiv paper",
+              "url": "https://arxiv.org/abs/2610.14224"
+            }
+          ]
+        },
+        {
+          "id": "monty-1-2",
+          "headline": "Pydantic Monty v1.2.0: csv, hashlib and os.path for sandboxed agent code",
+          "takeaway": "The minimal Python interpreter for model-written code now covers more of the standard library.",
+          "tags": [
+            "Sandbox",
+            "Code execution",
+            "Pydantic"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 3:45am Mon AEDT. Adds the csv, hashlib, bisect and os.path modules, dataclass field() and __post_init__, list slice assignment, and caps restored session budgets at the destination's limits. It also ships the match statements previewed in yesterday's card.",
+          "why_it_matters": "Each module added is one less reason for an agent's code to need a full container, so more tool calls can run in a tight sandbox.",
+          "caveats": "Still a subset of Python; test your agents' typical scripts before relying on it.",
+          "links": [
+            {
+              "label": "Release notes",
+              "url": "https://github.com/pydantic/monty/releases/tag/v1.2.0"
+            },
+            {
+              "label": "@samuelcolvin",
+              "url": "https://x.com/samuelcolvin/status/2111884046489772273"
+            }
+          ]
+        },
+        {
+          "id": "deepseek-search-api",
+          "headline": "DeepSeek opens its in-house web Search and Fetch APIs",
+          "takeaway": "Agents can call DeepSeek's own search index directly, billed per request.",
+          "tags": [
+            "Search API",
+            "Tools",
+            "DeepSeek"
+          ],
+          "sources": [
+            "Docs",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "DeepSeek's change log, dated 17 Oct, opens its search engine as standalone Search and Fetch APIs, which it says handles hundreds of millions of queries a day. X posts cite $0.75 per 1,000 calls and free use via Claude Code or Codex until 1 Nov (unverified).",
+          "why_it_matters": "It's a cheap alternative to a third-party search tool in a research agent, but a bank would need to clear sending queries to it.",
+          "caveats": "Pricing and free-period details come from X posts, not the change log text checked. Quality claims about spam filtering are DeepSeek's own.",
+          "links": [
+            {
+              "label": "DeepSeek change log",
+              "url": "https://api-docs.deepseek.com/updates"
+            },
+            {
+              "label": "X summary (unverified)",
+              "url": "https://x.com/_ninetyhe/status/2111781336247881806"
+            }
+          ]
+        },
+        {
+          "id": "ollama-0-40-7-rc0",
+          "headline": "Ollama v0.40.7-rc0: reasoning effort on any model via the Responses API",
+          "takeaway": "A release candidate that stops non-thinking models rejecting the effort setting.",
+          "tags": [
+            "Ollama",
+            "Responses API",
+            "Local models"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Pre-release out 11:28am Sun AEDT. The OpenAI-compatible Responses API now accepts reasoning effort on non-thinking models, llama-server infers the speculative-decoding draft type, and MLX adds support for PLX Decider v1.2.",
+          "why_it_matters": "One agent config that sets reasoning effort can now run against local non-thinking models without erroring.",
+          "caveats": "Release candidate only.",
+          "links": [
+            {
+              "label": "Release notes",
+              "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7-rc0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "vllm-0-32",
+          "headline": "vLLM v0.32.0: security fixes, closed CORS default and low-precision KV cache",
+          "takeaway": "A big inference-server release with breaking changes worth reading before you upgrade.",
+          "tags": [
+            "vLLM",
+            "Inference",
+            "Security"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Released 5:50pm Sun AEDT (814 commits). Fixes three advisories, stops allowing every CORS origin by default, limits untrusted images to raster formats and rejects JSON schemas nested over 64 levels. Adds a /v1/systemone structured-decision endpoint, an 'hf' tool-call parser that reads the model's own template, wider FP8/NVFP4 KV cache, and EmbeddingGemma 2, MiniCPM-V 4.7 and Nemotron 3.5 ASR support.",
+          "why_it_matters": "If your bank self-hosts models on vLLM, the CORS and parser changes affect how agents connect, and the security fixes are reason enough to plan the upgrade.",
+          "caveats": "Breaking: Python 3.10 dropped, CORS restricted, max_tokens no longer reserved from context, Responses API reasoning events renamed. Throughput gains are from the PRs' own benchmarks.",
+          "links": [
+            {
+              "label": "Release notes",
+              "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+            },
+            {
+              "label": "@vllm_project",
+              "url": "https://x.com/vllm_project/status/2111814711956168760"
+            }
+          ]
+        },
+        {
+          "id": "kimi-k3-decode",
+          "headline": "Kimi K3 decodes at 842 tokens/s at batch 1 on vLLM",
+          "takeaway": "vLLM's fused decode path for Moonshot's model gives 1.5–2x decode throughput in tested setups.",
+          "tags": [
+            "Kimi K3",
+            "Inference",
+            "NVIDIA"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "vLLM's 16 Oct blog, promoted on X at 12:55pm Sun AEDT, describes one CuTe DSL decode path that fuses attention, mixture-of-experts and communication on NVIDIA GB300 NVL72, with DSpark speculative decoding. vLLM reports 842 tokens/s at batch 1 and up to 1.8x better P90 interactivity.",
+          "why_it_matters": "Fast single-user decode on a very large open model makes interactive agent loops on self-hosted weights more realistic.",
+          "caveats": "vLLM's own measurements on top-end GB300 racks, in selected configurations; your hardware will differ.",
+          "links": [
+            {
+              "label": "vLLM blog",
+              "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel"
+            },
+            {
+              "label": "@vllm_project",
+              "url": "https://x.com/vllm_project/status/2111637219647840611"
+            }
+          ]
+        },
+        {
+          "id": "openai-aurora",
+          "headline": "OpenAI 'aurora' image models briefly appeared in its API (unverified)",
+          "takeaway": "Three undocumented alphas showed up in the model list, then disappeared.",
+          "tags": [
+            "OpenAI",
+            "Image models",
+            "Leak"
+          ],
+          "sources": [
+            "X",
+            "News"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "On 17 Oct, aurora-red-alpha, aurora-green-alpha and aurora-blue-alpha were spotted in OpenAI's public model list. Community tests suggest image generation, and references were then removed. OpenAI has published no docs, pricing or access details.",
+          "why_it_matters": "Nothing to build on yet. If they ship, they'd replace the documented gpt-image models in any document or UI generation flow.",
+          "caveats": "Unverified: no official confirmation, and reporting is from community tests.",
+          "links": [
+            {
+              "label": "OpenAI Images API docs (no aurora listing)",
+              "url": "https://developers.openai.com/api/reference/resources/images/"
+            },
+            {
+              "label": "LuminaBench write-up",
+              "url": "https://luminabench.com/journal/aurora-image-models/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "inslm-spy-agencies-ai",
+          "headline": "Australia's spy agencies use AI with no specific rules, says the security law monitor",
+          "takeaway": "The INSLM's annual report finds a 'gap' in oversight, and its planned review has stalled.",
+          "tags": [
+            "Australia",
+            "Regulation",
+            "National security"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Reported 5:30am Mon AEDT. The Independent National Security Legislation Monitor (INSLM) says ministers' internal rules for intelligence agencies 'say nothing about AI specifically' and that agencies are exempt from the Privacy Act and the government's responsible-AI policy. A review of whether bespoke AI rules are needed hasn't been done, and the Monitor's term ends 25 Nov.",
+          "why_it_matters": "It shows Australian oversight of AI in decision-making is still patchy, as the government prepares national AI standards legislation for early 2027.",
+          "caveats": "Report coverage from one outlet. The government says oversight of the agencies is 'robust'.",
+          "links": [
+            {
+              "label": "Canberra Times",
+              "url": "https://www.canberratimes.com.au/story/9368764/australian-spy-agencies-face-scrutiny-over-unregulated-ai-use/"
+            }
+          ]
+        },
+        {
+          "id": "anthropic-pbf",
+          "headline": "Anthropic puts 5% of its shares into a Public Benefit Fund",
+          "takeaway": "The stake grows by 2% for every 50% rise in value above a baseline, at the board's discretion.",
+          "tags": [
+            "Anthropic",
+            "Governance",
+            "IPO"
+          ],
+          "sources": [
+            "Blog"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Announced 3:49am Mon AEDT, subject to stockholder approval. The fund is a wholly-owned LLC that won't use its equity for lobbying or political giving. Anthropic says about 20% of its shares are now dedicated to public-good uses, including co-founder pledges and an employee match, and names labour-market impacts as one focus.",
+          "why_it_matters": "It comes ahead of a reported IPO and changes the governance picture of a key model vendor, which matters for third-party risk reviews.",
+          "caveats": "Governance and valuation milestones aren't published yet.",
+          "links": [
+            {
+              "label": "Anthropic",
+              "url": "https://www.anthropic.com/news/public-benefit-fund"
+            }
+          ]
+        },
+        {
+          "id": "meta-scraping-terms",
+          "headline": "Meta drops terms language that could have allowed AI training on scraped sites",
+          "takeaway": "After expert criticism, the revised business terms tie crawling to ads and business products, not AI training.",
+          "tags": [
+            "Meta",
+            "Data rights",
+            "Policy"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "On 17 Oct (US time) Meta removed language from its upcoming commercial terms that could have let it train AI on content scraped from business-linked sites. The terms still allow crawling those domains with automated software and test credentials. Meta says its crawler practices are unchanged.",
+          "why_it_matters": "Terms like these decide whether your organisation's public web content ends up in training data; legal experts say the new wording is still broad.",
+          "caveats": "Interpretation differs: Meta says nothing changed in practice, while Nieman Lab's experts say permissions remain broad.",
+          "links": [
+            {
+              "label": "TechCrunch",
+              "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/"
+            },
+            {
+              "label": "The Verge",
+              "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites"
+            },
+            {
+              "label": "Nieman Lab",
+              "url": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "waypoint-opd",
+          "headline": "Waypoint-OPD: distil only the RL lessons that held steady during training",
+          "takeaway": "Uses a mid-training teacher checkpoint to filter which preference shifts a student should copy.",
+          "tags": [
+            "Distillation",
+            "RL",
+            "Small models"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The most-upvoted paper on Hugging Face's latest daily list (667 upvotes, listed 15 Oct). It compares early and late policy shifts from the same RL (reinforcement learning) run and suppresses the ones that point opposite ways, for one extra frozen-teacher pass. With Qwen3-4B teachers it scores best among compared methods in all six maths and code settings.",
+          "why_it_matters": "Cheaper, cleaner distillation is how teams get a small in-house model to match a big one on a narrow task.",
+          "caveats": "Maths and code reasoning only, with small Qwen models; authors' own results.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.21601"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.21601"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/hhhbxloveai/WaypointOPD"
+            }
+          ]
+        },
+        {
+          "id": "mpt-swarms",
+          "headline": "Market-based post-training: agents bid to decide who acts",
+          "takeaway": "Agents learn both their actions and when to take part, with no central orchestrator.",
+          "tags": [
+            "Multi-agent",
+            "Orchestration",
+            "RL"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "MPT (market-based post-training) has agents place bids that decide who acts and how team results are credited back to each agent. Tested on embodied crafting, robot navigation and deep research, it beats single-model post-training, and learned bidding beats fixed coordination strategies.",
+          "why_it_matters": "It's a different design from a supervisor agent, with participation that can be inspected through the bids.",
+          "caveats": "Research setting; the deep-research task is the only one close to enterprise work.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.22322"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.22322"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Embodied-Minds-Lab/MPT"
+            }
+          ]
+        },
+        {
+          "id": "cowork-gym",
+          "headline": "Cowork-Gym: 64.9k synthetic work environments with a user who edits files too",
+          "takeaway": "A simulated user changes requirements and the shared workspace while the agent works.",
+          "tags": [
+            "Environments",
+            "Agent training",
+            "User simulation"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "A build-execute-revise loop generates and repairs environments across 14 scenarios. Qwen models post-trained on them gain 8.7 (9B), 6.4 (27B) and 4.1 (35B-A3B) points on average across six agent benchmarks.",
+          "why_it_matters": "A stateful user who edits the workspace mid-task is a realistic test case for co-working agents.",
+          "caveats": "No code link on the paper page yet; authors' own results.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.17670"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.17670"
+            }
+          ]
+        },
+        {
+          "id": "mlexpert",
+          "headline": "MLExpert: a 35B model trained to run long ML-engineering experiments",
+          "takeaway": "Learns from intermediate results across many costly Kaggle-style experiment runs.",
+          "tags": [
+            "ML engineering",
+            "Agents",
+            "RL"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Builds executable tasks with a 'Kaggle-MLE Factory', then trains a 35B mixture-of-experts model with hierarchical supervised fine-tuning and Windowed Interaction RL, which credits decisions within windows of a long run.",
+          "why_it_matters": "Credit assignment over long, expensive runs is the same problem as training or evaluating long-horizon coding agents.",
+          "caveats": "Authors' own benchmarks; framed around recursive self-improvement claims.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.22344"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.22344"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/InternScience/MLExpert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "otari",
+          "headline": "mozilla-ai/otari",
+          "takeaway": "A self-hosted, OpenAI-compatible LLM gateway with virtual keys, budgets and usage tracking.",
+          "tags": [
+            "Gateway",
+            "Self-hosted",
+            "Cost control"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Trending in Python (653 stars, 46 today, Apache-2.0). One endpoint for 40+ providers.",
+          "why_it_matters": "Virtual keys mean agents never hold real provider keys, which is exactly the exposure in today's OpenCode breach.",
+          "caveats": "Small project so far; check maturity before putting it in a production path.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/mozilla-ai/otari"
+            }
+          ]
+        },
+        {
+          "id": "graphify",
+          "headline": "Graphify-Labs/graphify",
+          "takeaway": "Turns a codebase, docs, SQL schemas and PDFs into a queryable knowledge graph, as a skill for Claude Code, Codex and Cursor.",
+          "tags": [
+            "Code graph",
+            "Skills",
+            "Context"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Trending in Python (128,336 stars, 592 today, Apache-2.0). Local, deterministic AST (syntax-tree) parsing, every edge explained, no vector store.",
+          "why_it_matters": "Deterministic structure is easier to audit than embeddings when an agent explains why it touched a file.",
+          "caveats": "Large repos may produce large graphs; check what it writes to disk.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Graphify-Labs/graphify"
+            }
+          ]
+        },
+        {
+          "id": "tradingagents",
+          "headline": "TauricResearch/TradingAgents",
+          "takeaway": "A multi-agent LLM trading framework with analyst, researcher and trader roles.",
+          "tags": [
+            "Finance",
+            "Multi-agent"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending in Python (111,890 stars, 242 today, Apache-2.0).",
+          "why_it_matters": "A ready-made multi-agent finance setup to red-team: role hand-offs and confident-sounding analysis are what bank validators need to probe.",
+          "caveats": "A research framework, not investment advice or a production system.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/TauricResearch/TradingAgents"
+            }
+          ]
+        },
+        {
+          "id": "treg",
+          "headline": "superdesigndev/treg",
+          "takeaway": "Billed as 'OpenRouter for agent tools': one place to route agents to tools.",
+          "tags": [
+            "Tools",
+            "Routing"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending in Python (5,749 stars, 76 today).",
+          "why_it_matters": "A tool registry is the kind of chokepoint where you'd enforce which tools an agent may call.",
+          "caveats": "No standard licence detected on GitHub, so check terms before use.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/superdesigndev/treg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,732 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-24",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Saturday 24 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "coding",
+      "card_id": "claude-code-2-1-309",
+      "headline": "Claude Code 2.1.309 closes several sandbox and permission gaps; update now"
+    },
+    {
+      "section_id": "evals",
+      "card_id": "agent-mosaic",
+      "headline": "Agents can combine permitted documents into conclusions they shouldn't reveal"
+    },
+    {
+      "section_id": "models",
+      "card_id": "kimi-k3-1-pro",
+      "headline": "Kimi K3.1 Pro: 1M context, with open weights promised by 4 Nov"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "claude-code-2-1-309",
+          "headline": "Claude Code 2.1.309 closes several sandbox and permission gaps",
+          "takeaway": "A follow-up to 2.1.307–308: a batch of fixes where sandboxed or denied actions could still get through.",
+          "tags": [
+            "Claude Code",
+            "Sandbox",
+            "Permissions"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Fixes include: sandboxed Bash ran the shell's startup files outside the sandbox; the macOS `denyWrite` glob didn't apply through symlinks; sandboxed commands could edit the `--mcp-config` file; a disabled MCP (Model Context Protocol) server could be reconnected by a later permission prompt; an `Edit(path)` deny rule didn't block some Bash redirects; locale-prefixed and zsh arithmetic commands could bypass the worktree isolation guard; and split-pane teammates didn't inherit the leader's deny rules. Agent SDK Python 0.2.173 bundles 2.1.309.",
+          "why_it_matters": "If your bank's control evidence relies on Claude Code's sandbox and deny rules, each of these was a path around them. Treat earlier versions as weaker than documented and re-run any sandbox escape tests you keep.",
+          "caveats": "These are fixes to gaps that existed until now; Anthropic's notes don't say whether any were exploited.",
+          "how_to_try": "Update to 2.1.309, add an `Edit(path)` deny rule, then try `echo x > path` from Bash and confirm it's blocked.",
+          "links": [
+            {
+              "label": "Claude Code v2.1.309 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309"
+            },
+            {
+              "label": "Claude Agent SDK Python v0.2.173",
+              "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.173"
+            }
+          ]
+        },
+        {
+          "id": "codex-0-164",
+          "headline": "Codex 0.164: saved presets, enterprise MCP auth and masked credentials",
+          "takeaway": "Ten `/presets` slots, inline `/model` and `/permissions` arguments, and secrets hidden in remote shell snapshots.",
+          "tags": [
+            "Codex",
+            "MCP",
+            "Enterprise"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "rust-v0.164.0 adds ten `/presets` slots and lets `/model` and `/permissions` take arguments inline. Enterprise MCP (Model Context Protocol) auth now supports Codex account grants and OAuth clients that need secrets. Credentials are masked in remote Bash and Zsh snapshot sessions. The Bedrock setup wizard is on by default, compaction failures are fixed, resumed sessions restore their thread settings, Windows proxies get NTLM/Negotiate support, and macOS sandbox checks are hardened.",
+          "why_it_matters": "Presets let you switch between a locked-down review profile and a looser build profile in one command. Credential masking and corporate proxy auth are the two things that usually block Codex inside a bank network.",
+          "caveats": "Enterprise MCP auth depends on how your Codex workspace admin has set up grants.",
+          "how_to_try": "Update Codex, save a read-only preset with `/permissions`, and recall it with `/presets` in a new session.",
+          "links": [
+            {
+              "label": "Codex rust-v0.164.0 release",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+            }
+          ]
+        },
+        {
+          "id": "cursor-computer-control",
+          "headline": "Cursor agents can now control your computer (unverified)",
+          "takeaway": "Cursor says its agents can drive desktop apps such as the iOS Simulator to test what they build.",
+          "tags": [
+            "Cursor",
+            "Computer use"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Cursor's official X account posted that agents can now control your computer, with the iOS Simulator as the example. Cursor's changelog and blog had no entry for it when this issue was written.",
+          "why_it_matters": "An agent that can click through the app it just built closes the loop for UI testing. It also widens what an agent can touch on a work laptop, so it needs the same permission review as shell access.",
+          "caveats": "Only announced on X so far; no docs on availability, plans or permission controls.",
+          "how_to_try": "Wait for Cursor's changelog entry before turning it on, and try it first on a machine with no work credentials.",
+          "links": [
+            {
+              "label": "@cursor_ai announcement",
+              "url": "https://x.com/cursor_ai/status/2113661506634305834"
+            },
+            {
+              "label": "Cursor changelog",
+              "url": "https://cursor.com/changelog"
+            }
+          ]
+        },
+        {
+          "id": "copilot-cli-1-0-104",
+          "headline": "Copilot CLI 1.0.104 prerelease: Assisted Permissions without experimental mode",
+          "takeaway": "Assisted Permissions no longer need the experimental flag, and a missing Auto preference falls back instead of failing.",
+          "tags": [
+            "Copilot CLI",
+            "Permissions"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "v1.0.104-0 makes Assisted Permissions available without experimental mode. When a saved Auto preference is no longer available, Auto falls back to its default instead of failing each turn.",
+          "why_it_matters": "Assisted Permissions is the Copilot equivalent of Claude Code's auto mode, so it's worth comparing how each decides what to allow.",
+          "caveats": "This is a prerelease build.",
+          "how_to_try": "Install the prerelease in a test environment and compare its permission prompts with your current settings.",
+          "links": [
+            {
+              "label": "Copilot CLI v1.0.104-0 release",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-0"
+            }
+          ]
+        },
+        {
+          "id": "deepagents-code-0-2",
+          "headline": "Deep Agents Code 0.2.1 adds skill-scoped MCP tools and auto-migrates to Python 3.14",
+          "takeaway": "A follow-up to 0.2.0: a skill can now bring its own MCP tools, and installs move to the newly required Python 3.14 on their own.",
+          "tags": [
+            "Deep Agents",
+            "LangChain",
+            "MCP"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "New since 0.2.0, which we noted in passing on 23 Oct and which made Python 3.14 a requirement (a breaking change): 0.2.1, released 4:05am Sat AEDT, adds skill-scoped MCP (Model Context Protocol) tools, defaults the Anthropic Auto classifier to Claude Sonnet 5.5, and auto-migrates to Python 3.14 when no other session is running.",
+          "why_it_matters": "Skill-scoped tools mean a tool is only available while its skill is loaded, which keeps the agent's tool list small.",
+          "caveats": "Python 3.14 may not be on your bank's approved runtime list yet.",
+          "how_to_try": "Check your Python version before upgrading; re-run the dcode installer if auto-upgrade is off.",
+          "links": [
+            {
+              "label": "deepagents-code 0.2.1 release",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.1"
+            },
+            {
+              "label": "deepagents-code 0.2.0 release",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "agent-mosaic",
+          "headline": "Agent Mosaic: agents combine confidential documents into conclusions they shouldn't reveal",
+          "takeaway": "Even with classification headers and rules, unsafe disclosures persisted in about a third of simulated answers.",
+          "tags": [
+            "Data leakage",
+            "Agents",
+            "Paper"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The paper tests the 'mosaic effect', where an agent reads several documents it is allowed to access and discloses a sensitive conclusion built from them. Across 30 synthetic cybersecurity, medical and military examples (10,800 simulated answers and 1,440 from live agents in two open-source harnesses), the best model tested, GPT-5.6-Sol, disclosed forbidden composites in 7.08% of answers to benign queries, with worse rates in live harnesses. Visible classification headers and explicit aggregation rules cut disclosures, but they persisted in 32.37% of simulated answers under that setup.",
+          "why_it_matters": "Document-level access control is how most bank RAG (retrieval-augmented generation) and agent deployments are approved. This shows that passing per-document checks doesn't stop an agent combining documents into something restricted, which is a test case worth adding to your validation suite.",
+          "caveats": "Synthetic examples only, and no banking data; the numbers are the authors' own.",
+          "links": [
+            {
+              "label": "Agent Mosaic on arXiv",
+              "url": "https://arxiv.org/abs/2610.30418"
+            },
+            {
+              "label": "Agent Mosaic on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.30418"
+            }
+          ]
+        },
+        {
+          "id": "promptfoo-0-125",
+          "headline": "promptfoo 0.125: agent SDK providers become opt-in, plus a safe mode with no inline JavaScript",
+          "takeaway": "Breaking change for anyone testing Claude Agent or Codex SDK providers; new ROUGE assertions and repeat-run stability.",
+          "tags": [
+            "promptfoo",
+            "Evals"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Breaking: the Claude Agent SDK and Codex SDK providers are now opt-in, and jks-js is an optional peer dependency. New: rouge-l and rouge-s assertions (ROUGE scores text overlap with a reference), filtering trace spans by attributes, a safe mode that disables inline JavaScript in configs, cache-hit rows shown in summaries, and stability reported across repeated tests.",
+          "why_it_matters": "Safe mode matters when eval configs come from other teams, since inline JavaScript in a config runs on your machine. Stability across repeats gives you a number for how flaky an agent test is.",
+          "caveats": "Check your configs before upgrading if they use the agent SDK providers.",
+          "links": [
+            {
+              "label": "promptfoo 0.125.0 release",
+              "url": "https://github.com/promptfoo/promptfoo/releases/tag/0.125.0"
+            }
+          ]
+        },
+        {
+          "id": "langfuse-4-69",
+          "headline": "Langfuse 4.69: traces show which skills an agent loaded",
+          "takeaway": "Skill-load tracing and filters, plus an outbound host allowlist for blob storage.",
+          "tags": [
+            "Langfuse",
+            "Observability",
+            "Skills"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "v4.69.0 traces skill loads and lets you filter by them, adds guided AI gateway setup, an outbound host allowlist for blob storage, MCP-managed skill versions, and masks and encrypts legacy webhook headers.",
+          "why_it_matters": "Knowing which skill was loaded when an agent went wrong is part of reproducing a failure. The host allowlist is a control a security review will ask about on a self-hosted install.",
+          "caveats": "Check whether each feature is in the self-hosted edition you run.",
+          "links": [
+            {
+              "label": "Langfuse v4.69.0 release",
+              "url": "https://github.com/langfuse/langfuse/releases/tag/v4.69.0"
+            }
+          ]
+        },
+        {
+          "id": "phoenix-20-26",
+          "headline": "Arize Phoenix 20.25–20.26: an experimental issue-to-PR agent 'factory'",
+          "takeaway": "Phoenix scaffolds managed agents that turn triaged issues into pull requests, and adds service.version to its telemetry.",
+          "tags": [
+            "Phoenix",
+            "Observability"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "20.25.0 scaffolds a managed-agents issue-to-PR factory. 20.26.0 nominates factory candidates during triage, dispatches trusted ones, links session IDs to the Claude Console, and adds service.version to the server's OpenTelemetry (OTel) resource.",
+          "why_it_matters": "It's a public example of a team wiring triage, trust levels and agent dispatch together, which you can compare with your own approval gates.",
+          "caveats": "The factory is new and mostly internal tooling for the Phoenix repo.",
+          "links": [
+            {
+              "label": "Phoenix v20.26.0 release",
+              "url": "https://github.com/Arize-ai/phoenix/releases/tag/arize-phoenix-v20.26.0"
+            },
+            {
+              "label": "Phoenix v20.25.0 release",
+              "url": "https://github.com/Arize-ai/phoenix/releases/tag/arize-phoenix-v20.25.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "mcp-skills-extension",
+          "headline": "MCP TypeScript SDK 2.4: servers can now publish Agent Skills",
+          "takeaway": "The first SDK support for Skills over MCP, a day after Agent Skills moved to the Agentic AI Foundation.",
+          "tags": [
+            "MCP",
+            "Agent Skills",
+            "SDK"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "v2.4.0 adds Skills over MCP (Model Context Protocol), from proposal SEP-2640. A server publishes a folder of skills with `loadSkills(folder)` and `skills.attach(server)`, and a client lists, reads and verifies them with `SkillsClient`. It works on the 2025-11-25 and 2026-07-28 protocol versions. Also new: `ServerEvent` takes optional params, so gateways can forward change notifications.",
+          "why_it_matters": "Skills can be served centrally and verified by clients, instead of being copied into every repo, which gives a bank one place to review and version them.",
+          "caveats": "`attach` is experimental and may change in a minor release. Upgrade note: `x-mcp-header` on a number parameter is now rejected.",
+          "links": [
+            {
+              "label": "MCP TypeScript SDK v2.4.0 release",
+              "url": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/v2.4.0"
+            },
+            {
+              "label": "@modelcontextprotocol/server 2.4.0",
+              "url": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/%40modelcontextprotocol/server%402.4.0"
+            }
+          ]
+        },
+        {
+          "id": "pydantic-ai-2-60",
+          "headline": "Pydantic AI 2.60: strips instructions from untrusted message history",
+          "takeaway": "`sanitize_messages` now removes request-level instructions from untrusted history, and memory files can record who wrote them.",
+          "tags": [
+            "Pydantic AI",
+            "Prompt injection"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "v2.60.0 deprecates RetryPromptPart. `sanitize_messages` strips request-level instructions from untrusted history. The MCP capability's id now comes from the hostname. An opt-in MetadataMemoryStore records who wrote each memory file, and the Bedrock maxTokens default changed.",
+          "why_it_matters": "Replaying stored chat history is a common prompt-injection route; this makes the safer behaviour the default path. Memory authorship is useful for audit.",
+          "caveats": "Check the compatibility notes if you use RetryPromptPart or rely on the old Bedrock token default.",
+          "links": [
+            {
+              "label": "Pydantic AI v2.60.0 release",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.60.0"
+            }
+          ]
+        },
+        {
+          "id": "adk-python-2-13",
+          "headline": "Google ADK Python 2.13: 12 features move to stable",
+          "takeaway": "Google's Agent Development Kit promotes 12 features, adds a classifier node and live audio with barge-in.",
+          "tags": [
+            "Google ADK",
+            "Frameworks"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "v2.13.0 promotes 12 features to stable, adds TypesafeClassifier and ClassifierNode using TypeSafe's Jev models, live audio with barge-in (interrupting the agent mid-reply), and experimental MongoDB session and memory services.",
+          "why_it_matters": "Stable status is what lets a bank team build on a feature without expecting it to change underneath them.",
+          "caveats": "The MongoDB services are experimental.",
+          "links": [
+            {
+              "label": "ADK Python v2.13.0 release",
+              "url": "https://github.com/google/adk-python/releases/tag/v2.13.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "kimi-k3-1-pro",
+          "headline": "Moonshot's Kimi K3.1 Pro: 1M context, open weights promised by 4 Nov",
+          "takeaway": "A post-trained K3 with more reinforcement learning, aimed at long coding tasks and finance work.",
+          "tags": [
+            "Kimi",
+            "Open weights",
+            "Coding"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Kimi K3.1 Pro is a 2.8T-total, 104B-active MoE (mixture of experts) multimodal model with a 1M-token context, plus a Highspeed version Moonshot says is 2–3× faster. Both are live on Kimi.ai, Kimi Work, Kimi Code and the Kimi API, with full weights due by 4 Nov. Moonshot reports 65.7% on Terminal-Bench 4.0, against its own figures of 58.2% for GPT-6 Astra and 66.4% for Claude Opus 5.5, and gains on its internal finance benchmarks.",
+          "why_it_matters": "It's another open-weight option near the top proprietary coding models, and open weights are what make self-hosting inside a bank possible.",
+          "caveats": "All scores are Moonshot's own; the finance benchmarks are internal. Weights aren't out yet.",
+          "links": [
+            {
+              "label": "Kimi K3.1 Pro tech blog",
+              "url": "https://kimi.ai/blog/kimi-k3-1-pro"
+            },
+            {
+              "label": "Kimi API platform",
+              "url": "https://platform.kimi.ai/"
+            },
+            {
+              "label": "@Kimi_Moonshot announcement",
+              "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067"
+            }
+          ]
+        },
+        {
+          "id": "minimax-m3-1-flash-weights",
+          "headline": "MiniMax M3.1 Flash weights are now on Hugging Face",
+          "takeaway": "Follow-up to the 20 Oct launch: the 428B-total, 23B-active model can now be self-hosted.",
+          "tags": [
+            "MiniMax",
+            "Open weights"
+          ],
+          "sources": [
+            "Hugging Face",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "New since the API launch: weights are public on Hugging Face and ModelScope. The model card lists about 428B total and 23B active parameters, text, image and video input, and up to 1M tokens of context. MiniMax reports 76.2 on BankerToolBench, 73.7% on DeepSWE v1.1 and 61.7 on OSWorld 2.0.",
+          "why_it_matters": "BankerToolBench is a banking-style tool-use test, so it's one of the few public scores close to your use case, though it's vendor-run.",
+          "caveats": "Scores are MiniMax's own; at 428B parameters self-hosting needs serious GPU capacity.",
+          "links": [
+            {
+              "label": "MiniMax M3.1 Flash on Hugging Face",
+              "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+            },
+            {
+              "label": "@MiniMax_AI on the weights",
+              "url": "https://x.com/MiniMax_AI/status/2113436864904610008"
+            }
+          ]
+        },
+        {
+          "id": "nemotron-3-5-bolt",
+          "headline": "NVIDIA Nemotron 3.5 Bolt E4B: a 4GB open model for local agents",
+          "takeaway": "Built on Gemma 4 E4B, for voice and device assistants that call tools, and already on Ollama.",
+          "tags": [
+            "NVIDIA",
+            "Small models",
+            "Local"
+          ],
+          "sources": [
+            "Blog",
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "NVIDIA released Nemotron 3.5 Bolt E4B 4GB on 23 Oct, a Gemma 4 E4B model with Nemotron post-training for multi-turn tool use, a concise conversational mode and configurable reasoning. NVIDIA reports about 40% higher average quality than its prior model on conversational agent benchmarks. Ollama v0.40.10 added it as a vision-language model with a DFlash draft for speculative decoding.",
+          "why_it_matters": "A 4GB tool-calling model is small enough to test local, offline agent flows on a laptop with no data leaving it.",
+          "caveats": "NVIDIA's page says 64K context, while Ollama's notes say 128K; check before relying on long inputs. Quality figures are NVIDIA's.",
+          "links": [
+            {
+              "label": "NVIDIA Nemotron 3.5 Bolt E4B page",
+              "url": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/"
+            },
+            {
+              "label": "Ollama v0.40.10 release",
+              "url": "https://github.com/ollama/ollama/releases/tag/v0.40.10"
+            }
+          ]
+        },
+        {
+          "id": "iquest-q1",
+          "headline": "IQuest-Q1: a 320B mixture-of-experts model built for agentic command-line work",
+          "takeaway": "A technical report on training a model across several agent scaffolds at once.",
+          "tags": [
+            "Open models",
+            "Coding agents",
+            "Paper"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "IQuest-Q1 is a sparse MoE (mixture of experts) model with 320B total and 15B active parameters. The report covers three stages of training, with post-training across several agent scaffolds and versions, and model merging to combine experts.",
+          "why_it_matters": "Training across multiple scaffolds targets models that behave consistently whether they run in Claude Code-style or Codex-style harnesses.",
+          "caveats": "Results are the authors' own; check weight availability and licence before use.",
+          "links": [
+            {
+              "label": "IQuest-Q1 on arXiv",
+              "url": "https://arxiv.org/abs/2610.30949"
+            },
+            {
+              "label": "IQuest-Q1 on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.30949"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "mas-bloom-expands",
+          "headline": "Malaysia's and Thailand's central banks join Singapore's BLOOM digital money initiative",
+          "takeaway": "MAS's cross-border settlement project for tokenised deposits and stablecoins now has three central banks and more industry members.",
+          "tags": [
+            "Banking",
+            "Payments",
+            "Asia"
+          ],
+          "sources": [
+            "Regulator"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "On 23 Oct MAS (the Monetary Authority of Singapore) said Bank Negara Malaysia and the Bank of Thailand joined BLOOM as policymaker members. Airwallex, Mastercard, Maybank, Monee, Nium, Ripple, ShopeePay, Visa and the World Bank Group also joined. Work covers cross-border acceptance and settlement, interoperability, and programmable controls such as identity checks, sanctions screening and transaction controls.",
+          "why_it_matters": "Programmable controls on payments are the same problem as letting an AI agent pay: what limits and checks run before money moves. This is where regional banks are setting those standards.",
+          "caveats": "It's a framework-building initiative, not a live payment service.",
+          "links": [
+            {
+              "label": "MAS media release",
+              "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-bnm-and-bot-partner-with-industry-to-advance-cross-border-settlement-in-digital-money"
+            },
+            {
+              "label": "BLOOM initiative page",
+              "url": "https://www.mas.gov.sg/schemes-and-initiatives/BLOOM"
+            }
+          ]
+        },
+        {
+          "id": "china-ai-employment-policy",
+          "headline": "China's State Council issues guidance on AI and jobs",
+          "takeaway": "Measures to grow AI jobs and startups while reducing displacement from AI adoption.",
+          "tags": [
+            "Policy",
+            "China",
+            "Employment"
+          ],
+          "sources": [
+            "Government"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The State Council General Office published guidance (Guobanfa 2026 No. 29), dated 16 Oct and released 23 Oct, on adapting to AI to support employment. It includes support for AI startups and open-source communities, adding qualifying AI firms to job-support loan schemes, lowering AI adoption costs for small businesses, developing new AI occupations, and reducing job displacement from AI use.",
+          "why_it_matters": "It's a national government putting job displacement into AI policy, a topic that will reach bank boards and Australian regulators too.",
+          "caveats": "The official text is in Chinese; this summary covers only its opening sections.",
+          "links": [
+            {
+              "label": "State Council guidance (Chinese)",
+              "url": "https://www.gov.cn/zhengce/content/202610/content_7084107.htm"
+            },
+            {
+              "label": "@julien_c summary",
+              "url": "https://x.com/julien_c/status/2113649956393226700"
+            }
+          ]
+        },
+        {
+          "id": "occ-genius-final-rule",
+          "headline": "US OCC publishes its final GENIUS Act stablecoin rule",
+          "takeaway": "Rules for bank-issued and other payment stablecoins under the OCC, effective 18 Jan 2027.",
+          "tags": [
+            "Banking",
+            "Regulation",
+            "Stablecoins"
+          ],
+          "sources": [
+            "Regulator"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "The OCC (Office of the Comptroller of the Currency) announced the rule on 21 Oct and it appeared in the Federal Register on 23 Oct. It adds a new 12 CFR Part 15 covering reserves, redemption, risk management, audits, custody, licensing, and capital and operational backstops. Anti-money-laundering and sanctions rules will come separately.",
+          "why_it_matters": "Stablecoins are one of the likeliest ways AI agents will move money, and this sets the US rules for banks that issue or hold them.",
+          "caveats": "Not an AI rule; it matters for agent payments only indirectly.",
+          "links": [
+            {
+              "label": "Federal Register final rule",
+              "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
+            },
+            {
+              "label": "OCC news release",
+              "url": "https://occ.gov/news-issuances/news-releases/2026/nr-occ-2026-92.html"
+            },
+            {
+              "label": "OCC Bulletin 2026-50",
+              "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-50.html"
+            }
+          ]
+        },
+        {
+          "id": "aws-spend-limits",
+          "headline": "AWS adds hard monthly spend caps per project (unverified)",
+          "takeaway": "AWS says projects pause when they reach the cap instead of billing past it.",
+          "tags": [
+            "AWS",
+            "Cost control"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "@awsdevelopers posted that the new AWS experience lets you set a hard monthly spend cap per project on the paid plan, starting at US$20 a month. Projects pause at the cap, optional settings can pause idle resources earlier, and you get 90 days to raise the limit and resume.",
+          "why_it_matters": "A hard cap is a simple guard against a runaway agent loop burning cloud or model spend in a test account.",
+          "caveats": "Only seen on X so far; no AWS docs page found yet, and it applies to the 'new AWS experience' plan.",
+          "links": [
+            {
+              "label": "@awsdevelopers announcement",
+              "url": "https://x.com/awsdevelopers/status/2113707070809682373"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "naive-rag-memory",
+          "headline": "Naive RAG over raw history beats complex agent memory systems in most tests",
+          "takeaway": "Plain retrieval and reranking ranked first in six of seven benchmark-model settings.",
+          "tags": [
+            "Memory",
+            "RAG"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The authors test Raw-RAG, plain dense retrieval and reranking over raw conversation history, against agentic memory systems on LoCoMo, LongMemEval, MEME and MemoryAgentBench. It ranked first in six of seven settings, ahead of the strongest memory system by 0.13–5.53 points. They put it down to raw history covering more of the needed evidence.",
+          "why_it_matters": "Before approving a complex memory layer for an agent, test it against this simple RAG (retrieval-augmented generation) baseline; it's also easier to audit.",
+          "caveats": "The margins are small and these are conversation-memory benchmarks.",
+          "links": [
+            {
+              "label": "Paper on arXiv",
+              "url": "https://arxiv.org/abs/2610.30755"
+            },
+            {
+              "label": "Paper on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.30755"
+            }
+          ]
+        },
+        {
+          "id": "scope-policy-compiler",
+          "headline": "SCOPE turns written policies into programs that check agent transcripts",
+          "takeaway": "A cheaper, steadier alternative to using a large language model (LLM) as a judge for compound agent policies.",
+          "tags": [
+            "Guardrails",
+            "Policy"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "SCOPE compiles a natural-language policy into a program of small neural checks, deterministic extractors and code that combines their results, then runs it over multi-turn transcripts and tool-call traces. It targets compound policies, where the authors say fine-tuned guardrail models degrade and LLM-as-a-judge is costly and unstable.",
+          "why_it_matters": "Bank policies are compound ('don't do X unless Y was checked'). An explicit program is easier to explain to model risk than a judge model's opinion.",
+          "caveats": "Results are the authors' own.",
+          "links": [
+            {
+              "label": "SCOPE on arXiv",
+              "url": "https://arxiv.org/abs/2610.31062"
+            },
+            {
+              "label": "SCOPE on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.31062"
+            }
+          ]
+        },
+        {
+          "id": "tool-output-retrieval-cost",
+          "headline": "Saving long tool output to files can cost some models accuracy",
+          "takeaway": "GPT-5.1 and 5.2 lost 11.3 and 7.9 points when reading a simulator report by index; Claude 4.6 models showed no detectable cost.",
+          "tags": [
+            "Agent harness",
+            "Context"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Using the USGS geochemistry simulator PHREEQC, whose reports reach 846.8k characters, the authors compared agents reading output in context against reading it through a section index. The models computed the right value about as often either way; what changed was the evidence they answered from.",
+          "why_it_matters": "Claude Code and Codex both move long tool output out of context, so this is a failure mode to check in your own agent evals.",
+          "caveats": "One scientific tool and 158 questions; posted 19 Oct.",
+          "links": [
+            {
+              "label": "Paper on arXiv",
+              "url": "https://arxiv.org/abs/2610.26836"
+            },
+            {
+              "label": "Paper on Hugging Face",
+              "url": "https://huggingface.co/papers/2610.26836"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "unlimited-ocr",
+          "headline": "baidu/Unlimited-OCR: one-shot parsing for long documents",
+          "takeaway": "Baidu's MIT-licensed OCR (optical character recognition) project is trending again.",
+          "tags": [
+            "OCR",
+            "Documents"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "The repo describes one-shot, long-horizon document parsing. It has 28,279 stars, an MIT licence and was last pushed on 23 Oct.",
+          "why_it_matters": "Bank agents live on PDFs; it's another parser to test against your current one on statements and forms.",
+          "caveats": "Check model size and hardware needs before testing.",
+          "links": [
+            {
+              "label": "Unlimited-OCR on GitHub",
+              "url": "https://github.com/baidu/Unlimited-OCR"
+            }
+          ]
+        },
+        {
+          "id": "book-to-skill",
+          "headline": "book-to-skill: turn a technical book PDF into a Claude Code skill",
+          "takeaway": "Converts a book into a skill you can study from and reference while coding.",
+          "tags": [
+            "Claude Code",
+            "Skills"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "The MIT-licensed repo turns a technical book PDF into a Claude Code skill. It has 35,862 stars and was trending on GitHub today.",
+          "why_it_matters": "Turning an internal standards document into a skill is a quick way to give Claude Code your team's rules.",
+          "caveats": "Respect copyright and licensing on any book you convert.",
+          "links": [
+            {
+              "label": "book-to-skill on GitHub",
+              "url": "https://github.com/virgiliojr94/book-to-skill"
+            }
+          ]
+        },
+        {
+          "id": "claude-red",
+          "headline": "Claude-Red: a library of offensive security skills for Claude",
+          "takeaway": "SKILL.md files covering attacks from SQL injection to EDR evasion.",
+          "tags": [
+            "Security",
+            "Skills"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "The MIT-licensed repo collects offensive security skills for Claude, each a SKILL.md file for an attack area such as SQLi (SQL injection), shellcode, EDR (endpoint detection and response) evasion and exploit development. It has 8,353 stars.",
+          "why_it_matters": "Useful for red-teaming your own agents, and a reminder to review any third-party skill before installing it.",
+          "caveats": "Use only for authorised testing; it's unlikely to pass a bank's software approval.",
+          "links": [
+            {
+              "label": "Claude-Red on GitHub",
+              "url": "https://github.com/SnailSploit/Claude-Red"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

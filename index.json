@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "latest": {
+    "markets": "2026-10-25",
+    "ai": "2026-10-25"
+  },
+  "days": [
+    {
+      "date": "2026-10-25",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    }
+  ]
+}

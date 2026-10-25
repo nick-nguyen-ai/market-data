@@ -1,0 +1,744 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-20",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Tuesday 20 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "evals",
+      "card_id": "bizbench",
+      "headline": "BizBench: frontier agents pass about 6 in 10 real payments procedures"
+    },
+    {
+      "section_id": "models",
+      "card_id": "minimax-m3-1-flash",
+      "headline": "MiniMax M3.1 Flash: cheap 1M-context agent model, but it guesses a lot"
+    },
+    {
+      "section_id": "models",
+      "card_id": "muse-glimmer-report",
+      "headline": "Meta's Muse Glimmer report: an open 30B local agent model with a banking score"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "copilot-cli-1-0-100",
+          "headline": "Copilot CLI v1.0.100: a telemetry off switch and verified skill installs",
+          "takeaway": "The stable release adds a flag to stop client telemetry uploads and installs verified Skills and plugins from GitHub links.",
+          "tags": [
+            "Copilot CLI",
+            "Telemetry",
+            "Skills"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 5:43am Tue AEDT. New `--disable-client-telemetry` turns off client telemetry uploads, and `--trust-folder` trusts a folder for one-off `-p` or piped runs. `copilot plugin install \"ghapp://air/install?...\"` installs verified Skills and plugins. Sessions no longer stall for minutes when an MCP (Model Context Protocol) server hangs while loading tools. The sandbox proxy fix covered on Sunday from the pre-release is now in the stable build.",
+          "why_it_matters": "A documented telemetry off switch and verified skill sources are both things a bank's tooling review asks for before approving a coding agent.",
+          "caveats": "The notes don't say exactly what client telemetry covers, or whether it differs from server-side logging. 'Verified' is GitHub's own label.",
+          "how_to_try": "Update, then run `copilot --disable-client-telemetry -p \"summarise this repo\"` with a network monitor running to see what still leaves your machine.",
+          "links": [
+            {
+              "label": "Copilot CLI v1.0.100 release",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100"
+            }
+          ]
+        },
+        {
+          "id": "codex-edit-messages",
+          "headline": "Codex desktop app: you can now edit earlier messages in a thread (unverified)",
+          "takeaway": "Codex's lead says editing previous messages has shipped in the desktop app, but it isn't in the changelog yet.",
+          "tags": [
+            "Codex",
+            "Desktop app"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Posted 12:18pm Mon AEDT by @thsottiaux, who leads Codex: 'You can now edit previous messages within a thread in the desktop app.' The official ChatGPT and Codex changelog's latest entry is still 14 Oct.",
+          "why_it_matters": "Editing a past prompt lets you rerun a branch of an agent session with a fixed instruction instead of starting over, which helps when comparing runs.",
+          "caveats": "Only an X post so far, with no changelog entry or version number, so the behaviour (for example, whether later turns are discarded) isn't documented.",
+          "how_to_try": "Update the desktop app, edit an earlier prompt in a throwaway thread, and check what happens to the turns after it.",
+          "links": [
+            {
+              "label": "@thsottiaux post",
+              "url": "https://x.com/thsottiaux/status/2111990254408434095"
+            },
+            {
+              "label": "Codex changelog",
+              "url": "https://developers.openai.com/codex/changelog"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2-1-303",
+          "headline": "Claude Code 2.1.303: reliability fixes only, and 2.1.304 is close",
+          "takeaway": "A small release with fixes for crashes and failed commands, and the next build already flagged as imminent.",
+          "tags": [
+            "Claude Code",
+            "Release"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "v2.1.303 was published at 9:26am Mon AEDT with the single note 'Bug fixes and reliability improvements'. The unofficial @ClaudeCodeLog tracker summarised it as one CLI change that reduces crashes and command failures, and at 6:56am Tue AEDT it posted that 2.1.304 'is about to be released'.",
+          "why_it_matters": "If you pin a Claude Code version for agent evals, two builds in two days means checking which one your runs actually used.",
+          "caveats": "Anthropic's notes give no detail. 2.1.304 isn't out yet, and @ClaudeCodeLog is a third-party tracker.",
+          "how_to_try": "Run `claude --version` in your eval harness and record it alongside each run's results.",
+          "links": [
+            {
+              "label": "Claude Code v2.1.303 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303"
+            },
+            {
+              "label": "@ClaudeCodeLog on 2.1.304",
+              "url": "https://x.com/ClaudeCodeLog/status/2112271586078113873"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "bizbench",
+          "headline": "BizBench: frontier agents pass only about 6 in 10 real payments-company procedures",
+          "takeaway": "A benchmark built from a payments firm's real procedures scores whether every step obeyed policy, not just the final result.",
+          "tags": [
+            "Benchmark",
+            "Payments",
+            "Process checks"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "BizBench has 50 multi-turn tasks in an executable environment with 789 knowledge documents and 601 business tools, including outdated or conflicting guidance. Deterministic checks grade both the goal and whether execution stayed valid. The authors report strict success of 64.0% for Claude Opus 5 and 61.3% for GPT-6 Sol. Qwen3.8-27B reaches 42.0% on goal attainment but 32.7% on strict success. It was the #3 paper on Hugging Face's daily list (169 upvotes at fetch time).",
+          "why_it_matters": "It's the gap you test for at a bank: an agent can reach the right outcome while breaking a policy on the way, and outcome-only evals miss that.",
+          "caveats": "Authors' own benchmark and scores, from 50 tasks. The paper describes its source only as 'a leading payments company'. The code repo is new (21 stars).",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.20424"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.20424"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/ant-intl/BizAgentBench"
+            }
+          ]
+        },
+        {
+          "id": "langfuse-4-64-halo",
+          "headline": "Langfuse v4.64.0: Halo, an in-app assistant for your traces, and tighter API keys",
+          "takeaway": "The in-app assistant is now called Halo, and project API key permissions are on by default.",
+          "tags": [
+            "Observability",
+            "Tracing",
+            "API keys"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 4:34am Tue AEDT. The in-app assistant is renamed Halo, and Halo questionnaire content is now kept out of session replay. Project API key permissions are enabled by default, keys whose path names another project are refused, and evaluator health is now based on the most recent runs. Legacy API deprecation notices are made visible to code agents.",
+          "why_it_matters": "Plain-language trace queries speed up failure triage on the agents you validate, and default-on key permissions reduce how much a leaked key can do.",
+          "caveats": "Halo sends your trace data to a model, so check where that runs before using it on production traces. Self-hosters need to upgrade to get these changes.",
+          "links": [
+            {
+              "label": "Langfuse v4.64.0 release",
+              "url": "https://github.com/langfuse/langfuse/releases/tag/v4.64.0"
+            },
+            {
+              "label": "@langfuse on Halo",
+              "url": "https://x.com/langfuse/status/2112215993804083501"
+            }
+          ]
+        },
+        {
+          "id": "intact-browsing",
+          "headline": "Intact: browsing agents that judge page elements by origin, not by what they say",
+          "takeaway": "Feeding the model one element at a time with its provenance cut injected attacks getting through the planner from 73.1% to 12.8%.",
+          "tags": [
+            "Prompt injection",
+            "Browser agents",
+            "Security"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Intact builds a page representation (GenTree) that records where each element comes from, passes elements to the model one at a time, and only lets each step use that element's capabilities. It asks the user before acting on third-party content. On 1,091 real pages with injected attacks, 12.8% of attacks got past its planner, each only as a consent request, against 73.1% for a conventional planner. Isolation broke functionality on 3.7% of tasks.",
+          "why_it_matters": "It's a concrete control design for prompt injection in browsing agents, rather than relying on the model to refuse.",
+          "caveats": "A single-author research prototype measured by its author. Code repo is new. It adds latency, which the paper says a parallel schedule could mostly remove.",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.22697"
+            },
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.22697"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/llm-platform-security/intact"
+            }
+          ]
+        },
+        {
+          "id": "multifinground",
+          "headline": "MultiFinGround: models recognise financial concepts but miss the numbers behind them",
+          "takeaway": "Models recognised accounting concepts 97.3–99.4% of the time yet missed at least one fact in 26.6–41.9% of those groups.",
+          "tags": [
+            "Benchmark",
+            "Financial reports",
+            "Grounding"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Built from FY2025 disclosures of 90 issuers in English, French and Greek, aligned through a shared accounting taxonomy with fact-level annotations. Across 15 models, eight reference models scored 97.3–99.4% on concept recognition but missed at least one target fact in 26.6–41.9% of correctly recognised groups. Finance-specialised models gave limited gains.",
+          "why_it_matters": "Extraction from financial reports is a common bank use case, and this shows why checking completeness of extracted facts matters more than checking recognition.",
+          "caveats": "Authors' own benchmark; European languages only. No upvotes on Hugging Face yet, so little outside attention so far.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.19432"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.19432"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "ai-sdk-lowmemory-move",
+          "headline": "AI SDK 7.0.144: low-memory streaming moves to its own function",
+          "takeaway": "If you adopted Sunday's low-memory flag, the call changes to `experimental_streamTextLowMemory`.",
+          "tags": [
+            "AI SDK",
+            "Streaming",
+            "Breaking change"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 4:56am Tue AEDT. To fix `streamText` return types, `streamText({ experimental_lowMemory: true, ...options })` is replaced by `experimental_streamTextLowMemory(options)`. The same release adds Perplexity decisions API support. 7.0.145 followed at 6:12am Tue AEDT.",
+          "why_it_matters": "The low-memory mode covered on Sunday has already changed shape, so any agent server you built on the flag needs a one-line update.",
+          "caveats": "Still experimental, so expect further changes. 7.0.145's notes are dependency updates only.",
+          "links": [
+            {
+              "label": "ai@7.0.144 release",
+              "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.144"
+            }
+          ]
+        },
+        {
+          "id": "carryon",
+          "headline": "CarryOn: keep long-running agents' context as task objects, not history",
+          "takeaway": "A context runtime that carries forward reusable progress and cut total tokens by 51.9% on OSWorld 2.0.",
+          "tags": [
+            "Context engineering",
+            "Long-horizon",
+            "Memory"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "CarryOn builds each turn's context from 'continuation carriers' (records of progress so far), execution context and a short live tail of recent turns, and updates those records against evidence when old history is dropped. The authors report gains of 5.8% on OSWorld 2.0 and 7.0% on BrowseComp-Plus while using 51.9% and 22.9% fewer total tokens.",
+          "why_it_matters": "It's a concrete pattern to compare against plain summarise-and-compact when your agents run long sessions.",
+          "caveats": "Authors' own results on two benchmarks. The code repo is very new (4 stars).",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.18784"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.18784"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Ethannju/carryon"
+            },
+            {
+              "label": "Project page",
+              "url": "https://ethannju.github.io/carryon"
+            }
+          ]
+        },
+        {
+          "id": "langgraph-cli-0-4-37",
+          "headline": "LangGraph CLI 0.4.37: deploys default to serverless, and verbose mode stops echoing stdin",
+          "takeaway": "A small release with two behaviour changes worth knowing before your next deploy.",
+          "tags": [
+            "LangGraph",
+            "Deploy",
+            "Logging"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 1:06am Tue AEDT. `deploy` now defaults to serverless, and verbose output no longer prints subprocess stdin.",
+          "why_it_matters": "Stdin can carry secrets or config, so the fix matters if CI logs from verbose deploys are kept; the new default may change where your graphs run.",
+          "caveats": "The notes don't say whether stdin was echoed in earlier non-verbose output. Check your CI logs from verbose runs.",
+          "links": [
+            {
+              "label": "LangGraph cli==0.4.37 release",
+              "url": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "minimax-m3-1-flash",
+          "headline": "MiniMax M3.1 Flash: $0.15/$0.60 per million tokens, 1M context, on Ollama day one",
+          "takeaway": "A cheap agentic model that independent tests put near DeepSeek V4.1 Flash, but with a strong tendency to guess.",
+          "tags": [
+            "MiniMax",
+            "Pricing",
+            "Hallucination"
+          ],
+          "sources": [
+            "Blog",
+            "Docs",
+            "News",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Launched 10:56pm Mon AEDT. API pricing is $0.15 per million input tokens, $0.60 output and $0.015 cached input, with a 1M-token context and text and image input. MiniMax says agent-task cost is 70% lower than M3 and inference nearly 3x faster. Artificial Analysis scores it 42 on its Intelligence Index (M3 scored 29; DeepSeek V4.1 Flash-1017 scores 45), and found it often gives wrong answers rather than admitting uncertainty. Ollama says on X that Ollama Cloud hosts it in the US with zero data retention: `ollama run minimax-m3.1-flash:cloud`, or run Claude Code on it with `ollama launch claude`.",
+          "why_it_matters": "It's another low-cost option to A/B in Claude Code alongside DeepSeek, but its guessing tendency is exactly what your evals should probe before any factual use.",
+          "caveats": "Cost and speed claims are MiniMax's own. Sources differ on coding: a TechCity comparison has DeepSeek's model ahead on DeepSWE (77.0 vs 73.7) and Terminal Bench 4.0 (42.3 vs 38.1). Ollama's retention claim is its own.",
+          "links": [
+            {
+              "label": "MiniMax blog",
+              "url": "https://www.minimax.io/blog/minimax-m31f"
+            },
+            {
+              "label": "MiniMax pricing",
+              "url": "https://platform.minimax.io/docs/pricing/overview"
+            },
+            {
+              "label": "Artificial Analysis",
+              "url": "https://artificialanalysis.ai/models/minimax-m3-1-flash"
+            },
+            {
+              "label": "TechCity comparison",
+              "url": "https://www.techcityauthority.com/2026/10/minimax-m3-1-flash-price-performance.html"
+            },
+            {
+              "label": "VentureBeat",
+              "url": "https://venturebeat.com/technology/minimaxs-new-m3-1-flash-beats-deepseek-and-opus-5-on-a-key-business-benchmark-at-lower-cost-but-with-a-high-hallucination-rate"
+            },
+            {
+              "label": "@ollama launch post",
+              "url": "https://x.com/ollama/status/2112249324398858505"
+            }
+          ]
+        },
+        {
+          "id": "muse-glimmer-report",
+          "headline": "Meta publishes the Muse Glimmer 30B technical report",
+          "takeaway": "The open-weight local agent model now has a full write-up, including a banking-agent score above Gemma and Qwen.",
+          "tags": [
+            "Meta",
+            "Open weights",
+            "Local agents"
+          ],
+          "sources": [
+            "Paper",
+            "Docs",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Meta published the report on 19 Oct; the Apache 2.0 model itself came out in August. It's a ~29.6B dense model with a ~1.8B vision encoder, 131K context, and 4-bit weights for 24–32 GB GPUs. Meta's own table puts it at 23.5 on τ³-Banking against 15.1 for Gemma4-31B and 16.7 for Qwen3.6-27B, and 75.5 on MCP Atlas against 54.2 and 62.5. Qwen3.6-27B leads on OSWorld-Verified (75.6 vs 65.9).",
+          "why_it_matters": "A permissively licensed model that runs on one GPU is a candidate for on-premises agents and LLM-as-judge work where bank data can't leave the building.",
+          "caveats": "All scores are Meta's, and its methodology notes say its setup may not be tuned for other models. The release is a technical report, not a new model.",
+          "links": [
+            {
+              "label": "Meta technical report",
+              "url": "https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/"
+            },
+            {
+              "label": "Model page and benchmarks",
+              "url": "https://dev.meta.ai/models/muse-glimmer"
+            },
+            {
+              "label": "Hugging Face model card",
+              "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+            },
+            {
+              "label": "@AIatMeta post",
+              "url": "https://x.com/AIatMeta/status/2112265822274302066"
+            }
+          ]
+        },
+        {
+          "id": "ming-3-speech",
+          "headline": "Ant Ling open-sources five Ming-3.0 speech models, served day one in vLLM-Omni (unverified)",
+          "takeaway": "Text-to-speech, speech recognition and audio understanding models from 0.5B to 126B total parameters.",
+          "tags": [
+            "Speech",
+            "Open weights",
+            "vLLM"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "vLLM posted at 3:32am Tue AEDT that @AntLingAGI open-sourced five mixture-of-experts speech models spanning TTS, ASR and audio understanding, from 0.5B up to 126B total parameters (6.5B active), with day-0 serving in vLLM-Omni.",
+          "why_it_matters": "Open speech models that run on the same serving stack as your LLMs matter if you're evaluating voice agents for contact centres.",
+          "caveats": "Details come from vLLM's post only; not yet checked against Ant Ling's model cards or licences.",
+          "links": [
+            {
+              "label": "@vllm_project post",
+              "url": "https://x.com/vllm_project/status/2112220256941085002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "microsoft-nscale-essex",
+          "headline": "Microsoft drops its Essex AI data centre deal with Nscale over grid delays",
+          "takeaway": "Power for the Loughton site isn't expected until the 2030s; Nscale says it will look for other power sources.",
+          "tags": [
+            "Data centres",
+            "Power",
+            "UK"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Reported 18 Oct. The BBC understands Microsoft has ended its involvement in Nscale's planned £2bn AI data centre in Loughton, Essex, after Nscale was told the site's grid connection won't come until the 2030s. Microsoft declined to comment. Nscale says it remains committed to the site, is exploring other power sources, and that the 'London-wide grid issue' doesn't affect its other contracts.",
+          "why_it_matters": "Power, not chips, is setting where AI capacity lands, which shapes where your bank's cloud AI workloads can actually run.",
+          "caveats": "Microsoft hasn't confirmed the move publicly. 'London-wide grid issue' is Nscale's description. UK political reaction is reported in the press but is not covered here.",
+          "links": [
+            {
+              "label": "BBC News",
+              "url": "https://www.bbc.co.uk/news/articles/c9m26kl5y7epo"
+            },
+            {
+              "label": "The Guardian",
+              "url": "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns"
+            }
+          ]
+        },
+        {
+          "id": "binance-ai-pro",
+          "headline": "Binance AI Pro: describe a trading strategy in plain English, paper-trade it, then approve",
+          "takeaway": "A no-code strategy agent with a review canvas and a separate, isolated account before anything trades live.",
+          "tags": [
+            "Trading agents",
+            "Human approval",
+            "Crypto"
+          ],
+          "sources": [
+            "Press release",
+            "Blog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Announced 11:19pm Mon AEDT. Binance says users describe assets, conditions and risk limits in plain language, and the agent builds a visual strategy they can review and paper-trade. Going live needs separate approval and funding of an isolated AI Strategy Account. It starts with spot and USDS-M futures.",
+          "why_it_matters": "It's a consumer-scale example of the approval and isolation pattern regulators will expect from any bank that lets agents place trades.",
+          "caveats": "Backtesting isn't in the initial release, and full availability depends on regional restrictions. All details are from Binance's own materials.",
+          "links": [
+            {
+              "label": "PR Newswire",
+              "url": "https://www.prnewswire.com/news-releases/binance-launches-binance-ai-pro-bringing-conversational-ai-strategy-building-to-users-302912575.html"
+            },
+            {
+              "label": "Binance guide",
+              "url": "https://www.binance.com/en/academy/articles/binance-ai-pro-guide-what-it-is-and-how-to-use-it"
+            }
+          ]
+        },
+        {
+          "id": "tether-aisa",
+          "headline": "Tether backs AIsa, a payments network for AI agents (unverified)",
+          "takeaway": "Tether joined a seed round taking AIsa past $9 million, according to X's news summary.",
+          "tags": [
+            "Agent payments",
+            "Stablecoins"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "X's news summary (18 Oct) says Tether joined AIsa's seed round alongside Alibaba and Tribe Capital, taking the total raise past $9 million, and that AIsa offers pay-per-use access to 5,000 APIs, models and tools with spending controls, billed in fiat or stablecoins.",
+          "why_it_matters": "Agents that pay for their own tools raise the spending-limit and audit questions your bank would need answered first.",
+          "caveats": "Based only on X's generated news summary; not confirmed against a Tether or AIsa release, and usage figures are unverified.",
+          "links": [
+            {
+              "label": "X news summary",
+              "url": "https://x.com/i/trending/2111881219793363012"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "skip-the-compressor",
+          "headline": "Skip the Compressor: coding agents fix more bugs when shown whole files",
+          "takeaway": "At the same token budget, picking which files to show verbatim beat compressors and retrievers on SWE-rebench.",
+          "tags": [
+            "Coding agents",
+            "Context",
+            "SWE-rebench"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "On 300 recent SWE-rebench issues, a simple file selector (CQ2-CARE) resolved 43.7% with GPT-5.6 and 46.7% with Claude Opus 5. That's 6.3 points more than the best of three prompt compressors and 9.3 and 12.7 points more than the best retrievers. The authors say compressors keep the right files but alter their text, so fewer patches apply.",
+          "why_it_matters": "It's evidence for giving Claude Code or Codex exact, whole files rather than compressed context, which is a design choice in the agents you build and validate.",
+          "caveats": "Authors' own experiment on one benchmark with two models. Very little attention so far (3 upvotes).",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.21073"
+            },
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.21073"
+            }
+          ]
+        },
+        {
+          "id": "dlite",
+          "headline": "DLite: speculative decoding that keeps working as agent contexts grow",
+          "takeaway": "Drafts from the target model's hidden states instead of the history, avoiding the up-to-80% drop seen in agent workloads.",
+          "tags": [
+            "Inference",
+            "Speculative decoding",
+            "Agents"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The authors find existing draft models lose up to 80% of their acceptance length on long, multi-turn agent contexts. DLite drops the history from the draft model, reuses the target model's hidden states, and adds a light sequential head. They report acceptance lengths of 2–6 and up to 70% better than the DSpark method.",
+          "why_it_matters": "Speculative decoding (a small model drafts tokens a big one checks) is how agent latency gets cut, and this targets the long-context case your agents hit.",
+          "caveats": "Authors' own benchmarks. Needs training a drafter per target model.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.23787"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.23787"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/SJTU-DAI-Sys/DLite"
+            }
+          ]
+        },
+        {
+          "id": "livemace",
+          "headline": "LiveMACE: 30 days of live-market agents show returns don't track capability",
+          "takeaway": "Five frontier models traded live, and similar returns came from very different use of tools, memory and rules.",
+          "tags": [
+            "Benchmark",
+            "Markets",
+            "Process evals"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "LiveMACEBench runs persistent agents in live financial markets under matched tool-use, memory, rule-following and multi-agent setups, scoring both returns and diagnostics from full decision traces. Over 30 days the authors find realised returns often diverge from the capability measures.",
+          "why_it_matters": "It backs up a point model validators make: P&L alone doesn't validate a trading or advice agent, the decision trace does.",
+          "caveats": "Thirty days of one market period; results depend on market conditions. Authors' own benchmark.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.09872"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.09872"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/RaymondVoldemortFu/LiveMACE"
+            }
+          ]
+        },
+        {
+          "id": "hexashell",
+          "headline": "HexaShell: Codex drives a two-arm robot through one command line",
+          "takeaway": "A thin harness lets a coding agent write its own tools from camera data, reaching 39.7% on RoboDojo, which its authors call a new best.",
+          "tags": [
+            "Robotics",
+            "Codex",
+            "Harness"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "The agent sees three calibrated cameras, reads logs after failures and writes small tools, keeping what it learns as code. Using Codex with GPT-6-Astra at medium effort, it reached 39.7% success and a 48.0 progress score across all 42 RoboDojo tasks, which the authors call a new state of the art. They say the limit is physical contact, not reasoning. It was the top paper on Hugging Face's daily list (243 upvotes at fetch time).",
+          "why_it_matters": "It's a clear example of the 'agent improves its own tools' loop, the same pattern as harness tuning in software agents.",
+          "caveats": "Tools were built on ten layouts of one seed per task and tested on ten new layouts of the same seed, so generalisation is narrow.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.23479"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.23479"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/HexaFuture/HexaShell"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "headroom",
+          "headline": "headroomlabs-ai/headroom",
+          "takeaway": "Compresses tool outputs, logs, files and RAG chunks before they reach the model.",
+          "tags": [
+            "Context",
+            "Token cost"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Trending on GitHub today (76,164 stars, 317 today). It claims 20% fewer tokens for coding agents.",
+          "why_it_matters": "A quick way to measure how much of your agents' context is tool-output noise, and a useful contrast to today's paper finding that compressing code can hurt patches.",
+          "caveats": "Savings figures are the project's own. Compressing code, rather than logs, may cut fix rates, per today's paper.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/headroomlabs-ai/headroom"
+            }
+          ]
+        },
+        {
+          "id": "strix",
+          "headline": "usestrix/strix",
+          "takeaway": "An open-source AI penetration-testing tool that finds and fixes app vulnerabilities.",
+          "tags": [
+            "Security",
+            "Pen testing",
+            "Agents"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Trending in Python (70,019 stars, 476 today).",
+          "why_it_matters": "Useful for red-teaming your own agentic apps in a sandbox, and as a case study in what autonomous security agents can reach.",
+          "caveats": "Only run it against systems you're authorised to test, and in an isolated environment.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/usestrix/strix"
+            }
+          ]
+        },
+        {
+          "id": "cursor-plugins",
+          "headline": "cursor/plugins",
+          "takeaway": "Cursor's plugin specification and its official plugins.",
+          "tags": [
+            "Cursor",
+            "Plugins",
+            "Spec"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending in TypeScript (13,020 stars, 441 today).",
+          "why_it_matters": "Plugin formats across Cursor, Claude Code, Codex and Copilot are converging on skills plus MCP, so the spec shows what a portable internal plugin needs.",
+          "caveats": "A spec and catalogue, not a tool you run.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/cursor/plugins"
+            }
+          ]
+        },
+        {
+          "id": "ai-job-search",
+          "headline": "MadsLorentzen/ai-job-search",
+          "takeaway": "A local job-search framework built on Claude Code that evaluates postings and tailors applications.",
+          "tags": [
+            "Claude Code",
+            "Skills"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Top of GitHub's daily trending list (56,779 stars, 3,860 today).",
+          "why_it_matters": "A popular, readable example of packaging a multi-step workflow as Claude Code skills and commands.",
+          "caveats": "Off-topic for banking work; worth a look only as a structure example. It handles personal data, so check what it stores.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/MadsLorentzen/ai-job-search"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

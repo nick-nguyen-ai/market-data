@@ -1,0 +1,860 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-22",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Thursday 22 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "evals",
+      "card_id": "litellm-compromise",
+      "headline": "LiteLLM 1.107.0 shipped a credential stealer; check installs and rotate keys"
+    },
+    {
+      "section_id": "industry",
+      "card_id": "carliy0s-banks",
+      "headline": "Criminals ran a team of AI agents against 400+ Latin American banks, says Straiker"
+    },
+    {
+      "section_id": "coding",
+      "card_id": "claude-code-2-1-305",
+      "headline": "Claude Code 2.1.305 fixes Bedrock and Vertex failures and changes MCP allowlist filtering"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "claude-code-2-1-305",
+          "headline": "Claude Code 2.1.305–306: fixes the Bedrock and Vertex breakage from 2.1.304, and changes how MCP allowlists filter",
+          "takeaway": "Upgrade if you run through Bedrock, Vertex or a gateway, and recheck your managed MCP allowlist, because one rule now lets more servers load.",
+          "tags": [
+            "Claude Code",
+            "MCP",
+            "Enterprise settings"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "2.1.305 shipped at 7:46am Wed AEDT, just after yesterday's issue went out. It fixes a 2.1.304 regression where every request failed on Vertex, Bedrock and other providers when the endpoint or a gateway rejected tool search; Claude Code now retries without it. A new `sandbox.allowNestedUserNamespaces` setting lets sandboxed Linux commands create user namespaces (for Chromium or rootless podman), and the notes say this lets them get around the sandbox's file protections. `allowedMcpServers` no longer filters `managed-mcp.json` stdio servers that use `${VAR}` only in `env`, so a server your allowlist left out now loads on upgrade unless you list it in `deniedMcpServers`. 2.1.306 (2:16pm Wed AEDT) fixes `claude -p` showing 'Not logged in' in cloud sessions, and an API error being replaced by 'prompt is too long' in sessions with many MCP (Model Context Protocol) tools. The Python Agent SDK 0.2.170 bundles 2.1.306 and now returns every tool call from turns that ran tools in parallel.",
+          "why_it_matters": "If your bank routes Claude Code through Bedrock, Vertex or an internal gateway, 2.1.304 could have broken every request. The allowlist change can quietly load an MCP server your policy meant to keep out, so it's one to check before rolling out.",
+          "caveats": "The nested-namespaces option weakens the sandbox by design, so leave it off unless a tool needs it. The allowlist change only affects servers that use `${VAR}` in `env` alone.",
+          "how_to_try": "Update to 2.1.306, then list the stdio servers in your `managed-mcp.json` and add any you want blocked to `deniedMcpServers` before you deploy it to the team.",
+          "links": [
+            {
+              "label": "Claude Code v2.1.305 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305"
+            },
+            {
+              "label": "Claude Code v2.1.306 release",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.306"
+            },
+            {
+              "label": "Claude Agent SDK Python v0.2.170",
+              "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.170"
+            },
+            {
+              "label": "@ClaudeCodeLog on 2.1.306",
+              "url": "https://x.com/ClaudeCodeLog/status/2112748699734479305"
+            }
+          ]
+        },
+        {
+          "id": "copilot-cli-1-0-102",
+          "headline": "Copilot CLI v1.0.102: subagents follow your tool approvals, and the sandbox respects NO_PROXY",
+          "takeaway": "Subagents now inherit custom and MCP tool approvals, and sandboxed traffic follows your proxy settings.",
+          "tags": [
+            "Copilot CLI",
+            "Subagents",
+            "Proxies"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 5:05am Thu AEDT. Subagents honour custom and MCP tool approvals, which avoids duplicate permission prompts and lets inherited workflows run. Prompt mode (`-p` and piped stdin) now honours managed Auto model selection. Sandboxed network traffic honours `NO_PROXY` and `ALL_PROXY` when it inherits host proxy settings, and long-running sandboxed commands keep running past 10 seconds. Replies cut off by a provider overload now retry with backoff and show the provider's message and request ID.",
+          "why_it_matters": "Corporate proxies are a common reason agent sandboxes fail inside a bank network, and approvals that carry into subagents mean one policy covers the whole run.",
+          "caveats": "Inherited approvals also mean a broad approval now reaches subagents, so check what you've approved.",
+          "how_to_try": "Update, run a task behind your corporate proxy with `NO_PROXY` set for internal hosts, and confirm a subagent doesn't ask again for a tool you already approved.",
+          "links": [
+            {
+              "label": "Copilot CLI v1.0.102 release",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.102"
+            }
+          ]
+        },
+        {
+          "id": "gemini-cli-0-65",
+          "headline": "Gemini CLI v0.65.0: read-only settings in untrusted folders and custom telemetry headers",
+          "takeaway": "A stable release that tightens untrusted-folder handling and lets you send OpenTelemetry data to an authenticated collector.",
+          "tags": [
+            "Gemini CLI",
+            "Trust",
+            "Telemetry"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 8:17am Wed AEDT. Workspace settings are now enforced as read-only in untrusted folders, and false positives on untrusted command flags and compound loops are fixed. Telemetry config supports custom OTLP (OpenTelemetry protocol) headers. OAuth callback `iss` validation now follows RFC 9207, and infinite verification and OAuth retry loops are fixed. Fixes also stop rapid Ctrl-C from poisoning a session and quick exits from deleting resumed session history.",
+          "why_it_matters": "Custom OTLP headers let you ship Gemini CLI traces to an internal, authenticated collector alongside your other agent telemetry.",
+          "caveats": "Mostly fixes; the release notes don't describe new agent features.",
+          "how_to_try": "Update, add your collector's auth header to the telemetry settings, and open the CLI in a cloned third-party repo to confirm its workspace settings are read-only.",
+          "links": [
+            {
+              "label": "Gemini CLI v0.65.0 release",
+              "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "litellm-compromise",
+          "headline": "LiteLLM 1.107.0 on PyPI and Docker shipped a credential stealer",
+          "takeaway": "If any machine or image pulled litellm 1.107.0 or the `latest` Docker tags on 21 Oct, treat it as compromised and rotate its credentials.",
+          "tags": [
+            "Supply chain",
+            "LiteLLM",
+            "Security"
+          ],
+          "sources": [
+            "Advisory",
+            "Blog",
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "LiteLLM says its release pipeline was compromised and pushed v1.107.0. All seven PyPI wheels were live from 11:39 to 13:23 UTC on 21 Oct (10:39pm Wed to 12:23am Thu AEDT), and the Docker and GHCR images `v1.107.0`, `latest`, `main-latest` and `main-stable` pointed to a compromised image from 11:46 UTC until 13:51–14:20 UTC. Researchers found the wheels drop `cook.pth`, `cook.py` and `sitecustomize.py` into site-packages, so the code runs on every Python start even if litellm is never imported. It collects cloud, SSH, Kubernetes, CI and environment-variable secrets and installs an hourly remote-code loader. LiteLLM says attackers used three developers' GitHub credentials and built from an attacker-controlled repository; the git tag itself is clean and the private enterprise release wasn't affected. Arize Phoenix 20.24.0 already excludes 1.107.0 from its dependencies.",
+          "why_it_matters": "LiteLLM often sits in front of every model call as a gateway, so it tends to hold provider keys and run on hosts with cloud credentials. A `pip install -U` or an unpinned `latest` image in that window is enough to be exposed.",
+          "caveats": "The investigation is ongoing. Uninstalling with pip doesn't remove the dropped files; follow the cleanup steps in the advisory and pin `litellm==1.106.2` in a clean environment.",
+          "links": [
+            {
+              "label": "LiteLLM incident report",
+              "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026"
+            },
+            {
+              "label": "GitHub security issue #47826",
+              "url": "https://github.com/BerriAI/litellm/issues/47826"
+            },
+            {
+              "label": "AISLE analysis",
+              "url": "https://aisle.com/blog/litellm-11070-on-pypi-shipped-a-credential-stealer"
+            },
+            {
+              "label": "JFrog analysis",
+              "url": "https://research.jfrog.com/post/litellm-hijacked-again/"
+            },
+            {
+              "label": "Phoenix 20.24.0 release",
+              "url": "https://github.com/Arize-ai/phoenix/releases/tag/arize-phoenix-v20.24.0"
+            }
+          ]
+        },
+        {
+          "id": "emsign-certifi",
+          "headline": "Python's trusted certificates drop emSign after weak CA keys; update pip, certifi and uv",
+          "takeaway": "Old pip and certifi still trust a certificate authority whose keys were weak, which could allow a man-in-the-middle on pypi.org.",
+          "tags": [
+            "TLS",
+            "Python",
+            "Supply chain"
+          ],
+          "sources": [
+            "Advisory",
+            "Forum"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Certifi's critical advisory (published 20 Oct) removes eMudhra's emSign root certificates because intermediates under them were revoked for key compromise. eMudhra says eight intermediate CAs had weak keys from an April 2025 key ceremony, that it revoked them on 19 Oct, and that none had issued end-entity certificates. Python's packaging maintainers ask users to upgrade to certifi 2026.10.19, pip 26.2.2, uv 0.13.4, sigstore 4.5.1 and pixi 0.82.1, and to rebuild container images. They note pip below 26.2.2 keeps trusting the bad CAs whatever the system trust store says.",
+          "why_it_matters": "Bank build images and CI runners often pin pip and certifi for months, so this is a quick patch-and-rebuild item for anything that installs Python packages, including agent sandboxes.",
+          "caveats": "eMudhra says it knows of no misuse. The advisory lists 2026.10.18 as the patched version, but maintainers recommend 2026.10.19 for compatibility with unaffected emSign roots.",
+          "links": [
+            {
+              "label": "certifi advisory GHSA-6q48-6c7w-9gw2",
+              "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2"
+            },
+            {
+              "label": "Python packaging guidance",
+              "url": "https://discuss.python.org/t/information-for-python-users-regarding-emudhra-emsign-ca-certificate-security-incident/109576"
+            },
+            {
+              "label": "eMudhra statement",
+              "url": "https://emudhra.com/en/post/certificate-security-incident"
+            },
+            {
+              "label": "oss-security notice",
+              "url": "https://www.openwall.com/lists/oss-security/2026/10/20/20"
+            }
+          ]
+        },
+        {
+          "id": "phoenix-evals-decision",
+          "headline": "Arize Phoenix evals can now run any classification evaluator on a decision model",
+          "takeaway": "Phoenix's TypeScript evals return a label plus a probability per option from models like gpt-6-luna, and trace each call as a decision span.",
+          "tags": [
+            "LLM-as-judge",
+            "Decision models",
+            "Phoenix"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "`@arizeai/phoenix-evals` 2.7.0 (3:06am Thu AEDT) lets every classification evaluator, including the built-ins, run on AI SDK decision models such as `openai.decisionModel(\"gpt-6-luna\")`. The label comes from `experimental_decide`, with label probabilities in metadata, and decide spans record the question and answer. It pins `ai` to 7.0.137 and `@ai-sdk/otel` to 1.0.137 because the decision API is still experimental, and needs `@ai-sdk/openai` 4.0.89 or later for OpenAI decision models.",
+          "why_it_matters": "Probabilities per label let you set and tune pass/fail thresholds for judges instead of trusting a single text answer, which is what yesterday's decision-model comparison argued for.",
+          "caveats": "It changes what evaluation models such as TypeSafe's Jev receive, so rerun existing evals before comparing scores. The exact version pins may clash with other AI SDK code.",
+          "links": [
+            {
+              "label": "phoenix-evals 2.7.0 release",
+              "url": "https://github.com/Arize-ai/phoenix/releases/tag/%40arizeai/phoenix-evals%402.7.0"
+            },
+            {
+              "label": "@ArizePhoenix post",
+              "url": "https://x.com/ArizePhoenix/status/2112958492936212780"
+            }
+          ]
+        },
+        {
+          "id": "owasp-red-teaming",
+          "headline": "OWASP publishes version 1.0 of its GenAI Red Teaming Manual",
+          "takeaway": "An eight-phase method for attacking models, apps and AI agents, from planning to remediation.",
+          "tags": [
+            "Red teaming",
+            "OWASP",
+            "Agents"
+          ],
+          "sources": [
+            "Guide"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 20 Oct by the OWASP GenAI Security Project. The phases are planning, reconnaissance, attack-surface mapping, exploitation, persistence, impact assessment, reporting and remediation, and it covers models, applications, multimodal interfaces and AI agents. A summary in the AI Pulse Daily Brief says the manual asks testers to score input filters and final outputs separately and to record untested and inconclusive cases.",
+          "why_it_matters": "It gives you a recognised structure to point to when writing up how an agentic app was tested, which helps when risk and audit teams review your validation.",
+          "caveats": "The detail on separate filter and output scoring comes from a secondary summary; check the manual itself before citing it.",
+          "links": [
+            {
+              "label": "OWASP GenAI Red Teaming Manual v1.0",
+              "url": "https://genai.owasp.org/resource/genai-red-teaming-manual-version-1-0/"
+            },
+            {
+              "label": "AI Pulse Daily Brief summary",
+              "url": "https://buttondown.com/Horizonscan/archive/ai-pulse-daily-brief-2026-10-21/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "pydantic-ai-2-59",
+          "headline": "Pydantic AI 2.59.0: a high-severity web_fetch fix, Daytona sandboxes and provider-neutral model errors",
+          "takeaway": "Upgrade if your agents fetch untrusted web pages; the release also adds typed errors for rate limits and context overflow.",
+          "tags": [
+            "Pydantic AI",
+            "Security",
+            "Error handling"
+          ],
+          "sources": [
+            "Changelog",
+            "Advisory"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 3:36pm Wed AEDT, a day after the 2.58.0 advisories in yesterday's issue. Advisory GHSA-4whf-38hw-pxxh (high): when `web_fetch_tool` fetched attacker-controlled HTML with many elements, converting it could delay unrelated work in the same process; fixed in 2.59.0 and 1.107.9. New features include `DaytonaSandbox`, which runs the harness's Coder, Shell and FileSystem capabilities in a Daytona sandbox, and provider-neutral errors such as `ModelRateLimitError`, `ModelUnavailableError` and `ModelContextWindowExceededError`. `TemporalDurability` can skip retries for chosen error categories. `TrajectoryJudge` feedback is now sent as escaped `<judge_feedback>` data, and `BackgroundTools` results are framed as tool output rather than untagged user text.",
+          "why_it_matters": "Typed model errors make retry and fallback logic testable across providers, and marking judge and background results as data rather than user text reduces prompt-injection risk.",
+          "caveats": "Several compatibility notes change behaviour, including how missing provider usage is reported, so read them before upgrading.",
+          "links": [
+            {
+              "label": "Pydantic AI v2.59.0 release",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.59.0"
+            },
+            {
+              "label": "Advisory GHSA-4whf-38hw-pxxh",
+              "url": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-4whf-38hw-pxxh"
+            },
+            {
+              "label": "v1.107.9 release",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v1.107.9"
+            }
+          ]
+        },
+        {
+          "id": "openshell-ra",
+          "headline": "NVIDIA's OpenShell Reference Architecture: agent controls that sit outside the agent's reach",
+          "takeaway": "A secure agent runtime with a policy-checking supervisor and formal policy proofs, now packaged with NVIDIA hardware.",
+          "tags": [
+            "Agent security",
+            "Sandboxing",
+            "NVIDIA"
+          ],
+          "sources": [
+            "Press release",
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Announced at GTC Berlin on 21 Oct. Open-source OpenShell has four parts: a Gateway that manages sandboxes and policies, a Supervisor that checks outbound requests against policy and handles credentials outside the sandbox, the Sandbox itself, and a Policy Prover that formally verifies what a policy permits. The reference architecture adds Vera CPUs for agent harnesses and BlueField-4 DPUs running NVIDIA Sentry for out-of-band monitoring and in-silicon enforcement. NVIDIA names Anthropic, AWS, Google Cloud, Microsoft, OpenAI and others as working with it. The same keynote added an Agent Knowledge Foundation to NVIDIA's Agent Toolkit (see Repos).",
+          "why_it_matters": "Keeping credential access and policy checks in a separate supervisor that the agent can't change is the kind of control a bank risk team will ask for, and it works without NVIDIA hardware.",
+          "caveats": "Performance figures such as CoreWeave's faster sandbox startup are vendor-reported. The hardware enforcement parts need NVIDIA DPUs.",
+          "links": [
+            {
+              "label": "NVIDIA newsroom",
+              "url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture"
+            },
+            {
+              "label": "NVIDIA technical blog",
+              "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/"
+            },
+            {
+              "label": "OpenShell on GitHub",
+              "url": "https://github.com/NVIDIA/OpenShell"
+            },
+            {
+              "label": "@NVIDIAAI post",
+              "url": "https://x.com/NVIDIAAI/status/2112846708527018339"
+            }
+          ]
+        },
+        {
+          "id": "mastra-1-79",
+          "headline": "Mastra core 1.79.0: MCP Events, per-tool latency analytics and per-user connections",
+          "takeaway": "MCP servers can push events to clients, traces can be aggregated per tool or agent, and each end user's connected accounts stay separate.",
+          "tags": [
+            "Mastra",
+            "MCP",
+            "Observability"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 11:28pm Wed AEDT. Experimental MCP Events, based on the draft SEP-3415 proposal, let servers publish event streams that clients poll, stream or receive by signed webhook. A new `aggregateSpans()` storage contract gives per-span analytics such as p95 latency per tool and cost per agent, and queries gain `timeToFirstChunkMs`. `@mastra/connect` now scopes connections per end user so one user's credentials can't serve another's request. Agent controller sessions are now keyed by `sessionId`.",
+          "why_it_matters": "Per-user credential scoping is a basic requirement for any customer-facing agent at a bank, and per-tool p95 latency is a useful production metric to track.",
+          "caveats": "MCP Events is based on a draft spec and marked experimental. The release has breaking changes to session and span-query APIs.",
+          "links": [
+            {
+              "label": "@mastra/core 1.79.0 release",
+              "url": "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.79.0"
+            }
+          ]
+        },
+        {
+          "id": "chatgpt-ad-stack",
+          "headline": "OpenAI explains how an LLM orchestrator runs ChatGPT's ads, kept apart from the answers",
+          "takeaway": "A post-trained model calls retrieval, eligibility, scoring and auction tools in a loop, while a separate service keeps ads out of ChatGPT's replies.",
+          "tags": [
+            "Production patterns",
+            "Tool calling",
+            "OpenAI"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 21 Oct by OpenAI engineers Ritendra Datta and Karthik Gopalratnam. The orchestrator rewrites a conversation into retrieval queries, calls tools to filter, score and rank candidates, and nominates options for an auction. The auction, not the model, sets price and final selection. The ads service runs alongside answer generation with separate models and code, so if it's slow the ad is simply dropped, and 'no ad' counts as a successful outcome. Every step logs a specific outcome, and OpenAI's strongest models judge results and train smaller orchestrator models. OpenAI says ChatGPT ads reached a US$1 billion annualised run rate in under 200 days.",
+          "why_it_matters": "It's a detailed public example of a pattern you can reuse: let the model nominate options but leave pricing or approval to deterministic code, isolate the agent so its failure can't break the main product, and log each outcome for evals.",
+          "caveats": "This is OpenAI describing its own system; there are no independent measurements of ad relevance or of answer independence.",
+          "links": [
+            {
+              "label": "OpenAI engineering post",
+              "url": "https://openai.com/index/building-chatgpt-ad-stack"
+            },
+            {
+              "label": "@OpenAIDevs post",
+              "url": "https://x.com/OpenAIDevs/status/2112962753682198969"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "recursive-flint",
+          "headline": "Recursive Flint: a 40B open coding model that activates 2.5B parameters and runs on a laptop",
+          "takeaway": "Apache 2.0 weights, a 262K-token context and support in Ollama, vLLM and LM Studio on day one.",
+          "tags": [
+            "Open weights",
+            "Local models",
+            "Coding"
+          ],
+          "sources": [
+            "Model card",
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 21 Oct by Recursive, Richard Socher's lab. Flint is a mixture-of-experts model with 39.8B total parameters and about 2.5B active per token, trained from scratch, with a 262,144-token context. Recursive reports 54.9% on Terminal-Bench 2.1, 89.7% on SWE-bench Pro v2 and 74.2% on SWE-bench Verified, and more than 125 tokens/s on an M4 Pro MacBook Pro. vLLM says a single request decodes at about 500 tokens/s on one GB200 even at 100K context. Ollama added it in the v0.40.8-rc0 pre-release (`ollama run flint`). Recursive says its automated research system contributed throughout development.",
+          "why_it_matters": "A capable local coding model lets you try agent workflows on code that can't leave your machine, and the open licence makes it an option for an on-premises evaluation.",
+          "caveats": "All benchmark scores are Recursive's own. Ollama's build is a release candidate and supports macOS only for now. Recursive says Flint may need more guidance than larger closed models.",
+          "links": [
+            {
+              "label": "Flint model card",
+              "url": "https://huggingface.co/RecursiveSI/flint"
+            },
+            {
+              "label": "Recursive announcement",
+              "url": "https://recursive.com/updates/introducing-recursive-flint"
+            },
+            {
+              "label": "vLLM day-0 blog",
+              "url": "https://vllm.ai/blog/2026-10-21-flint"
+            },
+            {
+              "label": "Ollama v0.40.8-rc0",
+              "url": "https://github.com/ollama/ollama/releases/tag/v0.40.8-rc0"
+            },
+            {
+              "label": "TechCrunch",
+              "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
+            }
+          ]
+        },
+        {
+          "id": "claude-duet",
+          "headline": "Anthropic opens a waitlist for Claude Duet, a proactive work agent",
+          "takeaway": "A separate app that flags what needs your attention, keeps working when you step away and checks before acting for you.",
+          "tags": [
+            "Anthropic",
+            "Proactive agents",
+            "Research preview"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Announced 21 Oct (US time) as a research preview by waitlist, starting with US Pro and Max subscribers. Duet is a standalone app on iOS, Android and claude.ai. Anthropic says it comes to you with what needs attention, completes tasks, keeps working while you're away and checks with you before acting on your behalf. It shares your plan's usage limits, and its background checks count against them.",
+          "why_it_matters": "Proactive agents that act before you ask raise the same approval and audit questions you'll face with bank agents, so it's worth watching how Anthropic handles them.",
+          "caveats": "US only and waitlisted. Anthropic says it may misread a thread or miscalibrate what's urgent, and it can't yet show you its browser.",
+          "links": [
+            {
+              "label": "Anthropic announcement",
+              "url": "https://claude.com/resources/articles/claude-duet"
+            },
+            {
+              "label": "@_catwu post",
+              "url": "https://x.com/_catwu/status/2112988751576330487"
+            },
+            {
+              "label": "9to5Mac",
+              "url": "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/"
+            }
+          ]
+        },
+        {
+          "id": "humming-kernels",
+          "headline": "Ant Group and vLLM open-source Humming, one kernel library for quantized inference",
+          "takeaway": "One library for many quantization formats and NVIDIA GPU generations, with up to 43% more throughput in one DeepSeek test.",
+          "tags": [
+            "Inference",
+            "Quantization",
+            "vLLM"
+          ],
+          "sources": [
+            "Blog",
+            "GitHub",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Announced 21 Oct. Humming compiles quantized GEMM kernels on demand from shared CUDA components, supporting NVIDIA GPUs from Turing onward plus T-Head's Zhenwu 810E. It is already a dependency of vLLM 0.29.0+ on CUDA and is selected with `--linear-backend humming --moe-backend humming`. In the vLLM community's test of DeepSeek-V4.1-Flash on eight H20 GPUs, switching the MoE layers from Marlin W4A16 to Humming W4A8 raised end-to-end throughput by about 14–43% and cut mean time to first token by about 25–32%.",
+          "why_it_matters": "If you self-host open models for evaluation, a flag change in vLLM may give more throughput on the GPUs you already have.",
+          "caveats": "Benchmarks were run by the developers. Gains depend on model, format and GPU, and autotuning isn't available yet.",
+          "links": [
+            {
+              "label": "vLLM blog",
+              "url": "https://vllm.ai/blog/2026-10-21-humming"
+            },
+            {
+              "label": "Humming on GitHub",
+              "url": "https://github.com/vllm-project/humming"
+            },
+            {
+              "label": "@vllm_project post",
+              "url": "https://x.com/vllm_project/status/2112760256120197333"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "carliy0s-banks",
+          "headline": "Straiker: criminals used a team of Claude, Grok and Kimi agents against 400+ Latin American banks",
+          "takeaway": "A security firm says it got inside the group's own systems and found AI agents debating targets, writing exploits and mining stolen secrets.",
+          "tags": [
+            "Banking",
+            "Cybercrime",
+            "Agent misuse"
+          ],
+          "sources": [
+            "Blog",
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Published 21 Oct by AI security company Straiker. It says a group it ties to CyberCartel, operating as Tr4nsHack Team, built a multi-agent system called CARLIY0S on the open-source PentAGI framework. A Claude 'commander' running in the Cursor IDE delegated to Claude sub-agents that debated each target before an arbiter decided, and five Grok-based 'miners' collected a 4,493-record database of stolen secrets. The group got past model refusals by framing requests as authorised red-team work, shared state through an MCP knowledge graph, and fell back to hard-coded code when models refused. Straiker says Anthropic revoked the credential the group used and xAI is looking into the activity.",
+          "why_it_matters": "It shows agent tooling you use every day (MCP, multi-agent debate, IDE agents) being used against banks' payment systems, and why 'it's a red-team test' prompts and shared agent memory need controls.",
+          "caveats": "These are a security vendor's findings from its own investigation, not independently confirmed. Victims are anonymised, and Straiker treats one model entry in the configuration as unverified.",
+          "links": [
+            {
+              "label": "Straiker report",
+              "url": "https://www.straiker.ai/blog/inside-carliy0s-how-cybercartel-used-multiple-ai-models-to-attack-latin-american-banks"
+            },
+            {
+              "label": "PYMNTS",
+              "url": "https://www.pymnts.com/cybersecurity/2026/hackers-employ-grok-and-claude-to-attack-latam-banks/"
+            }
+          ]
+        },
+        {
+          "id": "mastercard-agent-pay-machines",
+          "headline": "Mastercard opens early access to Agent Pay for Machines, built on the x402 payment protocol",
+          "takeaway": "A business sets an agent's task and budget, and the agent pays services with signed vouchers that are settled later.",
+          "tags": [
+            "Payments",
+            "Agent commerce",
+            "Banking"
+          ],
+          "sources": [
+            "Press release",
+            "Docs"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Announced at Cloudflare Connect on 20 Oct (US time). When a service returns 'HTTP 402 Payment Required', the agent signs a payment voucher within its approved limit, the provider verifies it and delivers, and vouchers can be combined and redeemed later. In the demo, a marketing agent for agency Hype made nine payments to two providers under one budget. Pilots included Cloudflare, Ant International, AIsa, Base, BVNK, Coinbase and Hype. Early access gives developers buyer- and seller-side APIs, a toolkit and a sandbox.",
+          "why_it_matters": "Scoped, pre-authorised spending limits are the payment version of the least-privilege access controls you'd require of any bank agent.",
+          "caveats": "Early access only, with settlement partly through crypto partners in the pilot. Mastercard hasn't published pricing or liability terms.",
+          "links": [
+            {
+              "label": "Mastercard announcement",
+              "url": "https://www.mastercard.com/global/en/news-and-trends/press/2026/october/Mastercard-Agent-Pay-for-Machines-in-action.html"
+            },
+            {
+              "label": "Cloudflare x402 docs",
+              "url": "https://developers.cloudflare.com/monetization-gateway/x402/"
+            }
+          ]
+        },
+        {
+          "id": "firmus-nvidia",
+          "headline": "Nvidia reportedly in talks to invest in Australia's Firmus after its IPO was pulled",
+          "takeaway": "The Information reports a possible investment of hundreds of millions of dollars in the Australian AI cloud provider.",
+          "tags": [
+            "Australia",
+            "AI infrastructure",
+            "Nvidia"
+          ],
+          "sources": [
+            "News",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "The Information reported on 20 Oct (US time) that Nvidia is in talks to invest hundreds of millions of dollars in Firmus Grid. Firmus withdrew its planned ASX listing on 8 Oct, citing market volatility. Nvidia already holds a stake in the company.",
+          "why_it_matters": "Local AI compute capacity matters for Australian banks that need data to stay onshore.",
+          "caveats": "Based on an unnamed-source report. Neither company has confirmed a deal, and the amount and terms aren't known.",
+          "links": [
+            {
+              "label": "Techmeme summary of The Information",
+              "url": "https://www.techmeme.com/261020/p56"
+            },
+            {
+              "label": "Yahoo Finance",
+              "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-talks-back-firmus-ipo-235952854.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "decisionpivot",
+          "headline": "DecisionPivot: decision models with similar scores can differ a lot on controlled variations",
+          "takeaway": "Two 27B models only 2.6 points apart on public tests scored 70.1% and 44.2% when judged on groups of matched variations.",
+          "tags": [
+            "Benchmark",
+            "Decision models",
+            "Calibration"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "A diagnostic benchmark of 48 tasks and 40,033 items across seven decision roles such as routing, guardrails and output verification. Its core track groups items into contrast sets with answers checked by independent solvers. Across 40 decision models and 14 general models, it found Perplexity Decider ranked the positive item above the negative one in 92.3% of pairs but got both right only 74.1% of the time.",
+          "why_it_matters": "If you use decision models as eval judges or guardrails, a single accuracy number can hide unstable behaviour, and this gives you a method to test for it.",
+          "caveats": "A new benchmark from StartLux Labs; the generated task families may not reflect your domain.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.28522"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.28522"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/StartLuxLabs/DecisionPivot"
+            }
+          ]
+        },
+        {
+          "id": "decision-controllers",
+          "headline": "Using a decision model to steer a coding agent raised cost 19% with no gain in success",
+          "takeaway": "A pre-registered Terminal-Bench study found a decision model ranked good stopping points well but told the agent to re-check work that was already right.",
+          "tags": [
+            "Agent control",
+            "Decision models",
+            "Cost"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The study kept a Claude Sonnet 5.5 terminal agent fixed and varied only the controller: none, rules, Claude Haiku 5.5, the Jev 1.13 decision model, or a placebo. On 21 held-out tasks (315 trials), Jev raised cost per attempt by 19% at the same 73.0% pass rate. Offline it ranked finish requests best (AUROC 0.78), but it was poorly calibrated: its mean probability that a run was done was 0.50 when 87% of those runs passed.",
+          "why_it_matters": "A good offline judge score doesn't mean the judge improves the agent when you put it in the loop, so test controllers end to end.",
+          "caveats": "One author, one agent and 21 tasks; a narrow setup.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.24649"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.24649"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/namanvats/decision-model-controllers"
+            }
+          ]
+        },
+        {
+          "id": "agent-s4",
+          "headline": "Agent S4: computer-use agents that build their own tools beat GPT-5.5 and Claude Opus 4.8 on OSWorld V2, authors report",
+          "takeaway": "Interfaces evolved from the agent's own past runs lifted an open 27B model to 21.3%, 3.8 times its score with fixed interfaces.",
+          "tags": [
+            "Computer use",
+            "Self-improvement",
+            "Benchmark"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "A meta-agent studies task trajectories without success labels and builds and revises interfaces, such as code shortcuts instead of cell-by-cell typing, plus notes on when to use them. Evolution keeps changes that help on held-out validation tasks. With Qwen3.8-27B, Agent S4 reached 21.3% on OSWorld V2 versus 13.0% for GPT-5.5 and 20.6% for Claude Opus 4.8, at about 4.3% and 1.5% of their cost. On ScienceBoard, success rose from 41.4% to 58.6%.",
+          "why_it_matters": "It suggests better tools for the agent can matter as much as a bigger model, which is cheaper to try for internal desktop automation.",
+          "caveats": "Author-reported results; absolute scores on OSWorld V2 are still low.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.28601"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.28601"
+            }
+          ]
+        },
+        {
+          "id": "flowstate",
+          "headline": "FlowState: keep an agent's execution state as memory, and use about 40% fewer tokens",
+          "takeaway": "Typed state nodes with links back to raw tool outputs beat full-context history on two long-horizon benchmarks.",
+          "tags": [
+            "Memory",
+            "Long-horizon agents",
+            "Context"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "From Ant International researchers. FlowState stores semantically typed state nodes and their relations, with references to raw tool observations that the agent opens only when needed. Using DeepSeek-V4-Flash for both, it beat a full-context baseline by 4.55 points on MemoryArena and 13.95 points on τ³-Bench, while cutting total tokens by 43.2% and 40.6%.",
+          "why_it_matters": "Structured, auditable state is easier to inspect than a long transcript, which helps when you need to explain why an agent made a decision.",
+          "caveats": "Compared only against a full-context baseline with one model.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2609.34565"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2609.34565"
+            }
+          ]
+        },
+        {
+          "id": "more-memory-worse",
+          "headline": "More memory, worse agents: stored lessons can keep repeating their own mistakes",
+          "takeaway": "Rules and summaries that agents save from past runs can recreate the original errors, so the authors rebuild guidance fresh each time.",
+          "tags": [
+            "Memory",
+            "Self-improvement",
+            "Reliability"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The authors call it error reproduction: a wrong rule shapes new runs, which then produce new rules with the same error. Their Anti-Persistence design keeps only trajectories and outcomes, builds task guidance on demand and discards it after use. Across benchmarks and models it reported the highest held-out success and the lowest average model-call cost among the memory designs tested.",
+          "why_it_matters": "If you validate agents that learn from their own history, this is a specific failure mode to test for.",
+          "caveats": "The abstract gives no headline numbers; read the paper for the size of the effect.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.27406"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.27406"
+            }
+          ]
+        },
+        {
+          "id": "mmenterprise-bench",
+          "headline": "MMEnterprise-Bench: agents struggle when workplace records conflict or change over time",
+          "takeaway": "1,613 questions over evolving documents, chats and figures; more retrieval found more evidence but didn't reliably improve answers.",
+          "tags": [
+            "Benchmark",
+            "Enterprise agents",
+            "RAG"
+          ],
+          "sources": [
+            "Paper",
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Built from simulated collaboration projects where information is shared, corrected and revised. Questions fall into evidence reasoning, conflict resolution and unanswerable. Ten multimodal models struggled most when evidence conflicted across sources or over time, or spanned several images.",
+          "why_it_matters": "Bank knowledge bases are full of superseded versions, so 'recognise when the evidence is insufficient' is a test case worth borrowing.",
+          "caveats": "Simulated projects, not real enterprise data.",
+          "links": [
+            {
+              "label": "Hugging Face Papers",
+              "url": "https://huggingface.co/papers/2610.27911"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2610.27911"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/mlvlab/MMEnterprise-Bench"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "auto-ontology",
+          "headline": "NVIDIA/auto-ontology",
+          "takeaway": "A library that maps raw company data into business concepts so agents can generate queries over it, now part of NVIDIA's Agent Toolkit.",
+          "tags": [
+            "Text-to-SQL",
+            "Knowledge graphs",
+            "Agents"
+          ],
+          "sources": [
+            "GitHub",
+            "Blog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "NVIDIA named Auto-Ontology on 21 Oct as part of its new Agent Knowledge Foundation. It builds a semantic, graph-based layer over data, mapping tables to concepts such as customers, products and orders, for deterministic query generation and better context retrieval. A companion repo, `NVIDIA/auto-ontology-eval`, scores text-to-SQL retrieval and includes a standalone SQL judge. Both are Apache 2.0; the main repo has 47 stars.",
+          "why_it_matters": "A shared semantic layer plus a text-to-SQL judge is relevant if you validate agents that answer questions from bank data.",
+          "caveats": "Small, young repos with few users so far.",
+          "links": [
+            {
+              "label": "auto-ontology on GitHub",
+              "url": "https://github.com/NVIDIA/auto-ontology"
+            },
+            {
+              "label": "auto-ontology-eval on GitHub",
+              "url": "https://github.com/NVIDIA/auto-ontology-eval"
+            },
+            {
+              "label": "NVIDIA blog",
+              "url": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/"
+            }
+          ]
+        },
+        {
+          "id": "vllm-torchtpu",
+          "headline": "vllm-project/vllm-torchtpu",
+          "takeaway": "A new vLLM backend that serves most vLLM models on Google Cloud TPUs without changing model code.",
+          "tags": [
+            "Inference",
+            "TPU",
+            "vLLM"
+          ],
+          "sources": [
+            "GitHub",
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 20 Oct by Inferact and Google as an out-of-tree vLLM plugin (`pip install vllm-torchtpu`, Python 3.12 on a Cloud TPU VM). It uses the same CLI and OpenAI-compatible server, supports all six vLLM parallelism modes, prefix caching, speculative decoding, multi-LoRA and disaggregated prefill and decode. TPU v7x (Ironwood) is recommended and tested in CI; v6e, v5e and v5p are experimental. Apache 2.0.",
+          "why_it_matters": "If your bank's cloud is Google Cloud, this is a way to serve open models on TPUs with the same vLLM setup you'd use on GPUs.",
+          "caveats": "Older TPU generations are experimental, and first startup spends minutes compiling graphs.",
+          "links": [
+            {
+              "label": "vllm-torchtpu on GitHub",
+              "url": "https://github.com/vllm-project/vllm-torchtpu"
+            },
+            {
+              "label": "vLLM blog",
+              "url": "https://vllm.ai/blog/2026-10-20-vllm-torchtpu"
+            },
+            {
+              "label": "@vllm_project post",
+              "url": "https://x.com/vllm_project/status/2112979682421596162"
+            }
+          ]
+        },
+        {
+          "id": "claude-howto",
+          "headline": "luongnv89/claude-howto",
+          "takeaway": "A visual, example-driven Claude Code guide with copy-paste templates, kept in step with recent releases.",
+          "tags": [
+            "Claude Code",
+            "Guides",
+            "Templates"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Trending on GitHub with 429 stars today (42,473 total, MIT licence). Synced to Claude Code v2.1.302 on 19 Oct, and on 20 Oct its database MCP example was made read-only by default.",
+          "why_it_matters": "Handy templates for onboarding colleagues to Claude Code, and the read-only default is the right example to copy.",
+          "caveats": "A community guide, synced to 2.1.302, four releases behind the current 2.1.306.",
+          "links": [
+            {
+              "label": "claude-howto on GitHub",
+              "url": "https://github.com/luongnv89/claude-howto"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

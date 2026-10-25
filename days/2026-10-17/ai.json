@@ -1,0 +1,1112 @@
+{
+  "schema_version": 1,
+  "type": "ai",
+  "date": "2026-10-17",
+  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "title": "Daily AI report · Saturday 17 Oct 2026",
+  "top_stories": [
+    {
+      "section_id": "coding",
+      "card_id": "code-review",
+      "headline": "Claude Code Review is GA, plus how Anthropic validates agent-written code"
+    },
+    {
+      "section_id": "evals",
+      "card_id": "fsb",
+      "headline": "The FSB final report: judge an agent's actions, not just the outcome, and test kill switches"
+    },
+    {
+      "section_id": "industry",
+      "card_id": "banks-block",
+      "headline": "Schwab, Citi and BofA join JPMorgan in blocking outside AI agents"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coding",
+      "name": "Coding Agents",
+      "cards": [
+        {
+          "id": "code-review",
+          "headline": "Claude Code Review is GA, plus Anthropic's internal review playbook",
+          "takeaway": "Parallel bug-finding agents with a false-positive filter. It never approves, so a person still merges.",
+          "tags": [
+            "Claude Code",
+            "Code review"
+          ],
+          "sources": [
+            "Blog",
+            "Docs",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Out of research preview for Team and Enterprise (9:51am Fri AEDT). Most reviews take 6–10 min. Anthropic says Claude writes about 90% of the team's code, and from June to September merged PRs more than doubled while the share reverted fell by more than 40%.",
+          "why_it_matters": "It's a ready-made design for validating an LLM reviewer: a daily eval built from past incidents, noise measured by how authors respond, a 3-round cap, and an agent's approval never counting as a human one.",
+          "caveats": "Reviews run on Anthropic's infrastructure, so check data rules first. @bcherny says it \"catches almost every bug\" (unverified, his own claim).",
+          "how_to_try": "Enable it on one non-sensitive repo and log every finding as true or false positive for 2 weeks.",
+          "links": [
+            {
+              "label": "GA announcement",
+              "url": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+            },
+            {
+              "label": "How the team does review",
+              "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
+            },
+            {
+              "label": "Docs",
+              "url": "https://code.claude.com/docs/en/code-review"
+            },
+            {
+              "label": "@ClaudeDevs",
+              "url": "https://x.com/ClaudeDevs/status/2110866210573386065"
+            },
+            {
+              "label": "@bcherny",
+              "url": "https://x.com/bcherny/status/2111158313463525518"
+            }
+          ]
+        },
+        {
+          "id": "cc-2-1-302",
+          "headline": "Claude Code v2.1.302: headless permission default changes",
+          "takeaway": "claude -p and SDK sessions on Bedrock or Vertex now start in default mode, and the OpenTelemetry fixes have landed.",
+          "tags": [
+            "Claude Code",
+            "Breaking-ish"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 7:53am Sat AEDT. Sessions that set no permission mode start in `default` on a fresh install or with telemetry off. Fork subagents are on by default. `classifier_category` is fixed, and `tool_use_id`/`tool_parameters` are no longer dropped.",
+          "why_it_matters": "Headless pipelines can change behaviour silently, and your OTel dashboards now get reliable classifier fields.",
+          "caveats": "@ClaudeCodeLog is an unofficial bot. The release notes are the authority.",
+          "how_to_try": "Pin --permission-mode in every CI or headless call, then upgrade.",
+          "links": [
+            {
+              "label": "Release notes",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302"
+            },
+            {
+              "label": "@ClaudeCodeLog",
+              "url": "https://x.com/ClaudeCodeLog/status/2111203632217559255"
+            }
+          ]
+        },
+        {
+          "id": "codex-0-163",
+          "headline": "Codex CLI 0.163.0: steer mid-turn, and cancelling stops running tools",
+          "takeaway": "New stable release with a live /config panel. Resumed threads keep their approvals.",
+          "tags": [
+            "Codex",
+            "Release"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 8:30am Fri AEDT. You can send follow-ups mid-answer, and interrupting a turn stops Code Mode cells and nested tool calls. Resume restores permissions and network approvals under managed policy. The bundled patched zsh is gone.",
+          "why_it_matters": "\"Cancel, but the tool keeps running\" and \"resume loses its approvals\" are good agent test cases.",
+          "caveats": "@thsottiaux says Codex now gives more usage per plan through subagent context reuse and longer caching (unverified, no changelog entry).",
+          "how_to_try": "Search config.toml for the retired shell flags before upgrading.",
+          "links": [
+            {
+              "label": "Release notes",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
+            },
+            {
+              "label": "Codex changelog",
+              "url": "https://developers.openai.com/codex/changelog"
+            },
+            {
+              "label": "@thsottiaux on usage",
+              "url": "https://x.com/thsottiaux/status/2111244596131111253"
+            },
+            {
+              "label": "OpenAIDevs: backlog",
+              "url": "https://x.com/OpenAIDevs/status/2111213093577691337"
+            },
+            {
+              "label": "OpenAIDevs: on-call",
+              "url": "https://x.com/OpenAIDevs/status/2111211411766399288"
+            }
+          ]
+        },
+        {
+          "id": "vscode-1-142",
+          "headline": "VS Code 1.142: org agent policies can switch off Claude and Codex chat",
+          "takeaway": "With a permissions or sandbox policy set, chat is forced into the Copilot harness.",
+          "tags": [
+            "VS Code",
+            "Enterprise policy"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Released 14 Oct (US time). Under a non-empty `permissions` policy or `sandbox.enabled: true`, full chat runs in the Copilot harness under Agent Host, and Claude, Codex and terminal chat are unavailable. The opt-out also bypasses the sandbox rules.",
+          "why_it_matters": "If the bank manages VS Code centrally, this could cut off your daily tools.",
+          "caveats": "It only applies when those policies are set.",
+          "how_to_try": "Ask your policy owner which VS Code agent policies are set.",
+          "links": [
+            {
+              "label": "Release notes",
+              "url": "https://code.visualstudio.com/updates/v1_142"
+            }
+          ]
+        },
+        {
+          "id": "cursor-canvases",
+          "headline": "Cursor: cloud agents build shareable canvases, and the Environments API is in beta",
+          "takeaway": "Agents can produce a dashboard and share it as a link. Environments can now be defined in code.",
+          "tags": [
+            "Cursor",
+            "Cloud agents"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Announced 7:33am Sat AEDT. The Environments API (beta) manages cloud agent environments in code, including repos and the environment.json setup. Cursor also added Meta's Muse Wonder (46.1% on CursorBench, per Cursor).",
+          "why_it_matters": "Reproducible sandboxes keep model and harness comparisons fair.",
+          "caveats": "Cursor's changelog link returned a 404, so this comes only from its X posts.",
+          "how_to_try": "Ask a cloud agent to build a canvas from an eval run.",
+          "links": [
+            {
+              "label": "@cursor_ai canvases",
+              "url": "https://x.com/cursor_ai/status/2111193957527146711"
+            },
+            {
+              "label": "@cursor_ai Environments API",
+              "url": "https://x.com/cursor_ai/status/2111193969355084011"
+            }
+          ]
+        },
+        {
+          "id": "copilot-cli",
+          "headline": "Copilot CLI previews fix MCP stalls, and the licence-compliance API is GA",
+          "takeaway": "Hung MCP servers no longer stall sessions, and agents can check dependency licences against policy.",
+          "tags": [
+            "Copilot",
+            "MCP"
+          ],
+          "sources": [
+            "Changelog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Three pre-releases, the latest at 7:10am Sat AEDT. Reasoning-only token exhaustion now ends with an error instead of looping. `--disable-client-telemetry` added. Open source licence compliance is GA for Enterprise Cloud.",
+          "why_it_matters": "Both are failure modes worth testing, and the licence API is a cheap deterministic guardrail.",
+          "caveats": "These are pre-releases.",
+          "how_to_try": "Try --disable-client-telemetry in a preview build.",
+          "links": [
+            {
+              "label": "v1.0.100-0",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-0"
+            },
+            {
+              "label": "Licence compliance GA",
+              "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available"
+            }
+          ]
+        },
+        {
+          "id": "factory",
+          "headline": "Factory Delegations is GA, and its docs flag a self-approval gap",
+          "takeaway": "The requester can be the sole approver of the bot's PR. Factory recommends two approvals.",
+          "tags": [
+            "Factory",
+            "Controls"
+          ],
+          "sources": [
+            "Docs",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "GA at 3:25am Sat AEDT. Work can be handed to Droid from Slack, Linear and Jira. Because the bot is the PR author, the requester can approve and merge alone.",
+          "why_it_matters": "Check whether any PR-opening agent at your bank allows requester-only approval.",
+          "caveats": "",
+          "how_to_try": "Audit branch protection for bot-authored PRs.",
+          "links": [
+            {
+              "label": "Factory docs",
+              "url": "https://docs.factory.com/delegations"
+            },
+            {
+              "label": "@FactoryAI",
+              "url": "https://x.com/FactoryAI/status/2111131400057602525"
+            }
+          ]
+        },
+        {
+          "id": "pi",
+          "headline": "Pi: unreleased fix for whitespace-only tool output that 400s every later turn",
+          "takeaway": "One bare \\r\\n tool result could break a whole session on some providers.",
+          "tags": [
+            "Pi",
+            "Robustness"
+          ],
+          "sources": [
+            "Changelog",
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "On main, not yet released. Whitespace-only results now get the empty-output placeholder, and summaries use the model's full output limit. The durable harness gains per-model compaction thresholds.",
+          "why_it_matters": "Feed agents empty, whitespace-only and oversized outputs, then check the session recovers.",
+          "caveats": "It's unreleased.",
+          "how_to_try": "Add whitespace-only tool outputs to your harness tests.",
+          "links": [
+            {
+              "label": "Changelog",
+              "url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md"
+            },
+            {
+              "label": "Fix commit",
+              "url": "https://github.com/earendil-works/pi/commit/4dd2b149"
+            }
+          ]
+        },
+        {
+          "id": "opencode",
+          "headline": "OpenCode makes GLM 5.3 Flash free and removes session sharing",
+          "takeaway": "Promotional free model access. v1.19.1 drops share links.",
+          "tags": [
+            "OpenCode",
+            "GLM"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Zhipu's GLM 5.3 Flash is free in OpenCode (about 17k likes). v1.19.2 stops auto-offering OpenCode 2 to 1.x installs.",
+          "why_it_matters": "Removing sharing closes one way transcripts could leak. Free endpoints suit personal experiments, not bank code.",
+          "caveats": "X users claim it's a separate glm-5.3-flash-free model with 200K context (unverified).",
+          "how_to_try": "Personal projects only.",
+          "links": [
+            {
+              "label": "@opencode",
+              "url": "https://x.com/opencode/status/2110986357539754114"
+            },
+            {
+              "label": "v1.19.1",
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.1"
+            },
+            {
+              "label": "v1.19.2",
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.2"
+            }
+          ]
+        },
+        {
+          "id": "t3code",
+          "headline": "T3 Code is out of alpha (unverified)",
+          "takeaway": "Theo's coding tool has left alpha.",
+          "tags": [
+            "T3 Code"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Announced on X by @theo. He also said npm broke his release.",
+          "why_it_matters": "It's another agent option to watch next to Claude Code and Codex.",
+          "caveats": "It comes only from X, with no release notes reviewed.",
+          "how_to_try": "Wait for release notes.",
+          "links": [
+            {
+              "label": "@theo",
+              "url": "https://x.com/theo/status/2110907433656938681"
+            },
+            {
+              "label": "@theo on npm",
+              "url": "https://x.com/theo/status/2110927196638597251"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "AI Evals, Safety & Governance",
+      "cards": [
+        {
+          "id": "fsb",
+          "headline": "FSB final AI report: agent practices for regulated firms",
+          "takeaway": "Judge whether an agent's actions were appropriate, monitor its intermediate steps, and test kill switches.",
+          "tags": [
+            "Regulation",
+            "Agents"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The final text adds agent guidance (Practices 9 and 10): whole-workflow testing, red teaming for higher autonomy, thresholds set in advance, cross-checking agents' own summaries, evaluating AI monitors, and a unique ID for each agent.",
+          "why_it_matters": "Use it as a gap check. Kill-switch tests and evidence your LLM-judge monitors work are the likely gaps.",
+          "caveats": "The FSB says it didn't fully consult on the agent part, so it may change.",
+          "links": [
+            {
+              "label": "Final report (PDF)",
+              "url": "https://www.fsb.org/uploads/P151026-1.pdf"
+            },
+            {
+              "label": "Report page",
+              "url": "https://www.fsb.org/2026/10/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-final-report/"
+            }
+          ]
+        },
+        {
+          "id": "beam-evals",
+          "headline": "Beam's launch: vendor scores vs independent retests, and reward hacking",
+          "takeaway": "Reflection reports 80.1% on Terminal-Bench 2.1, Artificial Analysis measured 3.0% on 4.0, and Gray Swan caught insecure fixes.",
+          "tags": [
+            "Benchmarks",
+            "Reward hacking"
+          ],
+          "sources": [
+            "Paper",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Artificial Analysis gives it 28 on its Coding Agent Index against 68 for the leaders. Gray Swan saw an insecure test-passing fix in 6/44 episodes, a shared registry overwritten in 3/5, and a scope exit in 4/5.",
+          "why_it_matters": "Build tasks where the honest route is blocked, and score whether the agent stops or escalates.",
+          "caveats": "The benchmark versions differ, so the scores aren't directly comparable.",
+          "links": [
+            {
+              "label": "Beam safety report",
+              "url": "https://reflection.ai/beam-safety-report"
+            },
+            {
+              "label": "@ArtificialAnlys",
+              "url": "https://x.com/ArtificialAnlys/status/2111087613822296151"
+            }
+          ]
+        },
+        {
+          "id": "langchain-evals",
+          "headline": "LangChain: evals built only from production traces are just regression tests",
+          "takeaway": "Spend more than half of eval time defining what the agent should handle. Prefer narrow pass/fail judges.",
+          "tags": [
+            "Eval design",
+            "LLM-as-judge"
+          ],
+          "sources": [
+            "Blog",
+            "X"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "LangChain's FAQ favours pass/fail questions over 1–10 scales. In its experiment, the Jev model matched human labels for $0.34 in total, against $28.17 for Sonnet 4.6.",
+          "why_it_matters": "It's the case for synthetic risk scenarios on top of trace-based regression sets.",
+          "caveats": "The cost comparison is LangChain's own experiment.",
+          "links": [
+            {
+              "label": "LangChain FAQ",
+              "url": "https://www.langchain.com/blog/common-questions-about-agent-evals"
+            },
+            {
+              "label": "@BraceSproul",
+              "url": "https://x.com/BraceSproul/status/2110854626761388290"
+            }
+          ]
+        },
+        {
+          "id": "pplx-decider",
+          "headline": "Perplexity open-sources calibrated \"decider\" judge models",
+          "takeaway": "27B and 4B Apache-2.0 models that return a probability per fixed option instead of free text.",
+          "tags": [
+            "LLM-as-judge",
+            "Calibration"
+          ],
+          "sources": [
+            "Paper",
+            "X"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "pplx-decider-v1.2 scores 68.09 on Perplexity's Decision Index 0.3, up from 62.30. ECE is 0.014 on its dev set but about 0.05 on held-out data.",
+          "why_it_matters": "A fixed-option judge is easier to calibrate against human labels, and runs on your own hardware.",
+          "caveats": "Perplexity now trains on some benchmarks' training splits.",
+          "links": [
+            {
+              "label": "Model card",
+              "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.2"
+            },
+            {
+              "label": "@AravSrinivas",
+              "url": "https://x.com/AravSrinivas/status/2111181956444827695"
+            }
+          ]
+        },
+        {
+          "id": "braintrust-langsmith",
+          "headline": "Braintrust traces coding agents, and LangSmith fixes a pairwise-scoring bug",
+          "takeaway": "Cost and usage per user, model and tool. LangSmith 0.14.9 fixes misattributed pairwise scores.",
+          "tags": [
+            "Observability",
+            "Eval tooling"
+          ],
+          "sources": [
+            "Changelog",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Braintrust's coding-agent insights (preview) trace Claude Code, Codex, pi and Cursor via the bt CLI. In LangSmith, `evaluate_comparative` with `randomize_order` could put scores on the wrong experiment.",
+          "why_it_matters": "If you ran pairwise judges with random order and several evaluators, re-run the results you relied on.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "Braintrust changelog",
+              "url": "https://www.braintrust.dev/docs/changelog"
+            },
+            {
+              "label": "LangSmith v0.14.9",
+              "url": "https://github.com/langchain-ai/langsmith-sdk/releases/tag/v0.14.9"
+            }
+          ]
+        },
+        {
+          "id": "phoenix",
+          "headline": "Arize Phoenix MCP: SQL trace queries about 17x cheaper (vendor benchmark)",
+          "takeaway": "Code-mode SQL over traces is much cheaper than paging through spans. Works in Claude Code and Cursor.",
+          "tags": [
+            "Observability",
+            "MCP"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Arize's own benchmark.",
+          "why_it_matters": "It's a cheaper way to have Claude Code analyse agent traces.",
+          "caveats": "It's a vendor-run benchmark from an X post only.",
+          "links": [
+            {
+              "label": "@ArizePhoenix",
+              "url": "https://x.com/ArizePhoenix/status/2111028804428947692"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agenteng",
+      "name": "Agent Engineering & Frameworks",
+      "cards": [
+        {
+          "id": "pydantic",
+          "headline": "Pydantic AI 2.57: a second model can pre-approve low-risk tool calls",
+          "takeaway": "ApprovalReviewer fails closed: only a clear \"no risk\" auto-approves, and anything else goes to a person.",
+          "tags": [
+            "Pydantic AI",
+            "Human-in-the-loop"
+          ],
+          "sources": [
+            "Changelog",
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Released 2:35pm Fri AEDT. A reviewer model answers one yes/no/unsure risk question you write. It never denies or runs a call.",
+          "why_it_matters": "It's auto-review as a library primitive. Validate it as a classifier, focusing on \"no risk\" verdicts on risky calls.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "v2.57.0",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.57.0"
+            },
+            {
+              "label": "PR #10143",
+              "url": "https://github.com/pydantic/pydantic-ai/pull/10143"
+            }
+          ]
+        },
+        {
+          "id": "mastra",
+          "headline": "Mastra 1.78: scoped identities, and paused runs survive bad resume data",
+          "takeaway": "Conflicting thread or resource IDs now return a 400 instead of silently picking one.",
+          "tags": [
+            "Mastra",
+            "Multi-tenant"
+          ],
+          "sources": [
+            "Changelog",
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Scopes such as org:acme can be set per call, per agent or by middleware. AGENT_RESUME_INVALID_DATA no longer uses up the paused run, and .foreach() failures no longer hang.",
+          "why_it_matters": "Silent tenant mix-ups are a data-leak risk.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "core 1.78.0",
+              "url": "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.78.0"
+            }
+          ]
+        },
+        {
+          "id": "trade-republic",
+          "headline": "Trade Republic runs live LLM workflows on self-hosted Langfuse (unverified)",
+          "takeaway": "A neobank uses held-out \"train and exam\" datasets to prove an issue is actually fixed.",
+          "tags": [
+            "Bank case study",
+            "Observability"
+          ],
+          "sources": [
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Per Langfuse on X. Marc Klingen says the roadmap now focuses on enriching traces so agents can reason over them.",
+          "why_it_matters": "It's the closest peer example to your work.",
+          "caveats": "It comes only from vendor posts on X, with no write-up.",
+          "links": [
+            {
+              "label": "@langfuse",
+              "url": "https://x.com/langfuse/status/2110999187399557376"
+            },
+            {
+              "label": "@marcklingen",
+              "url": "https://x.com/marcklingen/status/2111184898216354049"
+            }
+          ]
+        },
+        {
+          "id": "deepagents",
+          "headline": "Deep Agents 0.7.27: async subagent updates now reach the parent",
+          "takeaway": "Updates arrive as user-role messages, which is a new prompt-injection path.",
+          "tags": [
+            "LangChain",
+            "Subagents"
+          ],
+          "sources": [
+            "Changelog",
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "The parent checks unfinished subagent tasks before each model call. A finished subagent wakes an idle parent, but never cancels a pending approval. This only works on an Agent Server.",
+          "why_it_matters": "Add the subagent-to-parent path to your injection tests.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "0.7.27",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.27"
+            }
+          ]
+        },
+        {
+          "id": "ms-agent-accounts",
+          "headline": "Copilot Studio agents get their own accounts and audit trail",
+          "takeaway": "Agents act with their own credentials and scoped permissions, not a borrowed user's.",
+          "tags": [
+            "Microsoft",
+            "Agent identity"
+          ],
+          "sources": [
+            "Blog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Agents can be @mentioned in Teams and Outlook, carry business-process memory, and start from triggers. It's rolling out through Frontier.",
+          "why_it_matters": "Agent identity with its own audit trail is what risk teams will ask for.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "Microsoft blog",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/delegate-shared-business-processes-to-agents-that-are-more-persistent-and-proactive-with-microsoft-copilot-studio/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "name": "Models & Major Releases",
+      "cards": [
+        {
+          "id": "beam",
+          "headline": "Reflection Beam 1.0: a 501B open-weight model under Apache 2.0",
+          "takeaway": "An MoE with 23B active parameters and a 1M context. Runs on-prem via Dell and HPE, with day-one vLLM and Ollama support.",
+          "tags": [
+            "Open weights",
+            "On-prem"
+          ],
+          "sources": [
+            "Blog",
+            "X",
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Self-reported: 80.8% on MCP Atlas and 36.1% on Tau3 Banking. The model card allows distillation and fine-tuning. The Mirror harness (Apache 2.0) supports tool-call approval and MCP.",
+          "why_it_matters": "An Apache licence is easier to clear, but 36.1% on banking tasks means banking flows won't work out of the box.",
+          "caveats": "See the independent retest under Evals.",
+          "links": [
+            {
+              "label": "Reflection blog",
+              "url": "https://reflection.ai/blog/beam-is-available"
+            },
+            {
+              "label": "Hugging Face",
+              "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+            },
+            {
+              "label": "Mirror",
+              "url": "https://github.com/reflection-oss/mirror"
+            },
+            {
+              "label": "@NVIDIAAI",
+              "url": "https://x.com/NVIDIAAI/status/2111089696025858212"
+            }
+          ]
+        },
+        {
+          "id": "argon",
+          "headline": "Gemini 4 Argon: ARC-verified, and now on AI Pro",
+          "takeaway": "97.5% on ARC-AGI-3 with Google's harness vs 49.8% on the standard one, and access is widening beyond Ultra.",
+          "tags": [
+            "Gemini",
+            "Harness effects"
+          ],
+          "sources": [
+            "X",
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "It scored 91.3% on ARC-AGI-2. It's rolling out to AI Pro in Antigravity and AI Studio. Four Argon agents finished Minecraft in 27 hours.",
+          "why_it_matters": "The harness is part of the system under test.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "@arcprize",
+              "url": "https://x.com/arcprize/status/2110768288523251762"
+            },
+            {
+              "label": "@antigravity",
+              "url": "https://x.com/antigravity/status/2110866531932316011"
+            },
+            {
+              "label": "Minecraft paper",
+              "url": "https://arxiv.org/abs/2610.22319"
+            }
+          ]
+        },
+        {
+          "id": "astra-pro",
+          "headline": "GPT-6 Astra Pro splits tasks across parallel agents you can inspect",
+          "takeaway": "Pro in ChatGPT's Chat tab now runs parallel sub-agents, and each one is reviewable.",
+          "tags": [
+            "OpenAI",
+            "Multi-agent UX"
+          ],
+          "sources": [
+            "X",
+            "Blog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Announced 7:27am Sat AEDT, with Slides in Spaces too.",
+          "why_it_matters": "It shows how a lab presents multi-agent traces to non-technical users.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "@OpenAI",
+              "url": "https://x.com/OpenAI/status/2111192259073094035"
+            },
+            {
+              "label": "Release notes",
+              "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+            }
+          ]
+        },
+        {
+          "id": "muse-open",
+          "headline": "Muse Spark Open: top US open-weights model, but last on agentic evals",
+          "takeaway": "39 on the Artificial Analysis index, but last of the nine top open models on its four agentic evals.",
+          "tags": [
+            "Meta",
+            "Open weights"
+          ],
+          "sources": [
+            "X",
+            "Blog"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "It leads open models on AA-Omniscience and uses the fewest output tokens. The licence requires attribution, and model-as-a-service businesses with over $20M revenue need a separate agreement.",
+          "why_it_matters": "Run your own tool-use suite before using it in agents.",
+          "caveats": "Meta posted nothing about it on X in the window.",
+          "links": [
+            {
+              "label": "Artificial Analysis",
+              "url": "https://artificialanalysis.ai/models/muse-spark-open"
+            },
+            {
+              "label": "@ArtificialAnlys",
+              "url": "https://x.com/ArtificialAnlys/status/2110893784422908225"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "AI Industry, Policy & Banking",
+      "cards": [
+        {
+          "id": "banks-block",
+          "headline": "US banks block outside AI agents, and the line is settling on read-only MCP",
+          "takeaway": "Schwab blocks \"tens and twenties\" of agents a week. Citi and BofA want human sign-off before money moves.",
+          "tags": [
+            "Banking",
+            "Agent access"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Schwab will offer MCP servers for balances and research, but not for moving money. Citi bars third-party agents from logging in. Moynihan says money moving out needs human review until the liability rules are clear.",
+          "why_it_matters": "Expect Australian banks to be asked where they stand.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "Bloomberg Law",
+              "url": "https://news.bloomberglaw.com/banking-law/us-banks-block-ai-agents-attempting-to-move-money-for-customers"
+            },
+            {
+              "label": "The Next Web",
+              "url": "https://thenextweb.com/news/schwab-blocks-ai-agents-meta-muse"
+            }
+          ]
+        },
+        {
+          "id": "china-export",
+          "headline": "China proposes export controls on frontier models and agents",
+          "takeaway": "23 AI items, including weights above 10^26 FLOPs and agents with 20+ sub-tasks or 200+ tools.",
+          "tags": [
+            "Policy",
+            "China"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "MOFCOM proposed 40 technologies, 23 of them in AI. Already-open models and API access are excluded. Comments close on 15 Nov.",
+          "why_it_matters": "Future Chinese frontier releases could become conditional to get.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "MOFCOM",
+              "url": "https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_61446ab4beee4f63973d4d0ab3097648.html"
+            },
+            {
+              "label": "On The Wire",
+              "url": "https://onthewire.ai/article/china-proposes-export-controls-on-23-ai-technologies-from-large-models-to-agents"
+            }
+          ]
+        },
+        {
+          "id": "accc",
+          "headline": "Australia: the ACCC warns the AI inquiry about shopping agents",
+          "takeaway": "It's watching agents' built-in brand bias and very granular personalised pricing.",
+          "tags": [
+            "Australia",
+            "Consumer law"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Told the parliamentary AI inquiry on Friday. Personalised pricing isn't currently illegal. The National Anti-Scam Centre flagged AI voice cloning.",
+          "why_it_matters": "It's the local version of the banks' agent debate.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "Canberra Times (AAP)",
+              "url": "https://www.canberratimes.com.au/story/9370183/ai-surveillance-conspiring-bots-on-watchdogs-radar/"
+            }
+          ]
+        },
+        {
+          "id": "anthropic-ipo",
+          "headline": "Anthropic IPO: valuation talk eases, and a filing is reportedly due 26 Oct",
+          "takeaway": "Investors discussed about $1.5T, down from about $2T, as growth slowed.",
+          "tags": [
+            "Anthropic",
+            "IPO"
+          ],
+          "sources": [
+            "News"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Q3 was up 45% quarter on quarter. IFR reports an SEC filing on 26 Oct and a mid-November listing.",
+          "why_it_matters": "The filing will give the first audited numbers.",
+          "caveats": "Anthropic hasn't confirmed, and there's no public S-1 yet.",
+          "links": [
+            {
+              "label": "Reuters via Investing.com",
+              "url": "https://www.investing.com/news/stock-market-news/exclusiveinvestors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown-sources-say-4952698"
+            },
+            {
+              "label": "IFR",
+              "url": "https://www.ifre.com/equities/2499407/anthropic-pushes-ahead-with-mid-november-ipo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "name": "Papers Worth Reading",
+      "cards": [
+        {
+          "id": "fde-gym",
+          "headline": "FDE-Gym: can agents deliver for a real customer?",
+          "takeaway": "95 delivery tasks with scripted stakeholders. The best configuration averages 0.56, held back by unstated constraints.",
+          "tags": [
+            "Agent eval",
+            "Benchmark"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Agents are scored on the customer's own metric, with penalties for messages, trial runs and waiting. The best configuration fully resolves only 14 tasks.",
+          "why_it_matters": "It's a template for ambiguous requests.",
+          "caveats": "The results are author-reported.",
+          "links": [
+            {
+              "label": "arXiv 2610.22350",
+              "url": "https://arxiv.org/abs/2610.22350"
+            }
+          ]
+        },
+        {
+          "id": "sweeper",
+          "headline": "SWEeper-Bench: can coding agents find bugs nobody reported?",
+          "takeaway": "Codebase plus a vague request only. The best of 15 agents passes 59%.",
+          "tags": [
+            "Coding agents",
+            "Testing"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "200 tasks from real fixes, judged by an agentic verifier on what a user would see.",
+          "why_it_matters": "Agents may never exercise the failing path, so ask for interaction-level tests.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "arXiv 2610.14096",
+              "url": "https://arxiv.org/abs/2610.14096"
+            }
+          ]
+        },
+        {
+          "id": "jevharness",
+          "headline": "JevAgentHarness: small models for tool-choice decisions",
+          "takeaway": "Accuracy on isolated questions didn't predict end-to-end success. A fitted confidence threshold fixes delegation.",
+          "tags": [
+            "Tool routing",
+            "Cost"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Delegating without a threshold cut success by 19 points. With one, agents were 81–89% cheaper and lost under 3 points of success.",
+          "why_it_matters": "Test tool routing inside full trajectories.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "arXiv 2610.21412",
+              "url": "https://arxiv.org/abs/2610.21412"
+            }
+          ]
+        },
+        {
+          "id": "self-evolving",
+          "headline": "Self-Evolving Agent Harness: rules for agents rewriting their own scaffolding",
+          "takeaway": "Accept a change only if it holds up on fresh validation data, within a regression budget.",
+          "tags": [
+            "Survey",
+            "Harness"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "A 66-page framework covering revisions to prompts, memory, tools and code while the weights stay fixed.",
+          "why_it_matters": "Gate self-updating AGENTS.md and skills on a held-out set.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "arXiv 2610.18813",
+              "url": "https://arxiv.org/abs/2610.18813"
+            }
+          ]
+        },
+        {
+          "id": "opengcua",
+          "headline": "OpenGCUA: computer-use agents that choose between GUI and code",
+          "takeaway": "+19.6 points on OSWorld-v2 across 8 models, with 53% fewer steps.",
+          "tags": [
+            "Computer use",
+            "Harness"
+          ],
+          "sources": [
+            "Paper"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "From Tongyi-MAI. Some Qwen3.8-Max runs used 19.4 times as many reasoning tokens as GPT-6 Astra.",
+          "why_it_matters": "Results belong to the model plus harness pair, so track token cost.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "arXiv 2610.22200",
+              "url": "https://arxiv.org/abs/2610.22200"
+            }
+          ]
+        },
+        {
+          "id": "nist-seeds",
+          "headline": "Anthropic: Claude traced the NIST curve seeds to lrand48()",
+          "takeaway": "The \"random\" P-curve seeds were lrand48() output seeded with 1997–98 timestamps.",
+          "tags": [
+            "Research",
+            "Cryptography"
+          ],
+          "sources": [
+            "Blog"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "It brute-forced 17 hidden bits and used LLL to recover the generator state. Valsorda says this rules out a planted weak curve.",
+          "why_it_matters": "It's agentic research where every claim can be rerun and checked.",
+          "caveats": "Anthropic stresses this breaks nothing.",
+          "links": [
+            {
+              "label": "Anthropic research",
+              "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+            },
+            {
+              "label": "Filippo Valsorda",
+              "url": "https://words.filippo.io/seeds-solved/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repos",
+      "name": "Repos Worth Trying",
+      "cards": [
+        {
+          "id": "plugins-official",
+          "headline": "anthropics/claude-plugins-official",
+          "takeaway": "Anthropic's curated Claude Code plugin directory, #1 on GitHub's daily AI trending list (1,552 stars today).",
+          "tags": [
+            "Claude Code",
+            "Plugins"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "An official, curated directory.",
+          "why_it_matters": "A vetted source eases security review.",
+          "caveats": "Review each plugin's permissions.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/anthropics/claude-plugins-official"
+            }
+          ]
+        },
+        {
+          "id": "context-mode",
+          "headline": "mksglu/context-mode",
+          "takeaway": "An MCP server and hooks that keep raw tool output out of the agent's context (449 stars today).",
+          "tags": [
+            "Context engineering",
+            "MCP"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "Sandboxes tool output and persists session memory.",
+          "why_it_matters": "It could cut tokens on long Claude Code sessions.",
+          "caveats": "Third-party project, maturity unknown.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/mksglu/context-mode"
+            }
+          ]
+        },
+        {
+          "id": "android-skills",
+          "headline": "android/skills",
+          "takeaway": "Google's official Android Agent Skills, installable as Claude Code or Codex plugins (163 stars today).",
+          "tags": [
+            "Agent Skills",
+            "Google"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Aimed at areas where evaluations show LLMs underperform.",
+          "why_it_matters": "It's a reference for how a vendor ships eval-driven skills.",
+          "caveats": "",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/android/skills"
+            }
+          ]
+        },
+        {
+          "id": "cursor-plugins",
+          "headline": "cursor/plugins",
+          "takeaway": "Cursor's plugin spec and official plugins, including PR-review canvases and a continual-learning plugin (282 stars today).",
+          "tags": [
+            "Cursor",
+            "Plugins"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "The continual-learning plugin updates AGENTS.md.",
+          "why_it_matters": "Self-updating rules need a held-out gate (see Papers).",
+          "caveats": "",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/cursor/plugins"
+            }
+          ]
+        },
+        {
+          "id": "cli-anything",
+          "headline": "HKUDS/CLI-Anything",
+          "takeaway": "Wraps existing software in CLIs with SKILL.md files so agents can drive it (323 stars today).",
+          "tags": [
+            "Agent Skills",
+            "CLI"
+          ],
+          "sources": [
+            "GitHub"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "A generator plus a community hub.",
+          "why_it_matters": "It gives agents a cheap way to use legacy tools.",
+          "caveats": "Community-built wrappers need review.",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/HKUDS/CLI-Anything"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
