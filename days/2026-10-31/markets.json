@@ -1,0 +1,2382 @@
+{
+  "schema_version": 1,
+  "type": "markets",
+  "date": "2026-10-31",
+  "generated_at_utc": "2026-10-30T21:46:58Z",
+  "title": "Markets: Saturday 31 October",
+  "edition": "weekend",
+  "morning": {
+    "cutoff_local": "2026-10-31T07:30:00+11:00",
+    "session_note": "Weekend edition · the week in review, with the week ahead",
+    "summary": [
+      "Doubts about whether heavy AI spending will pay off hit US tech this week: the Nasdaq fell 2.0% for the week and the S&P 500 0.6%, after Alphabet's largest one-day fall on record on Thursday and a 29% drop in Intel on Friday, its worst day since the 1970s ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october), [CNBC](https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html)). The US 10-year yield ended the week at 4.94%, 6 bp lower.",
+      "Australian inflation rose to 4.3% in September and the quarterly trimmed mean rose 1.0%, above the RBA's 0.8% forecast, so all four major banks now expect a hike on Tuesday ([ABS](https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026), [AAP](https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call)). ASX futures put the chance at 78% at Friday's close ([RBA Watch](https://rbawatch.com/rba-meeting/november-2026)). The Fed held, with two officials voting to hike ([Federal Reserve](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm)).",
+      "Brent rose 13.6% in October, according to Reuters, as the US weighed new strikes on Iran after Tuesday's midterm elections and a tanker in Hormuz was hit by limpet mines ([CNBC](https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html), [Fox News](https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26)). Iran has received a US letter on talks but had not replied as of Thursday, according to Iran's semi-official Tasnim agency ([CBS News](https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/))."
+    ],
+    "prices": {
+      "retrieved_at_utc": "2026-10-30 21:38Z",
+      "cutoff_utc": "2026-10-30T20:30:00Z",
+      "quotes": [
+        {
+          "id": "asx200",
+          "display_name": "S&P/ASX 200",
+          "tier": "primary",
+          "instrument_type": "equity_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "AUD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (^AXJO)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EAXJO/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 8908.099609,
+          "display_value": "8,908.1",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T05:25:15Z",
+          "as_of_sydney": "30 Oct 2026, 16:25 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 8891.799805,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": 16.3,
+          "change_pct": 0.18,
+          "display_change": "+0.2%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 8795.200195,
+          "week_change_pct": 1.28,
+          "display_week_change": "+1.3% wk"
+        },
+        {
+          "id": "sp500",
+          "display_name": "S&P 500",
+          "tier": "primary",
+          "instrument_type": "equity_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "USD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "Yahoo Finance (^GSPC)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EGSPC/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 7580.069824,
+          "display_value": "7,580.1",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T20:47:43Z",
+          "as_of_sydney": "31 Oct 2026, 07:47 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 7720.390137,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": -140.3,
+          "change_pct": -1.82,
+          "display_change": "−1.8%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 7623.680176,
+          "week_change_pct": -0.57,
+          "display_week_change": "−0.6% wk"
+        },
+        {
+          "id": "audusd",
+          "display_name": "AUD/USD",
+          "tier": "primary",
+          "instrument_type": "fx",
+          "quote_kind": "spot",
+          "unit": "USD",
+          "currency": "USD",
+          "decimals": 4,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "note": "RBA 4pm Sydney rate (WM/Reuters); not the overnight move.",
+          "status": "ok",
+          "provider": "RBA F11.1 (4pm AEST/AEDT)",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 0.704,
+          "display_value": "0.7040",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T05:00:00Z",
+          "as_of_sydney": "30 Oct 2026, 16:00 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 0.7053,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": -0.0013,
+          "change_pct": -0.18,
+          "display_change": "−0.18%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 0.7006,
+          "week_change_pct": 0.49,
+          "display_week_change": "+0.5% wk"
+        },
+        {
+          "id": "au10y",
+          "display_name": "Australia 10Y",
+          "tier": "primary",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "note": "RBA interpolated 10-year yield; published with a lag of about two business days.",
+          "status": "ok",
+          "provider": "RBA F2 capital market yields",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 5.208,
+          "display_value": "5.21%",
+          "market_session_date": "2026-10-28",
+          "observation_timestamp_utc": "2026-10-28T05:30:00Z",
+          "as_of_sydney": "28 Oct 2026, 16:30 AEDT",
+          "comparison_date": "2026-10-27",
+          "comparison_value": 5.152,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_bp": 5.6,
+          "display_change": "+6 bp",
+          "week_comparison_date": "2026-10-21",
+          "week_comparison_value": 5.277,
+          "week_change_bp": -6.9,
+          "display_week_change": "−7 bp wk"
+        },
+        {
+          "id": "brent_spot",
+          "display_name": "Brent (spot)",
+          "tier": "primary",
+          "instrument_type": "commodity",
+          "quote_kind": "spot",
+          "unit": "USD/bbl",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "note": "EIA Europe Brent spot assessment via FRED. Not the futures price quoted in most news reports.",
+          "status": "ok",
+          "provider": "FRED DCOILBRENTEU (EIA)",
+          "provider_url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+          "licence_note": "FRED DCOILBRENTEU; source US EIA (public data). Spot assessment, published with a lag of several days.",
+          "official": true,
+          "source_label": "official",
+          "value": 123.1,
+          "display_value": "123.10",
+          "market_session_date": "2026-10-27",
+          "observation_timestamp_utc": "2026-10-27T18:30:00Z",
+          "as_of_sydney": "28 Oct 2026, 05:30 AEDT",
+          "comparison_date": "2026-10-26",
+          "comparison_value": 128.12,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": -5.02,
+          "change_pct": -3.92,
+          "display_change": "−3.9%",
+          "week_comparison_date": "2026-10-20",
+          "week_comparison_value": 115.22,
+          "week_change_pct": 6.84,
+          "display_week_change": "+6.8% wk"
+        },
+        {
+          "id": "vix",
+          "display_name": "VIX",
+          "tier": "primary",
+          "instrument_type": "volatility_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "",
+          "decimals": 2,
+          "change_unit": "pts",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "Yahoo Finance (^VIX)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EVIX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 19.42,
+          "display_value": "19.42",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T20:15:01Z",
+          "as_of_sydney": "31 Oct 2026, 07:15 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 17.200001,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": 2.22,
+          "change_pct": 12.91,
+          "display_change": "+2.22 pts",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 19.450001,
+          "week_change_abs": -0.03,
+          "display_week_change": "−0.03 pts wk"
+        },
+        {
+          "id": "nasdaq",
+          "display_name": "Nasdaq Composite",
+          "tier": "expanded",
+          "instrument_type": "equity_index",
+          "quote_kind": "index_close",
+          "unit": "pts",
+          "currency": "USD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "Yahoo Finance (^IXIC)",
+          "provider_url": "https://finance.yahoo.com/quote/%5EIXIC/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 25436.998047,
+          "display_value": "25,437.0",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T21:15:59Z",
+          "as_of_sydney": "31 Oct 2026, 08:15 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 26184.720703,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": -747.7,
+          "change_pct": -2.86,
+          "display_change": "−2.9%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 25955.339844,
+          "week_change_pct": -2.0,
+          "display_week_change": "−2.0% wk"
+        },
+        {
+          "id": "au2y",
+          "display_name": "Australia 2Y",
+          "tier": "expanded",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "RBA F2 capital market yields",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 4.951,
+          "display_value": "4.95%",
+          "market_session_date": "2026-10-28",
+          "observation_timestamp_utc": "2026-10-28T05:30:00Z",
+          "as_of_sydney": "28 Oct 2026, 16:30 AEDT",
+          "comparison_date": "2026-10-27",
+          "comparison_value": 4.883,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_bp": 6.8,
+          "display_change": "+7 bp",
+          "week_comparison_date": "2026-10-21",
+          "week_comparison_value": 4.917,
+          "week_change_bp": 3.4,
+          "display_week_change": "+3 bp wk"
+        },
+        {
+          "id": "au_curve",
+          "display_name": "AU 10Y–2Y curve",
+          "tier": "expanded",
+          "instrument_type": "spread",
+          "quote_kind": "spread",
+          "unit": "bp",
+          "currency": "AUD",
+          "decimals": 0,
+          "change_unit": "bp",
+          "observation_timezone": "Australia/Sydney",
+          "expected_session_date": "2026-10-30",
+          "status": "ok",
+          "provider": "Derived from RBA F2 (10Y minus 2Y)",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 25.7,
+          "display_value": "+26 bp",
+          "market_session_date": "2026-10-28",
+          "observation_timestamp_utc": "2026-10-28T05:30:00Z",
+          "as_of_sydney": "28 Oct 2026, 16:30 AEDT",
+          "comparison_date": "2026-10-27",
+          "comparison_value": 26.9,
+          "change_bp": -1.2,
+          "display_change": "−1 bp",
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "note": "Derived from lagged RBA F2 legs; not a live curve mark."
+        },
+        {
+          "id": "us10y",
+          "display_name": "US 10Y",
+          "tier": "expanded",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "US Treasury par yield curve",
+          "provider_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+          "licence_note": "US Treasury daily par yield curve; US-government public data.",
+          "official": true,
+          "source_label": "official",
+          "value": 4.94,
+          "display_value": "4.94%",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T19:30:00Z",
+          "as_of_sydney": "31 Oct 2026, 06:30 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 4.98,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_bp": -4.0,
+          "display_change": "−4 bp",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 5.0,
+          "week_change_bp": -6.0,
+          "display_week_change": "−6 bp wk"
+        },
+        {
+          "id": "us2y",
+          "display_name": "US 2Y",
+          "tier": "expanded",
+          "instrument_type": "government_bond",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "status": "ok",
+          "provider": "US Treasury par yield curve",
+          "provider_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+          "licence_note": "US Treasury daily par yield curve; US-government public data.",
+          "official": true,
+          "source_label": "official",
+          "value": 4.56,
+          "display_value": "4.56%",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T19:30:00Z",
+          "as_of_sydney": "31 Oct 2026, 06:30 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 4.61,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_bp": -5.0,
+          "display_change": "−5 bp",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 4.69,
+          "week_change_bp": -13.0,
+          "display_week_change": "−13 bp wk"
+        },
+        {
+          "id": "brent_fut",
+          "display_name": "Brent (futures)",
+          "tier": "expanded",
+          "instrument_type": "commodity",
+          "quote_kind": "futures_last",
+          "unit": "USD/bbl",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "note": "Yahoo BZ=F: front-month Brent last-day financial futures (NYMEX), daily close. Differs from the spot assessment.",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null,
+          "unavailable_reason": "Yahoo Finance (BZ=F): fetch failed https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=3mo&interval=1d: HTTP Error 429: Too Many Requests"
+        },
+        {
+          "id": "gold_fut",
+          "display_name": "Gold (COMEX futures)",
+          "tier": "expanded",
+          "instrument_type": "commodity",
+          "quote_kind": "futures_last",
+          "unit": "USD/oz",
+          "currency": "USD",
+          "decimals": 1,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "note": "Yahoo GC=F: active COMEX gold futures contract, not the spot or LBMA price.",
+          "status": "ok",
+          "provider": "Yahoo Finance (GC=F)",
+          "provider_url": "https://finance.yahoo.com/quote/GC%3DF/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 3884.899902,
+          "display_value": "3,884.9",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T20:59:59Z",
+          "as_of_sydney": "31 Oct 2026, 07:59 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 4031.399902,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": -146.5,
+          "change_pct": -3.63,
+          "display_change": "−3.6%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 4007.899902,
+          "week_change_pct": -3.07,
+          "display_week_change": "−3.1% wk"
+        },
+        {
+          "id": "rba_cash",
+          "display_name": "RBA cash rate target",
+          "tier": "expanded",
+          "instrument_type": "policy_rate",
+          "quote_kind": "yield",
+          "unit": "%",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "bp",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "RBA F1 cash rate target",
+          "provider_url": "https://www.rba.gov.au/statistics/cash-rate/",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 4.6,
+          "display_value": "4.60%",
+          "market_session_date": "2026-10-29",
+          "observation_timestamp_utc": "2026-10-29T05:00:00Z",
+          "as_of_sydney": "29 Oct 2026, 16:00 AEDT",
+          "comparison_date": "2026-09-29",
+          "comparison_value": 4.35,
+          "freshness_state": "scheduled_lag",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_bp": 25.0,
+          "display_change": "last move +25 bp (30 Sep)"
+        },
+        {
+          "id": "asx200_fut",
+          "display_name": "ASX SPI 200 futures",
+          "tier": "expanded",
+          "instrument_type": "equity_index_future",
+          "quote_kind": "futures_last",
+          "unit": "pts",
+          "currency": "AUD",
+          "decimals": 0,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "unavailable_reason": "No free, permitted feed for ASX 24 SPI 200 futures (licensed exchange data).",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null
+        },
+        {
+          "id": "iron_ore",
+          "display_name": "Iron ore 62% Fe",
+          "tier": "expanded",
+          "instrument_type": "commodity",
+          "quote_kind": "futures_last",
+          "unit": "USD/t",
+          "currency": "USD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "America/New_York",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "unavailable_reason": "No free, permitted daily benchmark (SGX/Platts are licensed); the only free series (IMF via FRED) is monthly.",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null
+        },
+        {
+          "id": "wl_zip",
+          "display_name": "ZIP · Zip Co",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 3,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (ZIP.AX)",
+          "provider_url": "https://finance.yahoo.com/quote/ZIP.AX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 1.79,
+          "display_value": "1.790",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T05:20:34Z",
+          "as_of_sydney": "30 Oct 2026, 16:20 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 1.86,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": -0.07,
+          "change_pct": -3.76,
+          "display_change": "−3.8%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 1.46,
+          "week_change_pct": 22.6,
+          "display_week_change": "+22.6% wk",
+          "ticker": "ZIP"
+        },
+        {
+          "id": "wl_csl",
+          "display_name": "CSL · CSL",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "ok",
+          "provider": "Yahoo Finance (CSL.AX)",
+          "provider_url": "https://finance.yahoo.com/quote/CSL.AX/",
+          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
+          "official": false,
+          "source_label": "delayed, unofficial",
+          "value": 200.729996,
+          "display_value": "200.73",
+          "market_session_date": "2026-10-30",
+          "observation_timestamp_utc": "2026-10-30T05:15:50Z",
+          "as_of_sydney": "30 Oct 2026, 16:15 AEDT",
+          "comparison_date": "2026-10-29",
+          "comparison_value": 197.5,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-10-30 21:38Z",
+          "change_abs": 3.23,
+          "change_pct": 1.64,
+          "display_change": "+1.6%",
+          "week_comparison_date": "2026-10-23",
+          "week_comparison_value": 196.699997,
+          "week_change_pct": 2.05,
+          "display_week_change": "+2.0% wk",
+          "ticker": "CSL"
+        },
+        {
+          "id": "wl_flt",
+          "display_name": "FLT · Flight Centre",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null,
+          "unavailable_reason": "Yahoo Finance (FLT.AX): fetch failed https://query1.finance.yahoo.com/v8/finance/chart/FLT.AX?range=3mo&interval=1d: HTTP Error 429: Too Many Requests",
+          "ticker": "FLT"
+        },
+        {
+          "id": "wl_iel",
+          "display_name": "IEL · IDP Education",
+          "tier": "watchlist",
+          "instrument_type": "equity",
+          "quote_kind": "close",
+          "unit": "AUD",
+          "currency": "AUD",
+          "decimals": 2,
+          "change_unit": "pct",
+          "expected_session_date": "2026-10-30",
+          "observation_timezone": "Australia/Sydney",
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null,
+          "unavailable_reason": "Yahoo Finance (IEL.AX): fetch failed https://query1.finance.yahoo.com/v8/finance/chart/IEL.AX?range=3mo&interval=1d: HTTP Error 429: Too Many Requests",
+          "ticker": "IEL"
+        }
+      ]
+    },
+    "sections": [
+      {
+        "id": "market-drivers",
+        "cards": [
+          {
+            "id": "ai-spending-tech-selloff-week",
+            "headline": "AI spending doubts pulled the Nasdaq down 2.0% for the week",
+            "takeaway": "Alphabet, Intel and Amazon fell after results, while energy, financials, utilities and healthcare were set for monthly gains.",
+            "tags": [
+              "Equities",
+              "AI",
+              "US"
+            ],
+            "key_figure": "Week to 30 Oct: Nasdaq −2.0%, S&P 500 −0.6%",
+            "new_since_last_issue": "Alphabet's fall was covered in the 30 Oct issue. Friday's Intel and chip selloff and the weekly totals are new.",
+            "what_happened": "Alphabet fell 12.6% on Thursday, its largest one-day fall on record, after search revenue missed forecasts and free cash flow was −US$9.1 billion ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october)). On Friday Intel fell 29%, its worst day since the 1970s, after weaker-than-expected guidance citing a plant shutdown in Israel and PC softness; Nvidia fell 4%, Broadcom more than 5% and Qualcomm 11%, while Amazon slipped 1.4% after a third-quarter miss and kept its 2026 capex forecast at US$220 billion ([CNBC](https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html)). Microsoft drew more than US$100 billion of orders for a US$25 billion bond sale ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october)).",
+            "why_it_matters": "The question has moved from whether AI demand is real to how the spending is funded: Alphabet and Meta are now burning cash while Microsoft is borrowing ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october)). Profits are still strong, with S&P 500 third-quarter earnings on pace to rise 31% according to LSEG data, and energy, financials, utilities and healthcare were set for monthly gains ([Reuters via Investing.com](https://www.investing.com/news/economy-news/midterm-elections-earnings-jobs-data-loom-for-aiwary-market-4986533)).",
+            "market_reaction": "Dashboard: S&P 500 7,580.1 (−1.8% day, −0.6% week), Nasdaq 25,437.0 (−2.9% day, −2.0% week), VIX 19.45 (+2.25 points day, unchanged for the week).",
+            "competing_views": [
+              {
+                "who": "Anna Wu, Floodlines Research",
+                "view": "Said the concern is not slowing AI demand but that \"higher funding costs and credit risk could eventually force hyperscalers to slow their build-out\".",
+                "source": {
+                  "label": "Market Index",
+                  "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+                  "claim_type": "opinion",
+                  "date": "30 Oct 2026"
+                }
+              },
+              {
+                "who": "Chris Galipeau, Franklin Templeton Institute",
+                "view": "\"The market is much more broad than people generally want to give it credit for.\"",
+                "source": {
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/economy-news/midterm-elections-earnings-jobs-data-loom-for-aiwary-market-4986533",
+                  "claim_type": "opinion",
+                  "date": "30 Oct 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Apple reports on Monday US time (Tuesday morning Sydney), with AMD, Qualcomm and Palantir also due next week.",
+            "sources": [
+              {
+                "label": "Market Index",
+                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Reuters via Investing.com",
+                "url": "https://www.investing.com/news/economy-news/midterm-elections-earnings-jobs-data-loom-for-aiwary-market-4986533",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "us-growth-inflation-fed-hold",
+            "headline": "The Fed held as US growth beat forecasts and inflation rose",
+            "takeaway": "Two Fed officials voted for a hike, and analysts are split on whether December's expected rise is the last.",
+            "tags": [
+              "US",
+              "Fed",
+              "Inflation"
+            ],
+            "key_figure": "US Q3 GDP: +3.4% annualised; September PCE inflation 3.6% y/y",
+            "new_since_last_issue": "The Fed decision and GDP were covered on 29 and 30 Oct. The wage data and analysts' views on the path are new.",
+            "what_happened": "The Fed held its range at 3.75–4.00% on a 10–2 vote, with Lisa Cook and Beth Hammack preferring a 25 bp hike, and said economic activity is expanding \"at a strong pace\" ([Federal Reserve](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm)). Real GDP grew at a 3.4% annual rate in the third quarter, up from 2.2% ([BEA](https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026)). September PCE prices rose 0.5% in the month and 3.6% from a year earlier, with core at 3.1% ([BEA](https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026)). Employment costs rose 0.8% in the quarter and 3.4% over the year ([BLS](https://www.bls.gov/news.release/eci.nr0.htm)).",
+            "why_it_matters": "Wages and salaries rose 3.1% over the year, and the BLS said inflation-adjusted wages fell 0.6% ([BLS](https://www.bls.gov/news.release/eci.nr0.htm)). The Fed's statement said inflation \"remains elevated\", and two officials voted to hike ([Federal Reserve](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm)).",
+            "competing_views": [
+              {
+                "who": "Kay Haigh, Goldman Sachs Asset Management",
+                "view": "Said the Fed's pause will likely be short-lived and expects hikes to resume in December, with more tightening possible next year if energy prices rise again.",
+                "source": {
+                  "label": "Newsquawk",
+                  "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+                  "claim_type": "forecast",
+                  "date": "30 Oct 2026"
+                }
+              },
+              {
+                "who": "Pantheon Macroeconomics",
+                "view": "Expects a final 25 bp hike in December, then easing from mid-2027 as core PCE falls to about 2.5% by end-2027.",
+                "source": {
+                  "label": "Newsquawk",
+                  "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+                  "claim_type": "forecast",
+                  "date": "30 Oct 2026"
+                }
+              }
+            ],
+            "what_to_watch": "October payrolls on Friday US time (Saturday Sydney); consensus is 55,000 jobs and 4.2% unemployment, according to Newsquawk.",
+            "sources": [
+              {
+                "label": "Federal Reserve",
+                "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+                "claim_type": "official_statement",
+                "date": "28 Oct 2026"
+              },
+              {
+                "label": "BEA",
+                "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
+                "claim_type": "measurement",
+                "date": "29 Oct 2026"
+              },
+              {
+                "label": "BEA personal income and outlays",
+                "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+                "claim_type": "measurement",
+                "date": "29 Oct 2026"
+              },
+              {
+                "label": "BLS Employment Cost Index",
+                "url": "https://www.bls.gov/news.release/eci.nr0.htm",
+                "claim_type": "measurement",
+                "date": "Oct 2026"
+              },
+              {
+                "label": "Newsquawk",
+                "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "australia-asx",
+        "cards": [
+          {
+            "id": "asx-week-coles-zip",
+            "headline": "ASX 200 rose 1.3% for the week as Coles slumped",
+            "takeaway": "Healthcare and a Zip rebound lifted the index, while Coles guided to flat first-half supermarket earnings.",
+            "tags": [
+              "ASX",
+              "Australia",
+              "Equities"
+            ],
+            "key_figure": "ASX 200: 8,908.1 (+0.2% Friday, +1.3% for the week)",
+            "new_since_last_issue": "Coles and Catalyst were covered on 30 Oct. The weekly picture is new.",
+            "what_happened": "Coles fell more than 12% during Friday's session after guiding to flat first-half supermarket earnings of about A$1.23 billion, about 7% below UBS's forecast. Catalyst Metals fell 22%. Consumer discretionary was down about 2% for the week, while healthcare has risen 38% since late July ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october)).",
+            "why_it_matters": "Coles cited price investment, competitor promotions and higher fuel costs for the flat outlook. Westpac reports on Monday, NAB on Thursday and Macquarie on Friday, ahead of Tuesday's RBA decision ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october)).",
+            "market_reaction": "Dashboard: ASX 200 8,908.1 (+0.2% day, +1.3% week); AUD/USD 0.7040 (−0.2% day, +0.5% week). ASX 200 futures and iron ore are unavailable in our data.",
+            "sources": [
+              {
+                "label": "Market Index",
+                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "au-cpi-rba-hike-odds",
+            "headline": "Hot inflation made a Melbourne Cup Day rate hike the base case",
+            "takeaway": "Core inflation beat the RBA's forecast, and all four major banks now expect a rise to 4.85% on Tuesday.",
+            "tags": [
+              "Australia",
+              "RBA",
+              "Inflation"
+            ],
+            "key_figure": "Trimmed mean: +1.0% q/q, 3.7% y/y (RBA forecast 0.8% q/q)",
+            "new_since_last_issue": "The CPI was covered on 28 Oct. Friday's closing odds and the RBA's response are new.",
+            "what_happened": "CPI rose 4.3% in the year to September, up from 4.0%, with fuel up 9.4% in the month ([ABS](https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026)). The quarterly trimmed mean rose 1.0%, above the RBA's 0.8% forecast, and NAB and CBA moved to forecast a hike, joining ANZ and Westpac ([AAP](https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call)). ASX futures implied a 78% chance of a hike at Friday's close, up from 56% a week earlier ([RBA Watch](https://rbawatch.com/rba-meeting/november-2026)).",
+            "why_it_matters": "Housing rose 5.2% and transport 8.7% over the year, so the pressure is not only fuel ([ABS](https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026)). Treasurer Chalmers has promised savings in December's mid-year budget update, while the Opposition's Tim Wilson said government spending is forcing the RBA's hand ([AAP](https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call)). The RBA publishes new forecasts on the same day as the decision.",
+            "competing_views": [
+              {
+                "who": "Marc Jocum, Global X",
+                "view": "\"This is an ugly number for the RBA and significantly strengthens the case for another rate hike next week.\"",
+                "source": {
+                  "label": "AAP",
+                  "url": "https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call",
+                  "claim_type": "opinion",
+                  "date": "28 Oct 2026"
+                }
+              },
+              {
+                "who": "RBA Deputy Governor Andrew Hauser",
+                "view": "Said inflation was too high but broadly in line with what the RBA had expected.",
+                "source": {
+                  "label": "AAP",
+                  "url": "https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call",
+                  "claim_type": "official_statement",
+                  "date": "28 Oct 2026"
+                }
+              }
+            ],
+            "what_to_watch": "The decision and Statement on Monetary Policy at 2:30pm Sydney time on Tuesday, then Governor Bullock's media conference at 3:30pm.",
+            "sources": [
+              {
+                "label": "ABS",
+                "url": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026",
+                "claim_type": "measurement",
+                "date": "28 Oct 2026"
+              },
+              {
+                "label": "AAP",
+                "url": "https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call",
+                "claim_type": "reporting",
+                "date": "28 Oct 2026"
+              },
+              {
+                "label": "RBA Watch",
+                "url": "https://rbawatch.com/rba-meeting/november-2026",
+                "claim_type": "measurement",
+                "date": "30 Oct 2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rates-expectations",
+        "cards": [
+          {
+            "id": "yields-week-us-au",
+            "headline": "US yields fell for the week while Australia's short end rose",
+            "takeaway": "The US 2-year yield fell 13 bp for the week, while Australia's 2-year rose 3 bp as RBA hike odds climbed.",
+            "tags": [
+              "Bonds",
+              "Rates"
+            ],
+            "key_figure": "US 2Y 4.56% (−13 bp week); AU 2Y 4.95% (+3 bp week)",
+            "what_happened": "The US 10-year yield ended the week 6 bp lower at 4.94% and the 2-year 13 bp lower at 4.56%, according to our data. CNBC put the 30-year at 5.31% on Friday ([CNBC](https://www.cnbc.com/2026/10/30/us-treasury-yields-fed-interest-rates.html)). In Australia, the RBA's latest published data, for 28 October, show the 10-year at 5.21%, 7 bp lower than a week earlier, and the 2-year at 4.95%, 3 bp higher, leaving the 10-year 26 bp above the 2-year.",
+            "why_it_matters": "In Australia, ASX futures moved from 56% to 78% odds of a November hike over the week ([RBA Watch](https://rbawatch.com/rba-meeting/november-2026)). The US Treasury's quarterly refunding on Wednesday will show whether it changes coupon auction sizes, which matters for long-end yields ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-)).",
+            "market_reaction": "Dashboard: US 10Y 4.94% (−4 bp day, −6 bp week); US 2Y 4.56% (−5 bp day, −13 bp week); AU 10Y 5.21% and AU 2Y 4.95% as at 28 Oct (RBA, lagged).",
+            "what_to_watch": "US Treasury refunding announcement on Wednesday US time; RBA decision on Tuesday.",
+            "sources": [
+              {
+                "label": "RBA Watch",
+                "url": "https://rbawatch.com/rba-meeting/november-2026",
+                "claim_type": "measurement",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/10/30/us-treasury-yields-fed-interest-rates.html",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "RBA statistical tables (F2)",
+                "url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+                "claim_type": "measurement",
+                "date": "28 Oct 2026"
+              },
+              {
+                "label": "Newsquawk",
+                "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "global-central-banks-week",
+            "headline": "Central banks split between holding and hiking on energy inflation",
+            "takeaway": "The ECB, BoJ and RBNZ held while Canada hiked, and Lagarde will leave the ECB early.",
+            "tags": [
+              "Central banks",
+              "Europe",
+              "Asia"
+            ],
+            "key_figure": "ECB deposit rate 2.5%; BoJ 1.25%; RBNZ 2.75%",
+            "new_since_last_issue": "Each decision was covered in this week's daily issues; this card pulls them together.",
+            "what_happened": "The ECB held its deposit rate at 2.5%, and Christine Lagarde will step down on 7 February 2027 ([ECB](https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html), [Euronews](https://www.euronews.com/2026/10/29/ecb-holds-rates-at-25-as-lagarde-announces-early-exit-with-inflation-near-double-the-targe)). The BoJ held at 1.25% in an 8–1 vote, the Bank of Canada raised rates by 25 bp, and the RBNZ held at 2.75% on a 4–3 vote when markets had priced about a 93% chance of a hike. Italy's flash inflation reached 5.6% ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-)).",
+            "why_it_matters": "The Bank of England is expected to begin hiking with a 25 bp rise on Thursday, according to Newsquawk. The ECB said it is \"not pre-committing to a particular rate path\" (Euronews). The RBNZ held on a 4–3 vote when money markets had priced about a 93% chance of a hike (Newsquawk).",
+            "sources": [
+              {
+                "label": "ECB",
+                "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html",
+                "claim_type": "official_statement",
+                "date": "29 Oct 2026"
+              },
+              {
+                "label": "Euronews",
+                "url": "https://www.euronews.com/2026/10/29/ecb-holds-rates-at-25-as-lagarde-announces-early-exit-with-inflation-near-double-the-targe",
+                "claim_type": "reporting",
+                "date": "29 Oct 2026"
+              },
+              {
+                "label": "Newsquawk",
+                "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "global-risk",
+        "cards": [
+          {
+            "id": "iran-talks-strike-options",
+            "headline": "The US weighed post-midterm strikes on Iran as mediators pushed for talks",
+            "takeaway": "Trump says the war will end soon, Tehran had not answered a US letter as of Thursday, and military options are on the table for after 3 November.",
+            "tags": [
+              "Iran",
+              "Geopolitics",
+              "US policy"
+            ],
+            "key_figure": "US midterms: Tuesday 3 November",
+            "new_since_last_issue": "The Vance letter was covered on 29 and 30 Oct. Friday's statements, the mediation and the briefing on strike options are new.",
+            "what_happened": "Defense Secretary Hegseth, Gen. Caine and Adm. Cooper briefed Trump on military options for after the midterms, the WSJ reported ([Fox News](https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26)). Qatari mediators returned to Tehran on Friday, and the NYT reported joint US-Israeli strike planning for after 3 November ([Al Jazeera](https://www.aljazeera.com/news/2026/10/30/us-weighs-new-iran-strikes-as-vance-reaches-out-is-war-or-a-deal-closer)). Vice President Vance's letter says talks \"require discussions on the nuclear issue\" ([Axios](https://www.axios.com/2026/10/28/vance-iran-nuclear-talks-letter)), and the Guardian reported it sets out a seven-day process to reopen Hormuz in return for sanctions relief ([Guardian](https://www.theguardian.com/world/2026/oct/29/jd-vance-letter-may-offer-last-chance-to-avert-fresh-conflict-between-us-and-iran)).",
+            "why_it_matters": "Fuel was the main driver of Australia's September inflation, according to the Treasurer ([AAP](https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call)), so the outcome of talks bears on the RBA. Saxo Bank expects oil volatility around the 3 November midterms ([CNBC](https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html)). Pakistan, another mediator, said it is \"cautiously optimistic\" ([Fox News](https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26)).",
+            "competing_views": [
+              {
+                "who": "President Trump",
+                "view": "\"One way or the other, it's going to end very soon,\" he said on Friday, adding that Iran \"wants to talk\".",
+                "source": {
+                  "label": "Fox News",
+                  "url": "https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26",
+                  "claim_type": "official_statement",
+                  "date": "30 Oct 2026"
+                }
+              },
+              {
+                "who": "Tasnim news agency (Iran)",
+                "view": "Said Iran's conditions for talks are unchanged, including lifting the blockade, sanctions relief and access to frozen assets.",
+                "source": {
+                  "label": "CBS News",
+                  "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/",
+                  "claim_type": "official_statement",
+                  "date": "30 Oct 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Any Iranian reply to the letter, and statements from Washington in the days after Tuesday's vote.",
+            "sources": [
+              {
+                "label": "AAP",
+                "url": "https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Fox News",
+                "url": "https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Al Jazeera",
+                "url": "https://www.aljazeera.com/news/2026/10/30/us-weighs-new-iran-strikes-as-vance-reaches-out-is-war-or-a-deal-closer",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Axios",
+                "url": "https://www.axios.com/2026/10/28/vance-iran-nuclear-talks-letter",
+                "claim_type": "reporting",
+                "date": "28 Oct 2026"
+              },
+              {
+                "label": "The Guardian",
+                "url": "https://www.theguardian.com/world/2026/oct/29/jd-vance-letter-may-offer-last-chance-to-avert-fresh-conflict-between-us-and-iran",
+                "claim_type": "reporting",
+                "date": "29 Oct 2026"
+              },
+              {
+                "label": "CBS News",
+                "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "oil-hormuz-tanker-month",
+            "headline": "Brent rose 13.6% in October as Hormuz attacks continued",
+            "takeaway": "A limpet-mine attack in Hormuz and Houthi claims of strikes on Saudi sites lifted oil, though the December contract's expiry muddies the weekly figure.",
+            "tags": [
+              "Oil",
+              "Commodities",
+              "Hormuz"
+            ],
+            "key_figure": "January Brent settle US$113.43 (+US$2.63); Brent +13.6% in October",
+            "what_happened": "The expiring December Brent contract settled up 2.4% at US$117.64 on Friday and the more active January contract rose US$2.63 to US$113.43; WTI settled at US$104.12 ([CNBC](https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html)). A tanker in the strait was hit by limpet mines, the first known successful limpet-mine strike in the waterway since the war began, maritime sources told CNBC, and UKMTO data showed October had the most incidents since the conflict began ([Fox News](https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26)).",
+            "why_it_matters": "Supply is still moving: Adm. Cooper said the primary transit routes are clear and Gulf partners have exported more than 1.5 billion barrels with US help since summer ([Fox News](https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26)), and Saudi exports rose in October ([CNBC](https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html)).",
+            "market_reaction": "Dashboard: Brent futures 112.42 (−2.1% day, −3.7% week; Yahoo feed, see comparison below); Brent spot 123.10 as at 27 Oct (FRED, lagged), +6.8% on the prior week.",
+            "competing_views": [
+              {
+                "who": "Adm. Brad Cooper, US Central Command",
+                "view": "Said the primary transit routes through Hormuz have been cleared of mines and Iran's navy \"is all at the bottom of the sea\".",
+                "source": {
+                  "label": "Fox News",
+                  "url": "https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26",
+                  "claim_type": "official_statement",
+                  "date": "30 Oct 2026"
+                }
+              },
+              {
+                "who": "Saxo Bank",
+                "view": "Expects crude to trade in a US$70–90 range even after the conflict ends, above the pre-war US$60–70 range.",
+                "source": {
+                  "label": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html",
+                  "claim_type": "forecast",
+                  "date": "29 Oct 2026"
+                }
+              }
+            ],
+            "comparison": {
+              "title": "Which Brent price for Friday?",
+              "why_different": "December Brent expired on Friday. Our Yahoo BZ=F feed appears to have rolled to the January contract, so its −2.1% compares a January price with Thursday's December settle of 114.88, and its −3.7% weekly change compares it with last Friday's December settle. Reported settles show both contracts rose on Friday. A gap of about US$1 between the feed and the reported January settle remains, possibly from a different close time; we have not confirmed this.",
+              "resolution": "explained",
+              "rows": [
+                {
+                  "source": "CNBC (Reuters report)",
+                  "url": "https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html",
+                  "figure": "US$117.64 (+2.4%)",
+                  "measure": "December Brent futures settlement (expiry day)",
+                  "timestamp": "30 Oct 2026 settle",
+                  "method": "Exchange settlement as reported",
+                  "status": "independently reported"
+                },
+                {
+                  "source": "CNBC (Reuters report)",
+                  "url": "https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html",
+                  "figure": "US$113.43 (+US$2.63)",
+                  "measure": "January Brent futures settlement",
+                  "timestamp": "30 Oct 2026 settle",
+                  "method": "Exchange settlement as reported",
+                  "status": "independently reported"
+                },
+                {
+                  "source": "Yahoo Finance (BZ=F), via our snapshot",
+                  "url": "https://finance.yahoo.com/quote/BZ%3DF/",
+                  "figure": "US$112.42 (−2.1%)",
+                  "measure": "Brent front-month financial futures, daily close",
+                  "timestamp": "30 Oct 2026, 20:20 UTC",
+                  "method": "Delayed, unofficial data feed",
+                  "status": "unverified"
+                }
+              ]
+            },
+            "what_to_watch": "Tanker incidents in Hormuz and Houthi attacks on Saudi facilities, especially around Tuesday's US election.",
+            "sources": [
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/10/30/oil-rises-on-supply-concerns-as-houthis-attack-saudi-arabia.html",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Fox News",
+                "url": "https://www.foxnews.com/live-news/us-iran-war-oil-prices-strait-hormuz-10-30-26",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "us-midterms-market-scenarios",
+            "headline": "Wall Street expects Democratic gains in Tuesday's midterms",
+            "takeaway": "A Democratic House is the consensus, the Senate is closer, and analysts disagree on what a sweep means for AI stocks and bonds.",
+            "tags": [
+              "US politics",
+              "Elections",
+              "US policy"
+            ],
+            "key_figure": "Polymarket: Democratic sweep 70%",
+            "what_happened": "Polymarket odds give Democrats a 94% chance of the House and 69% of the Senate, according to Newsquawk ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-)). Wolfe Research puts the chance of a Democratic Senate at 49%, and Piper Sandler estimates Democratic proposals would add US$5 trillion to deficits over a decade ([CNBC](https://www.cnbc.com/2026/10/30/2026-midterm-election-wall-street-prepares-for-democratic-gains.html)).",
+            "why_it_matters": "Investors are watching data-centre policy, including state and local races in Texas, plus defence, healthcare and bank regulation ([Reuters via Investing.com](https://www.investing.com/news/economy-news/midterm-elections-earnings-jobs-data-loom-for-aiwary-market-4986533)). The US is expected to reach its debt limit in 2027, so control of Congress also shapes that fight ([CNBC](https://www.cnbc.com/2026/10/30/2026-midterm-election-wall-street-prepares-for-democratic-gains.html)).",
+            "competing_views": [
+              {
+                "who": "Rick Meckler, Cherry Lane Investments",
+                "view": "Said a significant blue wave would likely be seen as negative for AI names, tech in general \"and maybe even for the market as a whole\".",
+                "source": {
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/economy-news/midterm-elections-earnings-jobs-data-loom-for-aiwary-market-4986533",
+                  "claim_type": "forecast",
+                  "date": "30 Oct 2026"
+                }
+              },
+              {
+                "who": "TD Securities",
+                "view": "Said a Democratic Senate could ease concerns about Fed independence, because new Fed members need Senate confirmation.",
+                "source": {
+                  "label": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/30/2026-midterm-election-wall-street-prepares-for-democratic-gains.html",
+                  "claim_type": "forecast",
+                  "date": "30 Oct 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Results arrive from Wednesday morning Sydney time; a slow or contested count is a risk analysts flag.",
+            "sources": [
+              {
+                "label": "Newsquawk",
+                "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/10/30/2026-midterm-election-wall-street-prepares-for-democratic-gains.html",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Reuters via Investing.com",
+                "url": "https://www.investing.com/news/economy-news/midterm-elections-earnings-jobs-data-loom-for-aiwary-market-4986533",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          },
+          {
+            "id": "gold-silver-binance-selloff",
+            "headline": "Gold fell to a one-year low as a crypto hack added to selling",
+            "takeaway": "Gold and silver dropped despite war risk as rate-hike expectations rose, while a suspected Binance hack hit Bitcoin.",
+            "tags": [
+              "Gold",
+              "Crypto",
+              "Risk"
+            ],
+            "key_figure": "Spot gold US$3,880 (−3.5% Friday), lowest since 6 Oct 2025",
+            "what_happened": "Spot gold fell 3.5% to about US$3,880 on Friday and spot silver fell to US$48.95, Kitco reported, citing higher oil prices feeding expectations of further Fed hikes ([Kitco](https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears)). Binance suspended deposits and withdrawals over a suspected hack with about US$3 billion of assets frozen, and Bitcoin fell below US$77,000 ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october)).",
+            "why_it_matters": "Analysts quoted by Kitco said gold fell even as the dollar and bond yields weakened, and that it is reacting to inflation expectations and the future path of interest rates ([Kitco](https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears)).",
+            "market_reaction": "Dashboard: gold futures 3,889.9 (−3.5% day, −2.9% week).",
+            "sources": [
+              {
+                "label": "Kitco",
+                "url": "https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              },
+              {
+                "label": "Market Index",
+                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+                "claim_type": "reporting",
+                "date": "30 Oct 2026"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rates": {
+      "rba": {
+        "status": "available",
+        "summary": "ASX 30-day interbank futures implied a 78% chance of a 25 bp hike on 3 November at Friday's close (expected rate 4.79%), up from 56% a week earlier.",
+        "as_of": "30 Oct 2026 (ASX close)",
+        "source": {
+          "label": "RBA Watch",
+          "url": "https://rbawatch.com/rba-meeting/november-2026",
+          "claim_type": "measurement"
+        },
+        "forecasts": [
+          {
+            "who": "ANZ, CBA, NAB and Westpac",
+            "view": "All four expect a hike in November, after NAB and CBA switched from a hold following the CPI.",
+            "source": {
+              "label": "AAP",
+              "url": "https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call",
+              "claim_type": "forecast",
+              "date": "28 Oct 2026"
+            }
+          },
+          {
+            "who": "Sally Auld, NAB",
+            "view": "Said the RBA may need unemployment nearer 5.5% than 5% to bring inflation down, which would require tighter financial conditions.",
+            "source": {
+              "label": "AAP",
+              "url": "https://aapnews.aap.com.au/news/the-figures-to-watch-ahead-of-melbourne-cup-rate-call",
+              "claim_type": "forecast",
+              "date": "28 Oct 2026"
+            }
+          }
+        ]
+      },
+      "fed": {
+        "status": "available",
+        "summary": "The Fed held at 3.75–4.00%; December hike bets fell to 76% after Thursday's PCE and GDP data, according to Market Index.",
+        "as_of": "30 Oct 2026 (Market Index, Sydney morning)",
+        "source": {
+          "label": "Market Index",
+          "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+          "claim_type": "reporting"
+        },
+        "forecasts": [
+          {
+            "who": "Kay Haigh, Goldman Sachs Asset Management",
+            "view": "Expects hikes to resume in December.",
+            "source": {
+              "label": "Newsquawk",
+              "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+              "claim_type": "forecast",
+              "date": "30 Oct 2026"
+            }
+          },
+          {
+            "who": "Pantheon Macroeconomics",
+            "view": "Expects a final 25 bp hike in December, then easing from mid-2027.",
+            "source": {
+              "label": "Newsquawk",
+              "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-",
+              "claim_type": "forecast",
+              "date": "30 Oct 2026"
+            }
+          }
+        ]
+      }
+    },
+    "watchlist": [
+      {
+        "ticker": "ZIP",
+        "note": "Rose 22.6% for the week to A$1.79, recovering part of the previous Friday's 29% plunge on US fraud losses. Monday's 14% jump came as UBS called the selloff \"an overreaction\" and Macquarie kept its A$3.50 target, while Citi and Jefferies were more cautious. It slipped 3.8% on Friday. ASX filings show MUFG became a substantial holder on 28 October and ceased to be one on 30 October, and three directors lodged interest-change notices.",
+        "next_catalyst": "AGM on 19 November.",
+        "sources": [
+          {
+            "label": "IBTimes Australia",
+            "url": "https://www.ibtimes.com.au/zip-shares-rebound-after-us-fraud-losses-1877383",
+            "claim_type": "reporting"
+          },
+          {
+            "label": "ASX announcements (ZIP)",
+            "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/ZIP/announcements",
+            "claim_type": "official_statement"
+          }
+        ]
+      },
+      {
+        "ticker": "CSL",
+        "note": "Rose 2.0% for the week to A$200.73, helped by a broad healthcare rally that has lifted the sector 38% since late July. CSL held its AGM on Tuesday, said Brian McNamee will retire with Gordon Naylor as the next chair, and kept buying back shares.",
+        "sources": [
+          {
+            "label": "Market Index",
+            "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+            "claim_type": "reporting"
+          },
+          {
+            "label": "ASX announcements (CSL)",
+            "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/CSL/announcements",
+            "claim_type": "official_statement"
+          }
+        ]
+      },
+      {
+        "ticker": "FLT",
+        "note": "Rose 0.9% for the week to A$11.35, with no company announcements since 20 October. It moved with the consumer discretionary sector, which snapped a four-day losing streak on Friday but was still down about 2% for the week, according to Market Index.",
+        "next_catalyst": "Tuesday's RBA decision, which affects household travel budgets.",
+        "sources": [
+          {
+            "label": "Market Index",
+            "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+            "claim_type": "reporting"
+          },
+          {
+            "label": "ASX announcements (FLT)",
+            "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/FLT/announcements",
+            "claim_type": "official_statement"
+          }
+        ]
+      },
+      {
+        "ticker": "IEL",
+        "note": "Unchanged for the week at A$2.21 (−0.5% Friday). The company kept buying back shares, a substantial holder exited on 28 October and final director's interest notices were lodged for A Barker and A Barkla on 29 October; none of these filings was marked price-sensitive, and no report we found explains the week's moves.",
+        "sources": [
+          {
+            "label": "ASX announcements (IEL)",
+            "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/IEL/announcements",
+            "claim_type": "official_statement"
+          }
+        ]
+      }
+    ],
+    "calendar": [
+      {
+        "when": "Tue 3 Nov, morning",
+        "event": "US ISM manufacturing PMI for October (Monday US time); Apple results after the US close",
+        "country": "US",
+        "importance": "medium",
+        "prior": "54.5",
+        "consensus": "54.7",
+        "consensus_source": "Newsquawk week-ahead (30 Oct)",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Tue 3 Nov, 2:30pm",
+        "event": "RBA cash rate decision and Statement on Monetary Policy; media conference 3:30pm",
+        "country": "AU",
+        "importance": "high",
+        "prior": "4.60%",
+        "source": {
+          "label": "RBA Watch",
+          "url": "https://rbawatch.com/rba-meeting/november-2026"
+        }
+      },
+      {
+        "when": "Tue 3 Nov (results from Wed morning)",
+        "event": "US midterm elections",
+        "country": "US",
+        "importance": "high",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Wed 4 Nov, early morning",
+        "event": "US JOLTS job openings for September (Tuesday US time)",
+        "country": "US",
+        "importance": "medium",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Wed 4 Nov, evening",
+        "event": "Euro area flash CPI for October",
+        "country": "EU",
+        "importance": "medium",
+        "prior": "3.8% y/y",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Thu 5 Nov, morning",
+        "event": "US Treasury quarterly refunding and ISM services PMI (Wednesday US time)",
+        "country": "US",
+        "importance": "medium",
+        "prior": "54.9",
+        "consensus": "54.7",
+        "consensus_source": "Newsquawk week-ahead (30 Oct)",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Thu 5 Nov",
+        "event": "Australia trade balance for September; NAB results",
+        "country": "AU",
+        "importance": "low",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Thu 5 Nov, late night",
+        "event": "Bank of England rate decision and Monetary Policy Report",
+        "country": "UK",
+        "importance": "medium",
+        "consensus": "25 bp hike",
+        "consensus_source": "Newsquawk week-ahead (30 Oct)",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      },
+      {
+        "when": "Sat 7 Nov, early morning",
+        "event": "US October payrolls (Friday US time)",
+        "country": "US",
+        "importance": "high",
+        "prior": "29,000; unemployment 4.2%",
+        "consensus": "55,000; unemployment 4.2%",
+        "consensus_source": "Newsquawk week-ahead (30 Oct)",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-"
+        }
+      }
+    ]
+  },
+  "close": null,
+  "watchlist_data": {
+    "retrieved_at_utc": "2026-10-30T21:45Z",
+    "editions": {
+      "morning": {
+        "cutoff_local": "2026-10-31T07:30:00+11:00",
+        "session_date": "2026-10-30",
+        "stocks": {
+          "A2M": {
+            "ticker": "A2M",
+            "name": "THE A2 Milk Company",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 6.92,
+              "display_value": "6.92",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 6.8,
+              "change_pct": 1.76,
+              "display_change": "+1.8%",
+              "provider": "Yahoo Finance (A2M.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/A2M.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.8% to A$6.92 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (A2M)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.a2m",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "AIA": {
+            "ticker": "AIA",
+            "name": "Auckland International Airport",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 6.78,
+              "display_value": "6.78",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 6.73,
+              "change_pct": 0.74,
+              "display_change": "+0.7%",
+              "provider": "Yahoo Finance (AIA.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/AIA.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.7% to A$6.78 on Friday. ASX announcements: “AIA - Capital Change Notice (FY27 LTI)”, 30 Oct 10:35am AEDT; “AIA - NZX D&O Disclosure Notice”, 30 Oct 10:39am AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (AIA)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.aia",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "ALL": {
+            "ticker": "ALL",
+            "name": "Aristocrat Leisure",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 64.39,
+              "display_value": "64.39",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 63.23,
+              "change_pct": 1.83,
+              "display_change": "+1.8%",
+              "provider": "Yahoo Finance (ALL.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/ALL.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.8% to A$64.39 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (ALL)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.all",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "AMC": {
+            "ticker": "AMC",
+            "name": "Amcor PLC",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 66.62,
+              "display_value": "66.62",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 65.0,
+              "change_pct": 2.49,
+              "display_change": "+2.5%",
+              "provider": "Yahoo Finance (AMC.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/AMC.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 2.5% to A$66.62 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (AMC)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.amc",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "ANZ": {
+            "ticker": "ANZ",
+            "name": "ANZ Group Holdings",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 40.81,
+              "display_value": "40.81",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 40.72,
+              "change_pct": 0.22,
+              "display_change": "+0.2%",
+              "provider": "Yahoo Finance (ANZ.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/ANZ.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.2% to A$40.81 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (ANZ)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.anz",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "BHP": {
+            "ticker": "BHP",
+            "name": "BHP Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 57.56,
+              "display_value": "57.56",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 57.52,
+              "change_pct": 0.07,
+              "display_change": "+0.1%",
+              "provider": "Yahoo Finance (BHP.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/BHP.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.1% to A$57.56 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (BHP)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.bhp",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "BXB": {
+            "ticker": "BXB",
+            "name": "Brambles",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 21.39,
+              "display_value": "21.39",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 20.97,
+              "change_pct": 2.0,
+              "display_change": "+2.0%",
+              "provider": "Yahoo Finance (BXB.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/BXB.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 2.0% to A$21.39 on Friday. ASX announcements: “Update - Notification of buy-back - BXB”, 30 Oct 8:13am AEDT; “Notification of cessation of securities - BXB”, 30 Oct 9:02am AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (BXB)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.bxb",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "CBA": {
+            "ticker": "CBA",
+            "name": "Commonwealth Bank of Australia",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 166.72,
+              "display_value": "166.72",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 166.39,
+              "change_pct": 0.2,
+              "display_change": "+0.2%",
+              "provider": "Yahoo Finance (CBA.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/CBA.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.2% to A$166.72 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (CBA)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.cba",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "COL": {
+            "ticker": "COL",
+            "name": "Coles Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 21.66,
+              "display_value": "21.66",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 23.46,
+              "change_pct": -7.67,
+              "display_change": "−7.7%",
+              "provider": "Yahoo Finance (COL.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/COL.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 7.7% to A$21.66 on Friday. ASX announcement: “2027 First Quarter Sales Results” (price sensitive), 30 Oct 8:32am AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (COL)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.col",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "CSL": {
+            "ticker": "CSL",
+            "name": "CSL",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 200.729996,
+              "display_value": "200.73",
+              "change_pct": 1.64,
+              "display_change": "+1.6%",
+              "provider": "Yahoo Finance (CSL.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/CSL.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 2.0% for the week to A$200.73, helped by a broad healthcare rally that has lifted the sector 38% since late July. CSL held its AGM on Tuesday, said Brian McNamee will retire with Gordon Naylor as the next chair, and kept buying back shares.",
+            "sources": [
+              {
+                "label": "Market Index",
+                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "ASX announcements (CSL)",
+                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/CSL/announcements",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "EVN": {
+            "ticker": "EVN",
+            "name": "Evolution Mining",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 11.76,
+              "display_value": "11.76",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 12.0,
+              "change_pct": -2.0,
+              "display_change": "−2.0%",
+              "provider": "Yahoo Finance (EVN.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/EVN.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 2.0% to A$11.76 on Friday. ASX announcement: “Update - Proposed issue of securities - EVN”, 30 Oct 11:50am AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (EVN)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.evn",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "FLT": {
+            "ticker": "FLT",
+            "name": "Flight Centre Travel Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 11.35,
+              "display_value": "11.35",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 11.3,
+              "change_pct": 0.44,
+              "display_change": "+0.4%",
+              "provider": "Yahoo Finance (FLT.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/FLT.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.9% for the week to A$11.35, with no company announcements since 20 October. It moved with the consumer discretionary sector, which snapped a four-day losing streak on Friday but was still down about 2% for the week, according to Market Index.",
+            "sources": [
+              {
+                "label": "Market Index",
+                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-30th-october",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "ASX announcements (FLT)",
+                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/FLT/announcements",
+                "claim_type": "official_statement"
+              }
+            ],
+            "next_catalyst": "Tuesday's RBA decision, which affects household travel budgets."
+          },
+          "FMG": {
+            "ticker": "FMG",
+            "name": "Fortescue",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 14.27,
+              "display_value": "14.27",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 14.59,
+              "change_pct": -2.19,
+              "display_change": "−2.2%",
+              "provider": "Yahoo Finance (FMG.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/FMG.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 2.2% to A$14.27 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (FMG)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.fmg",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "GMG": {
+            "ticker": "GMG",
+            "name": "Goodman Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 27.0,
+              "display_value": "27.00",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 27.3,
+              "change_pct": -1.1,
+              "display_change": "−1.1%",
+              "provider": "Yahoo Finance (GMG.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/GMG.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 1.1% to A$27.00 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (GMG)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.gmg",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "IEL": {
+            "ticker": "IEL",
+            "name": "IDP Education",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 2.21,
+              "display_value": "2.21",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 2.22,
+              "change_pct": -0.45,
+              "display_change": "−0.5%",
+              "provider": "Yahoo Finance (IEL.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/IEL.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Unchanged for the week at A$2.21 (−0.5% Friday). The company kept buying back shares, a substantial holder exited on 28 October and final director's interest notices were lodged for A Barker and A Barkla on 29 October; none of these filings was marked price-sensitive, and no report we found explains the week's moves.",
+            "sources": [
+              {
+                "label": "ASX announcements (IEL)",
+                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/IEL/announcements",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "IPH": {
+            "ticker": "IPH",
+            "name": "IPH",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 3.88,
+              "display_value": "3.88",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 3.82,
+              "change_pct": 1.57,
+              "display_change": "+1.6%",
+              "provider": "Yahoo Finance (IPH.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/IPH.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.6% to A$3.88 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (IPH)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.iph",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "MQG": {
+            "ticker": "MQG",
+            "name": "Macquarie Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 252.44,
+              "display_value": "252.44",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 252.38,
+              "change_pct": 0.02,
+              "display_change": "±0.0%",
+              "provider": "Yahoo Finance (MQG.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/MQG.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Little changed at A$252.44 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (MQG)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.mqg",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "NAB": {
+            "ticker": "NAB",
+            "name": "National Australia Bank",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 41.51,
+              "display_value": "41.51",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 41.36,
+              "change_pct": 0.36,
+              "display_change": "+0.4%",
+              "provider": "Yahoo Finance (NAB.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/NAB.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.4% to A$41.51 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (NAB)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.nab",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "NST": {
+            "ticker": "NST",
+            "name": "Northern Star Resources",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 25.27,
+              "display_value": "25.27",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 25.28,
+              "change_pct": -0.04,
+              "display_change": "±0.0%",
+              "provider": "Yahoo Finance (NST.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/NST.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Little changed at A$25.27 on Friday. ASX announcement: “Change of Director's Interest Notice”, 30 Oct 7:19pm AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (NST)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.nst",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "NXT": {
+            "ticker": "NXT",
+            "name": "Nextdc",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 5.87,
+              "display_value": "5.87",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 6.17,
+              "change_pct": -4.86,
+              "display_change": "−4.9%",
+              "provider": "Yahoo Finance (NXT.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/NXT.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 4.9% to A$5.87 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (NXT)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.nxt",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "PME": {
+            "ticker": "PME",
+            "name": "PRO Medicus",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 196.2,
+              "display_value": "196.20",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 197.09,
+              "change_pct": -0.45,
+              "display_change": "−0.5%",
+              "provider": "Yahoo Finance (PME.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/PME.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 0.5% to A$196.20 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (PME)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.pme",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "QBE": {
+            "ticker": "QBE",
+            "name": "QBE Insurance Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 26.18,
+              "display_value": "26.18",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 25.79,
+              "change_pct": 1.51,
+              "display_change": "+1.5%",
+              "provider": "Yahoo Finance (QBE.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/QBE.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.5% to A$26.18 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (QBE)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.qbe",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "REA": {
+            "ticker": "REA",
+            "name": "REA Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 159.48,
+              "display_value": "159.48",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 157.49,
+              "change_pct": 1.26,
+              "display_change": "+1.3%",
+              "provider": "Yahoo Finance (REA.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/REA.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.3% to A$159.48 on Friday. ASX announcement: “Notice of release of Q1 results to the market”, 30 Oct 8:36am AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (REA)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.rea",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "RIO": {
+            "ticker": "RIO",
+            "name": "RIO Tinto",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 147.31,
+              "display_value": "147.31",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 149.69,
+              "change_pct": -1.59,
+              "display_change": "−1.6%",
+              "provider": "Yahoo Finance (RIO.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/RIO.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 1.6% to A$147.31 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (RIO)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.rio",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "SPK": {
+            "ticker": "SPK",
+            "name": "Spark NEW Zealand",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 1.585,
+              "display_value": "1.59",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 1.575,
+              "change_pct": 0.63,
+              "display_change": "+0.6%",
+              "provider": "Yahoo Finance (SPK.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/SPK.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.6% to A$1.59 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (SPK)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.spk",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "STO": {
+            "ticker": "STO",
+            "name": "Santos",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 9.25,
+              "display_value": "9.25",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 9.13,
+              "change_pct": 1.31,
+              "display_change": "+1.3%",
+              "provider": "Yahoo Finance (STO.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/STO.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.3% to A$9.25 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (STO)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.sto",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "SUN": {
+            "ticker": "SUN",
+            "name": "Suncorp Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 19.65,
+              "display_value": "19.65",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 19.53,
+              "change_pct": 0.61,
+              "display_change": "+0.6%",
+              "provider": "Yahoo Finance (SUN.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/SUN.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.6% to A$19.65 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (SUN)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.sun",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "TCL": {
+            "ticker": "TCL",
+            "name": "Transurban Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 13.83,
+              "display_value": "13.83",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 13.71,
+              "change_pct": 0.88,
+              "display_change": "+0.9%",
+              "provider": "Yahoo Finance (TCL.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/TCL.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.9% to A$13.83 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (TCL)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.tcl",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "TLS": {
+            "ticker": "TLS",
+            "name": "Telstra Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 4.95,
+              "display_value": "4.95",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 4.91,
+              "change_pct": 0.81,
+              "display_change": "+0.8%",
+              "provider": "Yahoo Finance (TLS.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/TLS.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.8% to A$4.95 on Friday. ASX announcement: “Update - Notification of buy-back - TLS”, 30 Oct 4:49pm AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (TLS)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.tls",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "WBC": {
+            "ticker": "WBC",
+            "name": "Westpac Banking Corporation",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 36.82,
+              "display_value": "36.82",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 37.21,
+              "change_pct": -1.05,
+              "display_change": "−1.0%",
+              "provider": "Yahoo Finance (WBC.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/WBC.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 1.0% to A$36.82 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (WBC)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.wbc",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "WDS": {
+            "ticker": "WDS",
+            "name": "Woodside Energy Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 33.33,
+              "display_value": "33.33",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 32.74,
+              "change_pct": 1.8,
+              "display_change": "+1.8%",
+              "provider": "Yahoo Finance (WDS.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/WDS.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.8% to A$33.33 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (WDS)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.wds",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "WEB": {
+            "ticker": "WEB",
+            "name": "Webbeds Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 3.59,
+              "display_value": "3.59",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 3.62,
+              "change_pct": -0.83,
+              "display_change": "−0.8%",
+              "provider": "Yahoo Finance (WEB.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/WEB.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 0.8% to A$3.59 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (WEB)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.web",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "WES": {
+            "ticker": "WES",
+            "name": "Wesfarmers",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 76.69,
+              "display_value": "76.69",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 74.02,
+              "change_pct": 3.61,
+              "display_change": "+3.6%",
+              "provider": "Yahoo Finance (WES.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/WES.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 3.6% to A$76.69 on Friday. ASX announcement: “Final Director's Interest Notice - M Chaney”, 30 Oct 12:55pm AEDT.",
+            "sources": [
+              {
+                "label": "ASX announcements (WES)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.wes",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "WOW": {
+            "ticker": "WOW",
+            "name": "Woolworths Group",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 40.22,
+              "display_value": "40.22",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 39.48,
+              "change_pct": 1.87,
+              "display_change": "+1.9%",
+              "provider": "Yahoo Finance (WOW.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/WOW.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 1.9% to A$40.22 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (WOW)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.wow",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "WTC": {
+            "ticker": "WTC",
+            "name": "Wisetech Global",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 40.81,
+              "display_value": "40.81",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 40.59,
+              "change_pct": 0.54,
+              "display_change": "+0.5%",
+              "provider": "Yahoo Finance (WTC.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/WTC.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 0.5% to A$40.81 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (WTC)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.wtc",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "XRO": {
+            "ticker": "XRO",
+            "name": "Xero",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 62.1,
+              "display_value": "62.10",
+              "comparison_date": "2026-10-29",
+              "comparison_value": 63.62,
+              "change_pct": -2.39,
+              "display_change": "−2.4%",
+              "provider": "Yahoo Finance (XRO.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/XRO.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Fell 2.4% to A$62.10 on Friday. No new ASX announcement.",
+            "sources": [
+              {
+                "label": "ASX announcements (XRO)",
+                "url": "https://www.asx.com.au/markets/trade-our-cash-market/announcements.xro",
+                "claim_type": "official_statement"
+              }
+            ]
+          },
+          "ZIP": {
+            "ticker": "ZIP",
+            "name": "ZIP Co",
+            "price": {
+              "status": "ok",
+              "session_date": "2026-10-30",
+              "value": 1.79,
+              "display_value": "1.790",
+              "change_pct": -3.76,
+              "display_change": "−3.8%",
+              "provider": "Yahoo Finance (ZIP.AX)",
+              "provider_url": "https://finance.yahoo.com/quote/ZIP.AX/",
+              "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only."
+            },
+            "note": "Rose 22.6% for the week to A$1.79, recovering part of the previous Friday's 29% plunge on US fraud losses. Monday's 14% jump came as UBS called the selloff \"an overreaction\" and Macquarie kept its A$3.50 target, while Citi and Jefferies were more cautious. It slipped 3.8% on Friday. ASX filings show MUFG became a substantial holder on 28 October and ceased to be one on 30 October, and three directors lodged interest-change notices.",
+            "sources": [
+              {
+                "label": "IBTimes Australia",
+                "url": "https://www.ibtimes.com.au/zip-shares-rebound-after-us-fraud-losses-1877383",
+                "claim_type": "reporting"
+              },
+              {
+                "label": "ASX announcements (ZIP)",
+                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/ZIP/announcements",
+                "claim_type": "official_statement"
+              }
+            ],
+            "next_catalyst": "AGM on 19 November."
+          }
+        }
+      }
+    }
+  },
+  "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
+}
