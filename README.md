@@ -2,6 +2,8 @@
 
 Daily market and AI news data in JSON.
 
+See [How to use this data](docs/how-to-use-market-data.md) for the field dictionary, update schedule, a sample CI workflow, and the UI reference.
+
 ## Files
 
 | Path | Contents |
