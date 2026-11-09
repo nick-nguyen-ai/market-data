@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-10-21",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "generated_at_utc": "2026-11-09T10:46:03Z",
   "title": "Markets: Wednesday 21 October",
   "edition": "weekday",
   "morning": {
@@ -1405,56 +1405,6 @@
         ]
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "No new verified news. The shares fell 2.3% to A$2.12 on Tuesday, and Zip's latest ASX announcement is from 16 October.",
-        "next_catalyst": "1Q FY27 results update on Friday 23 October; AGM on 19 November.",
-        "sources": [
-          {
-            "label": "Zip key dates",
-            "url": "https://zip.co/investors/key-dates",
-            "claim_type": "official_statement"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "No new company announcement. The shares rose 1.2% to A$196.30 on Tuesday as health care rose 0.9%, and Citi kept its neutral rating and A$180 target.",
-        "sources": [
-          {
-            "label": "Market Index broker moves",
-            "url": "https://www.marketindex.com.au/news/evening-wrap-asx-200-recoups-big-early-loss-as-healthcare-and-supermarkets",
-            "claim_type": "forecast",
-            "date": "20 Oct 2026"
-          }
-        ]
-      },
-      {
-        "ticker": "FLT",
-        "note": "No new company news since the State Street substantial-holder notice covered on the Close tab. The shares rose 2.1% to A$11.07 on Tuesday; overnight, US airline shares rose as oil fell.",
-        "sources": [
-          {
-            "label": "AP via SMH",
-            "url": "https://www.smh.com.au/business/markets/asx-set-to-climb-as-wal-street-rises-a-over-us70c-20261021-p6179f.html",
-            "claim_type": "reporting",
-            "date": "21 Oct 2026"
-          }
-        ]
-      },
-      {
-        "ticker": "IEL",
-        "note": "No new verified news. The shares were unchanged at A$2.25 on Tuesday, after the company withdrew resolution 4(b) from its AGM notice on Tuesday morning.",
-        "next_catalyst": "AGM on Tuesday 27 October at 10am AEDT.",
-        "sources": [
-          {
-            "label": "IDP Notice of AGM 2026",
-            "url": "https://investors.idp.com/FormBuilder/_Resource/_module/v1AiEHYL20-_Rje11PzkYA/agm/Notice-of-Annual-General-Meeting_2026.pdf",
-            "claim_type": "official_statement"
-          }
-        ]
-      }
-    ],
     "calendar": [
       {
         "when": "Wed 21 Oct, 8:45am",
@@ -3095,63 +3045,6 @@
         }
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "Fell 2.8% to A$2.06. No new company announcement; the latest is from 16 October.",
-        "next_catalyst": "1Q FY27 update on Friday 23 October.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (ZIP.AX)",
-            "url": "https://finance.yahoo.com/quote/ZIP.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-21"
-          },
-          {
-            "label": "Zip key dates",
-            "url": "https://zip.co/investors/key-dates",
-            "claim_type": "official_statement"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "Slipped 0.1% to A$196.08 as health care was little changed. No new company announcement.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (CSL.AX)",
-            "url": "https://finance.yahoo.com/quote/CSL.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-21"
-          }
-        ]
-      },
-      {
-        "ticker": "FLT",
-        "note": "Rose 1.0% to A$11.18. No new verified news; the company lodged a notice of cessation of securities this morning.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (FLT.AX)",
-            "url": "https://finance.yahoo.com/quote/FLT.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-21"
-          }
-        ]
-      },
-      {
-        "ticker": "IEL",
-        "note": "Closed unchanged to A$2.25. No new verified news.",
-        "next_catalyst": "AGM on Tuesday 27 October.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (IEL.AX)",
-            "url": "https://finance.yahoo.com/quote/IEL.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-21"
-          }
-        ]
-      }
-    ],
     "calendar": [
       {
         "when": "Wed 21 Oct, 5:00pm",
@@ -3225,6 +3118,5 @@
       }
     ]
   },
-  "watchlist_data": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-10-17",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "generated_at_utc": "2026-11-09T10:46:03Z",
   "title": "Weekend global briefing: Saturday 17 October",
   "edition": "weekend",
   "morning": {
@@ -1051,37 +1051,6 @@
         ]
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "Zip plans to consolidate every five shares into one, with a vote at its AGM on 19 November. Its US CEO, Joe Heck, has resigned.",
-        "next_catalyst": "Quarterly update due Friday 23 October.",
-        "sources": [
-          {
-            "label": "Rask Media",
-            "url": "https://www.raskmedia.com.au/2026/10/16/zip-asxzip-share-price-rises-on-share-consolidation-us-boss-exit/",
-            "claim_type": "reporting"
-          },
-          {
-            "label": "CommSec",
-            "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/October/ECO_Insights_161026-Week-Ahead.pdf",
-            "claim_type": "reporting"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "No company news."
-      },
-      {
-        "ticker": "FLT",
-        "note": "No company news."
-      },
-      {
-        "ticker": "IEL",
-        "note": "No company news."
-      }
-    ],
     "calendar": [
       {
         "when": "Mon 19 Oct",
@@ -1166,6 +1135,5 @@
     ]
   },
   "close": null,
-  "watchlist_data": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }

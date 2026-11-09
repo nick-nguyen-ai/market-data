@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-10-16",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "generated_at_utc": "2026-11-09T10:46:03Z",
   "title": "ASX morning briefing: Friday 16 October",
   "edition": "weekday",
   "morning": {
@@ -918,39 +918,6 @@
         }
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "No company news.",
-        "next_catalyst": "How the new Zip Cash product performs in the US over the holiday season."
-      },
-      {
-        "ticker": "CSL",
-        "note": "No new company news this week."
-      },
-      {
-        "ticker": "FLT",
-        "note": "The share buy-back continues. Most brokers rate it a strong buy, with an average target of about $13.75. The company says travel demand will stay subdued while the Middle East conflict lasts.",
-        "sources": [
-          {
-            "label": "Motley Fool",
-            "url": "https://www.fool.com.au/2026/10/14/woodside-new-hope-flight-centre-shares-buy-hold-or-sell/",
-            "claim_type": "reporting"
-          }
-        ]
-      },
-      {
-        "ticker": "IEL",
-        "note": "State Street became a substantial shareholder with 5.5%. No new statement from Blackstone since the board rejected its $2.50 a share offer.",
-        "sources": [
-          {
-            "label": "AFR",
-            "url": "https://www.afr.com/company/asx/iel",
-            "claim_type": "reporting"
-          }
-        ]
-      }
-    ],
     "calendar": [
       {
         "when": "Late Oct",
@@ -977,6 +944,5 @@
     ]
   },
   "close": null,
-  "watchlist_data": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-10-20",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "generated_at_utc": "2026-11-09T10:46:03Z",
   "title": "Markets: Tuesday 20 October",
   "edition": "weekday",
   "morning": {
@@ -1440,46 +1440,6 @@
         ]
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "Zip announced a second US bank partner, Column N.A., for its unsecured US instalment loans, saying it diversifies funding and supports funding-cost efficiencies. The shares were unchanged on Monday.",
-        "next_catalyst": "Quarterly update due Friday 23 October; AGM vote on the five-for-one share consolidation on 19 November.",
-        "sources": [
-          {
-            "label": "Zip newsroom",
-            "url": "https://zip.co/investors/newsroom/zip-us-announces-expansion-of-banking-partnerships-to-support-long-term-growth",
-            "claim_type": "official_statement",
-            "date": "19 Oct 2026"
-          },
-          {
-            "label": "CommSec week ahead",
-            "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/October/ECO_Insights_161026-Week-Ahead.pdf",
-            "claim_type": "reporting"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "No new verified news. The shares rose 1.0% on Monday; we found no company announcement explaining the move."
-      },
-      {
-        "ticker": "FLT",
-        "note": "No new company news. The shares rose 3.6% on Monday; a change-in-substantial-holding notice was lodged that evening, and we have not reviewed who filed it.",
-        "sources": [
-          {
-            "label": "Market Index (FLT announcements)",
-            "url": "https://www.marketindex.com.au/asx/flt/announcements/change-in-substantial-holding-2A1704927",
-            "claim_type": "official_statement",
-            "date": "19 Oct 2026"
-          }
-        ]
-      },
-      {
-        "ticker": "IEL",
-        "note": "No new verified news. The shares were unchanged on Monday."
-      }
-    ],
     "calendar": [
       {
         "when": "Tue 20 Oct, about 8:30am",
@@ -3111,86 +3071,6 @@
         }
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "Fell 2.3% to A$2.12. No new verified news today.",
-        "next_catalyst": "Quarterly update due Friday 23 October.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (ZIP.AX)",
-            "url": "https://finance.yahoo.com/quote/ZIP.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-20"
-          },
-          {
-            "label": "Zip ASX announcements",
-            "url": "https://zip.co/investors/asx-announcements",
-            "claim_type": "official_statement"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "Rose 1.2% to A$196.30 as health care rose 0.9%. No company announcement. Morgan Stanley raised its price target to A$200 from A$182, citing two new drug partnerships.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (CSL.AX)",
-            "url": "https://finance.yahoo.com/quote/CSL.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-20"
-          },
-          {
-            "label": "Motley Fool (Morgan Stanley note)",
-            "url": "https://www.fool.com.au/2026/10/20/morgan-stanley-just-upgraded-their-csl-share-price-target/",
-            "claim_type": "forecast",
-            "date": "2026-10-20"
-          }
-        ]
-      },
-      {
-        "ticker": "FLT",
-        "note": "Rose 2.1% to A$11.07. No company news. New since this morning, the substantial-holder notice lodged on Monday came from State Street, whose voting power rose to 8.11% from 6.95% on 15 October.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (FLT.AX)",
-            "url": "https://finance.yahoo.com/quote/FLT.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-20"
-          },
-          {
-            "label": "Kalkine (State Street Form 604)",
-            "url": "https://kalkine.com.au/news/announcements/state-street-corporation-discloses-substantial-holder-change-in-flight-centre-travel-group-on-15-october-2026",
-            "claim_type": "reporting",
-            "date": "2026-10-19"
-          },
-          {
-            "label": "Market Index (FLT announcement)",
-            "url": "https://www.marketindex.com.au/asx/flt/announcements/change-in-substantial-holding-2A1704927",
-            "claim_type": "official_statement",
-            "date": "2026-10-19"
-          }
-        ]
-      },
-      {
-        "ticker": "IEL",
-        "note": "Closed unchanged at A$2.25. The company lodged a notice withdrawing resolution 4(b) from its AGM notice; no other new announcement.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (IEL.AX)",
-            "url": "https://finance.yahoo.com/quote/IEL.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-20"
-          },
-          {
-            "label": "IDP ASX announcements",
-            "url": "https://investors.idp.com/Investor-Centre/?page=ASX-Announcements",
-            "claim_type": "official_statement",
-            "date": "2026-10-20"
-          }
-        ]
-      }
-    ],
     "calendar": [
       {
         "when": "Tue 20 Oct, 6:00pm",
@@ -3279,6 +3159,5 @@
       }
     ]
   },
-  "watchlist_data": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }

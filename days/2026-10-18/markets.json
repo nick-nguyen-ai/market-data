@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-10-18",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "generated_at_utc": "2026-11-09T10:46:03Z",
   "title": "Weekend global briefing: Sunday 18 October",
   "edition": "weekend",
   "morning": {
@@ -1036,25 +1036,6 @@
         }
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "No new verified news this weekend.",
-        "next_catalyst": "Quarterly update due Friday."
-      },
-      {
-        "ticker": "CSL",
-        "note": "No new verified news this weekend."
-      },
-      {
-        "ticker": "FLT",
-        "note": "No new verified news this weekend."
-      },
-      {
-        "ticker": "IEL",
-        "note": "No new verified news this weekend."
-      }
-    ],
     "calendar": [
       {
         "when": "Sun 18 Oct",
@@ -1129,6 +1110,5 @@
     ]
   },
   "close": null,
-  "watchlist_data": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }

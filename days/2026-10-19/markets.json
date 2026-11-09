@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-10-19",
-  "generated_at_utc": "2026-10-25T05:56:13Z",
+  "generated_at_utc": "2026-11-09T10:46:03Z",
   "title": "Markets: Monday 19 October",
   "edition": "weekday",
   "morning": {
@@ -1219,32 +1219,6 @@
         }
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "No new verified news since Friday's announcements of a five-for-one share consolidation and the US chief executive's resignation.",
-        "next_catalyst": "Quarterly update due Friday 23 October.",
-        "sources": [
-          {
-            "label": "CommSec week ahead",
-            "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/October/ECO_Insights_161026-Week-Ahead.pdf",
-            "claim_type": "reporting"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "No new verified news. The shares rose 2.8% on Friday; we found no company announcement explaining the move."
-      },
-      {
-        "ticker": "FLT",
-        "note": "No new verified news."
-      },
-      {
-        "ticker": "IEL",
-        "note": "No new verified news."
-      }
-    ],
     "calendar": [
       {
         "when": "Mon 19 Oct, before 10:00am",
@@ -2733,74 +2707,6 @@
         }
       }
     },
-    "watchlist": [
-      {
-        "ticker": "ZIP",
-        "note": "Closed unchanged at A$2.17 after trading as low as A$2.09. No new verified news today; its last announcements were on 16 October (proposed share consolidation and a US leadership change).",
-        "sources": [
-          {
-            "label": "Yahoo Finance (ZIP.AX)",
-            "url": "https://finance.yahoo.com/quote/ZIP.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-19"
-          },
-          {
-            "label": "Stock Analysis (ZIP history)",
-            "url": "https://stockanalysis.com/quote/asx/ZIP/history/",
-            "claim_type": "measurement",
-            "date": "2026-10-19"
-          },
-          {
-            "label": "Zip ASX release (16 Oct)",
-            "url": "https://announcements.asx.com.au/asxpdf/20261016/pdf/075d4dswhvpmvz.pdf",
-            "claim_type": "official_statement",
-            "date": "2026-10-16"
-          }
-        ]
-      },
-      {
-        "ticker": "CSL",
-        "note": "Rose 1.0% to A$194.05. No new verified news.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (CSL.AX)",
-            "url": "https://finance.yahoo.com/quote/CSL.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-19"
-          }
-        ]
-      },
-      {
-        "ticker": "FLT",
-        "note": "Rose 3.6% to A$10.84. No company announcement or verified news explained the move.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (FLT.AX)",
-            "url": "https://finance.yahoo.com/quote/FLT.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-19"
-          }
-        ]
-      },
-      {
-        "ticker": "IEL",
-        "note": "Closed unchanged at A$2.25. No new verified news.",
-        "sources": [
-          {
-            "label": "Yahoo Finance (IEL.AX)",
-            "url": "https://finance.yahoo.com/quote/IEL.AX/",
-            "claim_type": "measurement",
-            "date": "2026-10-19"
-          },
-          {
-            "label": "Stock Analysis (IEL history)",
-            "url": "https://stockanalysis.com/quote/asx/IEL/history/",
-            "claim_type": "measurement",
-            "date": "2026-10-19"
-          }
-        ]
-      }
-    ],
     "calendar": [
       {
         "when": "Mon 19 Oct, 6:00pm",
@@ -2867,6 +2773,5 @@
       }
     ]
   },
-  "watchlist_data": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }
