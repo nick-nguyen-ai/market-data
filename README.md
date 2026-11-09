@@ -8,7 +8,7 @@ Daily market and AI news data in JSON.
 | --- | --- |
 | `latest/markets.json` | Newest markets day |
 | `latest/ai.json` | Newest AI day |
-| `days/YYYY-MM-DD/markets.json` | Markets for that date: summary, story cards, rates, stock notes, calendar, prices, and the afternoon close update when there is one |
+| `days/YYYY-MM-DD/markets.json` | Markets for that date: summary, story cards, rates, calendar, prices, and the afternoon close update when there is one |
 | `days/YYYY-MM-DD/ai.json` | AI news cards for that date |
 | `index.json` | Available dates and the files for each |
 
