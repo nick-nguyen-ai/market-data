@@ -2,7 +2,7 @@
   "schema_version": 1,
   "type": "markets",
   "date": "2026-11-11",
-  "generated_at_utc": "2026-11-11T05:29:52Z",
+  "generated_at_utc": "2026-11-11T05:35:09Z",
   "title": "Markets: Wednesday 11 November",
   "edition": "weekday",
   "morning": {
@@ -1289,12 +1289,12 @@
     "cutoff_local": "2026-11-11T16:30:00+11:00",
     "session_note": "Weekday ASX edition · after the close",
     "summary": [
-      "The ASX 200 was up 0.2% at 9,143.7 at about 4:04pm, before the closing auction, after opening 0.3% lower; tech rose 1.8% and utilities 1.0%, while financials fell 0.5% as CBA dropped 1.8% after its first-quarter update (close snapshot, Yahoo Finance; [ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
-      "IDP Education rose 16.3% after Blackstone made a revised A$3.00 cash proposal, which the board said it will consider; GQG fell 19.6% after October funds under management fell 11.8%, and Flight Centre 2.1% after its FY27 guidance ([IDP ASX announcement](https://investors.idp.com/DownloadFile.axd?file=%2FReport%2FComNews%2F20261111%2F03160427.pdf); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
+      "The ASX 200 closed 0.3% higher at 9,153.2 after opening 0.3% lower; tech rose 1.5% and utilities 1.3%, while financials fell 0.3% as CBA dropped 1.2% after its first-quarter update (close snapshot, Yahoo Finance; [ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
+      "IDP Education rose 16.3% after Blackstone made a revised A$3.00 cash proposal, which the board said it will consider; GQG fell 19.6% after October funds under management fell 11.8%, and Flight Centre 1.5% after its FY27 guidance ([IDP ASX announcement](https://investors.idp.com/DownloadFile.axd?file=%2FReport%2FComNews%2F20261111%2F03160427.pdf); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
       "New home loan commitments fell 15.5% in the September quarter, the largest fall since the series began in 2002, led by a 32.3% drop in investor lending; Lagarde speaks at 8:45pm Sydney time and US bond markets are shut for Veterans Day ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848); [Danske Bank](https://research.danskebank.com/link/MM061126/$file/MM_061126.pdf))."
     ],
     "prices": {
-      "retrieved_at_utc": "2026-11-11 05:22Z",
+      "retrieved_at_utc": "2026-11-11 05:31Z",
       "cutoff_utc": "2026-11-11T05:30:00Z",
       "quotes": [
         {
@@ -1315,18 +1315,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 9143.700195,
-          "display_value": "9,143.7",
+          "value": 9153.200195,
+          "display_value": "9,153.2",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:02:15Z",
-          "as_of_sydney": "11 Nov 2026, 16:02 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:11:15Z",
+          "as_of_sydney": "11 Nov 2026, 16:11 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 9129.0,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": 14.7,
-          "change_pct": 0.16,
-          "display_change": "+0.2%"
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 24.2,
+          "change_pct": 0.27,
+          "display_change": "+0.3%"
         },
         {
           "id": "sp500",
@@ -1355,7 +1355,7 @@
           "comparison_date": "2026-11-09",
           "comparison_value": 7549.939941,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_abs": -29.0,
           "change_pct": -0.38,
           "display_change": "−0.4%",
@@ -1386,15 +1386,15 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 0.688137,
+          "value": 0.688089,
           "display_value": "0.6881",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:21:29Z",
-          "as_of_sydney": "11 Nov 2026, 16:21 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:29:30Z",
+          "as_of_sydney": "11 Nov 2026, 16:29 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 0.692123,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_abs": -0.004,
           "change_pct": -0.58,
           "display_change": "−0.58%"
@@ -1426,7 +1426,7 @@
           "comparison_date": "2026-11-03",
           "comparison_value": 5.086,
           "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_bp": -0.4,
           "display_change": "±0 bp"
         },
@@ -1457,7 +1457,7 @@
           "comparison_date": "2026-11-02",
           "comparison_value": 107.39,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_abs": -0.36,
           "change_pct": -0.34,
           "display_change": "−0.3%"
@@ -1488,7 +1488,7 @@
           "comparison_date": "2026-11-09",
           "comparison_value": 19.92,
           "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_abs": -0.46,
           "change_pct": -2.31,
           "display_change": "−0.46 pts"
@@ -1520,7 +1520,7 @@
           "comparison_date": "2026-11-09",
           "comparison_value": 25253.140625,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_abs": -187.3,
           "change_pct": -0.74,
           "display_change": "−0.7%",
@@ -1559,7 +1559,7 @@
           "comparison_date": "2026-11-03",
           "comparison_value": 4.828,
           "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_bp": -0.2,
           "display_change": "±0 bp"
         },
@@ -1591,7 +1591,7 @@
           "change_bp": -0.2,
           "display_change": "±0 bp",
           "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "note": "Derived from lagged RBA F2 legs; not a live curve mark."
         },
         {
@@ -1620,7 +1620,7 @@
           "comparison_date": "2026-11-09",
           "comparison_value": 4.88,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_bp": 10.0,
           "display_change": "+10 bp"
         },
@@ -1650,7 +1650,7 @@
           "comparison_date": "2026-11-09",
           "comparison_value": 4.56,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_bp": 17.0,
           "display_change": "+17 bp"
         },
@@ -1673,18 +1673,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 92.150002,
-          "display_value": "92.15",
+          "value": 92.260002,
+          "display_value": "92.26",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:12:57Z",
-          "as_of_sydney": "11 Nov 2026, 16:12 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:20:54Z",
+          "as_of_sydney": "11 Nov 2026, 16:20 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 91.489998,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": 0.66,
-          "change_pct": 0.72,
-          "display_change": "+0.7%"
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 0.77,
+          "change_pct": 0.84,
+          "display_change": "+0.8%"
         },
         {
           "id": "gold_fut",
@@ -1705,18 +1705,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 4059.699951,
-          "display_value": "4,059.7",
+          "value": 4062.300049,
+          "display_value": "4,062.3",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:13:29Z",
-          "as_of_sydney": "11 Nov 2026, 16:13 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:22:06Z",
+          "as_of_sydney": "11 Nov 2026, 16:22 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 4030.199951,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": 29.5,
-          "change_pct": 0.73,
-          "display_change": "+0.7%"
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 32.1,
+          "change_pct": 0.8,
+          "display_change": "+0.8%"
         },
         {
           "id": "rba_cash",
@@ -1744,7 +1744,7 @@
           "comparison_date": "2026-11-03",
           "comparison_value": 4.6,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_bp": 25.0,
           "display_change": "last move +25 bp (4 Nov)"
         },
@@ -1795,7 +1795,7 @@
           "comparison_date": "2026-11-09",
           "comparison_value": 92.709999,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
           "change_abs": -0.17,
           "change_pct": -0.18,
           "display_change": "−0.2%"
@@ -1818,18 +1818,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 61236.660156,
-          "display_value": "61,236.7",
+          "value": 61204.820312,
+          "display_value": "61,204.8",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:08:35Z",
-          "as_of_sydney": "11 Nov 2026, 16:08 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:17:20Z",
+          "as_of_sydney": "11 Nov 2026, 16:17 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 60459.578125,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": 777.1,
-          "change_pct": 1.29,
-          "display_change": "+1.3%"
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 745.2,
+          "change_pct": 1.23,
+          "display_change": "+1.2%"
         },
         {
           "id": "hang_seng",
@@ -1850,18 +1850,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 24348.080078,
-          "display_value": "24,348.1",
+          "value": 24348.679688,
+          "display_value": "24,348.7",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:08:40Z",
-          "as_of_sydney": "11 Nov 2026, 16:08 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:17:26Z",
+          "as_of_sydney": "11 Nov 2026, 16:17 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 24557.039062,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": -209.0,
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": -208.4,
           "change_pct": -0.85,
-          "display_change": "−0.9%"
+          "display_change": "−0.8%"
         },
         {
           "id": "shanghai",
@@ -1881,18 +1881,18 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 3660.088135,
-          "display_value": "3,660.1",
+          "value": 3670.739014,
+          "display_value": "3,670.7",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:08:40Z",
-          "as_of_sydney": "11 Nov 2026, 16:08 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:17:30Z",
+          "as_of_sydney": "11 Nov 2026, 16:17 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 3663.7229,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": -3.6,
-          "change_pct": -0.1,
-          "display_change": "−0.1%"
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 7.0,
+          "change_pct": 0.19,
+          "display_change": "+0.2%"
         },
         {
           "id": "kospi",
@@ -1912,17 +1912,17 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 5355.529785,
-          "display_value": "5,355.5",
+          "value": 5352.450195,
+          "display_value": "5,352.5",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:03:40Z",
-          "as_of_sydney": "11 Nov 2026, 16:03 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:12:30Z",
+          "as_of_sydney": "11 Nov 2026, 16:12 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 5239.129883,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": 116.4,
-          "change_pct": 2.22,
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 113.3,
+          "change_pct": 2.16,
           "display_change": "+2.2%"
         },
         {
@@ -1944,17 +1944,17 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 6.325,
-          "display_value": "6.325",
+          "value": 6.3275,
+          "display_value": "6.327",
           "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:13:31Z",
-          "as_of_sydney": "11 Nov 2026, 16:13 AEDT",
+          "observation_timestamp_utc": "2026-11-11T05:22:20Z",
+          "as_of_sydney": "11 Nov 2026, 16:22 AEDT",
           "comparison_date": "2026-11-10",
           "comparison_value": 6.2195,
           "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-11 05:22Z",
-          "change_abs": 0.105,
-          "change_pct": 1.7,
+          "source_vintage": "retrieved 2026-11-11 05:31Z",
+          "change_abs": 0.108,
+          "change_pct": 1.74,
           "display_change": "+1.7%"
         }
       ]
@@ -1965,18 +1965,18 @@
         "cards": [
           {
             "id": "asx200-close-1111",
-            "headline": "ASX 200 recovers from early losses as tech offsets falls in banks",
-            "takeaway": "Tech, utilities and energy gained, while CBA and NAB weighed on financials.",
+            "headline": "ASX 200 recovers from early losses as tech and utilities offset falls in banks",
+            "takeaway": "Tech, utilities and materials gained, while CBA and NAB weighed on financials.",
             "tags": [
               "ASX",
               "sectors",
               "banks",
               "tech"
             ],
-            "key_figure": "9,143.7 · +0.2% (about 4:04pm, before the closing auction; Yahoo Finance)",
-            "new_since_last_issue": "This morning's briefing had futures pointing to a 0.5% fall. The index opened 0.3% lower at 9,103 but was up 14.7 points by about 4:04pm, adding to Tuesday's 1.1% gain.",
-            "what_happened": "The S&P/ASX 200 was at 9,143.7 at about 4:04pm, up 14.7 points or 0.2% on Tuesday's 9,129.0 close, in a read taken before the closing auction (close snapshot, Yahoo Finance). It was down 0.3% at 9,103 at 10:10am as miners fell after overnight falls in gold and copper ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). At the same read, info tech was up 1.8%, utilities 1.0%, energy 0.9% and materials 0.7%, while financials fell 0.5% and staples 0.1% (S&P/ASX 200 sector indices, Yahoo Finance). The Small Ordinaries rose 0.5% (Yahoo Finance).",
-            "why_it_matters": "CBA fell 1.8%, NAB 1.1% and Macquarie 1.2%, while ANZ rose 0.9% and Westpac 0.3% (Yahoo Finance). CBA reported first-quarter cash profit of about A$2.8 billion, up 8% on a year earlier and flat on the second-half quarterly average, with a A$300 million impairment expense and home loan arrears up 7 basis points ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). Market Index said Australian 3-year and 10-year yields had risen in three of the last four sessions, to 4.77% and 5.06% at 2pm ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
+            "key_figure": "9,153.2 · +0.3% (close, Yahoo Finance)",
+            "new_since_last_issue": "This morning's briefing had futures pointing to a 0.5% fall. The index opened 0.3% lower at 9,103 but closed up 24.2 points, adding to Tuesday's 1.1% gain.",
+            "what_happened": "The S&P/ASX 200 closed at 9,153.2, up 24.2 points or 0.3% on Tuesday's 9,129.0 (close snapshot, Yahoo Finance). It was down 0.3% at 9,103 at 10:10am as miners fell after overnight falls in gold and copper ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). At the close, info tech was up 1.5%, utilities 1.3%, materials 0.8% and energy 0.7%, while financials fell 0.3%, the only sector lower (S&P/ASX 200 sector indices, Yahoo Finance). The Small Ordinaries rose 0.5% (Yahoo Finance).",
+            "why_it_matters": "CBA fell 1.2%, NAB 1.5% and Macquarie 0.9%, while ANZ rose 1.4% and Westpac 0.1% (Yahoo Finance). CBA reported first-quarter cash profit of about A$2.8 billion, up 8% on a year earlier and flat on the second-half quarterly average, with a A$300 million impairment expense and home loan arrears up 7 basis points ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). Market Index said Australian 3-year and 10-year yields had risen in three of the last four sessions, to 4.77% and 5.06% at 2pm ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "competing_views": [
               {
                 "who": "Andrew Triggs, J.P. Morgan",
@@ -2005,31 +2005,31 @@
               "labels": [
                 "Info tech",
                 "Utilities",
-                "Energy",
                 "Materials",
-                "A-REITs",
-                "Industrials",
+                "Energy",
                 "Discretionary",
+                "Industrials",
+                "A-REITs",
                 "Health care",
                 "Telecoms",
                 "Staples",
                 "Financials"
               ],
               "values": [
-                1.77,
-                0.95,
-                0.87,
-                0.67,
-                0.36,
-                0.35,
-                0.34,
-                0.24,
-                0.09,
-                -0.06,
-                -0.53
+                1.52,
+                1.3,
+                0.77,
+                0.72,
+                0.53,
+                0.38,
+                0.3,
+                0.27,
+                0.21,
+                0.1,
+                -0.35
               ],
               "unit": "%",
-              "caption": "S&P/ASX 200 sector indices against Tuesday's closes, about 4:04pm Sydney time, before the closing auction.",
+              "caption": "S&P/ASX 200 sector indices against Tuesday's closes, after the closing auction (about 4:12pm Sydney time).",
               "source": "Yahoo Finance (S&P/ASX 200 sector indices)"
             },
             "sources": [
@@ -2061,7 +2061,7 @@
           },
           {
             "id": "asx-movers-1111",
-            "headline": "IDP jumps on a revised Blackstone proposal; GQG, PEXA and Domino's fall",
+            "headline": "IDP jumps on a revised Blackstone proposal; GQG and PEXA fall",
             "takeaway": "Takeover news, guidance changes and a funds update drove the largest moves.",
             "tags": [
               "IDP",
@@ -2069,8 +2069,8 @@
               "PEXA",
               "Life360"
             ],
-            "key_figure": "IDP Education A$2.57 · +16.3% (Yahoo Finance, about 3:59pm)",
-            "what_happened": "IDP Education rose 16.3% to A$2.57 after it received a revised non-binding proposal from Blackstone to buy it for A$3.00 cash a share by scheme of arrangement; the board, which rejected earlier proposals at A$2.30 and A$2.50, said it will consider the offer and has made no decision ([IDP ASX announcement](https://investors.idp.com/DownloadFile.axd?file=%2FReport%2FComNews%2F20261111%2F03160427.pdf); [Reuters via US News](https://money.usnews.com/investing/news/articles/2026-11-10/australias-idp-education-mulls-blackstones-revised-571-million-takeover-bid)). GQG Partners fell 19.6% to A$0.78 after reporting October funds under management down 11.8% to US$131.6 billion, with net outflows of US$6.7 billion. PEXA fell 3.1% after cutting its FY27 revenue guidance to A$355–380 million, and Domino's fell 4.2% after an AFR report on franchisee tax arrears. Life360 rose 9.5% and Monadelphous 7.1% (Yahoo Finance; [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
+            "key_figure": "IDP Education A$2.57 · +16.3% (Yahoo Finance closing read)",
+            "what_happened": "IDP Education rose 16.3% to A$2.57 after it received a revised non-binding proposal from Blackstone to buy it for A$3.00 cash a share by scheme of arrangement; the board, which rejected earlier proposals at A$2.30 and A$2.50, said it will consider the offer and has made no decision ([IDP ASX announcement](https://investors.idp.com/DownloadFile.axd?file=%2FReport%2FComNews%2F20261111%2F03160427.pdf); [Reuters via US News](https://money.usnews.com/investing/news/articles/2026-11-10/australias-idp-education-mulls-blackstones-revised-571-million-takeover-bid)). GQG Partners fell 19.6% to A$0.78 after reporting October funds under management down 11.8% to US$131.6 billion, with net outflows of US$6.7 billion. PEXA fell 3.4% after cutting its FY27 revenue guidance to A$355–380 million. Life360 rose 10.1% and Monadelphous 7.2% (Yahoo Finance; [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "why_it_matters": "The ABS said new home loan commitments fell 15.5% in value in the September quarter, the largest fall since the series began in 2002, with investor lending down 32.3% and owner-occupier lending down 5.3%. ABS head of finance statistics Mish Tan said investor activity \"is being influenced by factors beyond increasing borrowing costs, including the potential impacts of tax changes and expectations of lower house prices\" ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)). PEXA said October transfer volumes fell 26% ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "sources": [
               {
@@ -2120,8 +2120,8 @@
               "Japan",
               "China"
             ],
-            "key_figure": "Nikkei 61,236.7 · +1.3% (about 4:08pm Sydney time, still trading)",
-            "what_happened": "At about 4:08pm Sydney time the Nikkei was up 1.3% at 61,236.7, the Hang Seng down 0.9% at 24,348.1 and the Shanghai Composite down 0.1% at 3,660.1; the KOSPI was up 2.2% at 5,355.5 at about 4:03pm (close snapshot; all four markets were still trading). Asian stocks rose after CoreWeave reported third-quarter revenue of US$3.66 billion, above the US$3.55 billion analysts expected, and its shares rose more than 7% in extended trading ([ABC, with Reuters](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
+            "key_figure": "Nikkei 61,204.8 · +1.2% (about 4:17pm Sydney time, still trading)",
+            "what_happened": "At about 4:17pm Sydney time the Nikkei was up 1.2% at 61,204.8, the Hang Seng down 0.8% at 24,348.7 and the Shanghai Composite up 0.2% at 3,670.7; the KOSPI was up 2.2% at 5,352.5 at about 4:12pm (close snapshot; all four markets were still trading). Asian stocks rose after CoreWeave reported third-quarter revenue of US$3.66 billion, above the US$3.55 billion analysts expected, and its shares rose more than 7% in extended trading ([ABC, with Reuters](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "why_it_matters": "SoftBank fell as much as 11% in Tokyo after reporting a ¥1.12 trillion (US$7.1 billion) net loss for its fiscal second quarter, including a US$3.7 billion writedown linked to US data centre projects ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)). US Treasury Secretary Scott Bessent said the US and China plan to share practices on testing advanced AI models, ahead of Trump's meeting with Xi Jinping at APEC in Shenzhen next week ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "sources": [
               {
@@ -2159,8 +2159,8 @@
               "yields",
               "housing"
             ],
-            "key_figure": "AUD/USD 0.6881 · −0.58% (4:21pm Sydney time)",
-            "what_happened": "The Australian dollar was at US$0.6881 at 4:21pm, down 0.58% on Tuesday's 4pm Sydney level, after falling about 0.9% overnight to US68.63¢ as US yields rose (close snapshot; [ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). The Australian 10-year yield was 5.06% at about 2pm, up from 5.01% at 7am ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)); the latest official RBA yields in our snapshot are from 4 November.",
+            "key_figure": "AUD/USD 0.6881 · −0.58% (4:29pm Sydney time)",
+            "what_happened": "The Australian dollar was at US$0.6881 at 4:29pm, down 0.58% on Tuesday's 4pm Sydney level, after falling about 0.9% overnight to US68.63¢ as US yields rose (close snapshot; [ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). The Australian 10-year yield was 5.06% at about 2pm, up from 5.01% at 7am ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)); the latest official RBA yields in our snapshot are from 4 November.",
             "why_it_matters": "ANZ said its base case is that the RBA has finished raising the cash rate at 4.85%, but that a December or, less likely, February rise \"cannot be ruled out if evidence points to inflation expectations continuing to drift higher\" ([ABC](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). The Melbourne Institute inflation expectations survey is due on Thursday ([Westpac IQ](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261109.pdf)).",
             "competing_views": [
               {
@@ -2226,8 +2226,8 @@
               "copper",
               "Hormuz"
             ],
-            "key_figure": "Brent futures US$92.15 · +0.7% (about 4:12pm Sydney time)",
-            "what_happened": "At about 4:12pm Sydney time Brent futures were at US$92.15, up 0.7% on Tuesday's US$91.49 settlement, gold futures at US$4,059.7, up 0.7%, and copper futures at US$6.33 a pound, up 1.7% (close snapshot). Iron ore was US$92.54 a tonne at Tuesday's close (close snapshot). Singapore iron ore futures fell 0.9% to US$91.75 a tonne, a third daily fall ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
+            "key_figure": "Brent futures US$92.26 · +0.8% (about 4:20pm Sydney time)",
+            "what_happened": "At about 4:20pm Sydney time Brent futures were at US$92.26, up 0.8% on Tuesday's US$91.49 settlement, gold futures at US$4,062.3, up 0.8%, and copper futures at US$6.33 a pound, up 1.7% (close snapshot). Iron ore was US$92.54 a tonne at Tuesday's close (close snapshot). Singapore iron ore futures fell 0.9% to US$91.75 a tonne, a third daily fall ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "why_it_matters": "The Washington Institute for Near East Policy recorded 37 attacks on ships in the Strait of Hormuz and surrounding waters in October, the highest monthly total since the war began, and 10 so far in November ([ABC, with Reuters](https://www.abc.net.au/news/2026-11-11/asx-markets-business-live-news-nov-11/107370848)). Market Index said China Mineral Resources Group's iron ore negotiations with BHP, Rio Tinto and Fortescue have become a recurring price risk, with Fortescue still negotiating ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-wednesday-11th-november)).",
             "sources": [
               {
