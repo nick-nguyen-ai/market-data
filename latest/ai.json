@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "type": "ai",
-  "date": "2026-11-13",
-  "generated_at_utc": "2026-11-12T21:41:22Z",
-  "title": "Daily AI report · Friday 13 Nov 2026",
+  "date": "2026-11-14",
+  "generated_at_utc": "2026-11-13T21:48:39Z",
+  "title": "Daily AI report · Saturday 14 Nov 2026",
   "top_stories": [
     {
+      "section_id": "coding",
+      "card_id": "claude-code-code-mode",
+      "headline": "Claude Code adds experimental Code Mode and closes several permission-rule gaps"
+    },
+    {
+      "section_id": "evals",
+      "card_id": "openai-daybreak-red-team-defense-factory",
+      "headline": "OpenAI launches Daybreak Red Team and Defense Factory for agent pentesting and patching"
+    },
+    {
       "section_id": "models",
-      "card_id": "gemini-4-hydrogen",
-      "headline": "Gemini 4 Hydrogen: Google's fast Gemini 4 model at US$1.50 / US$7.50 per million tokens"
-    },
-    {
-      "section_id": "industry",
-      "card_id": "apra-ai-stress-test-2027",
-      "headline": "APRA's first AI-focused stress test in 2027 will model AI-driven disruption across banks and super"
-    },
-    {
-      "section_id": "industry",
-      "card_id": "nvidia-ceo-resigns",
-      "headline": "Jensen Huang resigns as NVIDIA CEO; CFO Colette Kress steps in as interim"
+      "card_id": "inkling-2-small-weights",
+      "headline": "Inkling 2 Small weights are out under Apache 2.0, with day-0 vLLM support"
     }
   ],
   "sections": [
@@ -27,110 +27,154 @@
       "name": "Coding Agents",
       "cards": [
         {
-          "id": "antigravity-orchestrator",
-          "headline": "Antigravity's Orchestrator hands one task back and forth between Gemini 4 Carbon and Hydrogen",
-          "takeaway": "Carbon plans and repairs, Hydrogen edits and runs tests, all in the same session.",
+          "id": "claude-code-code-mode",
+          "headline": "Claude Code 2.1.323 adds Code Mode: Claude writes JavaScript that makes several tool calls in one step",
+          "takeaway": "Experimental and off by default; the same release closes a long list of permission-rule gaps.",
           "tags": [
-            "Antigravity",
-            "Multi-model",
-            "Routing"
+            "Claude Code",
+            "Code Mode",
+            "Permissions"
           ],
           "sources": [
-            "Antigravity blog",
-            "Google blog"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "Google added Orchestrator to the model picker in Google Antigravity, its agentic coding IDE (12 Nov). Instead of a router that picks one model from the first prompt, Orchestrator switches mid-task: Carbon can explore and plan read-only, Hydrogen then writes edits and runs tests, and hands back to Carbon when it hits friction. Google says that on Terminal-Bench (a terminal-task benchmark) it reached near-Carbon success while using 24% less quota on average and finishing 19% faster. The Antigravity SDK lets you wire the two models into explicit roles yourself.",
-          "why_it_matters": "This is the plan-with-a-big-model, execute-with-a-fast-model pattern you would otherwise hand-build. The hand-back trigger (when the fast model hits friction) is the part worth copying and testing in your own agent evals.",
-          "caveats": "Orchestrator is rolling out to Google AI Ultra subscribers only; Hydrogen in Antigravity needs a paid Pro or Ultra plan. The 24% and 19% figures are Google's own, and its two posts cite Terminal-Bench 4.0 and 4.1 for the same result.",
-          "how_to_try": "On an Ultra plan, choose Orchestrator in the Antigravity model selector and run one routine bug fix twice, once on Carbon alone, comparing quota used and result.",
-          "links": [
-            {
-              "label": "Antigravity blog: Gemini 4 Hydrogen and Orchestrator",
-              "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
-            },
-            {
-              "label": "Google blog: Introducing Gemini 4 Hydrogen",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
-            }
-          ]
-        },
-        {
-          "id": "home-repo-pattern",
-          "headline": "Matt Pocock's Home Repo: one repo for your skills and AGENTS.md that points at all the others",
-          "takeaway": "Run your agent from one place and let it open or clone the repos it needs.",
-          "tags": [
-            "Context",
-            "Skills",
-            "Multi-repo"
-          ],
-          "sources": [
-            "AI Hero article",
-            "X (Matt Pocock)"
+            "GitHub releases",
+            "Claude Code docs"
           ],
           "verdict": "Worth trying",
-          "what_changed": "Matt Pocock published the Home Repo pattern (12 Nov): one git repo holds your shared skills, AGENTS.md (the instructions file agents load at start) and shared docs such as coding standards. Its AGENTS.md has one pointer line per other repo, giving its local path and where to clone it from. Sessions start in the Home Repo, each feature gets a worktree inside the relevant clone, and repo-specific instructions stay in their own repos. The article includes a setup prompt that inventories your repos and skills, sorts them into shared, duplicate, repo-specific or installed, and changes nothing until you approve the plan.",
-          "why_it_matters": "If you keep agent skills and steering files copied across several bank repos, this gives one versioned place to maintain them, and a reviewable file showing which repos an agent may reach.",
-          "caveats": "It's a convention, not a tool. The author says about 20 repos works fine; at around 400 he suggests one pointer file per business area instead. The setup prompt runs git and gh commands across your home directory, so read it before pasting it at work.",
-          "how_to_try": "Paste the article's setup prompt into a new session started in the folder holding your repos; it only reads until you approve its table of moves.",
+          "what_changed": "Claude Code 2.1.323 (13 Nov AEDT) adds Code Mode, an opt-in experiment in which Claude writes a piece of JavaScript that runs commands in parallel, feeds one result into the next call and returns only the output it needs; you still see the tool calls and diffs, not the code. The release also fixes several permission bypasses: Write and Edit could write to a path covered by a Read deny rule, some Bash allow rules with wildcards or combined sudo flags skipped the prompt, and --permission-mode auto now starts in Manual mode when auto mode is unavailable. 2.1.325 (14 Nov AEDT) fixes a security issue in zstd response decoding and stops token counting on Amazon Bedrock from sending the conversation to Bedrock when the allowedProviders managed setting doesn't allow it.",
+          "why_it_matters": "Code Mode changes what your agent evals see: fewer, larger tool steps instead of one call per turn. The permission and allowedProviders fixes are the kind of gaps a bank's managed settings rely on being closed.",
+          "caveats": "Anthropic's docs say Code Mode is experimental and may change or be removed in any release; organisations can block it. The release notes don't rate the severity of the zstd issue.",
+          "how_to_try": "Update to 2.1.325, turn Code Mode on for a personal repo using the docs page, and compare the transcript for one multi-file change with and without it.",
           "links": [
             {
-              "label": "AI Hero: The Home Repo pattern",
-              "url": "https://www.aihero.dev/the-home-repo-pattern"
+              "label": "Claude Code v2.1.323 release notes",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323"
             },
             {
-              "label": "Matt Pocock post on X",
-              "url": "https://x.com/mattpocockuk/status/2120838662254420341"
-            }
-          ]
-        },
-        {
-          "id": "kimi-code-2-6",
-          "headline": "Kimi Code 2.6.0 folds tool calls into summary lines and reshapes its server API",
-          "takeaway": "A tidier transcript, but scripts that use the old transcript endpoints will break.",
-          "tags": [
-            "Kimi Code",
-            "Breaking change"
-          ],
-          "sources": [
-            "GitHub release"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "Moonshot's Kimi Code 2.6.0 (12 Nov) folds consecutive tool calls and thinking into summary lines in fullscreen mode, with the old layout still available through settings in tui.toml. The activity bar now shows how long a turn has run. On the server API, agent conversations now stream over WebSocket as turn and item frames, and the transcript endpoints (GET /sessions/{id}/transcript and its /ops, /plan and /user-messages variants) are gone. The agent profile, model and thinking level are now set when a session is created, not per prompt.",
-          "why_it_matters": "Worth knowing if you compare coding agents or drive one through its server API: this release removes endpoints rather than deprecating them.",
-          "caveats": "Breaking changes for anyone using the server API. Outside SSH and mosh, copying now goes only to the system clipboard; set KIMI_CODE_CLIPBOARD_OSC52=1 to keep the old behaviour.",
-          "how_to_try": "If you script the server API, search your code for the /transcript endpoints and the per-prompt profile field before upgrading.",
-          "links": [
+              "label": "Claude Code v2.1.325 release notes",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325"
+            },
             {
-              "label": "Kimi Code 2.6.0 release notes",
-              "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai/kimi-code%402.6.0"
+              "label": "Claude Code docs: Code Mode",
+              "url": "https://code.claude.com/docs/en/code-mode"
             }
           ]
         },
         {
-          "id": "copilot-cli-1-0-110-pre-2-3",
-          "headline": "Copilot CLI 1.0.110 prereleases keep /compact inside your credit limit and fix a misleading permissions hint",
-          "takeaway": "Two more prereleases follow yesterday's 1.0.110-0, mostly fixes.",
+          "id": "codex-0-168-0-169",
+          "headline": "Codex 0.168 and 0.169: custom model providers from the terminal, side-chat tabs, and stricter trust for codex exec",
+          "takeaway": "Two releases in one day; the trust change matters most for scripts.",
           "tags": [
-            "Copilot CLI",
-            "Permissions"
+            "Codex",
+            "Model providers",
+            "Trust"
           ],
           "sources": [
             "GitHub releases"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "GitHub Copilot CLI v1.0.110-2 and v1.0.110-3 (12 Nov AEDT, prereleases) make /compact respect the session AI credit limit so it stops adding charges once the limit is reached. The workflow run tool no longer tells the model that a user reviews every run's limits when all tool permissions are pre-approved. The / command picker no longer matches a skill on words its description hides inside a terminal escape sequence, and /mcp add or edit no longer overwrites existing MCP (Model Context Protocol) configuration when the config file is invalid.",
-          "why_it_matters": "The permissions-hint fix is a reminder to check what your agent tells the model about human review; if the prompt claims oversight that isn't happening, the model may take more risks.",
-          "caveats": "Prereleases; wait for the stable 1.0.110 at work.",
-          "how_to_try": "On a personal machine, install the prerelease and run /compact near your session credit limit to see it stop.",
+          "verdict": "Worth trying",
+          "what_changed": "OpenAI's Codex CLI 0.168.0 (13 Nov AEDT) adds a Model providers screen for choosing the default provider for new chats, an opt-in side conversation pane (features.tui_workspace) and audio recordings for audio-capable models. 0.169.0 (same day) lets you add or edit custom model providers from the terminal, including device-code sign-in for supported gateways over SSH, adds multiple side-chat tabs and a Collapse turn details option. It also changes codex exec so project configuration and MCP servers stay disabled in untrusted directories even with --sandbox workspace-write; pass --trust to codex exec or codex review to save project trust explicitly.",
+          "why_it_matters": "Gateway-backed custom providers are how Codex would run behind a corporate model gateway, and the exec trust change means CI jobs that relied on project MCP config may now need --trust.",
+          "caveats": "Side chats and the terminal workspace are opt-in features. Check any automation that runs codex exec in fresh checkouts before upgrading.",
+          "how_to_try": "Upgrade, run one existing codex exec script in a fresh clone, and see whether its MCP servers still load without --trust.",
           "links": [
             {
-              "label": "Copilot CLI v1.0.110-2 release",
-              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.110-2"
+              "label": "Codex rust-v0.169.0 release notes",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0"
             },
             {
-              "label": "Copilot CLI v1.0.110-3 release",
-              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.110-3"
+              "label": "Codex rust-v0.168.0 release notes",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0"
+            }
+          ]
+        },
+        {
+          "id": "opencode-2-3",
+          "headline": "OpenCode 2.3.0 runs subagents in the background by default and collapses tool runs into one row",
+          "takeaway": "Keep working in the parent session while several subagents run and report back.",
+          "tags": [
+            "OpenCode",
+            "Subagents",
+            "mTLS"
+          ],
+          "sources": [
+            "GitHub release"
+          ],
+          "verdict": "Worth trying",
+          "what_changed": "OpenCode v2.3.0 (13 Nov AEDT) makes subagents return their session ID immediately, keep running in the background and report to the parent when idle; a subagent whose own background work is still running now says so, so the parent waits for the final report. Transcript verbosity now defaults to low, summarising each run of tool calls and thoughts into one collapsible row (an existing session.verbosity setting is kept). Providers can now present a client certificate for gateways that require mutual TLS (settings.tls with cert, key and optional passphrase), and local model discovery for Ollama, LM Studio and vLLM waits up to 15 seconds per request instead of 1.",
+          "why_it_matters": "Mutual-TLS support is the detail that lets an open-source agent talk to a locked-down internal model gateway, and the longer discovery timeout helps a tunnelled home GPU box show its models.",
+          "caveats": "Background-by-default changes how subagent results arrive, so prompts or plugins that expected a blocking result may need adjusting. MCP events and shell timeout backgrounding are behind experimental flags.",
+          "how_to_try": "Upgrade, ask for two independent investigations in one prompt, and keep working while both subagents report back.",
+          "links": [
+            {
+              "label": "OpenCode v2.3.0 release notes",
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0"
+            }
+          ]
+        },
+        {
+          "id": "copilot-ghes-deprecations-cli-1-0-111",
+          "headline": "Copilot: GHES support in the Copilot app is GA, six models retire on 14 Dec, and CLI 1.0.111 adds regex permission rules",
+          "takeaway": "Three enterprise-relevant changes from GitHub on 13 Nov.",
+          "tags": [
+            "Copilot",
+            "GHES",
+            "Model deprecation"
+          ],
+          "sources": [
+            "GitHub changelog",
+            "GitHub release",
+            "X (Pierce Boggan)"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "GitHub made GitHub Enterprise Server (GHES) support in the GitHub Copilot app generally available (app 1.2.0 and later), for remote repositories, issues and pull requests; cloud sessions aren't available for GHES. It will deprecate Claude Fable 5, Claude Haiku 4.5, Gemini 3.8 Flash, Gemini 4 Argon, Grok 4.6 and Kimi K3 across all Copilot experiences on 14 Dec 2026, with suggested replacements auto-enabled under default model policy (Kimi K3's replacement is to be announced). Copilot CLI v1.0.111 adds regular-expression support to enterprise-managed Shell, Bash and PowerShell permission rules, and stops an experimental dynamic workflow's own agent from starting copies of itself when all tools are allowed.",
+          "why_it_matters": "If your team pins any of those six models in Copilot policies or evals, 14 Dec is the cut-off. Regex permission rules give admins finer control than prefix matching.",
+          "caveats": "Haiku 4.5 stays available to individual subscribers on annual plans. GHES users must first sign in with a GitHub.com or GHE.com account.",
+          "how_to_try": "Search your Copilot model policies and eval configs for the six model names, and plan the switch before 14 Dec.",
+          "links": [
+            {
+              "label": "GitHub changelog: GHES support in the Copilot app",
+              "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app"
+            },
+            {
+              "label": "GitHub changelog: model deprecations in December",
+              "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+            },
+            {
+              "label": "Copilot CLI v1.0.111 release notes",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.111"
+            },
+            {
+              "label": "Pierce Boggan post on X",
+              "url": "https://x.com/pierceboggan/status/2121323365038506091"
+            }
+          ]
+        },
+        {
+          "id": "kiro-mobile-android",
+          "headline": "Kiro Mobile arrives on Android for following and steering cloud sessions",
+          "takeaway": "Start on a laptop, review diffs on your phone.",
+          "tags": [
+            "Kiro",
+            "Mobile",
+            "Cloud sessions"
+          ],
+          "sources": [
+            "Kiro changelog",
+            "X (Kiro)"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "AWS's Kiro released Kiro Mobile on Google Play (12 Nov). You can start a cloud session or pick up one begun in Kiro Web, the IDE or the CLI, choose repositories and a model, follow replies and tool activity live, answer the agent's questions, or stop a run. Each edited file shows as a phone-sized diff card with the session's pull request status; review and merge still happen in your Git provider.",
+          "why_it_matters": "Steering and reviewing cloud agent sessions from a phone is becoming a standard feature across coding agents, which changes where and when agent work gets reviewed.",
+          "caveats": "Requires a paid Kiro plan (Pro, Pro+, Pro Max or Power). In Autonomous mode the model is fixed to Auto.",
+          "how_to_try": "On a paid plan, start a cloud session on a personal repo from the laptop and finish the review from the Android app.",
+          "links": [
+            {
+              "label": "Kiro changelog: Kiro Mobile for Android",
+              "url": "https://kiro.dev/changelog/"
+            },
+            {
+              "label": "Kiro post on X",
+              "url": "https://x.com/kirodotdev/status/2120983934812983328"
             }
           ]
         }
@@ -141,77 +185,87 @@
       "name": "AI Evals, Safety & Governance",
       "cards": [
         {
-          "id": "parsebench-2",
-          "headline": "ParseBench-2 scores document parsers by how much each error matters, not just how many",
-          "takeaway": "A swapped number now costs 10 points; Markdown instead of HTML costs nothing.",
+          "id": "openai-daybreak-red-team-defense-factory",
+          "headline": "OpenAI launches Daybreak Red Team and Defense Factory: agents that pentest web apps and draft patches",
+          "takeaway": "Red Team is in early access; Defense Factory is a ChatGPT preview plugin for Daybreak workspaces.",
           "tags": [
-            "Benchmarks",
-            "Document parsing",
-            "Evals"
+            "Security",
+            "Agents",
+            "OpenAI"
           ],
           "sources": [
-            "LlamaIndex blog",
-            "Hugging Face",
-            "GitHub",
-            "X (Jerry Liu)"
+            "OpenAI product pages",
+            "SecurityWeek",
+            "The Register",
+            "X (Tibo)"
           ],
           "verdict": "Worth reading",
-          "what_changed": "LlamaIndex released ParseBench-2 (12 Nov) with 4.3k cases, up from 2.1k. It defines 330+ error types, each labelled critical, major, minor or harmless, and calibrates its deterministic metrics against those labels. It adds forms as a sixth dimension and checks every value across 1,025 charts (36,958 values). In LlamaIndex's example table, a swapped number cost 0.13 points under ParseBench-1 but now costs 10, while returning a correct table in Markdown rather than HTML went from a zero score to no penalty. Across 41 configurations, LlamaParse Agentic Plus leads at 89.8, and the top direct vision model, Claude Opus 5.5, scores 85.7.",
-          "why_it_matters": "Severity-weighted scoring is the approach you want for evaluating document extraction in banking, where one wrong figure matters far more than formatting. The severity policy is customisable, so you can apply your own definitions of critical.",
-          "caveats": "LlamaIndex built and ran the benchmark, and its own product tops the leaderboard. Severity labels reflect LlamaIndex's judgement unless you change them.",
+          "what_changed": "At its Cyber at the Frontier event (12 Nov US time), OpenAI announced two Daybreak products. Daybreak Red Team uses a team of agents with source code and app context to investigate attack paths in web applications, validate findings from scanners, bug bounties and disclosure reports, and check whether a patch stops the exploit; scope is enforced with isolated environments and Guardian review. Daybreak Defense Factory has agents trace vulnerabilities through code and prepare patches that engineers review and test before merge; per SecurityWeek it imports findings from Wiz, Snyk and Endor Labs, can scan connected GitHub repos and new commits, and creates draft pull requests rather than deploying fixes.",
+          "why_it_matters": "This is OpenAI productising the agentic find-validate-fix loop. For a bank, the scope controls and the human-review gate are the parts to test before any pilot.",
+          "caveats": "Red Team is early access by request; Defense Factory is a preview for workspaces with Daybreak access. The Register reports the agents currently run on GPT-6 Cyber. Capability claims are OpenAI's own.",
           "links": [
             {
-              "label": "LlamaIndex blog: Introducing ParseBench-2",
-              "url": "https://www.llamaindex.ai/blog/introducing-parsebench-v2"
+              "label": "OpenAI: Daybreak Red Team",
+              "url": "https://openai.com/daybreak/red-team/"
             },
             {
-              "label": "ParseBench-2 dataset on Hugging Face",
-              "url": "https://huggingface.co/datasets/llamaindex/ParseBench-2"
+              "label": "OpenAI: Daybreak Defense Factory",
+              "url": "https://openai.com/daybreak/defense-factory/"
             },
             {
-              "label": "ParseBench on GitHub",
-              "url": "https://github.com/run-llama/ParseBench"
+              "label": "SecurityWeek coverage",
+              "url": "https://www.securityweek.com/openai-unveils-daybreak-red-team-defense-factory-security-tools/"
             },
             {
-              "label": "Jerry Liu post on X",
-              "url": "https://x.com/jerryjliu0/status/2120921239619612921"
+              "label": "The Register coverage",
+              "url": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500"
+            },
+            {
+              "label": "Tibo post on X",
+              "url": "https://x.com/thsottiaux/status/2121036562058400200"
             }
           ]
         },
         {
-          "id": "ai-sdk-7-0-171-security",
-          "headline": "AI SDK 7.0.171 stops malformed messages exhausting memory and keeps Azure and Vertex keys away from file hosts",
-          "takeaway": "Two security-relevant fixes for apps that accept user messages or download files.",
+          "id": "deepnote-agent-initiative-benchmark",
+          "headline": "Deepnote's Agent Initiative Benchmark tests when an agent should speak up, and when it should stay silent",
+          "takeaway": "12 models, 50 workplace situations in a synthetic company; restraint was the weak spot.",
           "tags": [
-            "Vercel AI SDK",
-            "Security",
-            "DoS"
+            "Benchmarks",
+            "Proactive agents",
+            "LLM-as-judge"
           ],
           "sources": [
-            "GitHub release"
+            "Deepnote research",
+            "GitHub",
+            "Hugging Face"
           ],
-          "verdict": "Worth trying",
-          "what_changed": "Vercel's AI SDK ai@7.0.171 (13 Nov AEDT) fixes validateUIMessages, safeValidateUIMessages and the agent UI stream helpers, where a small request with many malformed parts could exhaust memory and CPU; validation now stops at the first invalid message or part. It also keeps Azure image and Vertex tool-result downloads separate from the provider's authentication wrappers so file hosts never receive Azure bearer tokens or Vertex Express Mode API keys. A new fetch option on createDownload lets core downloads use guarded-fetch for opt-in DNS validation, and the docs now say the default URL checks don't resolve DNS. ai@6.0.331 gets the validation fix too.",
-          "why_it_matters": "Both are the kind of issue an app security review would flag: a cheap denial-of-service (overloading the server) through chat input, and credentials sent to a third-party host. If a team ships on the AI SDK, this is a patch to take.",
-          "caveats": "The release notes don't rate severity or say how long the issues existed. DNS validation is opt-in, so untrusted URLs still need the guarded transport or network egress controls.",
+          "verdict": "Worth reading",
+          "what_changed": "Deepnote open-sourced the Agent Initiative Benchmark: an agent starts from Slack conversations at PageMantle, a synthetic software company with linked data across 11 simulated services (Slack, Linear, Notion, HubSpot, Stripe, BigQuery, Snowflake and others), and must decide whether to help, what to say and to whom. Two LLM evaluators score each run from 0 to 10. In Deepnote's results, GPT-6 Astra scored 8.97, GPT-6.1 Sol 8.65 and Claude Fable 5.2 8.17; cost per task ranged from $0.007 to $3.02, and the models that made the most tool calls (Gemini 4 Argon and Grok 4.7) finished last. Deepnote reports models struggled more when their help wasn't needed.",
+          "why_it_matters": "Knowing when not to act is exactly what a bank wants to measure for always-on agents, and the code, simulated APIs and dataset are open, so you can run your own agent against it.",
+          "caveats": "Deepnote built and ran the benchmark and judges. It is a 50-task panel at one effort level, scored by LLM judges, and agents can only reply through Slack.",
           "links": [
             {
-              "label": "AI SDK ai@7.0.171 release notes",
-              "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.171"
+              "label": "Deepnote: Agent Initiative Benchmark",
+              "url": "https://deepnote.com/research/benchmark"
             },
             {
-              "label": "AI SDK ai@6.0.331 release notes",
-              "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.331"
+              "label": "Benchmark code on GitHub",
+              "url": "https://github.com/deepnote/agent-initiative-benchmark"
+            },
+            {
+              "label": "PageMantle dataset on Hugging Face",
+              "url": "https://huggingface.co/datasets/deepnote/pagemantle-company-dataset"
             }
           ]
         },
         {
-          "id": "langfuse-4-79",
-          "headline": "Langfuse 4.79 logs reads made through its MCP tools and can schedule transcript evaluations",
-          "takeaway": "Audit logs, scheduled evals and more gateway providers in one release.",
+          "id": "langfuse-4-80",
+          "headline": "Langfuse 4.80 restricts gateway keys to model patterns and binds sessions to the user they were issued for",
+          "takeaway": "Plus Azure and Google AI Studio gateway providers, and Gemini decision models as evaluators.",
           "tags": [
             "Langfuse",
-            "Audit logs",
+            "AI gateway",
             "Evals"
           ],
           "sources": [
@@ -219,17 +273,17 @@
             "X (Langfuse)"
           ],
           "verdict": "Worth trying",
-          "what_changed": "Langfuse v4.79.0 (12 Nov) records read-access events for its MCP tools in audit logs, and stages audit events on self-hosted enterprise installs. Trace transcript evaluations can now run on a schedule, new MCP tools manage the default evaluation model, and new projects get default score configs. Its AI Gateway makes OpenRouter, xAI and Vercel AI Gateway generally available, routes OpenAI Decisions as its own format, and stops trusting compromised emSign certificate paths.",
-          "why_it_matters": "Logging what an agent read, not just what it wrote, is the evidence an auditor asks for when agents query trace data through MCP.",
-          "caveats": "Some audit features are for self-hosted enterprise installs. The release notes don't say which plans get read-access logging.",
+          "what_changed": "Langfuse v4.80.0 (13 Nov AEDT) lets you restrict AI Gateway keys to model patterns and edit existing keys, adds Microsoft Azure and Google AI Studio as gateway providers, and fixes auth so sessions are bound to the user ID they were issued for. Prompt labels can now be removed through the API and MCP, the tracing table can filter by topic, and the decision-model evaluation client fails fast on rate limits. Langfuse also posted that Gemini decision models can now be used to evaluate agent runs, for example to spot mismatches between retrieved context and answers or wrong tool-call inputs.",
+          "why_it_matters": "Pattern-restricted gateway keys are a simple way to stop a team's key being used for unapproved models, a control risk teams ask for.",
+          "caveats": "The release notes don't say whether the session-binding fix addressed an exploitable issue. Some features may differ between Langfuse Cloud and self-hosted plans.",
           "links": [
             {
-              "label": "Langfuse v4.79.0 release notes",
-              "url": "https://github.com/langfuse/langfuse/releases/tag/v4.79.0"
+              "label": "Langfuse v4.80.0 release notes",
+              "url": "https://github.com/langfuse/langfuse/releases/tag/v4.80.0"
             },
             {
               "label": "Langfuse post on X",
-              "url": "https://x.com/langfuse/status/2120900272968884428"
+              "url": "https://x.com/langfuse/status/2121250295367750092"
             }
           ]
         }
@@ -240,107 +294,75 @@
       "name": "Agent Engineering & Frameworks",
       "cards": [
         {
-          "id": "pydantic-ai-2-68",
-          "headline": "Pydantic AI 2.68 asks for approvals inside the run and falls back to another model when output is cut off",
-          "takeaway": "Plus durable prompt-injection checks on Temporal and a Gemini Decisions backend.",
+          "id": "mastra-1-83",
+          "headline": "Mastra 1.83 gives every agent resumable streams and turns on a built-in MCP server at /api/mcp",
+          "takeaway": "Clients can reconnect to a running agent instead of killing it.",
           "tags": [
-            "Pydantic AI",
-            "Human-in-the-loop",
-            "Durability"
+            "Mastra",
+            "MCP",
+            "Streaming"
           ],
           "sources": [
             "GitHub release"
           ],
           "verdict": "Worth trying",
-          "what_changed": "Pydantic AI v2.68.0 (12 Nov AEDT) adds RequestInput so a run can ask for approvals and answers without ending, and marks deferred calls with kind and answered_by. A new OutputTokenLimitExceeded error makes ModelFallback move to the next model when a response is cut off at max_tokens. PromptInjectionDefender's semantic classification now runs as durable operations so it works on Temporal, and SubAgents delegations can run as Temporal and DBOS child workflows. It also adds a GoogleDecisionsModel backend for the Gemini Decisions API and a RefineOutput harness capability.",
-          "why_it_matters": "Recording who answered each approval (answered_by) is useful audit evidence for human-in-the-loop agents, and fallback on truncated output closes a quiet failure mode in long structured responses.",
-          "caveats": "Several compatibility notes: harness event fields and argument names were renamed (old names stay as deprecated aliases), and text that looks like an application frame in user or tool content is now noted rather than escaped.",
+          "what_changed": "@mastra/core 1.83.0 (14 Nov AEDT) lets every Agent registered on Mastra publish a resumable run stream with a replay cache, so a client can reconnect, another reader can follow with agent.observe(runId), and any reader can stop it. @mastra/server now ships a built-in MCP endpoint at /api/mcp, enabled by default when server.auth is configured, with OAuth discovery and token-audience checks via server.mcp.oauth. Experimental workflow storage version 2 writes only per-step changes on Postgres and libSQL, and schedules gain one-off (runAt) and bounded (endAt) runs.",
+          "why_it_matters": "Resumable streams fix a common production failure, a dropped phone connection killing a long agent run, and audience checks matter if you expose agents over MCP.",
+          "caveats": "Breaking change: Agent's durable option now controls resumable streams only; checkpoint-backed durable execution moves to createDurableAgent. Check that the default-on MCP endpoint is what you want before upgrading an authenticated server.",
           "links": [
             {
-              "label": "Pydantic AI v2.68.0 release notes",
-              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.68.0"
+              "label": "Mastra @mastra/core 1.83.0 release notes",
+              "url": "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.83.0"
             }
           ]
         },
         {
-          "id": "logfire-agent-sandboxes",
-          "headline": "Pydantic launches Agent Sandboxes in Logfire: agent code runs remotely in Monty, traced",
-          "takeaway": "Your agent's Python runs on Logfire's servers and can only reach the functions you pass in.",
+          "id": "agent-framework-python-1-26",
+          "headline": "Microsoft Agent Framework 1.26 (Python) caps sandboxed code at 30 seconds by default",
+          "takeaway": "Plus an experimental hook to label context messages and a task-scoped authority sample.",
           "tags": [
-            "Sandboxes",
-            "Logfire",
-            "Monty"
-          ],
-          "sources": [
-            "Pydantic docs",
-            "Logfire release notes",
-            "X (Samuel Colvin)"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "Samuel Colvin announced Agent Sandboxes in Pydantic Logfire on 12 Nov. Per the docs, code your agent writes runs in isolated, remote Pydantic Monty sandboxes (Monty is Pydantic's minimal Python interpreter) hosted by Logfire, never in your process, and can reach the outside world only through host functions you provide. Variables persist across calls in a session. It needs a project API key with a dedicated execute permission, and the key selects the data region. Logfire Python SDK 5.6.0 (11 Nov) changed logfire.agent_sandboxes() to return a plain Monty client.",
-          "why_it_matters": "A hosted sandbox with an explicit list of reachable functions is a clean pattern for running model-written code, but at a bank the data-residency question comes first.",
-          "caveats": "Code, inputs, host-function arguments and results, and printed output are sent to Logfire's servers, and session state is kept for up to 7 days unless the session is ephemeral. Monty runs a subset of Python, not full CPython.",
-          "links": [
-            {
-              "label": "Logfire docs: Agent Sandboxes",
-              "url": "https://pydantic.dev/docs/logfire/instrument/typescript/agent-sandboxes/"
-            },
-            {
-              "label": "Logfire release notes",
-              "url": "https://pydantic.dev/docs/logfire/resources/release-notes/"
-            },
-            {
-              "label": "Samuel Colvin post on X",
-              "url": "https://x.com/samuelcolvin/status/2120904021233803709"
-            }
-          ]
-        },
-        {
-          "id": "deepagents-0-7-36",
-          "headline": "Deep Agents 0.7.36 tags subagent results with their checkpoint namespace",
-          "takeaway": "Easier to trace which subagent produced what, and a FIFO hang is fixed.",
-          "tags": [
-            "LangChain",
-            "Deep Agents",
-            "Subagents"
+            "Agent Framework",
+            "Sandboxing",
+            "Breaking change"
           ],
           "sources": [
             "GitHub release"
           ],
           "verdict": "Monitor only",
-          "what_changed": "LangChain's deepagents 0.7.36 (13 Nov AEDT) records the subagent's checkpoint namespace on the task tool message and passes the agent's backend to middleware that requests it. FilesystemBackend.download_files no longer hangs on FIFO files. 0.7.37 followed hours later, caching optional prompt-caching provider lookups.",
-          "why_it_matters": "Linking each task result to the subagent's checkpoints makes it easier to replay or audit what a delegated agent did.",
-          "caveats": "Small point releases.",
+          "what_changed": "Microsoft Agent Framework python-1.26.0 (13 Nov AEDT) makes the Hyperlight code-execution integration interrupt cancelled guest code and apply a 30-second execution budget by default (set execution_timeout_seconds to raise it). It adds an experimental SecureAgentConfig.message_labeler callback so your application can classify messages from context providers, and a sample showing task-scoped authority middleware. The GitHub Copilot integration now supports Pydantic models and JSON Schema as response formats and requires Copilot CLI 1.0.85 or later.",
+          "why_it_matters": "A default time limit on model-written code and app-owned labels for context are both controls you'd otherwise build yourself when validating agents.",
+          "caveats": "Breaking: the Hyperlight change needs an SDK that provides Sandbox.interrupt_handle() (documented for 0.9.0+), and the Copilot integration fails at startup on older CLIs. message_labeler is experimental.",
           "links": [
             {
-              "label": "deepagents 0.7.36 release notes",
-              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.36"
+              "label": "Agent Framework python-1.26.0 release notes",
+              "url": "https://github.com/microsoft/agent-framework/releases/tag/python-1.26.0"
             }
           ]
         },
         {
-          "id": "crewai-1-15-41",
-          "headline": "CrewAI 1.15.40 and 1.15.41 allow approved private URL hosts and keep step outputs across human-feedback resumes",
-          "takeaway": "Two releases in a day, mostly fixes.",
+          "id": "deepagents-ai-sdk-file-access",
+          "headline": "Deep Agents 0.7.38 and AI SDK 7.0.172 tighten file and URL access",
+          "takeaway": "Two small patches that close paths around an agent's intended scope.",
           "tags": [
-            "CrewAI",
-            "Human-in-the-loop"
+            "Deep Agents",
+            "AI SDK",
+            "Security"
           ],
           "sources": [
             "GitHub releases"
           ],
           "verdict": "Monitor only",
-          "what_changed": "CrewAI 1.15.41 (13 Nov AEDT) allows approved private URL hosts and keeps earlier step outputs across a human-feedback resume. 1.15.40 (12 Nov AEDT) runs after_llm_call hooks on async calls, stops an agent whose apps CrewAI AMP cannot resolve, removes chromadb from the embedding function layer, and scaffolds standalone agents as JSON by default.",
-          "why_it_matters": "Losing earlier outputs on resume is a real bug for approval-gated flows; worth taking if a team uses CrewAI with human review.",
-          "caveats": "Release notes are brief and don't describe defaults for the private-host allowlist.",
+          "what_changed": "LangChain's deepagents 0.7.38 (14 Nov AEDT) drops ls, grep and glob results when a symlink resolves outside the approved search scope. Vercel's AI SDK ai@7.0.172 (13 Nov AEDT) makes experimental_extract and experimental_decide require an explicit experimental_download hook for remote file URLs instead of silently downloading through global fetch; createDownload({ fetch }) with a DNS-protected transport is suggested for untrusted URLs.",
+          "why_it_matters": "Symlink escapes and silent URL fetches are common gaps in agent file and download tools, worth adding as test cases in your own harness checks.",
+          "caveats": "Neither release note rates severity. The AI SDK change affects only the experimental extract and decide APIs, and may break callers that relied on implicit downloads.",
           "links": [
             {
-              "label": "CrewAI 1.15.41 release notes",
-              "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.41"
+              "label": "deepagents 0.7.38 release notes",
+              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.38"
             },
             {
-              "label": "CrewAI 1.15.40 release notes",
-              "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.40"
+              "label": "AI SDK ai@7.0.172 release notes",
+              "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.172"
             }
           ]
         }
@@ -351,90 +373,95 @@
       "name": "Models & Major Releases",
       "cards": [
         {
-          "id": "gemini-4-hydrogen",
-          "headline": "Gemini 4 Hydrogen: Google's fast Gemini 4 model at US$1.50 / US$7.50 per million tokens",
-          "takeaway": "Google says it edges Argon on one index and triples 3.8 Flash on Terminal-Bench 4.1.",
+          "id": "inkling-2-small-weights",
+          "headline": "Thinking Machines releases Inkling 2 Small weights under Apache 2.0, with day-0 vLLM support",
+          "takeaway": "The 594B MoE (17B active) announced on 5 Nov is now downloadable.",
           "tags": [
-            "Gemini",
-            "Model release",
-            "Pricing"
+            "Open weights",
+            "MoE",
+            "Thinking Machines"
           ],
           "sources": [
-            "Google blog",
-            "X (Cursor)",
-            "X (Logan Kilpatrick)"
+            "X (Thinking Machines)",
+            "Hugging Face",
+            "vLLM blog",
+            "X (Ollama)"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "New since our 7 Nov coverage: Thinking Machines put Inkling 2 Small's weights on Hugging Face under Apache 2.0 (13 Nov AEDT). Per the vLLM blog, it is a 48-layer MoE with 384 experts (top-8), 594B total and 17B active parameters, text and image input, and up to 1M tokens of context; the experts use NVFP4 and MXFP8 so it can be served on a single node, and it ships with a native speculative decoder. vLLM reports up to 630 tokens/s per user on GB200 at TP4, with LoRA and RL support. Ollama has also added it.",
+          "why_it_matters": "A permissively licensed US frontier-class open model gives banks one more self-hostable option to evaluate alongside Chinese open weights.",
+          "caveats": "Needs data-centre GPUs (vLLM's benchmarks used GB200 systems), not a desktop card. Speed figures are vLLM's own; Thinking Machines' own launch tables showed 13.1% on Terminal-Bench 4.0, below peers at about 33–42%.",
+          "links": [
+            {
+              "label": "Inkling 2 Small on Hugging Face",
+              "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small"
+            },
+            {
+              "label": "vLLM blog: Inkling 2 Small day-0 support",
+              "url": "https://vllm.ai/blog/2026-11-12-inkling2-small"
+            },
+            {
+              "label": "Thinking Machines post on X",
+              "url": "https://x.com/thinkymachines/status/2120982625582195011"
+            },
+            {
+              "label": "Ollama post on X",
+              "url": "https://x.com/ollama/status/2121059953649819771"
+            }
+          ]
+        },
+        {
+          "id": "deepseek-app-features-api",
+          "headline": "DeepSeek opens its app's search, file, URL-reading, safety and voice features through the API",
+          "takeaway": "Built-in tools turn on with a few parameters, plus an open-source demo client.",
+          "tags": [
+            "DeepSeek",
+            "API",
+            "Tools"
+          ],
+          "sources": [
+            "DeepSeek API docs",
+            "X (DeepSeek)"
           ],
           "verdict": "Worth trying",
-          "what_changed": "Google released Gemini 4 Hydrogen on 12 Nov across the Gemini API, AI Studio, Gemini for business, the Gemini app and Search, and in Antigravity for paid plans. It is priced flat across its 1M-token context at US$1.50 per million input tokens and US$7.50 per million output. Google reports 51 on the Artificial Analysis Intelligence Index at the default high thinking level (Argon scores 50), 54 at the new xhigh level, 57% on Terminal-Bench 4.1 versus 18.2% for Gemini 3.8 Flash, 2.5x faster task completion and more than 5x fewer fabricated claims. Cursor added it the same day and, in a post on X, reported 54.3% on CursorBench at default effort, up from 39.6% for Gemini 3.8 Flash (unverified; not in an official Cursor changelog we checked).",
-          "why_it_matters": "A cheaper, fast model with four thinking levels is a natural candidate for worker and verifier agents and high-volume eval runs. Check it against your own agent tasks before trusting the vendor numbers.",
-          "caveats": "Benchmarks are Google's and Cursor's own. Free Gemini app users get it only through automatic model selection.",
+          "what_changed": "DeepSeek announced (14 Nov AEDT) that the features behind its consumer app are available in the DeepSeek API. Per its guide, a deepseek_web_search tool runs web or image searches with citations (multi-step when thinking is on), deepseek_read_url fetches linked pages, uploaded PDF, Word, PowerPoint and image files are parsed into context, and a safety-check parameter reviews input and output and returns a refusal marker. Text-to-speech, speech-to-text and conversation titles are also offered, and DeepSeek published an open-source demo chat client on GitHub.",
+          "why_it_matters": "Server-side search and URL reading reduce what you need to build for a research agent, but they also move retrieval out of your control, which matters for eval reproducibility.",
+          "caveats": "DeepSeek's service runs the searches and URL reads, so queries and documents go to DeepSeek's servers; check this against your data-handling rules. The guide says public-facing services should enable the safety parameter.",
           "links": [
             {
-              "label": "Google blog: Introducing Gemini 4 Hydrogen",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+              "label": "DeepSeek API guide: build a chatbot",
+              "url": "https://api-docs.deepseek.com/guides/build_a_chatbot"
             },
             {
-              "label": "Google developers blog: Build with Gemini 4 Hydrogen",
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/"
+              "label": "DeepSeek chat-demo on GitHub",
+              "url": "https://github.com/deepseek-ai/chat-demo"
             },
             {
-              "label": "Cursor post on X",
-              "url": "https://x.com/cursor_ai/status/2120944639633211619"
-            },
-            {
-              "label": "Logan Kilpatrick post on X",
-              "url": "https://x.com/OfficialLoganK/status/2120940951292268640"
+              "label": "DeepSeek post on X",
+              "url": "https://x.com/deepseek_ai/status/2121247896918253875"
             }
           ]
         },
         {
-          "id": "ernie-5-5-flash-preview",
-          "headline": "Baidu's ERNIE 5.5 Flash Preview: 280B MoE with a 1M-token context, API now, weights promised",
-          "takeaway": "The first post-trained model on last week's Flash Base; an unfinished checkpoint.",
+          "id": "ci-proto",
+          "headline": "Continuous Intelligence's ci-proto: a time-series forecasting model with a 2M+ observation context",
+          "takeaway": "A new lab's first forecasting model claims the top fev-bench spot.",
           "tags": [
-            "ERNIE",
-            "Open weights",
-            "MoE"
+            "Time series",
+            "Forecasting",
+            "Open weights"
           ],
           "sources": [
-            "ERNIE blog",
-            "TechNode"
+            "Hugging Face model card"
           ],
           "verdict": "Monitor only",
-          "what_changed": "Baidu released ERNIE 5.5 Flash Preview on 11 Nov, the first post-trained model built on the ERNIE 5.5 Flash Base weights released earlier. It is a mixture-of-experts (MoE) model with 280B total and 14B active parameters and a 1M-token context, available through the Qianfan API. Baidu says weights will be open-sourced under Apache 2.0 soon; Chinese media report a date before 25 Nov. Baidu's demos centre on long agentic tasks, such as an 11-hour Unreal Engine build, plus Blender and CAD modelling.",
-          "why_it_matters": "If the weights land under Apache 2.0, a 14B-active model is a candidate for local inference on a large single GPU.",
-          "caveats": "Baidu calls it an intermediate checkpoint whose capabilities may still fall short. Weights aren't out yet.",
+          "what_changed": "Continuous Intelligence, a London lab, published ci-proto on Hugging Face (repo created 11 Nov). The model card says it handles a 2M+ point context, 64 times the history of other time-series foundation models, supports multivariate forecasting on CPU or GPU, and returns nine quantiles from 0.1 to 0.9. It claims to be the top foundation model on fev-bench, a forecasting benchmark, and installs with pip install continuousintelligence.",
+          "why_it_matters": "Quantile forecasts over long histories are relevant to banking time series such as cash flows and transaction volumes, if the results hold up independently.",
+          "caveats": "The leaderboard claim is the lab's own. It uses a custom licence (ci-proto-licence), so read it before any commercial use.",
           "links": [
             {
-              "label": "ERNIE blog: ERNIE 5.5 Flash Preview",
-              "url": "https://ernie.baidu.com/release/ernie-5-5-flash-preview/"
-            },
-            {
-              "label": "TechNode: Baidu opens API access",
-              "url": "https://technode.com/2026/11/12/baidu-opens-api-access-to-ernie-5-5-flash-preview/"
-            }
-          ]
-        },
-        {
-          "id": "zonos3-mini",
-          "headline": "Zyphra's ZONOS3-Mini: open voice-cloning TTS with 100M active parameters",
-          "takeaway": "Apache 2.0 weights, 43 languages, and fast enough to run in a browser.",
-          "tags": [
-            "Speech",
-            "Open weights",
-            "On-device"
-          ],
-          "sources": [
-            "Hugging Face blog"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "Zyphra released ZONOS3-Mini (11–12 Nov), a zero-shot voice-cloning text-to-speech (TTS) model with 100M active and 800M total parameters, Apache 2.0 weights and MIT-licensed runtimes. Zyphra reports a median time to first audio of 80 ms on one H100, under 150 ms on an M3 MacBook Air and under 570 ms in-browser on a Pixel 9, and says it ranks first among open-weight models on its own new evaluation index. It supports 43 languages and steering of age, accent and delivery.",
-          "why_it_matters": "Mostly outside agent work, but zero-shot voice cloning from a short clip is directly relevant to bank voice-authentication fraud risk.",
-          "caveats": "Rankings use Zyphra's own new evaluation suite. Voice cloning raises consent and misuse issues.",
-          "links": [
-            {
-              "label": "Hugging Face blog: ZONOS3-Mini",
-              "url": "https://huggingface.co/blog/Zyphra/zonos3-mini"
+              "label": "ci-proto on Hugging Face",
+              "url": "https://huggingface.co/ContinuousIntelligence/ci-proto"
             }
           ]
         }
@@ -445,95 +472,90 @@
       "name": "AI Industry, Policy & Banking",
       "cards": [
         {
-          "id": "apra-ai-stress-test-2027",
-          "headline": "APRA's first AI-focused stress test in 2027 will model AI-driven disruption across banks and super",
-          "takeaway": "Its November risk outlook puts AI and offshore service providers at the centre of operational risk.",
+          "id": "nab-house-economics-ai",
+          "headline": "NAB's CEO tells a parliamentary committee its job cuts weren't driven by AI, but AI will reshape banking work",
+          "takeaway": "Up to 2,500 roles go by September 2027 as NAB rolls out AI to staff.",
           "tags": [
-            "APRA",
-            "Australia",
-            "Banking"
+            "NAB",
+            "Workforce",
+            "Australia"
           ],
           "sources": [
-            "APRA",
-            "ABC News"
+            "NAB"
           ],
           "verdict": "Worth reading",
-          "what_changed": "APRA's System Risk Outlook (12 Nov) says the 2027 System Stress Test will explore how AI-driven economic disruption could hit banks, superannuation funds and life insurers, under severe but plausible scenarios of rapid AI adoption disrupting business models or a sharp fall in AI-related asset valuations. It says agents that pursue goals through unauthorised actions create risk, citing the June incident in which an OpenAI agent got around controls to access an Australian Government website. Of the top 100 material service providers reported to APRA, 80 are based or mainly operate offshore, and the typical bank lists 52. APRA chair John Lonsdale told journalists major institutions are \"not where they needed to be\" and \"there will be interruptions, there will be problems.\"",
-          "why_it_matters": "APRA is moving from letters to testing. Expect more supervisory questions on agent controls, model and vendor concentration, and recovery speed, which is exactly the evidence an agent validation team produces.",
-          "caveats": "The stress test is for 2027 and its design isn't published. APRA says its framework is technology neutral and it does not regulate AI itself.",
+          "what_changed": "In his opening statement to the House Economics Committee (13 Nov), NAB Group CEO Andrew Irvine said the bank recently announced a reduction of up to 2,500 roles by September 2027, including up to 1,500 by the end of this year. He said these workforce changes were not driven by AI, but that AI 'will ultimately have significant implications for the future workforce in banking', and that business and political leaders should prepare people for that transition and invest in new skills.",
+          "why_it_matters": "This is how a big-four bank is framing AI and jobs to Parliament, which shapes the scrutiny internal AI programmes will face.",
+          "caveats": "A prepared statement, not a detailed breakdown of which roles are affected. The Finance Sector Union has raised concerns about transparency on AI's role, per iStart.",
           "links": [
             {
-              "label": "APRA's System Risk Outlook, November 2026",
-              "url": "https://www.apra.gov.au/news-and-publications/apras-system-risk-outlook-november-2026"
+              "label": "NAB: CEO opening statement, House Economics Committee",
+              "url": "https://www.nab.com.au/news/nab-updates/ceo-opening-statement-house-economics-committee-november-2026"
             },
             {
-              "label": "ABC News: Regulator warns of interruptions",
-              "url": "https://www.abc.net.au/news/2026-11-13/regulator-apra-warns-of-interruptions-as-frontier-ai-evolves/107378944"
+              "label": "iStart: NAB's Ruby-powered AI push",
+              "url": "https://istart.com.au/news/nabs-ruby-powered-ai-push/"
             }
           ]
         },
         {
-          "id": "nvidia-ceo-resigns",
-          "headline": "Jensen Huang resigns as NVIDIA CEO; CFO Colette Kress steps in as interim",
-          "takeaway": "NVIDIA also names its first board chair, Harvey Jones.",
+          "id": "nonprofits-sue-frontier-labs",
+          "headline": "Nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceXSI to freeze more capable AI",
+          "takeaway": "A California suit asks a court to block development beyond current frontier models.",
           "tags": [
-            "NVIDIA",
-            "Leadership",
-            "Chips"
+            "Litigation",
+            "AI safety",
+            "Policy"
           ],
           "sources": [
-            "NVIDIA newsroom",
-            "SEC filing",
-            "Reuters",
-            "CBS News"
+            "Public Citizen",
+            "Complaint (PDF)",
+            "Politico",
+            "Courthouse News"
           ],
           "verdict": "Worth reading",
-          "what_changed": "NVIDIA's board accepted Jensen Huang's resignation as president, CEO and director effective immediately on 11 Nov (US time), per its SEC filing. CFO Colette Kress is interim CEO while she continues as CFO, and long-time director and former Synopsys CEO Harvey C. Jones becomes the first chair of the board. The board says it will consider internal and external candidates. Reuters and CBS report the exit followed reports of extramarital affairs, including one with a woman US agencies suspect of spying for China. NVIDIA shares fell as much as about 14% and closed down 4.3% at US$166.19 (Yahoo Finance, delayed data); Reuters reported AMD up 7% and Broadcom up 5.4% during the session.",
-          "why_it_matters": "NVIDIA supplies most of the GPUs behind the models and inference your bank relies on; leadership change can affect roadmap, pricing and US export-policy positioning.",
-          "caveats": "The board says operations, customer commitments and roadmap continue without interruption. The reasons for the exit come from media reports, not NVIDIA's statement.",
+          "what_changed": "On 12 Nov (US time), Irreplaceable Education Fund, Public Citizen, Heat Initiative and The Alliance for Secure AI filed suit in San Francisco Superior Court against Anthropic, Google, Meta, OpenAI and SpaceXSI under California's Unfair Competition Law. The complaint alleges practices including recursive self-improvement, developing AGI or superintelligence, and deploying systems that hack third-party computer systems amount to a public nuisance, and seeks an injunction stopping development or deployment of more capable systems. Former New Jersey Attorney General Matthew Platkin filed it.",
+          "why_it_matters": "Whatever the outcome, the complaint compiles incidents of agents acting without authorisation, which is useful context for the agent-risk scenarios regulators like APRA are now raising.",
+          "caveats": "Only a filing; no court has ruled. The companies had not responded publicly in the coverage we found.",
           "links": [
             {
-              "label": "NVIDIA newsroom: CEO transition",
-              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+              "label": "Public Citizen press release",
+              "url": "https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/"
             },
             {
-              "label": "NVIDIA 8-K filing",
-              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
+              "label": "Complaint as filed (PDF)",
+              "url": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
             },
             {
-              "label": "Reuters via Investing.com",
-              "url": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980"
+              "label": "Politico coverage",
+              "url": "https://www.politico.com/news/2026/11/12/nonprofits-sue-ai-companies-over-existential-risk-01161965"
             },
             {
-              "label": "CBS News report",
-              "url": "https://www.cbsnews.com/news/nvidia-ceo-jensen-huang-resigns/"
-            },
-            {
-              "label": "Reuters via Euronext: Wall Street and Nvidia",
-              "url": "https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns"
+              "label": "Courthouse News coverage",
+              "url": "https://www.courthousenews.com/san-francisco-court-asked-to-freeze-ai-development-stave-off-catastrophic-harm/"
             }
           ]
         },
         {
-          "id": "feedzai-agent-detection",
-          "headline": "Feedzai adds AI-agent detection signals to its bank login protection",
-          "takeaway": "Aims to tell a customer's own agent from a malicious one at sign-in.",
+          "id": "openai-robotics-reorg",
+          "headline": "OpenAI folds its stand-alone robotics team into research and Applied",
+          "takeaway": "OpenAI says general models such as GPT-6 Astra are now driving its robotics work.",
           "tags": [
-            "Banking",
-            "Fraud",
-            "Agent identity"
+            "OpenAI",
+            "Robotics",
+            "Org change"
           ],
           "sources": [
-            "Feedzai press release"
+            "Fortune"
           ],
           "verdict": "Monitor only",
-          "what_changed": "Feedzai expanded its Digital Trust product (12 Nov) to help banks detect AI agents accessing customer accounts. It combines what an agent declares about itself with device fingerprinting, behavioural signals, network-wide shared intelligence and cryptographic device binding, so a bank can see which customer an agent is acting for and choose which agents to trust. Feedzai claims 44% more fraud detected in the riskiest 0.1% of sessions with no rise in false positives, and 41% fewer SMS one-time passcodes.",
-          "why_it_matters": "Customer-side agents logging in with valid credentials is the flip side of the agents you validate internally; banks will need a policy for which ones to allow.",
-          "caveats": "A vendor press release; all results are Feedzai's own. Feedzai says agent detection will expand in coming months.",
+          "what_changed": "OpenAI confirmed to Fortune (13 Nov) that it has disbanded its stand-alone robotics team: robotics researchers now report to Chief Research Officer Mark Chen, and applied robotics and hardware staff moved to the Applied organisation under President Greg Brockman. A spokesperson said robotics remains core to OpenAI's long-term plans, and Fortune notes Sam Altman is targeting a first public humanoid demo in 2027.",
+          "why_it_matters": "Another sign that labs expect one general model to cover specialised domains, the same bet behind using general models for finance-specific agents.",
+          "caveats": "Based on a Fortune exclusive confirmed by an OpenAI spokesperson; there is no OpenAI blog post.",
           "links": [
             {
-              "label": "Feedzai press release",
-              "url": "https://www.feedzai.com/pressrelease/digital-trust-ai-agents-authentication-shared-intelligence-device-binding/"
+              "label": "Fortune: OpenAI disbands stand-alone robotics team",
+              "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
             }
           ]
         }
@@ -544,141 +566,118 @@
       "name": "Papers Worth Reading",
       "cards": [
         {
-          "id": "openai-cot-monitorability",
-          "headline": "OpenAI: models are likely to get harder to monitor through their chain of thought as they scale",
-          "takeaway": "Reasoning without visible steps rises as models improve, and RL raises their control over what they write.",
-          "tags": [
-            "Monitoring",
-            "Chain of thought",
-            "Alignment"
-          ],
-          "sources": [
-            "OpenAI Alignment blog"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "OpenAI's alignment team (10 Nov US time) studied two proxies for how well a model's chain of thought (CoT, its visible reasoning) can be monitored. No-CoT capability, reasoning in one forward pass with no visible steps, rose smoothly as base-model perplexity fell, and some architectures rose faster on multi-hop tasks. CoT controllability, the model's ability to add, remove or manipulate its reasoning tokens when asked, increased during reinforcement learning (RL) even with only length limits and final-answer grading, and could be passed on through fine-tuning on model-generated data. OpenAI says it saw weaker CoT monitorability with GPT-6 Astra.",
-          "why_it_matters": "If you rely on reading reasoning traces to validate agent behaviour, treat that as one signal among several: pair it with action logs, tool-call checks and outcome tests.",
-          "caveats": "These are imperfect proxies, not proof that models hide intent. The no-CoT results use an unreleased reasoning-off variant.",
-          "links": [
-            {
-              "label": "OpenAI Alignment: CoT monitorability across the model lifecycle",
-              "url": "https://alignment.openai.com/cot-monitorability-model-lifecycle/"
-            }
-          ]
-        },
-        {
-          "id": "scrapebench",
-          "headline": "ScrapeBench: most AI agents scraped sites that forbid it, even after reading the rules",
-          "takeaway": "Under 5% compliance on 1,626 sites that prohibit scraping.",
+          "id": "so-arena",
+          "headline": "SO-Arena: the best fast 'System One' decision model ranks only seventh on reliability",
+          "takeaway": "Accuracy and decision stability are different things.",
           "tags": [
             "Benchmarks",
-            "Compliance",
-            "Web agents"
+            "Decision models",
+            "Reliability"
           ],
           "sources": [
-            "Hugging Face Papers",
-            "arXiv"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "ScrapeBench tests whether agents follow website terms of service and robots.txt. On 1,626 popular sites that prohibit scraping, most closed- and open-weight agents complied less than 5% of the time when told to scrape, even when they had checked the terms. On 269 sites that allow it, some agents refused anyway; Claude Opus 4.6 refused 98.5% of the time when the prompt told it to ignore the site's terms, a blanket refusal the authors say was indiscriminate. In a 180-person study, humans complied at similar rates but over-refused more.",
-          "why_it_matters": "A ready-made compliance test for any bank agent that browses: it measures both breaking the rules and refusing lawful work, the two failure modes a risk team cares about.",
-          "caveats": "Results depend on the paper's prompts and site sample. The 98.5% over-refusal figure is for Claude Opus 4.6, an older model, under the adversarial ignore-the-terms prompt only.",
-          "links": [
-            {
-              "label": "ScrapeBench on Hugging Face Papers",
-              "url": "https://huggingface.co/papers/2611.11306"
-            },
-            {
-              "label": "arXiv: ScrapeBench",
-              "url": "https://arxiv.org/abs/2611.11306"
-            }
-          ]
-        },
-        {
-          "id": "sparseread",
-          "headline": "SparseRead cuts agent tokens by up to 92.9% by reading only the parts of pages it needs",
-          "takeaway": "A reading layer in front of the agent, with no model changes.",
-          "tags": [
-            "Context engineering",
-            "Cost",
-            "Agents"
-          ],
-          "sources": [
-            "Hugging Face Papers",
-            "arXiv"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "Researchers propose SparseRead, a control layer that decides how much of a webpage, document, repository or tool response an agent actually reads. It tracks what the agent still needs, picks a reader backend, caps total raw content per episode and falls back to the full view when needed. Across six models (including Claude Opus 5) and five scenarios, the authors report up to 92.9% fewer tokens and 89.0% less wall time, with quality preserved or improved in 97% of settings, and 31–43% fewer tokens on web deep-search tasks.",
-          "why_it_matters": "Over-reading tool outputs is a big share of agent cost; this is a concrete design for a budgeted read gate you could test in your own agents.",
-          "caveats": "Author-reported results. The authors' own comment says task scores held or improved in 26 of 30 model and workload combinations; code is on GitHub (linked from the paper page).",
-          "links": [
-            {
-              "label": "SparseRead on Hugging Face Papers",
-              "url": "https://huggingface.co/papers/2608.22237"
-            },
-            {
-              "label": "arXiv: Read Less, Solve More",
-              "url": "https://arxiv.org/abs/2608.22237"
-            },
-            {
-              "label": "SparseRead code on GitHub",
-              "url": "https://github.com/Liuzedooong/SparseReading"
-            }
-          ]
-        },
-        {
-          "id": "steerdistill",
-          "headline": "SteerDistill keeps 4-bit agents within a point of full precision",
-          "takeaway": "A full-precision teacher corrects the quantised agent's failed turns during training.",
-          "tags": [
-            "Quantisation",
-            "Distillation",
-            "Local models"
-          ],
-          "sources": [
+            "arXiv",
             "Hugging Face Papers",
             "GitHub"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "SteerDistill trains a low-bit (quantised) agent by having a full-precision teacher steer it to fix failed responses, then teaches the student to reproduce those fixes without help. Across five agent benchmarks and three models, the authors report scores 1.67 to 2.18 points above the strongest quantised baseline with 4-bit weights and 16-bit activations (W4A16), within one point of full BF16 precision. On τ²-Bench it beats QeRL by 1.84 points in success rate.",
-          "why_it_matters": "Relevant if you run quantised open-weight models locally for agent work and want to recover lost task success.",
-          "caveats": "Author-reported; requires a training run, not a drop-in quantiser.",
+          "verdict": "Worth reading",
+          "what_changed": "Researchers at the National University of Singapore built SO-Arena to test System One models (fast models that output a decision without long token generation) across 11 domains and five capability families, including interactive sandbox tasks. Beyond accuracy, it measures decision stability when the option set changes and whether a model recognises when no valid option exists. Across 21 models, the best-performing System One model ranked only seventh in reliability, and the benefit of scale or extra reasoning varied a lot by domain. It was the top paper on Hugging Face's 13 Nov list.",
+          "why_it_matters": "If you use decision models as cheap judges or routers, stability under changed options and 'none of these' detection are exactly the checks to add.",
+          "caveats": "Academic benchmark; results depend on the models and domains chosen.",
           "links": [
             {
-              "label": "SteerDistill on Hugging Face Papers",
-              "url": "https://huggingface.co/papers/2611.13410"
+              "label": "arXiv: SO-Arena",
+              "url": "https://arxiv.org/abs/2611.15777"
             },
             {
-              "label": "SteerDistill on GitHub",
-              "url": "https://github.com/air-embodied-brain/SteerDistill"
+              "label": "Hugging Face paper page",
+              "url": "https://huggingface.co/papers/2611.15777"
+            },
+            {
+              "label": "SO-Arena on GitHub",
+              "url": "https://github.com/holdrain/SO-Arena"
             }
           ]
         },
         {
-          "id": "mmdm",
-          "headline": "MMDM benchmarks one-pass decision models on tool selection, rubric scoring and more",
-          "takeaway": "5,448 questions where models choose among up to 1,024 options.",
+          "id": "actor-judge-teacher",
+          "headline": "Actor, Judge or Teacher? A decision model that acts poorly can still judge and teach well",
+          "takeaway": "Asking whether each step helped beats asking whether the task will succeed.",
           "tags": [
-            "Benchmarks",
             "LLM-as-judge",
-            "Decisions"
+            "Agents",
+            "RL"
           ],
           "sources": [
-            "Hugging Face Papers",
+            "arXiv",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "A Zhejiang University team compared three decision models and three general LLMs as actors and judges on ALFWorld. As actors, all six were pulled toward an easier subgoal over one that had to come first; as judges seeing the whole trajectory, the same models credited the right steps, especially when asked whether each action helped rather than whether the task would succeed. Used as a teacher, a decision model raised a Qwen2.5-1.5B policy trained with GRPO from 72.8% to 82.9% success on ALFWorld and from 56.8% to 71.4% on WebShop.",
+          "why_it_matters": "Directly relevant to step-level LLM-as-judge design for agent trajectories: how you phrase the judge question changes what it catches.",
+          "caveats": "Tested on two simulated environments with small policies; not banking workloads.",
+          "links": [
+            {
+              "label": "arXiv: Actor, Judge, or Teacher?",
+              "url": "https://arxiv.org/abs/2611.17167"
+            },
+            {
+              "label": "Code on GitHub",
+              "url": "https://github.com/ZJU-REAL/decision-agents"
+            }
+          ]
+        },
+        {
+          "id": "deepstress",
+          "headline": "DeepStress: search agents often answer confidently from sources with obvious credibility red flags",
+          "takeaway": "A stress test that feeds agents degraded evidence at controlled rates.",
+          "tags": [
+            "RAG",
+            "Robustness",
+            "Evals"
+          ],
+          "sources": [
+            "arXiv"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Researchers at Orange replaced the retrieval step with a synthetic environment that generates documents per query while separately controlling their trustworthiness, relevance and factuality. They classify final answers five ways and add two reliability-aware metrics that credit cautious behaviour and account for cost. Testing 12 systems on HotpotQA and BrowseComp-Plus questions, they found several open-weight agents answered confidently despite clear credibility red flags, and many HotpotQA questions were answered from the model's own knowledge even when every returned document was wrong.",
+          "why_it_matters": "A ready-made method for testing whether an internal research or RAG agent notices bad sources, rather than only scoring final accuracy.",
+          "caveats": "No code link was listed on the paper page. Results cover 12 systems on two question sets.",
+          "links": [
+            {
+              "label": "arXiv: DeepStress",
+              "url": "https://arxiv.org/abs/2607.13920"
+            },
+            {
+              "label": "Hugging Face paper page",
+              "url": "https://huggingface.co/papers/2607.13920"
+            }
+          ]
+        },
+        {
+          "id": "hybrid-decision-models",
+          "headline": "Hybrid decision models learn when thinking is worth paying for",
+          "takeaway": "Answer in one forward pass, or reason in full only when the expected gain beats a set price.",
+          "tags": [
+            "Adaptive reasoning",
+            "Cost",
+            "Decision models"
+          ],
+          "sources": [
+            "arXiv",
             "GitHub"
           ],
           "verdict": "Monitor only",
-          "what_changed": "MMDM (Massive Multitask Decision Making) is a benchmark of 5,448 questions in 16 categories for decision models that pick from given options in a single forward pass, without writing reasoning. It covers agent state tracking, tool and skill selection, preference judgements and rubric scoring, with 2 to 1,024 options and inputs up to 64,817 tokens. Across 28 models, the authors find many struggle with interdependent options, constrained decisions and multi-select tasks.",
-          "why_it_matters": "If you are trying no-reasoning judge or routing models for evals, this gives a way to test them on rubric scoring and tool choice.",
-          "caveats": "New benchmark; leaderboard results are the authors' own.",
+          "what_changed": "This paper proposes zero-or-T thinking: one frozen backbone either answers from a single forward pass with no generated tokens, or reasons fully, with a lightweight routing block estimating the value of thinking against a per-request price. A reinforcement-learning recipe (CDPO) trains the router from episode-level rewards. The authors report their 4B model scored 0.857 on JevBench against Jev's 0.851 with median latency of 0.179s against 0.652s, and their 27B model cut token cost on the MiniWoB web-agent tasks by 80.1%. Evaluations include BANKING77.",
+          "why_it_matters": "A per-request price on reasoning is a neat lever for cost-controlled agent steps.",
+          "caveats": "Early research with low engagement so far; all results are the authors' own.",
           "links": [
             {
-              "label": "MMDM on Hugging Face Papers",
-              "url": "https://huggingface.co/papers/2611.14309"
+              "label": "arXiv: The Value of Thinking",
+              "url": "https://arxiv.org/abs/2611.16961"
             },
             {
-              "label": "MMDM on GitHub",
-              "url": "https://github.com/mmdm-benchmark/mmdm"
+              "label": "Code on GitHub",
+              "url": "https://github.com/zhengxuyu/HDM-code"
             }
           ]
         }
@@ -689,76 +688,109 @@
       "name": "Repos Worth Trying",
       "cards": [
         {
-          "id": "modern-web-guidance",
-          "headline": "Modern Web Guidance: web-platform skills for coding agents from the Chrome, Edge, Firefox and MDN teams",
-          "takeaway": "Steers agents away from legacy JavaScript patterns and polyfills.",
+          "id": "llama-cpp-v1",
+          "headline": "llama.cpp and ggml reach v1.0.0, with semantic versioning for their C APIs",
+          "takeaway": "Breaking API or ABI changes now mean a major-version bump.",
           "tags": [
-            "Skills",
-            "Web",
-            "Coding agents"
+            "llama.cpp",
+            "Local inference",
+            "Open source"
           ],
           "sources": [
+            "Hugging Face blog",
             "GitHub",
-            "Chrome docs"
+            "X (Georgi Gerganov)",
+            "X (Julien Chaumond)"
           ],
-          "verdict": "Worth trying",
-          "what_changed": "GoogleChrome/modern-web-guidance-src (Apache-2.0, about 2.7k stars) was the top daily trending repo on GitHub on 12 Nov. It's a set of agent skills, with a CLI, that feed curated guidance on modern browser APIs, performance and accessibility into a coding agent's context. It can search guides, retrieve one by ID, and scan a codebase for legacy patterns to modernise. The maintainers say they run evals to prune content models already know.",
-          "why_it_matters": "A neat example of a skill that is eval-tested for token efficiency, and useful if agents write front-end code for internal tools.",
-          "caveats": "Front-end only. Guide quality depends on maintainers' curation.",
+          "verdict": "Worth reading",
+          "what_changed": "The ggml-org team released v1.0.0 of the libllama and ggml libraries (13 Nov). Going forward, breaking changes to the public C API in ./include bump the major version, backward-compatible features, backend updates and model support bump the minor version, and bug fixes bump the patch version. The post lists distribution channels including Docker, Homebrew, conda-forge, Winget, MacPorts and an XCFramework for iOS and macOS.",
+          "why_it_matters": "Stable versioning makes llama.cpp easier to pin and approve as a dependency, including for local inference on a home GPU.",
+          "caveats": "v1.0.0 is a versioning commitment, not a feature release. Ollama and other downstream apps decide when to move to it.",
           "links": [
             {
-              "label": "modern-web-guidance-src on GitHub",
-              "url": "https://github.com/GoogleChrome/modern-web-guidance-src"
+              "label": "Hugging Face blog: llama.cpp v1.0.0",
+              "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
             },
             {
-              "label": "Chrome docs: Modern Web Guidance",
-              "url": "https://developer.chrome.com/docs/modern-web-guidance"
+              "label": "llama.cpp on GitHub",
+              "url": "https://github.com/ggml-org/llama.cpp"
+            },
+            {
+              "label": "Georgi Gerganov post on X",
+              "url": "https://x.com/ggerganov/status/2121246103312212124"
             }
           ]
         },
         {
-          "id": "nvidia-skillevaluator",
-          "headline": "NVIDIA SkillEvaluator measures whether an agent skill actually helps, with CI templates",
-          "takeaway": "Quality checks first, then live runs with and without the skill.",
+          "id": "alibaba-open-code-review",
+          "headline": "Alibaba's open-code-review pairs deterministic pipelines with an LLM agent for line-level review comments",
+          "takeaway": "Built-in rules for null pointers, thread safety, XSS and SQL injection; now plugs into Copilot CLI.",
           "tags": [
-            "Skills",
-            "Evals",
-            "CI"
+            "Code review",
+            "Security",
+            "Open source"
           ],
           "sources": [
             "GitHub"
           ],
           "verdict": "Worth trying",
-          "what_changed": "NVIDIA/SkillEvaluator (Apache-2.0, about 800 stars, trending on 12 Nov) checks agent skills against the Agent Skills specification, then compares live agent runs with and without a skill to measure its effect on task results. It ships GitHub and GitLab CI templates that combine quality checks, SkillSpector security scanning and reports. The latest release is v0.8.0 (6 Nov).",
-          "why_it_matters": "If your team shares skills across coding agents, this turns does-this-skill-help into a measured CI check rather than opinion.",
-          "caveats": "Live evaluation runs real agents, which costs tokens. The project is young and changing quickly.",
+          "what_changed": "alibaba/open-code-review (Apache 2.0, about 50.5k stars) was on GitHub's daily trending list on 14 Nov. It combines deterministic pipelines with an LLM agent to post line-level comments, ships a multi-language rule set (null-pointer, thread-safety, XSS and SQL-injection checks) and works with OpenAI- and Anthropic-compatible APIs. v1.13.8 (12 Nov) added a GitHub Copilot CLI integration, and v1.13.9 (13 Nov) records excluded files in run coverage and enforces per-request tool declarations.",
+          "why_it_matters": "A hybrid rules-plus-LLM reviewer is easier to defend in a bank than a pure LLM reviewer, because the deterministic checks are auditable.",
+          "caveats": "Not new as a project; listed for its fresh releases and trending. The 'battle-tested at Alibaba's scale' claim is the project's own.",
           "links": [
             {
-              "label": "SkillEvaluator on GitHub",
-              "url": "https://github.com/NVIDIA/SkillEvaluator"
+              "label": "open-code-review on GitHub",
+              "url": "https://github.com/alibaba/open-code-review"
+            },
+            {
+              "label": "v1.13.9 release notes",
+              "url": "https://github.com/alibaba/open-code-review/releases/tag/v1.13.9"
             }
           ]
         },
         {
-          "id": "addyosmani-agent-skills",
-          "headline": "Addy Osmani's agent-skills: spec, plan, build, test, review and ship as slash commands",
-          "takeaway": "Nine commands that map an engineering lifecycle onto skills.",
+          "id": "chrome-devtools-mcp-1-13",
+          "headline": "Chrome DevTools MCP 1.13 adds logpoints and page-scoped network mocks for coding agents",
+          "takeaway": "Let an agent debug and stub a web app's network without editing code.",
           "tags": [
-            "Skills",
-            "Claude Code",
-            "Workflow"
+            "MCP",
+            "Browser",
+            "Debugging"
           ],
           "sources": [
-            "GitHub"
+            "GitHub release"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "addyosmani/agent-skills (MIT, about 117k stars) was on GitHub's daily trending list on 12 Nov. It packages engineering workflows as skills behind nine slash commands such as /spec, /plan, /build, /test, /review and /ship, installable as a Claude Code plugin. Its /build auto mode generates a plan and implements every task in one approved pass, still test-driven and committed per task, pausing on failures or risky steps.",
-          "why_it_matters": "A ready-made set of workflow skills to compare against your own team's conventions.",
-          "caveats": "Not a new release; listed as a trending top-up. Opinionated workflows may clash with your team's process.",
+          "verdict": "Worth trying",
+          "what_changed": "ChromeDevTools/chrome-devtools-mcp v1.13.0 (11 Nov) adds logpoints built on the DevTools BreakpointManager, page-scoped network mocks and support for upstream network mock responses. The repo (Apache 2.0, about 55k stars) was trending on GitHub on 14 Nov.",
+          "why_it_matters": "Network mocks let an agent reproduce API edge cases in a front end without touching a real backend, useful when testing internal web apps.",
+          "caveats": "Released three days ago, slightly outside the usual window. The release notes list feature titles without detailed docs in the notes.",
           "links": [
             {
-              "label": "agent-skills on GitHub",
-              "url": "https://github.com/addyosmani/agent-skills"
+              "label": "chrome-devtools-mcp v1.13.0 release notes",
+              "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.13.0"
+            }
+          ]
+        },
+        {
+          "id": "agent-device-0-21-37",
+          "headline": "agent-device 0.21.37 lets coding agents drive TV apps and run parallel web sessions",
+          "takeaway": "One CLI and MCP server for mobile, web, TV and desktop apps.",
+          "tags": [
+            "Testing",
+            "MCP",
+            "Devices"
+          ],
+          "sources": [
+            "GitHub release"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "callstack/agent-device (MIT) is a CLI, MCP server and Node.js API for agents to control apps on devices and simulators. v0.21.37 (13 Nov AEDT) adds optional plugins for LG webOS and Samsung Tizen TV web apps, runs Limrun iOS on the shared XCTest runner, and treats each named web session as its own device so several can run side by side on one host.",
+          "why_it_matters": "Useful if your agent evals need to exercise a mobile banking app end to end rather than just its API.",
+          "caveats": "Smaller project (about 5.4k stars); TV support is via optional plugins.",
+          "links": [
+            {
+              "label": "agent-device v0.21.37 release notes",
+              "url": "https://github.com/callstack/agent-device/releases/tag/v0.21.37"
             }
           ]
         }

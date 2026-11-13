@@ -1,1226 +1,21 @@
 {
   "schema_version": 1,
   "type": "markets",
-  "date": "2026-11-13",
-  "generated_at_utc": "2026-11-13T05:32:46Z",
-  "title": "Markets: Friday 13 November",
-  "edition": "weekday",
+  "date": "2026-11-14",
+  "generated_at_utc": "2026-11-13T21:48:39Z",
+  "title": "Markets: Saturday 14 November",
+  "edition": "weekend",
   "morning": {
-    "cutoff_local": "2026-11-13T07:30:00+11:00",
-    "session_note": "Weekday ASX edition · before the 10:00 open",
+    "cutoff_local": "2026-11-14T07:30:00+11:00",
+    "session_note": "Weekend edition · the week in review",
     "summary": [
-      "Nvidia closed down 4.3% after Jensen Huang resigned as CEO, and the S&P 500 and Nasdaq each closed 0.4% lower, though AMD and Broadcom rose; ASX 200 futures were down 40 points, or 0.4%, at 9,142 near 6am, after Thursday's flat close at 9,146.8 ([AFR](https://www.afr.com/markets/equity-markets/asx-to-fall-nvidia-shares-plunge-on-huang-exit-wall-st-steady-20261113-p61dtw), [Reuters via Euronext](https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns), [Yahoo Finance](https://finance.yahoo.com/quote/%5EAXJO/), [Yahoo Finance US close](https://finance.yahoo.com/quote/%5EGSPC/)).",
-      "For Australia: Brent futures rose 3.6% to US$96.06 after President Trump said the US doesn't need a deal with Iran and Yemen's Houthis said they attacked Saudi oil sites, while gold futures fell 2.8% to US$3,888.5 and the US 10-year yield went back above 5%, so gold miners are in focus at the open ([Reuters via Euronext](https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions), [CNBC](https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html)).",
-      "Next catalyst: US producer prices at 12:30am Saturday Sydney time, after Thursday's claims rose to 200,000; then the RBA minutes on Tuesday and Nvidia's results on Wednesday morning Sydney time ([US Labor Department](https://www.dol.gov/ui/data.pdf), [Nvidia](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx), [RBA](https://www.rba.gov.au/coming-up/))."
+      "US inflation stayed high and markets priced more Fed hikes: October CPI rose 0.4% and producer prices 6.5% over the year, Fed officials including Mary Daly and Susan Collins said further tightening is likely, and CME FedWatch priced a December rise as a certainty. In our data the US 2-year yield rose 40 bp over the five sessions to Thursday, to 4.86% ([BLS](https://www.bls.gov/ppi/), [CNBC](https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html), [Reuters via Investing.com](https://www.investing.com/news/economy-news/fed-likely-to-need-to-raise-rates-amid-worsening-inflation-daly-5026338)).",
+      "Oil fell for a second week, with Brent futures down 2.4% to US$95.94 in our data, as the IEA said supply overtook demand in October for the first time since the Iran war began. President Trump said the US does not need a deal with Iran and will keep the blockade, while Iran said its seven conditions stand ([IEA](https://www.iea.org/reports/oil-market-report-november-2026), [Fox News](https://www.foxnews.com/live-news/oil-prices-war-strikes-donald-trump-iran-11-13-26), [Al Jazeera](https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance)).",
+      "The ASX 200 rose 0.7% for the week to 9,082.2 despite Friday's 0.7% fall, while the Australian dollar fell 1.4% to 0.6804 and gold futures 4.8% as the US dollar hit a 19-month high. Next week: RBA minutes Tuesday, wages Wednesday, jobs Thursday, and Nvidia's first results since Jensen Huang resigned ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again), [CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf))."
     ],
     "prices": {
-      "retrieved_at_utc": "2026-11-12 21:38Z",
-      "cutoff_utc": "2026-11-12T20:30:00Z",
-      "quotes": [
-        {
-          "id": "asx200",
-          "display_name": "S&P/ASX 200",
-          "tier": "primary",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "AUD",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "Australia/Sydney",
-          "status": "ok",
-          "provider": "Yahoo Finance (^AXJO)",
-          "provider_url": "https://finance.yahoo.com/quote/%5EAXJO/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 9146.799805,
-          "display_value": "9,146.8",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T06:00:44Z",
-          "as_of_sydney": "12 Nov 2026, 17:00 AEDT",
-          "comparison_date": "2026-11-11",
-          "comparison_value": 9153.200195,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": -6.4,
-          "change_pct": -0.07,
-          "display_change": "−0.1%"
-        },
-        {
-          "id": "sp500",
-          "display_name": "S&P 500",
-          "tier": "primary",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "USD",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-11",
-          "observation_timezone": "America/New_York",
-          "status": "ok",
-          "provider": "Yahoo Finance (^GSPC)",
-          "provider_url": "https://finance.yahoo.com/quote/%5EGSPC/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 7619.379883,
-          "display_value": "7,619.4",
-          "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T21:00:00Z",
-          "as_of_sydney": "12 Nov 2026, 08:00 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 7520.930176,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": 98.4,
-          "change_pct": 1.31,
-          "display_change": "+1.3%",
-          "cross_checks": [
-            {
-              "provider": "FRED SP500 (S&P Dow Jones Indices)",
-              "value": 7619.38,
-              "session_date": "2026-11-11"
-            }
-          ]
-        },
-        {
-          "id": "audusd",
-          "display_name": "AUD/USD",
-          "tier": "primary",
-          "instrument_type": "fx",
-          "quote_kind": "spot",
-          "unit": "USD",
-          "currency": "USD",
-          "decimals": 4,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "Australia/Sydney",
-          "note": "RBA 4pm Sydney rate (WM/Reuters); not the overnight move.",
-          "status": "ok",
-          "provider": "RBA F11.1 (4pm AEST/AEDT)",
-          "provider_url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
-          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
-          "official": true,
-          "source_label": "official",
-          "value": 0.6841,
-          "display_value": "0.6841",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T05:00:00Z",
-          "as_of_sydney": "12 Nov 2026, 16:00 AEDT",
-          "comparison_date": "2026-11-11",
-          "comparison_value": 0.6878,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": -0.0037,
-          "change_pct": -0.54,
-          "display_change": "−0.54%"
-        },
-        {
-          "id": "au10y",
-          "display_name": "Australia 10Y",
-          "tier": "primary",
-          "instrument_type": "government_bond",
-          "quote_kind": "yield",
-          "unit": "%",
-          "currency": "AUD",
-          "decimals": 2,
-          "change_unit": "bp",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "Australia/Sydney",
-          "note": "RBA interpolated 10-year yield; published with a lag of about two business days.",
-          "status": "ok",
-          "provider": "RBA F2 capital market yields",
-          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
-          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
-          "official": true,
-          "source_label": "official",
-          "value": 5.082,
-          "display_value": "5.08%",
-          "market_session_date": "2026-11-04",
-          "observation_timestamp_utc": "2026-11-04T05:30:00Z",
-          "as_of_sydney": "4 Nov 2026, 16:30 AEDT",
-          "comparison_date": "2026-11-03",
-          "comparison_value": 5.086,
-          "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_bp": -0.4,
-          "display_change": "±0 bp"
-        },
-        {
-          "id": "brent_spot",
-          "display_name": "Brent (spot)",
-          "tier": "primary",
-          "instrument_type": "commodity",
-          "quote_kind": "spot",
-          "unit": "USD/bbl",
-          "currency": "USD",
-          "decimals": 2,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "America/New_York",
-          "note": "EIA Europe Brent spot assessment via FRED. Not the futures price quoted in most news reports.",
-          "status": "ok",
-          "provider": "FRED DCOILBRENTEU (EIA)",
-          "provider_url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
-          "licence_note": "FRED DCOILBRENTEU; source US EIA (public data). Spot assessment, published with a lag of several days.",
-          "official": true,
-          "source_label": "official",
-          "value": 107.03,
-          "display_value": "107.03",
-          "market_session_date": "2026-11-03",
-          "observation_timestamp_utc": "2026-11-03T19:30:00Z",
-          "as_of_sydney": "4 Nov 2026, 06:30 AEDT",
-          "comparison_date": "2026-11-02",
-          "comparison_value": 107.39,
-          "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": -0.36,
-          "change_pct": -0.34,
-          "display_change": "−0.3%"
-        },
-        {
-          "id": "vix",
-          "display_name": "VIX",
-          "tier": "primary",
-          "instrument_type": "volatility_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "",
-          "decimals": 2,
-          "change_unit": "pts",
-          "expected_session_date": "2026-11-11",
-          "observation_timezone": "America/New_York",
-          "status": "ok",
-          "provider": "Cboe VIX History",
-          "provider_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
-          "licence_note": "Cboe Global Markets daily VIX history CSV; cite Cboe; personal non-commercial display of single closes.",
-          "official": true,
-          "source_label": "official",
-          "value": 17.49,
-          "display_value": "17.49",
-          "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T21:00:00Z",
-          "as_of_sydney": "12 Nov 2026, 08:00 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 19.46,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": -1.97,
-          "change_pct": -10.12,
-          "display_change": "−1.97 pts"
-        },
-        {
-          "id": "nasdaq",
-          "display_name": "Nasdaq Composite",
-          "tier": "expanded",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "USD",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-11",
-          "observation_timezone": "America/New_York",
-          "status": "ok",
-          "provider": "Yahoo Finance (^IXIC)",
-          "provider_url": "https://finance.yahoo.com/quote/%5EIXIC/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 25466.189453,
-          "display_value": "25,466.2",
-          "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T21:00:00Z",
-          "as_of_sydney": "12 Nov 2026, 08:00 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 25065.869141,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": 400.3,
-          "change_pct": 1.6,
-          "display_change": "+1.6%",
-          "cross_checks": [
-            {
-              "provider": "FRED NASDAQCOM (Nasdaq)",
-              "value": 25466.19,
-              "session_date": "2026-11-11"
-            }
-          ]
-        },
-        {
-          "id": "au2y",
-          "display_name": "Australia 2Y",
-          "tier": "expanded",
-          "instrument_type": "government_bond",
-          "quote_kind": "yield",
-          "unit": "%",
-          "currency": "AUD",
-          "decimals": 2,
-          "change_unit": "bp",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "Australia/Sydney",
-          "status": "ok",
-          "provider": "RBA F2 capital market yields",
-          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
-          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
-          "official": true,
-          "source_label": "official",
-          "value": 4.826,
-          "display_value": "4.83%",
-          "market_session_date": "2026-11-04",
-          "observation_timestamp_utc": "2026-11-04T05:30:00Z",
-          "as_of_sydney": "4 Nov 2026, 16:30 AEDT",
-          "comparison_date": "2026-11-03",
-          "comparison_value": 4.828,
-          "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_bp": -0.2,
-          "display_change": "±0 bp"
-        },
-        {
-          "id": "au_curve",
-          "display_name": "AU 10Y–2Y curve",
-          "tier": "expanded",
-          "instrument_type": "spread",
-          "quote_kind": "spread",
-          "unit": "bp",
-          "currency": "AUD",
-          "decimals": 0,
-          "change_unit": "bp",
-          "observation_timezone": "Australia/Sydney",
-          "expected_session_date": "2026-11-12",
-          "status": "ok",
-          "provider": "Derived from RBA F2 (10Y minus 2Y)",
-          "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
-          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
-          "official": true,
-          "source_label": "official",
-          "value": 25.6,
-          "display_value": "+26 bp",
-          "market_session_date": "2026-11-04",
-          "observation_timestamp_utc": "2026-11-04T05:30:00Z",
-          "as_of_sydney": "4 Nov 2026, 16:30 AEDT",
-          "comparison_date": "2026-11-03",
-          "comparison_value": 25.8,
-          "change_bp": -0.2,
-          "display_change": "±0 bp",
-          "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "note": "Derived from lagged RBA F2 legs; not a live curve mark."
-        },
-        {
-          "id": "us10y",
-          "display_name": "US 10Y",
-          "tier": "expanded",
-          "instrument_type": "government_bond",
-          "quote_kind": "yield",
-          "unit": "%",
-          "currency": "USD",
-          "decimals": 2,
-          "change_unit": "bp",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "America/New_York",
-          "status": "ok",
-          "provider": "US Treasury par yield curve",
-          "provider_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
-          "licence_note": "US Treasury daily par yield curve; US-government public data.",
-          "official": true,
-          "source_label": "official",
-          "value": 5.1,
-          "display_value": "5.10%",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T20:30:00Z",
-          "as_of_sydney": "13 Nov 2026, 07:30 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 4.98,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_bp": 12.0,
-          "display_change": "+12 bp"
-        },
-        {
-          "id": "us2y",
-          "display_name": "US 2Y",
-          "tier": "expanded",
-          "instrument_type": "government_bond",
-          "quote_kind": "yield",
-          "unit": "%",
-          "currency": "USD",
-          "decimals": 2,
-          "change_unit": "bp",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "America/New_York",
-          "status": "ok",
-          "provider": "US Treasury par yield curve",
-          "provider_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
-          "licence_note": "US Treasury daily par yield curve; US-government public data.",
-          "official": true,
-          "source_label": "official",
-          "value": 4.86,
-          "display_value": "4.86%",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T20:30:00Z",
-          "as_of_sydney": "13 Nov 2026, 07:30 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 4.73,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_bp": 13.0,
-          "display_change": "+13 bp"
-        },
-        {
-          "id": "brent_fut",
-          "display_name": "Brent (futures)",
-          "tier": "expanded",
-          "instrument_type": "commodity",
-          "quote_kind": "futures_last",
-          "unit": "USD/bbl",
-          "currency": "USD",
-          "decimals": 2,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "America/New_York",
-          "note": "Yahoo BZ=F: front-month Brent last-day financial futures (NYMEX), daily close. Differs from the spot assessment.",
-          "status": "ok",
-          "provider": "Yahoo Finance (BZ=F)",
-          "provider_url": "https://finance.yahoo.com/quote/BZ%3DF/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 95.959999,
-          "display_value": "95.96",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T21:29:19Z",
-          "as_of_sydney": "13 Nov 2026, 08:29 AEDT",
-          "comparison_date": "2026-11-11",
-          "comparison_value": 92.760002,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": 3.2,
-          "change_pct": 3.45,
-          "display_change": "+3.4%"
-        },
-        {
-          "id": "gold_fut",
-          "display_name": "Gold (COMEX futures)",
-          "tier": "expanded",
-          "instrument_type": "commodity",
-          "quote_kind": "futures_last",
-          "unit": "USD/oz",
-          "currency": "USD",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "America/New_York",
-          "note": "Yahoo GC=F: active COMEX gold futures contract, not the spot or LBMA price.",
-          "status": "ok",
-          "provider": "Yahoo Finance (GC=F)",
-          "provider_url": "https://finance.yahoo.com/quote/GC%3DF/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 3879.0,
-          "display_value": "3,879.0",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T21:29:10Z",
-          "as_of_sydney": "13 Nov 2026, 08:29 AEDT",
-          "comparison_date": "2026-11-11",
-          "comparison_value": 4000.5,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_abs": -121.5,
-          "change_pct": -3.04,
-          "display_change": "−3.0%"
-        },
-        {
-          "id": "rba_cash",
-          "display_name": "RBA cash rate target",
-          "tier": "expanded",
-          "instrument_type": "policy_rate",
-          "quote_kind": "yield",
-          "unit": "%",
-          "currency": "AUD",
-          "decimals": 2,
-          "change_unit": "bp",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "Australia/Sydney",
-          "status": "ok",
-          "provider": "RBA F1 cash rate target",
-          "provider_url": "https://www.rba.gov.au/statistics/cash-rate/",
-          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
-          "official": true,
-          "source_label": "official",
-          "value": 4.85,
-          "display_value": "4.85%",
-          "market_session_date": "2026-11-11",
-          "observation_timestamp_utc": "2026-11-11T05:00:00Z",
-          "as_of_sydney": "11 Nov 2026, 16:00 AEDT",
-          "comparison_date": "2026-11-03",
-          "comparison_value": 4.6,
-          "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-12 21:38Z",
-          "change_bp": 25.0,
-          "display_change": "last move +25 bp (4 Nov)"
-        },
-        {
-          "id": "asx200_fut",
-          "display_name": "ASX SPI 200 futures",
-          "tier": "expanded",
-          "instrument_type": "equity_index_future",
-          "quote_kind": "futures_last",
-          "unit": "pts",
-          "currency": "AUD",
-          "decimals": 0,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "Australia/Sydney",
-          "status": "unavailable",
-          "freshness_state": "unavailable",
-          "unavailable_reason": "No free, permitted feed for ASX 24 SPI 200 futures (licensed exchange data).",
-          "provider": null,
-          "provider_url": null,
-          "licence_note": null,
-          "official": null
-        },
-        {
-          "id": "iron_ore",
-          "display_name": "Iron ore 62% Fe",
-          "tier": "expanded",
-          "instrument_type": "commodity",
-          "quote_kind": "futures_last",
-          "unit": "USD/t",
-          "currency": "USD",
-          "decimals": 2,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-12",
-          "observation_timezone": "America/New_York",
-          "status": "unavailable",
-          "freshness_state": "unavailable",
-          "unavailable_reason": "No free, permitted daily benchmark (SGX/Platts are licensed); the only free series (IMF via FRED) is monthly.",
-          "provider": null,
-          "provider_url": null,
-          "licence_note": null,
-          "official": null
-        }
-      ]
-    },
-    "sections": [
-      {
-        "id": "market-drivers",
-        "cards": [
-          {
-            "id": "nvidia-huang-1113",
-            "headline": "Jensen Huang resigns as Nvidia CEO; shares close 4.3% lower",
-            "takeaway": "Nvidia recovered much of an early slide of about 14% to close 4.3% lower, as rival chipmakers rose and the main US indexes closed about 0.4% lower.",
-            "tags": [
-              "Equities",
-              "US",
-              "AI",
-              "Nvidia"
-            ],
-            "key_figure": "Nvidia US$166.19 (−4.3%) at the close, after falling as much as about 14% (Yahoo Finance, Fox Business); S&P 500 7,592.4 (−0.4%) and Nasdaq 25,366.1 (−0.4%) at the close (Yahoo Finance, delayed)",
-            "new_since_last_issue": "Yesterday's close edition said Nvidia's board was meeting on Huang's future. New: his resignation, the interim CEO and the market reaction.",
-            "what_happened": "Nvidia's board said Jensen Huang resigned as president, CEO and director with immediate effect; chief financial officer Colette Kress is interim CEO while keeping the CFO role, director Harvey Jones becomes the company's first board chair, and the board will consider internal and external candidates ([Nvidia](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition), [SEC 8-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm)). His departure follows reports of extramarital affairs, including with a woman US authorities suspect of spying for Beijing ([Reuters via Euronext](https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns), [ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). Nvidia shares fell as much as about 14% to US$148.80 and closed down 4.3% at US$166.19 ([Fox Business](https://www.foxbusiness.com/markets/nvidia-loses-its-godfather-ai-now-faces-first-big-test-without-him), [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/)). AMD rose about 7% and Broadcom 5.4%; Alibaba fell 7.1% in US trade after a report by The Information that the US Commerce Department is preparing rules to stop Chinese AI companies using advanced chips remotely through overseas data centres ([Reuters via Euronext](https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns), [Investing.com](https://www.investing.com/news/stock-market-news/alibaba-tencent-shares-fall-on-report-us-weighs-curbs-on-remote-ai-chip-access-5020375)). The main US indexes moved between gains and losses. The S&P 500 fell nearly 1% at the open ([AP](https://apnews.com/article/stock-markets-oil-ai-earnings-nvidia-8bf08407eafe1655ed73112f7494029a)), was up 0.29% in late-morning New York trade ([Reuters via Euronext](https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns)) and was down 0.1% at 2:42pm ([Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-slides-jensen-huang-resigns-invest-165632931.html)). It closed down 0.36% at 7,592.4, with the Nasdaq down 0.39% at 25,366.1 and the Dow down 0.36% at 52,297.1 ([Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPC/)).",
-            "why_it_matters": "Nvidia is the largest single driver of the AI trade, which has carried ASX data-centre, power and technology stocks. ASX tech rose 0.25% on Thursday as early gains faded ([Market Index](https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold)), and the futures market points lower this morning.",
-            "market_reaction": "Dashboard (11 Nov close, before Thursday's session): S&P 500 7,619.4 (+1.3%), Nasdaq 25,466.2 (+1.6%), VIX 17.49. Thursday's US session closed at 8:00am AEDT, after our 7:30am cutoff; the closing levels above are Yahoo Finance's delayed, unofficial data, added at review.",
-            "competing_views": [
-              {
-                "who": "Dan Ives, Yorkville Ives",
-                "view": "Said Nvidia remains the clear leader in AI chips, two to three years ahead of its nearest rival, and that demand will not change because Huang has gone; keeps a US$225 target.",
-                "source": {
-                  "label": "Fox Business",
-                  "url": "https://www.foxbusiness.com/markets/nvidia-loses-its-godfather-ai-now-faces-first-big-test-without-him",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              },
-              {
-                "who": "James McCann, Edward Jones",
-                "view": "Said uncertainty over Nvidia's leadership and the lack of a clear succession plan risk adding to sharp price moves, though the company's fundamentals are unchanged.",
-                "source": {
-                  "label": "Fox Business",
-                  "url": "https://www.foxbusiness.com/markets/nvidia-loses-its-godfather-ai-now-faces-first-big-test-without-him",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              },
-              {
-                "who": "Peter Tuz, Chase Investment Counsel",
-                "view": "Said the market absorbed the news reasonably well, but a lot remains unknown and further bad news could weigh on the stock again.",
-                "source": {
-                  "label": "Reuters via Euronext",
-                  "url": "https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Nvidia's third-quarter results, due at about 8:20am Wednesday 18 November Sydney time, with a call at 9:00am, and Cisco's and Applied Materials' results released after Thursday's US close.",
-            "sources": [
-              {
-                "label": "Nvidia newsroom",
-                "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-                "claim_type": "official_statement",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Nvidia 8-K (SEC)",
-                "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm",
-                "claim_type": "official_statement",
-                "date": "11 Nov 2026"
-              },
-              {
-                "label": "Reuters via Euronext",
-                "url": "https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance live",
-                "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-slides-jensen-huang-resigns-invest-165632931.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "AP",
-                "url": "https://apnews.com/article/stock-markets-oil-ai-earnings-nvidia-8bf08407eafe1655ed73112f7494029a",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Fox Business",
-                "url": "https://www.foxbusiness.com/markets/nvidia-loses-its-godfather-ai-now-faces-first-big-test-without-him",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "AFR markets live",
-                "url": "https://www.afr.com/markets/equity-markets/asx-to-fall-nvidia-shares-plunge-on-huang-exit-wall-st-steady-20261113-p61dtw",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Investing.com",
-                "url": "https://www.investing.com/news/stock-market-news/alibaba-tencent-shares-fall-on-report-us-weighs-curbs-on-remote-ai-chip-access-5020375",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Nvidia investor relations",
-                "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
-                "claim_type": "official_statement"
-              },
-              {
-                "label": "Market Index evening wrap",
-                "url": "https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (US index closes, delayed)",
-                "url": "https://finance.yahoo.com/quote/%5EGSPC/",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (Nvidia close, delayed)",
-                "url": "https://finance.yahoo.com/quote/NVDA/",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              }
-            ]
-          },
-          {
-            "id": "oil-trump-houthis-1113",
-            "headline": "Brent jumps after Trump says no Iran deal needed and Houthis hit Saudi sites",
-            "takeaway": "Oil reversed early losses as the US president's post and attacks on Saudi energy infrastructure added to shipping risks around Hormuz.",
-            "tags": [
-              "Oil",
-              "Iran",
-              "Saudi Arabia",
-              "Hormuz"
-            ],
-            "key_figure": "Brent futures US$96.06 (+3.6%, 7:28am AEDT, dashboard); US$95.20 (+2.63%) at 1:49pm New York time (Reuters)",
-            "new_since_last_issue": "Yesterday's issue had Iran's comments on enriched material and OPEC's report. New: Trump's post, the Houthi attacks on Saudi oil facilities and Iran's account of tankers being hit.",
-            "what_happened": "Brent futures were up 2.63% at US$95.20 a barrel and US crude 1.92% at US$88.19 at 1:49pm New York time, after falling in early trade ([Reuters via Euronext](https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions)). Prices rose after President Trump said the US does not need a deal with Iran (see Global macro & risk) ([Reuters via Euronext](https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions)). Yemen's Houthis said they attacked a pumping station on Saudi Arabia's East-West pipeline and an oil facility in Yanbu, with no immediate Saudi confirmation ([Reuters via Euronext](https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions), [Iran International](https://www.iranintl.com/en/202611122211)); Saudi civil defence said debris from two intercepted ballistic missiles fell in Makkah province, which the Houthis denied targeting ([Al Jazeera](https://www.aljazeera.com/news/2026/11/12/fighting-intensifies-in-yemen-as-houthis-deny-targeting-mecca), [Dawn](https://www.dawn.com/news/2044080/houthis-strike-two-oil-facility-deny-targeting-makkah)). Iran's military said four tankers were hit by explosions in the Strait of Hormuz after ignoring warnings, which Reuters could not verify ([Reuters via Euronext](https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions)). US crude, gasoline and distillate inventories rose last week, the EIA said ([Reuters via Euronext](https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions)).",
-            "why_it_matters": "The East-West pipeline to Yanbu is Saudi Arabia's main route for exporting crude without passing through Hormuz, so attacks on it bear on how much supply can bypass the strait. Higher oil feeds into fuel costs and inflation, which the RBA cited when it raised rates on 3 November, and supports ASX energy producers.",
-            "market_reaction": "Dashboard: Brent futures 96.06 (+3.6%, 7:28am AEDT). Brent spot 107.03 is a lagged official series as at 3 Nov and is a different instrument.",
-            "competing_views": [
-              {
-                "who": "Jeffrey Currie, Real Macro",
-                "view": "Said near-term prices should stay contained because a substantial amount of oil is now coming out of the Middle East, but high insurance and tanker rates keep longer-dated futures elevated.",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              },
-              {
-                "who": "John Kilduff, Again Capital",
-                "view": "Said the market may have got ahead of itself in pricing an end to hostilities, and renewed doubt about a deal would push the security premium higher.",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              },
-              {
-                "who": "Tamas Varga, PVM Associates",
-                "view": "Said traders are weighing tentative truces in Ukraine and the Middle East against continuing attacks on energy infrastructure and ships.",
-                "source": {
-                  "label": "RTÉ (Reuters)",
-                  "url": "https://www.rte.ie/news/business/2026/1112/1598959-world-oil-prices/",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Any Saudi confirmation of damage, further tanker incidents near Hormuz, and any Iranian response to the Trump post.",
-            "sources": [
-              {
-                "label": "Reuters via Euronext (oil)",
-                "url": "https://live.euronext.com/en/financial-news/oil-gains-over-2-attacks-saudi-energy-sites-strait-hormuz-disruptions",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "CNBC (Trump post)",
-                "url": "https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Kurdistan 24",
-                "url": "https://www.kurdistan24.net/en/story/952603/trump-we-dont-need-a-deal-with-iran",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "Iraqi Kurdish broadcaster"
-              },
-              {
-                "label": "CNBC (oil)",
-                "url": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Iran International",
-                "url": "https://www.iranintl.com/en/202611122211",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "London-based Persian-language broadcaster critical of the Iranian government"
-              },
-              {
-                "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/2026/11/12/fighting-intensifies-in-yemen-as-houthis-deny-targeting-mecca",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "Qatar-based broadcaster"
-              },
-              {
-                "label": "Dawn",
-                "url": "https://www.dawn.com/news/2044080/houthis-strike-two-oil-facility-deny-targeting-makkah",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "Pakistani newspaper"
-              },
-              {
-                "label": "RTÉ (Reuters)",
-                "url": "https://www.rte.ie/news/business/2026/1112/1598959-world-oil-prices/",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (Brent futures)",
-                "url": "https://finance.yahoo.com/quote/BZ%3DF/",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              }
-            ]
-          },
-          {
-            "id": "gold-dollar-1113",
-            "headline": "Gold falls to a 13-month low as yields and the US dollar rise",
-            "takeaway": "Gold fell for a third straight session as oil, US Treasury yields and the US dollar rose.",
-            "tags": [
-              "Gold",
-              "FX",
-              "AUD"
-            ],
-            "key_figure": "Gold futures US$3,888.5 (−2.8%, 7:29am AEDT, dashboard); dollar index 103.14, a 19-month high (Reuters, intraday)",
-            "new_since_last_issue": "Yesterday's issue had gold futures just below US$4,000. New: a further fall to the lowest level since October 2025.",
-            "what_happened": "Spot gold was down 2.7% at US$3,881.70 an ounce at 1:36pm New York time, its third straight fall, after touching its lowest since October 2025; December futures were down 2.8% at US$3,888.70 and spot silver 2.8% at US$50.24 ([CNBC](https://www.cnbc.com/2026/11/12/gold-falls-to-over-one-week-low-on-firm-dollar-fed-rate-hike-bets.html)). Gold's low was US$3,853 ([BullionVault](https://www.bullionvault.com/gold-news/gold-price-news/gold-inflation-fed-rate-hikes-111220261)). The US dollar index rose 0.26% to 103.14, a 19-month high, with the euro at US$1.1061 ([Reuters via Euronext](https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns)). The RBA's 4pm rate for the Australian dollar was US$0.6841 on Thursday, down 0.54% on Wednesday ([RBA](https://www.rba.gov.au/statistics/tables/#exchange-rates)).",
-            "why_it_matters": "The ASX gold sub-index fell 3.6% on Thursday, the worst sector move, before gold's latest overnight drop ([Market Index](https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold)). A weaker Australian dollar raises the local cost of imports such as fuel, while cushioning Australian-dollar gold prices for miners.",
-            "market_reaction": "Dashboard: gold futures 3,888.5 (−2.8%, 7:29am AEDT); AUD/USD 0.6841 (−0.54%, RBA 4pm, 12 Nov), before the overnight move.",
-            "competing_views": [
-              {
-                "who": "Jim Wyckoff, American Gold Exchange",
-                "view": "Said a jump in oil is negative for gold from an inflation perspective, and that the hot CPI report, hawkish Fed comments and the dollar rally are pressing gold lower.",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/12/gold-falls-to-over-one-week-low-on-firm-dollar-fed-rate-hike-bets.html",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "US PPI at 12:30am Saturday Sydney time; gold miners at the open.",
-            "sources": [
-              {
-                "label": "CNBC (gold)",
-                "url": "https://www.cnbc.com/2026/11/12/gold-falls-to-over-one-week-low-on-firm-dollar-fed-rate-hike-bets.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "BullionVault",
-                "url": "https://www.bullionvault.com/gold-news/gold-price-news/gold-inflation-fed-rate-hikes-111220261",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Reuters via Euronext",
-                "url": "https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "RBA exchange rates",
-                "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Market Index evening wrap",
-                "url": "https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (gold futures)",
-                "url": "https://finance.yahoo.com/quote/GC%3DF/",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "australia-asx",
-        "cards": [
-          {
-            "id": "asx-open-1113",
-            "headline": "ASX futures point to a 0.4% fall after the Nvidia news",
-            "takeaway": "Futures suggest a softer open, with gold and other miners in focus after Thursday’s fall in materials.",
-            "tags": [
-              "ASX",
-              "Futures",
-              "Miners"
-            ],
-            "key_figure": "ASX 200 9,146.8 (−0.07%, 12 Nov close); futures −40 points to 9,142 near 6:00am AEDT (AFR)",
-            "new_since_last_issue": "Yesterday's close edition reported Thursday's session. New: this morning's futures after the overnight moves.",
-            "what_happened": "ASX 200 futures were down 40 points, or 0.4%, at 9,142 near 6:00am AEDT ([AFR](https://www.afr.com/markets/equity-markets/asx-to-fall-nvidia-shares-plunge-on-huang-exit-wall-st-steady-20261113-p61dtw)). The ASX 200 closed Thursday down 6.4 points at 9,146.8; financials rose 1.1%, led by CBA (+2.9%) and Westpac (+1.9%), while materials fell 2.1% and the gold sub-index 3.6% ([Market Index](https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold), [Yahoo Finance](https://finance.yahoo.com/quote/%5EAXJO/)). Paladin Energy was in a trading halt all day after launching a fully underwritten A$474 million institutional placement and a C$50 million Canadian placement ([Market Index](https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold)).",
-            "why_it_matters": "Gold fell a further 2.8% overnight and Brent rose 3.6%, so the open may see the same split between energy and gold miners, while banks led Thursday's defensive gains.",
-            "market_reaction": "Dashboard: ASX 200 9,146.8 (−0.1%, 12 Nov). SPI 200 futures are unavailable in our feed; the futures level is the AFR's.",
-            "what_to_watch": "Gold and lithium miners, Paladin’s return to trade, and banks after the parliamentary hearings.",
-            "sources": [
-              {
-                "label": "AFR markets live",
-                "url": "https://www.afr.com/markets/equity-markets/asx-to-fall-nvidia-shares-plunge-on-huang-exit-wall-st-steady-20261113-p61dtw",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Market Index evening wrap",
-                "url": "https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (ASX 200)",
-                "url": "https://finance.yahoo.com/quote/%5EAXJO/",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              }
-            ]
-          },
-          {
-            "id": "bank-ceos-1113",
-            "headline": "ANZ and Westpac chiefs tell MPs less spending would ease inflation",
-            "takeaway": "Both CEOs said any cut in demand, public or private, would help, as ASIC began a case against CBA over business fees.",
-            "tags": [
-              "Banks",
-              "Inflation",
-              "Fiscal",
-              "ASIC"
-            ],
-            "new_since_last_issue": "Yesterday's close edition listed the hearings as an open item and noted the ASIC case. New: what the ANZ and Westpac chief executives told the committee.",
-            "what_happened": "ANZ chief executive Nuno Matos told a parliamentary committee that \"any spending reducing in the economy, be it public or private, will take the pressure from inflation\", and Westpac's Anthony Miller said \"any pull back of demand, public or private\" would help; Miller also called for faster approval of major infrastructure projects ([The Age](https://www.theage.com.au/politics/federal/cut-government-spending-to-reduce-inflation-big-banks-plea-20261112-p61dhq.html)). Matos said he does not expect a recession in Australia but sees a greater risk from an external shock linked to the AI build-out, calling record equity prices alongside high interest rates \"a dangerous situation for the world\" ([ABC](https://www.abc.net.au/news/2026-11-12/anz-boss-says-global-markets-in-dangerous-situation/107377392)). Committee chair Ed Husic asked about ANZ's A$7.59 billion cash profit; Matos said mortgages are one of the least profitable parts of banking ([ABC](https://www.abc.net.au/news/2026-11-12/anz-boss-says-global-markets-in-dangerous-situation/107377392)). Treasurer Jim Chalmers has said the mid-year budget update next month will include spending cuts ([The Age](https://www.theage.com.au/politics/federal/cut-government-spending-to-reduce-inflation-big-banks-plea-20261112-p61dhq.html)). Separately, ASIC began civil penalty proceedings alleging CBA overcharged about 42,000 CommBiz customers about A$8.5 million in undisclosed fees between November 2020 and May 2025; CBA has paid more than A$26.4 million in remediation to about 93,000 customers ([ASIC](https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-279mr-asic-sues-commonwealth-bank-alleging-tens-of-thousands-of-business-customers-overcharged-fees)).",
-            "why_it_matters": "Fiscal policy is one input to the RBA's inflation outlook after five rate rises this year. Oxford Economics Australia estimates cumulative data-centre spending could pass A$240 billion by 2030, adding to competition for construction trades ([The Age](https://www.theage.com.au/politics/federal/cut-government-spending-to-reduce-inflation-big-banks-plea-20261112-p61dhq.html)).",
-            "competing_views": [
-              {
-                "who": "Nuno Matos, ANZ",
-                "view": "Said high inflation is a global result of spending on AI, renewables and defence, and less spending in general would contribute to lower interest rates.",
-                "source": {
-                  "label": "ABC",
-                  "url": "https://www.abc.net.au/news/2026-11-12/anz-boss-says-global-markets-in-dangerous-situation/107377392",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              },
-              {
-                "who": "Oscar Guth, Oxford Economics Australia",
-                "view": "Said the expanding data-centre pipeline is likely to intensify competition for specialised labour, adding to wage and contractor costs.",
-                "source": {
-                  "label": "The Age",
-                  "url": "https://www.theage.com.au/politics/federal/cut-government-spending-to-reduce-inflation-big-banks-plea-20261112-p61dhq.html",
-                  "claim_type": "forecast",
-                  "date": "12 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "NAB and CBA chief executives at the inquiry, the mid-year budget update next month, and the RBA minutes on 17 November.",
-            "sources": [
-              {
-                "label": "The Age",
-                "url": "https://www.theage.com.au/politics/federal/cut-government-spending-to-reduce-inflation-big-banks-plea-20261112-p61dhq.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "ABC",
-                "url": "https://www.abc.net.au/news/2026-11-12/anz-boss-says-global-markets-in-dangerous-situation/107377392",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "ASIC media release 26-279MR",
-                "url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-279mr-asic-sues-commonwealth-bank-alleging-tens-of-thousands-of-business-customers-overcharged-fees",
-                "claim_type": "official_statement",
-                "date": "12 Nov 2026"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "rates-expectations",
-        "cards": [
-          {
-            "id": "us-yields-fed-1113",
-            "headline": "US 10-year yield back above 5% as Fed hike bets build",
-            "takeaway": "Treasuries sold off as markets reopened after the holiday, with oil and Fed comments adding to expectations of further rate rises.",
-            "tags": [
-              "Fed",
-              "US",
-              "Bonds"
-            ],
-            "key_figure": "US 10-year 5.125% (+13 bp), 2-year 4.879% (+15 bp), late 12 Nov session (CNBC); jobless claims 200,000 (US Labor Department)",
-            "new_since_last_issue": "Yesterday's issue had Goolsbee's and Paulson's comments while bond markets were shut. New: the first Treasury session since the CPI-day sell-off, Hammack's remarks and jobless claims.",
-            "what_happened": "The US 10-year Treasury yield rose more than 13 basis points to 5.125%, the 2-year more than 15 basis points to 4.879% and the 30-year 10 basis points to 5.449% ([CNBC](https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html)). Initial jobless claims rose 9,000 to 200,000 in the week to 7 November, with the four-week average unchanged at 195,250 ([US Labor Department](https://www.dol.gov/ui/data.pdf)). Existing home sales fell to their lowest in more than 16 years in October ([CNBC](https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html)). Cleveland Fed President Beth Hammack, a voter, said policy needs to move to a restrictive stance and favoured \"more frequent, smaller\" rises rather than larger moves, adding \"I don't think we're behind the curve today\" ([Reuters via Investing.com](https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530)). CME FedWatch put the odds of a December rise at 100%, with about a 13% chance of a 50 basis point move, and Goldman Sachs added a further quarter-point rise in March to its forecast ([CNBC](https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html)).",
-            "why_it_matters": "Higher US yields and a stronger US dollar weigh on the Australian dollar and on gold, and a widening gap between US and Australian policy rates matters for the currency.",
-            "market_reaction": "Dashboard: US 10-year 4.98% and 2-year 4.73% are US Treasury's 10 Nov official closes, before this move.",
-            "competing_views": [
-              {
-                "who": "Beth Hammack, Cleveland Fed",
-                "view": "Supports gradual, smaller rises and says faster moves would only be needed if the Fed fell behind the curve.",
-                "source": {
-                  "label": "Reuters via Investing.com",
-                  "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530",
-                  "claim_type": "official_statement",
-                  "date": "12 Nov 2026"
-                }
-              },
-              {
-                "who": "Chris Rupkey, FWDBONDS",
-                "view": "Said higher rates are pushing the housing correction deeper.",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
-                  "claim_type": "opinion",
-                  "date": "12 Nov 2026"
-                }
-              }
-            ],
-            "comparison": {
-              "title": "Which 10-year yield?",
-              "why_different": "The figures measure the same note at different times. Our dashboard uses US Treasury's official par-yield close, which is published with a lag and is at 10 November. Reuters and CNBC quoted live market yields on 12 November at different points in the session. None are averaged.",
-              "resolution": "explained",
-              "rows": [
-                {
-                  "source": "US Treasury par yield curve, via our snapshot",
-                  "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
-                  "figure": "4.98%",
-                  "measure": "10-year par yield, official close",
-                  "timestamp": "10 Nov 2026",
-                  "method": "Official series, published with a lag",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Reuters via Euronext",
-                  "url": "https://live.euronext.com/en/financial-news/wall-street-edges-nvidia-drops-after-ceo-resigns",
-                  "figure": "5.066% (+7.73 bp)",
-                  "measure": "10-year note yield, intraday",
-                  "timestamp": "12 Nov 2026, New York session",
-                  "method": "Wire market report",
-                  "status": "independently reported"
-                },
-                {
-                  "source": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
-                  "figure": "5.125% (+13 bp)",
-                  "measure": "10-year note yield, intraday",
-                  "timestamp": "12 Nov 2026, New York session",
-                  "method": "Market report",
-                  "status": "independently reported"
-                }
-              ]
-            },
-            "what_to_watch": "US PPI at 12:30am Saturday Sydney time; Fed Vice Chair Jefferson at 11:00am Saturday Sydney time.",
-            "sources": [
-              {
-                "label": "CNBC (Treasuries)",
-                "url": "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "US Labor Department weekly claims",
-                "url": "https://www.dol.gov/ui/data.pdf",
-                "claim_type": "measurement",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Reuters via Investing.com",
-                "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "US Treasury par yield curve",
-                "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
-                "claim_type": "measurement",
-                "date": "10 Nov 2026"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "global-risk",
-        "cards": [
-          {
-            "id": "trump-iran-deal-1113",
-            "headline": "Trump says the US no longer needs a deal with Iran",
-            "takeaway": "The post moved oil and yields; Iran had not formally responded, and Qatar's mediation continues.",
-            "tags": [
-              "Iran",
-              "US",
-              "Geopolitics"
-            ],
-            "new_since_last_issue": "Earlier this week Trump said the war was effectively over and new strikes were unlikely. New: his post that a deal is no longer needed.",
-            "what_happened": "President Trump wrote on Truth Social: \"We don't need a deal with Iran. Those days have long since passed. We've got their money, Hundreds of Billions of Dollars, and we've got their Strait!\" In the same post he asked Vice President Vance to focus on corruption and crime in Democratic-run states ([CNBC](https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html)). The Wall Street Journal reported on Wednesday that Vance, who has led diplomatic efforts with Iran, was considering face-to-face talks with a senior Iranian security official ([CNBC](https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html)). Iran had not responded to the post; Foreign Minister Abbas Araghchi has said the conflict will not be resolved by military means or tighter sanctions, Iran says its offer to reopen the strait within two days of an agreement stands if its demands are met, and Secretary of State Marco Rubio said on Tuesday there is \"no need for major combat operations\" because economic pressure is working ([Kurdistan 24](https://www.kurdistan24.net/en/story/952603/trump-we-dont-need-a-deal-with-iran)). Iran's security chief Mohsen Rezaei said this week there are no negotiations of any kind ([Iran International](https://www.iranintl.com/en/202611122211)).",
-            "why_it_matters": "Expectations of a settlement had pulled Brent down sharply in November, so signals on talks move oil, inflation expectations and bond yields, all of which feed into Australian fuel prices and rate expectations.",
-            "what_to_watch": "Any Iranian response, the White House's explanation of Vance's role, and Qatar's mediation.",
-            "sources": [
-              {
-                "label": "CNBC (Trump post)",
-                "url": "https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Kurdistan 24",
-                "url": "https://www.kurdistan24.net/en/story/952603/trump-we-dont-need-a-deal-with-iran",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "Iraqi Kurdish broadcaster"
-              },
-              {
-                "label": "Iran International",
-                "url": "https://www.iranintl.com/en/202611122211",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "London-based Persian-language broadcaster critical of the Iranian government"
-              }
-            ]
-          },
-          {
-            "id": "ukraine-putin-1113",
-            "headline": "US envoys meet Putin and say a new round of talks is set",
-            "takeaway": "Witkoff said trilateral talks have restarted and Europeans will join the next round; Putin said territory remains the key dispute.",
-            "tags": [
-              "Ukraine",
-              "Russia",
-              "Geopolitics"
-            ],
-            "new_since_last_issue": "Yesterday's issue said the envoys would meet Putin on Thursday. New: what was said at the meeting and the next steps.",
-            "what_happened": "Steve Witkoff and Jared Kushner met President Putin in Moscow for about two and a half hours; Witkoff said afterwards \"We've restarted it. We've set a new meeting\" and that European representatives will take part in the next round, and the envoys then headed to Dublin to meet President Zelensky ([RFE/RL](https://www.rferl.org/a/russia-ukraine-war-us-talks/33896823.html)). In the Kremlin's transcript, Kushner said the Russian, Ukrainian and European delegations agreed in Abu Dhabi that they want the war to end but are still apart on how, and Putin said \"there is only one line of demarcation – the state border\" ([Kremlin](http://en.kremlin.ru/events/president/news/81246)). Putin proposed a humanitarian evacuation of Kostiantynivka; Ukraine's presidential office said Russia had used a similar operation in Oleshky to bring in military equipment and that Kyiv needed details ([RFE/RL](https://www.rferl.org/a/russia-ukraine-war-us-talks/33896823.html)). Russian and Ukrainian drone and missile strikes continued on Thursday ([RFE/RL](https://www.rferl.org/a/russia-ukraine-war-us-talks/33896823.html)).",
-            "why_it_matters": "A settlement would affect European energy markets, Russian fuel exports and global commodity flows; strikes on energy infrastructure on both sides keep supply risks in place.",
-            "what_to_watch": "The Dublin meeting with Zelensky and the date and format of the next trilateral round.",
-            "sources": [
-              {
-                "label": "RFE/RL",
-                "url": "https://www.rferl.org/a/russia-ukraine-war-us-talks/33896823.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026",
-                "perspective": "US-funded broadcaster with Ukrainian and Russian services"
-              },
-              {
-                "label": "Kremlin transcript",
-                "url": "http://en.kremlin.ru/events/president/news/81246",
-                "claim_type": "official_statement",
-                "date": "12 Nov 2026",
-                "perspective": "Russian presidential office"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "rates": {
-      "rba": {
-        "status": "available",
-        "summary": "The ASX RBA Rate Tracker showed a 97% probability that the RBA holds the cash rate at 4.85% on 8 December and a 3% chance of a 25 bp rise, as of 11 November.",
-        "as_of": "11 Nov 2026",
-        "source": {
-          "label": "ASX RBA Rate Tracker via RBADay",
-          "url": "https://rbaday.com/rba-interest-rate-predictions",
-          "claim_type": "measurement",
-          "date": "11 Nov 2026"
-        },
-        "forecasts": [
-          {
-            "who": "Westpac (Luci Ellis)",
-            "view": "Expects a hold in December; sees February as the next most likely timing for a rise, as a risk rather than a base case.",
-            "source": {
-              "label": "Westpac IQ",
-              "url": "https://www.westpaciq.com.au/economics/2026/11/rba-decision-3-november-2026",
-              "claim_type": "forecast",
-              "date": "3 Nov 2026"
-            }
-          },
-          {
-            "who": "ANZ (Sophia Angala)",
-            "view": "Thinks the cash rate has likely peaked at 4.85%, with risks tilted towards further tightening given the RBA’s concern about inflation expectations.",
-            "source": {
-              "label": "ANZ newsroom",
-              "url": "https://www.anz.com.au/newsroom/media/2026/november/consumer-confidence-mortgage-holder-confidence-at-record-low/",
-              "claim_type": "forecast",
-              "date": "10 Nov 2026"
-            }
-          }
-        ]
-      },
-      "fed": {
-        "status": "available",
-        "summary": "CME FedWatch put the odds of a December Fed rise at 100%, with about a 13% chance of a 50 bp move, on 12 November.",
-        "as_of": "12 Nov 2026",
-        "source": {
-          "label": "CME FedWatch via CNBC",
-          "url": "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
-          "claim_type": "measurement",
-          "date": "12 Nov 2026"
-        },
-        "forecasts": [
-          {
-            "who": "Goldman Sachs",
-            "view": "Added a further quarter-point rise in March to its forecast after the October CPI report.",
-            "source": {
-              "label": "CNBC",
-              "url": "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html",
-              "claim_type": "forecast",
-              "date": "12 Nov 2026"
-            }
-          }
-        ]
-      }
-    },
-    "calendar": [
-      {
-        "when": "Fri 13 Nov, morning AEDT (after Thu US close)",
-        "event": "Cisco, Applied Materials and Cerebras results",
-        "country": "US",
-        "importance": "medium",
-        "source": {
-          "label": "Strategitz week ahead",
-          "url": "https://strategitz.com/week-ahead/2026-11-09.pdf"
-        }
-      },
-      {
-        "when": "Fri 13 Nov (Dublin, time not confirmed)",
-        "event": "US envoys Witkoff and Kushner meet President Zelensky",
-        "country": "IE",
-        "importance": "medium",
-        "source": {
-          "label": "RFE/RL",
-          "url": "https://www.rferl.org/a/russia-ukraine-war-us-talks/33896823.html"
-        }
-      },
-      {
-        "when": "Sat 14 Nov, 12:30am AEDT (8:30am Fri New York)",
-        "event": "US PPI, October (final demand, month on month)",
-        "country": "US",
-        "importance": "high",
-        "prior": "+1.3% m/m",
-        "consensus": "+0.4% m/m",
-        "consensus_source": "Westpac IQ week-ahead market forecast (6 Nov)",
-        "source": {
-          "label": "Westpac IQ weekly",
-          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261109.pdf"
-        }
-      },
-      {
-        "when": "Sat 14 Nov, 12:30am AEDT",
-        "event": "US core PPI (ex food and energy), October, month on month",
-        "country": "US",
-        "importance": "medium",
-        "prior": "+0.7% m/m",
-        "consensus": "+0.3% m/m",
-        "consensus_source": "Market Index economic calendar (12 Nov)",
-        "source": {
-          "label": "Market Index evening wrap",
-          "url": "https://www.marketindex.com.au/news/evening-wrap-asx-200-nears-record-high-as-banks-and-healthcare-rally-gold"
-        }
-      },
-      {
-        "when": "Sat 14 Nov, 2:50am AEDT (10:50am Fri New York)",
-        "event": "Fed Vice Chair for Supervision Bowman speaks",
-        "country": "US",
-        "importance": "low",
-        "source": {
-          "label": "Strategitz week ahead",
-          "url": "https://strategitz.com/week-ahead/2026-11-09.pdf"
-        }
-      },
-      {
-        "when": "Sat 14 Nov, 11:00am AEDT (7:00pm Fri New York)",
-        "event": "Fed Vice Chair Jefferson speaks",
-        "country": "US",
-        "importance": "medium",
-        "source": {
-          "label": "Strategitz week ahead",
-          "url": "https://strategitz.com/week-ahead/2026-11-09.pdf"
-        }
-      }
-    ]
-  },
-  "close": {
-    "cutoff_local": "2026-11-13T16:30:00+11:00",
-    "session_note": "Weekday ASX edition · after the close",
-    "summary": [
-      "The ASX 200 fell 64.6 points, or 0.71%, to 9,082.2 but rose 0.7% for the week, its third weekly gain in a row; materials fell about 1.6% and utilities rose about 1.3% ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again); S&P/ASX 200 sector indices, Yahoo Finance, about 4pm).",
-      "Paladin Energy fell about 17% on its return from a trading halt after a A$525 million raising at about A$7.80 a share, Lendlease about 7% after announcing a A$1.22 billion bond redemption, and gold miners fell as gold hit a 13-month low ([ASX](https://asx.api.markitdigital.com/asx-research/1.0/companies/PDN/announcements); [ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)).",
-      "Brent stayed near US$95–96 after President Trump said the US does not need a deal with Iran; the Australian dollar fell to about 68 US cents, its lowest since January, and US producer prices are due at 12:30am Saturday Sydney time ([CNBC](https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html); [AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again); [Bent Pine Capital](https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13))."
-    ],
-    "prices": {
-      "retrieved_at_utc": "2026-11-13 05:24Z",
-      "cutoff_utc": "2026-11-13T05:30:00Z",
+      "retrieved_at_utc": "2026-11-13 21:34Z",
+      "cutoff_utc": "2026-11-13T20:30:00Z",
       "quotes": [
         {
           "id": "asx200",
@@ -1240,18 +35,22 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 9080.700195,
-          "display_value": "9,080.7",
+          "value": 9082.200195,
+          "display_value": "9,082.2",
           "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:04:14Z",
-          "as_of_sydney": "13 Nov 2026, 16:04 AEDT",
+          "observation_timestamp_utc": "2026-11-13T06:07:14Z",
+          "as_of_sydney": "13 Nov 2026, 17:07 AEDT",
           "comparison_date": "2026-11-12",
           "comparison_value": 9146.799805,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -66.1,
-          "change_pct": -0.72,
-          "display_change": "−0.7%"
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
+          "change_abs": -64.6,
+          "change_pct": -0.71,
+          "display_change": "−0.7%",
+          "week_comparison_date": "2026-11-06",
+          "week_comparison_value": 9020.799805,
+          "week_change_pct": 0.68,
+          "display_week_change": "+0.7% wk"
         },
         {
           "id": "sp500",
@@ -1263,9 +62,8 @@
           "currency": "USD",
           "decimals": 1,
           "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
+          "expected_session_date": "2026-11-12",
           "observation_timezone": "America/New_York",
-          "note": "No Yahoo session for 2026-11-13; showing last available close 2026-11-12.",
           "status": "ok",
           "provider": "Yahoo Finance (^GSPC)",
           "provider_url": "https://finance.yahoo.com/quote/%5EGSPC/",
@@ -1275,15 +73,26 @@
           "value": 7592.399902,
           "display_value": "7,592.4",
           "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T21:58:23Z",
-          "as_of_sydney": "13 Nov 2026, 08:58 AEDT",
+          "observation_timestamp_utc": "2026-11-12T21:00:00Z",
+          "as_of_sydney": "13 Nov 2026, 08:00 AEDT",
           "comparison_date": "2026-11-11",
           "comparison_value": 7619.379883,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_abs": -27.0,
           "change_pct": -0.35,
-          "display_change": "−0.4%"
+          "display_change": "−0.4%",
+          "week_comparison_date": "2026-11-05",
+          "week_comparison_value": 7353.72998,
+          "week_change_pct": 3.25,
+          "display_week_change": "+3.2% wk",
+          "cross_checks": [
+            {
+              "provider": "FRED SP500 (S&P Dow Jones Indices)",
+              "value": 7592.4,
+              "session_date": "2026-11-12"
+            }
+          ]
         },
         {
           "id": "audusd",
@@ -1297,25 +106,29 @@
           "change_unit": "pct",
           "expected_session_date": "2026-11-13",
           "observation_timezone": "Australia/Sydney",
-          "note": "Yahoo AUDUSD=X last (intraday). RBA F11.1 4pm is the lagged official fallback.",
+          "note": "RBA 4pm Sydney rate (WM/Reuters); not the overnight move.",
           "status": "ok",
-          "provider": "Yahoo Finance (AUDUSD=X)",
-          "provider_url": "https://finance.yahoo.com/quote/AUDUSD%3DX/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 0.680226,
-          "display_value": "0.6802",
+          "provider": "RBA F11.1 (4pm AEST/AEDT)",
+          "provider_url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
+          "licence_note": "RBA statistical tables, CC BY 4.0 (attribution: Reserve Bank of Australia).",
+          "official": true,
+          "source_label": "official",
+          "value": 0.6804,
+          "display_value": "0.6804",
           "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:23:32Z",
-          "as_of_sydney": "13 Nov 2026, 16:23 AEDT",
+          "observation_timestamp_utc": "2026-11-13T05:00:00Z",
+          "as_of_sydney": "13 Nov 2026, 16:00 AEDT",
           "comparison_date": "2026-11-12",
-          "comparison_value": 0.68428,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -0.0041,
-          "change_pct": -0.59,
-          "display_change": "−0.59%"
+          "comparison_value": 0.6841,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
+          "change_abs": -0.0037,
+          "change_pct": -0.54,
+          "display_change": "−0.54%",
+          "week_comparison_date": "2026-11-06",
+          "week_comparison_value": 0.69,
+          "week_change_pct": -1.39,
+          "display_week_change": "−1.4% wk"
         },
         {
           "id": "au10y",
@@ -1329,7 +142,7 @@
           "change_unit": "bp",
           "expected_session_date": "2026-11-13",
           "observation_timezone": "Australia/Sydney",
-          "note": "RBA interpolated yield (F2); published with a lag of about two business days. No reliable free same-day ASX bond-futures yield (YT=F/XT=F unavailable).",
+          "note": "RBA interpolated 10-year yield; published with a lag of about two business days.",
           "status": "ok",
           "provider": "RBA F2 capital market yields",
           "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
@@ -1344,9 +157,13 @@
           "comparison_date": "2026-11-10",
           "comparison_value": 4.989,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_bp": 5.5,
-          "display_change": "+5 bp"
+          "display_change": "+5 bp",
+          "week_comparison_date": "2026-11-04",
+          "week_comparison_value": 5.082,
+          "week_change_bp": -3.8,
+          "display_week_change": "−4 bp wk"
         },
         {
           "id": "brent_spot",
@@ -1375,10 +192,14 @@
           "comparison_date": "2026-11-10",
           "comparison_value": 90.16,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_abs": 1.98,
           "change_pct": 2.2,
-          "display_change": "+2.2%"
+          "display_change": "+2.2%",
+          "week_comparison_date": "2026-11-04",
+          "week_comparison_value": 91.84,
+          "week_change_pct": 0.33,
+          "display_week_change": "+0.3% wk"
         },
         {
           "id": "vix",
@@ -1390,7 +211,7 @@
           "currency": "",
           "decimals": 2,
           "change_unit": "pts",
-          "expected_session_date": "2026-11-13",
+          "expected_session_date": "2026-11-12",
           "observation_timezone": "America/New_York",
           "status": "ok",
           "provider": "Cboe VIX History",
@@ -1405,11 +226,15 @@
           "as_of_sydney": "13 Nov 2026, 08:00 AEDT",
           "comparison_date": "2026-11-11",
           "comparison_value": 17.49,
-          "freshness_state": "stale",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_abs": 1.21,
           "change_pct": 6.92,
-          "display_change": "+1.21 pts"
+          "display_change": "+1.21 pts",
+          "week_comparison_date": "2026-11-05",
+          "week_comparison_value": 28.18,
+          "week_change_abs": -9.48,
+          "display_week_change": "−9.48 pts wk"
         },
         {
           "id": "nasdaq",
@@ -1421,9 +246,8 @@
           "currency": "USD",
           "decimals": 1,
           "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
+          "expected_session_date": "2026-11-12",
           "observation_timezone": "America/New_York",
-          "note": "No Yahoo session for 2026-11-13; showing last available close 2026-11-12.",
           "status": "ok",
           "provider": "Yahoo Finance (^IXIC)",
           "provider_url": "https://finance.yahoo.com/quote/%5EIXIC/",
@@ -1433,15 +257,19 @@
           "value": 25366.089844,
           "display_value": "25,366.1",
           "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T22:15:59Z",
-          "as_of_sydney": "13 Nov 2026, 09:15 AEDT",
+          "observation_timestamp_utc": "2026-11-12T21:00:00Z",
+          "as_of_sydney": "13 Nov 2026, 08:00 AEDT",
           "comparison_date": "2026-11-11",
           "comparison_value": 25466.189453,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_abs": -100.1,
           "change_pct": -0.39,
           "display_change": "−0.4%",
+          "week_comparison_date": "2026-11-05",
+          "week_comparison_value": 24315.0,
+          "week_change_pct": 4.32,
+          "display_week_change": "+4.3% wk",
           "cross_checks": [
             {
               "provider": "FRED NASDAQCOM (Nasdaq)",
@@ -1462,7 +290,6 @@
           "change_unit": "bp",
           "expected_session_date": "2026-11-13",
           "observation_timezone": "Australia/Sydney",
-          "note": "RBA interpolated yield (F2); published with a lag of about two business days. No reliable free same-day ASX bond-futures yield (YT=F/XT=F unavailable).",
           "status": "ok",
           "provider": "RBA F2 capital market yields",
           "provider_url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
@@ -1477,9 +304,13 @@
           "comparison_date": "2026-11-10",
           "comparison_value": 4.744,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_bp": 6.4,
-          "display_change": "+6 bp"
+          "display_change": "+6 bp",
+          "week_comparison_date": "2026-11-04",
+          "week_comparison_value": 4.826,
+          "week_change_bp": -1.8,
+          "display_week_change": "−2 bp wk"
         },
         {
           "id": "au_curve",
@@ -1509,7 +340,7 @@
           "change_bp": -0.9,
           "display_change": "−1 bp",
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "note": "Derived from lagged RBA F2 legs; not a live curve mark."
         },
         {
@@ -1530,17 +361,21 @@
           "licence_note": "US Treasury daily par yield curve; US-government public data.",
           "official": true,
           "source_label": "official",
-          "value": 5.1,
-          "display_value": "5.10%",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T20:30:00Z",
-          "as_of_sydney": "13 Nov 2026, 07:30 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 4.98,
-          "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_bp": 12.0,
-          "display_change": "+12 bp"
+          "value": 5.15,
+          "display_value": "5.15%",
+          "market_session_date": "2026-11-13",
+          "observation_timestamp_utc": "2026-11-13T20:30:00Z",
+          "as_of_sydney": "14 Nov 2026, 07:30 AEDT",
+          "comparison_date": "2026-11-12",
+          "comparison_value": 5.1,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
+          "change_bp": 5.0,
+          "display_change": "+5 bp",
+          "week_comparison_date": "2026-11-06",
+          "week_comparison_value": 4.86,
+          "week_change_bp": 29.0,
+          "display_week_change": "+29 bp wk"
         },
         {
           "id": "us2y",
@@ -1560,17 +395,21 @@
           "licence_note": "US Treasury daily par yield curve; US-government public data.",
           "official": true,
           "source_label": "official",
-          "value": 4.86,
-          "display_value": "4.86%",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T20:30:00Z",
-          "as_of_sydney": "13 Nov 2026, 07:30 AEDT",
-          "comparison_date": "2026-11-10",
-          "comparison_value": 4.73,
-          "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_bp": 13.0,
-          "display_change": "+13 bp"
+          "value": 4.88,
+          "display_value": "4.88%",
+          "market_session_date": "2026-11-13",
+          "observation_timestamp_utc": "2026-11-13T20:30:00Z",
+          "as_of_sydney": "14 Nov 2026, 07:30 AEDT",
+          "comparison_date": "2026-11-12",
+          "comparison_value": 4.86,
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
+          "change_bp": 2.0,
+          "display_change": "+2 bp",
+          "week_comparison_date": "2026-11-06",
+          "week_comparison_value": 4.51,
+          "week_change_bp": 37.0,
+          "display_week_change": "+37 bp wk"
         },
         {
           "id": "brent_fut",
@@ -1584,25 +423,29 @@
           "change_unit": "pct",
           "expected_session_date": "2026-11-13",
           "observation_timezone": "America/New_York",
-          "note": "Yahoo BZ=F: front-month Brent last-day financial futures (NYMEX), daily close. Differs from the spot assessment. Close-mode uses the Yahoo same-day last/daily bar with an as-of timestamp.",
+          "note": "Yahoo BZ=F: front-month Brent last-day financial futures (NYMEX), daily close. Differs from the spot assessment.",
           "status": "ok",
           "provider": "Yahoo Finance (BZ=F)",
           "provider_url": "https://finance.yahoo.com/quote/BZ%3DF/",
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 95.510002,
-          "display_value": "95.51",
+          "value": 96.300003,
+          "display_value": "96.30",
           "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:14:29Z",
-          "as_of_sydney": "13 Nov 2026, 16:14 AEDT",
+          "observation_timestamp_utc": "2026-11-13T21:25:17Z",
+          "as_of_sydney": "14 Nov 2026, 08:25 AEDT",
           "comparison_date": "2026-11-12",
           "comparison_value": 95.82,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -0.31,
-          "change_pct": -0.32,
-          "display_change": "−0.3%"
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
+          "change_abs": 0.48,
+          "change_pct": 0.5,
+          "display_change": "+0.5%",
+          "week_comparison_date": "2026-11-06",
+          "week_comparison_value": 98.32,
+          "week_change_pct": -2.05,
+          "display_week_change": "−2.1% wk"
         },
         {
           "id": "gold_fut",
@@ -1616,25 +459,29 @@
           "change_unit": "pct",
           "expected_session_date": "2026-11-13",
           "observation_timezone": "America/New_York",
-          "note": "Yahoo GC=F: active COMEX gold futures contract, not the spot or LBMA price. Close-mode uses the Yahoo same-day last/daily bar with an as-of timestamp.",
+          "note": "Yahoo GC=F: active COMEX gold futures contract, not the spot or LBMA price.",
           "status": "ok",
           "provider": "Yahoo Finance (GC=F)",
           "provider_url": "https://finance.yahoo.com/quote/GC%3DF/",
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 3918.100098,
-          "display_value": "3,918.1",
+          "value": 3881.699951,
+          "display_value": "3,881.7",
           "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:15:24Z",
-          "as_of_sydney": "13 Nov 2026, 16:15 AEDT",
+          "observation_timestamp_utc": "2026-11-13T21:25:33Z",
+          "as_of_sydney": "14 Nov 2026, 08:25 AEDT",
           "comparison_date": "2026-11-12",
           "comparison_value": 3885.300049,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": 32.8,
-          "change_pct": 0.84,
-          "display_change": "+0.8%"
+          "freshness_state": "latest_official_close",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
+          "change_abs": -3.6,
+          "change_pct": -0.09,
+          "display_change": "−0.1%",
+          "week_comparison_date": "2026-11-06",
+          "week_comparison_value": 4074.899902,
+          "week_change_pct": -4.74,
+          "display_week_change": "−4.7% wk"
         },
         {
           "id": "rba_cash",
@@ -1662,7 +509,7 @@
           "comparison_date": "2026-11-03",
           "comparison_value": 4.6,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
+          "source_vintage": "retrieved 2026-11-13 21:34Z",
           "change_bp": 25.0,
           "display_change": "last move +25 bp (4 Nov)"
         },
@@ -1698,394 +545,395 @@
           "change_unit": "pct",
           "expected_session_date": "2026-11-13",
           "observation_timezone": "America/New_York",
-          "note": "Yahoo TIO=F SGX/TSI 62% Fe CFR China proxy; dropped if the print looks broken. No Yahoo session for 2026-11-13; showing last available close 2026-11-12.",
-          "status": "ok",
-          "provider": "Yahoo Finance (TIO=F)",
-          "provider_url": "https://finance.yahoo.com/quote/TIO%3DF/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 91.599998,
-          "display_value": "91.60",
-          "market_session_date": "2026-11-12",
-          "observation_timestamp_utc": "2026-11-12T18:30:00Z",
-          "as_of_sydney": "13 Nov 2026, 05:30 AEDT",
-          "comparison_date": "2026-11-11",
-          "comparison_value": 92.150002,
-          "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -0.55,
-          "change_pct": -0.6,
-          "display_change": "−0.6%"
-        },
-        {
-          "id": "nikkei",
-          "display_name": "Nikkei 225",
-          "tier": "primary",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "JPY",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
-          "observation_timezone": "Asia/Tokyo",
-          "status": "ok",
-          "provider": "Yahoo Finance (^N225)",
-          "provider_url": "https://finance.yahoo.com/quote/%5EN225/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 61358.828125,
-          "display_value": "61,358.8",
-          "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:10:35Z",
-          "as_of_sydney": "13 Nov 2026, 16:10 AEDT",
-          "comparison_date": "2026-11-12",
-          "comparison_value": 60819.359375,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": 539.5,
-          "change_pct": 0.89,
-          "display_change": "+0.9%"
-        },
-        {
-          "id": "hang_seng",
-          "display_name": "Hang Seng",
-          "tier": "primary",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "HKD",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
-          "observation_timezone": "Asia/Hong_Kong",
-          "note": "Live: HK still trading at the Sydney 16:30 cutoff (closes 16:00 HKT / 19:00 AEDT).",
-          "status": "ok",
-          "provider": "Yahoo Finance (^HSI)",
-          "provider_url": "https://finance.yahoo.com/quote/%5EHSI/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 23735.339844,
-          "display_value": "23,735.3",
-          "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:10:38Z",
-          "as_of_sydney": "13 Nov 2026, 16:10 AEDT",
-          "comparison_date": "2026-11-12",
-          "comparison_value": 24008.550781,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -273.2,
-          "change_pct": -1.14,
-          "display_change": "−1.1%"
-        },
-        {
-          "id": "shanghai",
-          "display_name": "Shanghai Composite",
-          "tier": "expanded",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "CNY",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
-          "observation_timezone": "Asia/Shanghai",
-          "status": "ok",
-          "provider": "Yahoo Finance (000001.SS)",
-          "provider_url": "https://finance.yahoo.com/quote/000001.SS/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 3653.6604,
-          "display_value": "3,653.7",
-          "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:10:40Z",
-          "as_of_sydney": "13 Nov 2026, 16:10 AEDT",
-          "comparison_date": "2026-11-12",
-          "comparison_value": 3655.830078,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -2.2,
-          "change_pct": -0.06,
-          "display_change": "−0.1%"
-        },
-        {
-          "id": "kospi",
-          "display_name": "KOSPI",
-          "tier": "expanded",
-          "instrument_type": "equity_index",
-          "quote_kind": "index_close",
-          "unit": "pts",
-          "currency": "KRW",
-          "decimals": 1,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
-          "observation_timezone": "Asia/Seoul",
-          "status": "ok",
-          "provider": "Yahoo Finance (^KS11)",
-          "provider_url": "https://finance.yahoo.com/quote/%5EKS11/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 5304.52002,
-          "display_value": "5,304.5",
-          "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:05:40Z",
-          "as_of_sydney": "13 Nov 2026, 16:05 AEDT",
-          "comparison_date": "2026-11-12",
-          "comparison_value": 5342.72998,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": -38.2,
-          "change_pct": -0.72,
-          "display_change": "−0.7%"
-        },
-        {
-          "id": "copper_fut",
-          "display_name": "Copper (COMEX futures)",
-          "tier": "expanded",
-          "instrument_type": "commodity",
-          "quote_kind": "futures_last",
-          "unit": "USD/lb",
-          "currency": "USD",
-          "decimals": 3,
-          "change_unit": "pct",
-          "expected_session_date": "2026-11-13",
-          "observation_timezone": "America/New_York",
-          "note": "Yahoo HG=F: active COMEX copper futures contract. Close-mode uses the Yahoo same-day last/daily bar with an as-of timestamp.",
-          "status": "ok",
-          "provider": "Yahoo Finance (HG=F)",
-          "provider_url": "https://finance.yahoo.com/quote/HG%3DF/",
-          "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
-          "official": false,
-          "source_label": "delayed, unofficial",
-          "value": 6.197,
-          "display_value": "6.197",
-          "market_session_date": "2026-11-13",
-          "observation_timestamp_utc": "2026-11-13T05:14:16Z",
-          "as_of_sydney": "13 Nov 2026, 16:14 AEDT",
-          "comparison_date": "2026-11-12",
-          "comparison_value": 6.1825,
-          "freshness_state": "live_or_delayed",
-          "source_vintage": "retrieved 2026-11-13 05:24Z",
-          "change_abs": 0.015,
-          "change_pct": 0.23,
-          "display_change": "+0.2%"
+          "status": "unavailable",
+          "freshness_state": "unavailable",
+          "unavailable_reason": "No free, permitted daily benchmark (SGX/Platts are licensed); the only free series (IMF via FRED) is monthly.",
+          "provider": null,
+          "provider_url": null,
+          "licence_note": null,
+          "official": null
         }
       ]
     },
     "sections": [
       {
-        "id": "asx-close",
+        "id": "market-drivers",
         "cards": [
           {
-            "id": "asx200-close-1113",
-            "headline": "ASX 200 falls 0.7% as miners and property trusts drop, but ends the week higher",
-            "takeaway": "Utilities were the main gainers; materials, REITs, tech and financials fell.",
+            "id": "us-inflation-fed-hike-path",
+            "headline": "Hot US inflation week puts a December Fed hike fully in price",
+            "takeaway": "CPI beat forecasts, producer prices rose 6.5% over the year, and Fed officials said more tightening is likely; the debate has moved to January.",
             "tags": [
-              "ASX",
-              "sectors",
-              "miners",
-              "banks"
+              "Fed",
+              "Inflation",
+              "US"
             ],
-            "key_figure": "9,082.2 · −64.6 pts (−0.71%), final close (AAP)",
-            "new_since_last_issue": "This morning's briefing had futures down about 0.4% near 6am; by 8:30am they were down 0.58% ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)). The index opened 0.5% lower and was down as much as 0.9% at midday before trimming losses.",
-            "what_happened": "The S&P/ASX 200 closed at 9,082.2, down 64.6 points, and the All Ordinaries fell 0.75% to 9,204.5. The index rose 0.7% over the week, its third straight weekly gain ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again)). It had been down 0.91% at 9,063.4 at midday ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again)). At about 4pm, before the closing auction, utilities were up 1.3% and telecoms 0.3%, while materials fell 1.6%, A-REITs 1.0%, info tech 0.7%, financials 0.6% and health care 0.5% (S&P/ASX 200 sector indices, Yahoo Finance).",
-            "why_it_matters": "BHP fell about 1.6% and Rio Tinto about 1.2% as copper fell to its lowest since July, and gold miners fell as gold dropped to a 13-month low near US$3,883 an ounce ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again); Yahoo Finance, about 4pm). CBA fell about 0.9% and Westpac about 0.7% (Yahoo Finance). NAB's Andrew Irvine and CBA's Matt Comyn appeared before the House economics committee ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). Westpac chief economist Luci Ellis said the bank expects the RBA has finished raising rates, citing weaker housing, business survey and consumer data and lower oil prices ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)).",
-            "comparison": {
-              "title": "Which ASX 200 close?",
-              "why_different": "The figures were taken at different times. The closing auction ends about 4:12pm, so only figures published after it are final.",
-              "resolution": "explained",
-              "rows": [
-                {
-                  "source": "AAP close report",
-                  "url": "https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again",
-                  "figure": "9,082.2 (−64.6 pts, −0.71%)",
-                  "measure": "S&P/ASX 200 close",
-                  "timestamp": "13 Nov 2026, after the closing auction",
-                  "method": "Reported close",
-                  "status": "independently reported"
-                },
-                {
-                  "source": "Yahoo Finance (close snapshot)",
-                  "url": "https://finance.yahoo.com/quote/%5EAXJO/",
-                  "figure": "9,080.7 (−0.7%)",
-                  "measure": "S&P/ASX 200 last value",
-                  "timestamp": "13 Nov 2026, about 4:04pm",
-                  "method": "Delayed index feed, before the auction",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Wren Advisers daily database",
-                  "url": "https://www.wrenadvisers.com.au/results-date.php",
-                  "figure": "9,068.1 (−78.7 pts)",
-                  "measure": "S&P/ASX 200, labelled intraday",
-                  "timestamp": "13 Nov 2026, time not stated",
-                  "method": "Written during the session",
-                  "status": "independently reported"
+            "key_figure": "PPI +0.3% m/m, +6.5% y/y (Oct); FedWatch 100% December hike (13 Nov)",
+            "what_happened": "US producer prices rose 0.3% in October, below the 0.4% Reuters poll forecast, after a revised 1.4% rise in September; over the year they rose 6.5%, the largest annual gain since November 2022 ([BLS](https://www.bls.gov/ppi/), [Reuters via US News](https://money.usnews.com/investing/news/articles/2026-11-13/us-producer-prices-rise-further-in-october)). Core PPI rose 0.3%, in line with forecasts ([CNBC](https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html)). That followed Tuesday's October CPI, which rose 0.4% for the month against a 0.3% forecast ([CNBC](https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html)). San Francisco Fed President Mary Daly said on Friday the Fed will \"in all likelihood\" need to raise rates, citing services inflation ([Reuters via Investing.com](https://www.investing.com/news/economy-news/fed-likely-to-need-to-raise-rates-amid-worsening-inflation-daly-5026338)). Boston Fed President Susan Collins said some additional tightening is warranted soon ([investingLive](https://investinglive.com/central-banks/fed-s-collins-i-would-think-some-additional-policy-tightening-is-warranted-soon/)). This week's Fed speeches locked in expectations of a December hike and opened the prospect of the first back-to-back rises since 2023 ([Bloomberg Law](https://news.bloomberglaw.com/capital-markets/fed-on-track-for-december-rate-hike-as-debate-moves-to-january)). CME FedWatch put the chance of a rise at the 9 December meeting at 100% on Friday, with 86% for a quarter point and about 14% for a half point ([CNBC](https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html)).",
+            "why_it_matters": "Treasury yields and the US dollar rose this week as rate expectations climbed, while gold and the Australian dollar fell over the same period. US retail sales and the Fed minutes next week are the next inputs for that pricing.",
+            "market_reaction": "Dashboard (five US sessions to Thursday 12 Nov): US 2Y 4.86% (+40 bp week); US 10Y 5.10% (+26 bp week).",
+            "competing_views": [
+              {
+                "who": "Mary Daly, San Francisco Fed",
+                "view": "Said the Fed will in all likelihood need to raise rates, while watching whether consumer spending holds up through the holiday season.",
+                "source": {
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/economy-news/fed-likely-to-need-to-raise-rates-amid-worsening-inflation-daly-5026338",
+                  "claim_type": "official_statement",
+                  "date": "13 Nov 2026"
                 }
-              ]
-            },
+              },
+              {
+                "who": "Westpac economics",
+                "view": "Said market pricing of 25 bp hikes in December and January, and about 3.5 hikes by September, overstates the need for tightening, because core inflation excluding shelter is relatively benign on a six-month basis.",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+                  "claim_type": "forecast",
+                  "date": "16 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "US retail sales (12:30am Wednesday Sydney time) and the Fed minutes (6am Thursday Sydney time).",
             "sources": [
               {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again",
+                "label": "BLS",
+                "url": "https://www.bls.gov/ppi/",
+                "claim_type": "official_statement",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "Reuters via US News",
+                "url": "https://money.usnews.com/investing/news/articles/2026-11-13/us-producer-prices-rise-further-in-october",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "Yahoo Finance (close snapshot)",
-                "url": "https://finance.yahoo.com/quote/%5EAXJO/",
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "Reuters via Investing.com",
+                "url": "https://www.investing.com/news/economy-news/fed-likely-to-need-to-raise-rates-amid-worsening-inflation-daly-5026338",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "investingLive",
+                "url": "https://investinglive.com/central-banks/fed-s-collins-i-would-think-some-additional-policy-tightening-is-warranted-soon/",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "Bloomberg Law",
+                "url": "https://news.bloomberglaw.com/capital-markets/fed-on-track-for-december-rate-hike-as-debate-moves-to-january",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "CNBC (CME FedWatch)",
+                "url": "https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html",
                 "claim_type": "measurement",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "ABC markets live",
-                "url": "https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368",
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+                "claim_type": "forecast",
+                "date": "16 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "oil-iea-surplus",
+            "headline": "Oil falls for a second week as the IEA sees a surplus",
+            "takeaway": "Gulf exports recovered faster than demand in October, but diesel remains tight and attacks on shipping continue.",
+            "tags": [
+              "Oil",
+              "IEA",
+              "Hormuz"
+            ],
+            "key_figure": "Brent futures US$95.94 (−2.4% week, 13 Nov session)",
+            "what_happened": "The IEA said on Friday that global oil supply rose by 2.3 million barrels a day to 105.4 mb/d in October, surpassing demand for the first time since the war in Iran began, and that the market will return to a surplus in the fourth quarter. Gulf exports excluding Oman reached 18.4 mb/d, still 26% below pre-war levels. It said diesel tightness \"remains the overriding concern\", with European diesel near US$180 a barrel, 77% above pre-war levels ([IEA](https://www.iea.org/reports/oil-market-report-november-2026)). US crude inventories rose by 4.7 million barrels in the week to 6 November, against a forecast draw, the EIA said ([CNBC](https://www.cnbc.com/2026/11/13/oil-prices-set-for-second-weekly-decline-as-trump-to-stay-with-iran-blockade.html)). Iran's military said four tankers were hit by explosions in the strait on Thursday, which Reuters could not verify, and Yemen's Houthis said they attacked Saudi oil facilities ([Reuters via Mint](https://www.livemint.com/market/oil-prices-set-for-second-straight-weekly-decline-on-growing-signs-of-supply-surplus-11794595284142.html)). In our data Brent futures closed the 13 November session at US$95.94, up 0.1% on the day and down 2.4% for the week, after a 16.4% fall the week before. The lagged EIA spot series was US$92.14 as at 11 November.",
+            "why_it_matters": "Lower crude prices ease one part of fuel costs, but the IEA says diesel remains tight, which matters for Australian airlines, freight and transport businesses. Analysts such as Sugandha Sachdeva say any fresh supply disruption could push prices up again.",
+            "market_reaction": "Dashboard: Brent futures 95.94 (+0.1% day, −2.4% week); Brent spot 92.14 as at 11 Nov (FRED/EIA, +0.3% week).",
+            "competing_views": [
+              {
+                "who": "Phil Flynn, Price Futures Group",
+                "view": "Said the biggest fear a few months ago was a shortage and \"now it looks like the biggest fear is a surplus.\"",
+                "source": {
+                  "label": "Reuters via Mint",
+                  "url": "https://www.livemint.com/market/oil-prices-set-for-second-straight-weekly-decline-on-growing-signs-of-supply-surplus-11794595284142.html",
+                  "claim_type": "opinion",
+                  "date": "13 Nov 2026"
+                }
+              },
+              {
+                "who": "Sugandha Sachdeva, SS WealthStreet",
+                "view": "Said geopolitical risks remain elevated and any fresh disruption to supply could quickly push prices up again.",
+                "source": {
+                  "label": "Ship & Bunker",
+                  "url": "https://shipandbunker.com/news/world/508137-brent-down-16-on-the-week-as-iea-signals-return-to-surplus-for-end-of-2026",
+                  "claim_type": "opinion",
+                  "date": "13 Nov 2026"
+                }
+              }
+            ],
+            "comparison": {
+              "title": "Which Brent weekly move?",
+              "why_different": "Our futures feed covers the week to the 13 November session; the official spot series is published with a lag and covers the week to 11 November, before Thursday's rise and Friday's IEA report. They are different instruments and dates, so they are shown side by side, not averaged.",
+              "resolution": "explained",
+              "rows": [
+                {
+                  "source": "Yahoo Finance (BZ=F), via our snapshot",
+                  "url": "https://finance.yahoo.com/quote/BZ%3DF/",
+                  "figure": "US$95.94 (−2.4% week)",
+                  "measure": "Brent front-month futures, daily close",
+                  "timestamp": "13 Nov 2026 session",
+                  "method": "Delayed, unofficial data feed",
+                  "status": "primary measured"
+                },
+                {
+                  "source": "FRED DCOILBRENTEU (EIA), via our snapshot",
+                  "url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+                  "figure": "US$92.14 (+0.3% week)",
+                  "measure": "Europe Brent spot assessment",
+                  "timestamp": "As at 11 Nov 2026",
+                  "method": "Official series, lagged",
+                  "status": "primary measured"
+                }
+              ]
+            },
+            "what_to_watch": "OPEC and IEA follow-ups, weekly EIA stocks on Thursday morning Sydney time, and any verified tanker incidents.",
+            "sources": [
+              {
+                "label": "IEA Oil Market Report",
+                "url": "https://www.iea.org/reports/oil-market-report-november-2026",
+                "claim_type": "official_statement",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/11/13/oil-prices-set-for-second-weekly-decline-as-trump-to-stay-with-iran-blockade.html",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "Market Index",
-                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november",
+                "label": "Reuters via Mint",
+                "url": "https://www.livemint.com/market/oil-prices-set-for-second-straight-weekly-decline-on-growing-signs-of-supply-surplus-11794595284142.html",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "Wren Advisers",
-                "url": "https://www.wrenadvisers.com.au/results-date.php",
+                "label": "Ship & Bunker",
+                "url": "https://shipandbunker.com/news/world/508137-brent-down-16-on-the-week-as-iea-signals-return-to-surplus-for-end-of-2026",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               }
             ]
           },
           {
-            "id": "asx-movers-1113",
-            "headline": "Paladin and Lendlease fall sharply; GrainCorp and Xero rise",
-            "takeaway": "Company announcements drove the biggest moves; gold and copper miners fell with metal prices.",
+            "id": "nvidia-huang-ai-week",
+            "headline": "Chip stocks sell off after Huang exit; Nvidia reports Wednesday",
+            "takeaway": "US indexes still rose for the week, but Friday's chip sell-off sets up Nvidia's results and Anthropic's listing as the next tests for AI shares.",
             "tags": [
-              "PDN",
-              "LLC",
-              "CSC",
-              "GNC"
+              "Equities",
+              "AI",
+              "US"
             ],
-            "key_figure": "Paladin A$7.21 · −17.1% (Yahoo Finance, about 4pm)",
-            "what_happened": "Paladin Energy fell about 17% to A$7.21 on its return to trade after completing a A$525 million equity raising ([ASX announcement](https://asx.api.markitdigital.com/asx-research/1.0/companies/PDN/announcements); Yahoo Finance, about 4pm); the raising was priced at about A$7.80 a share ([Wren Advisers](https://www.wrenadvisers.com.au/results-date.php)). Lendlease fell about 7% after announcing it will redeem about A$1.22 billion of bonds by 30 November, funded from a A$1.25 billion standby facility, at a cost of about A$57 million ([ASX announcement](https://asx.api.markitdigital.com/asx-research/1.0/companies/LLC/announcements); [Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)). Capstone Copper fell about 5% after cutting the bottom of its 2026 copper production guidance to 195,000 tonnes from 200,000 tonnes because of a delayed restart at its Pinto Valley mine ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)).",
-            "why_it_matters": "Genesis Minerals and Silex Systems fell about 5%, and Evolution and Northern Star more than 2% (Yahoo Finance, about 4pm). GrainCorp rose about 5% after Macquarie upgraded it to outperform with a A$7.70 target ([Wren Advisers](https://www.wrenadvisers.com.au/results-date.php); Yahoo Finance). Xero rose about 2% and ResMed about 2% (Yahoo Finance; [ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). Accent Group entered a trading halt after reporting like-for-like sales down 3.9% in the first 19 weeks of FY27; it cited fuel prices, interest rate rises and consumer confidence ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november); [Wren Advisers](https://www.wrenadvisers.com.au/results-date.php)). Warburg Pincus revised its Ingenia proposal to seek a non-exclusive process at an unchanged A$5.55 a security, giving AVID until 15 November to respond ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)).",
+            "key_figure": "S&P 500 7,592.4, Nasdaq 25,366.1 (12 Nov close); VIX 18.70",
+            "what_happened": "Nvidia said on Thursday that Jensen Huang had resigned as CEO, with CFO Colette Kress as interim chief executive ([Nvidia](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition)). Chip stocks fell further on Friday: the Philadelphia semiconductor index fell about 4% during the session, AMD and Broadcom fell sharply, and the Nasdaq was down more than 1% in afternoon trade ([Reuters via Euronext](https://live.euronext.com/en/financial-news/stocks-fall-tech-nvidia-concerns-us-dollar-climbs), [Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html)). Friday's US session closed after our data cutoff; delayed closing data show the Nasdaq finished 0.9% lower at 25,136.3, the S&P 500 0.4% lower at 7,561.7 and the Dow 0.1% higher, with Nvidia down 2.0% at US$162.85 ([Yahoo Finance](https://finance.yahoo.com/quote/%5EIXIC/)). In our data, through Thursday's close the S&P 500 was up 3.2% and the Nasdaq 4.3% over five sessions, and the VIX was down 9.48 points to 18.70. Nvidia reports third-quarter results at about 8:20am Wednesday Sydney time ([Nvidia](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx)). Anthropic said it expects to sell 825 million shares at US$70–78, and its shares are due to start trading on Nasdaq on Thursday 19 November, US time ([Yahoo Finance](https://finance.yahoo.com/technology/article/anthropic-ipo-claude-maker-to-begin-trading-on-thursday-nov-19-173550865.html)).",
+            "why_it_matters": "Nvidia's results and guidance, and demand for Anthropic's shares, are the next scheduled tests for AI-linked stocks, including ASX technology and data-centre names.",
+            "market_reaction": "Dashboard (US session 12 Nov): S&P 500 7,592.4 (−0.4% day, +3.2% week); Nasdaq 25,366.1 (−0.4% day, +4.3% week); VIX 18.70 (+1.21 pts day, −9.48 pts week).",
+            "competing_views": [
+              {
+                "who": "Nathan Peterson, Schwab Center for Financial Research",
+                "view": "Said Nvidia still has a great product and a cheap valuation, but there is a lot of uncertainty around future leadership and customer relationships, which may take months to resolve.",
+                "source": {
+                  "label": "Charles Schwab",
+                  "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+                  "claim_type": "opinion",
+                  "date": "13 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Nvidia results and the CEO search; Anthropic's pricing on Wednesday, US time.",
             "sources": [
               {
-                "label": "ASX announcements (PDN)",
+                "label": "Nvidia",
+                "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+                "claim_type": "official_statement",
+                "date": "12 Nov 2026"
+              },
+              {
+                "label": "Reuters via Euronext",
+                "url": "https://live.euronext.com/en/financial-news/stocks-fall-tech-nvidia-concerns-us-dollar-climbs",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "Yahoo Finance",
+                "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "Charles Schwab",
+                "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "Nvidia investor relations",
+                "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
+                "claim_type": "official_statement",
+                "date": "28 Oct 2026"
+              },
+              {
+                "label": "Yahoo Finance",
+                "url": "https://finance.yahoo.com/technology/article/anthropic-ipo-claude-maker-to-begin-trading-on-thursday-nov-19-173550865.html",
+                "claim_type": "reporting",
+                "date": "12 Nov 2026"
+              },
+              {
+                "label": "Yahoo Finance (delayed closes)",
+                "url": "https://finance.yahoo.com/quote/%5EIXIC/",
+                "claim_type": "measurement",
+                "date": "13 Nov 2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "australia-asx",
+        "cards": [
+          {
+            "id": "asx-third-weekly-gain",
+            "headline": "ASX 200 posts a third weekly gain despite Friday's fall",
+            "takeaway": "The index rose 0.7% for the week; miners and banks fell on Friday as gold, copper and Paladin weighed.",
+            "tags": [
+              "ASX",
+              "Australia"
+            ],
+            "key_figure": "ASX 200 9,082.2 (−0.7% Friday, +0.7% week)",
+            "what_happened": "The ASX 200 fell 0.71% on Friday to 9,082.2 but rose 0.7% for the week, its third weekly gain in a row; materials fell 1.6% on Friday ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again)). Paladin Energy fell 17% after completing a A$525 million equity raising ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again), [ASX](https://asx.api.markitdigital.com/asx-research/1.0/companies/PDN/announcements)). NAB shares have fallen more than 6% since its full-year result ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again)). Local surveys were weak: Westpac–Melbourne Institute consumer sentiment fell 2.7% to 78.2 in November, NAB business confidence slipped to −15 in October, and the value of new home loan approvals fell 15% in the September quarter, the largest fall on record ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf)).",
+            "why_it_matters": "Westpac cites the weaker housing, business and consumer data in its view that the RBA has finished raising rates. Miners remain exposed to moves in the US dollar, gold and copper.",
+            "market_reaction": "Dashboard: ASX 200 9,082.2 (−0.7% day, +0.7% week). ASX 200 futures and iron ore unavailable.",
+            "what_to_watch": "Wages on Wednesday and jobs on Thursday; a busy AGM week including BlueScope, Mirvac, Medibank, Northern Star, Seek and Zip.",
+            "sources": [
+              {
+                "label": "AAP",
+                "url": "https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "ASX (PDN)",
                 "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/PDN/announcements",
                 "claim_type": "official_statement",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "ASX announcements (LLC)",
-                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/LLC/announcements",
-                "claim_type": "official_statement",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Market Index",
-                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november",
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Wren Advisers",
-                "url": "https://www.wrenadvisers.com.au/results-date.php",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (closing reads)",
-                "url": "https://finance.yahoo.com/quote/PDN.AX/",
-                "claim_type": "measurement",
-                "date": "13 Nov 2026"
+                "date": "16 Nov 2026"
               }
             ]
-          }
-        ]
-      },
-      {
-        "id": "asia-close",
-        "cards": [
+          },
           {
-            "id": "asia-1113",
-            "headline": "Asian shares give back early gains; yen stays near 160 per dollar",
-            "takeaway": "Japan held a gain; Korea and Hong Kong turned lower as Fed rate-rise bets lifted bond yields.",
+            "id": "aussie-week-ahead-jobs-wages",
+            "headline": "RBA minutes, wages and jobs are next week's local tests",
+            "takeaway": "Forecasters expect wage growth to pick up after the award increase and unemployment to hold at 4.7%.",
             "tags": [
-              "Asia",
-              "Japan",
-              "yen",
-              "bonds"
-            ],
-            "key_figure": "Nikkei 61,358.8 · +0.9% (about 4:10pm Sydney time)",
-            "what_happened": "At about 4:10pm Sydney time the Nikkei was up 0.9% at 61,358.8, the Shanghai Composite down 0.1% and the Hang Seng down 1.1%, and the Kospi down 0.7% at 5,304.5 at about 4:05pm, with all four markets still trading (close snapshot). The Kospi had been up more than 2% in early trade ([Handelsblatt](https://www.handelsblatt.com/finanzen/maerkte/marktberichte/nikkei-yen-hang-seng-erholung-nach-nvidia-schock-asienboersen-starten-im-plus/100269580.html)). The MSCI Asia Pacific Index was little changed in the afternoon after rising as much as 1.1% ([Bloomberg via Swissinfo](https://www.swissinfo.ch/eng/asian-stocks-erase-gain%2C-bonds-slide-before-us-ppi%3A-markets-wrap/92374084)).",
-            "why_it_matters": "The yen traded near 159.9 per US dollar after briefly passing 160 overnight, and Japanese officials warned against one-sided currency moves ([Investing.com](https://au.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-4767556)). Regional bonds fell before US producer price data, with the Fed expected to raise rates in December ([Bloomberg via Swissinfo](https://www.swissinfo.ch/eng/asian-stocks-erase-gain%2C-bonds-slide-before-us-ppi%3A-markets-wrap/92374084)). Japan's third-quarter GDP and October inflation and China's October activity data are due next week ([Investing.com](https://au.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-4767556); [LiteFinance](https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-16112026-22112026/)).",
-            "sources": [
-              {
-                "label": "Yahoo Finance (close snapshot)",
-                "url": "https://finance.yahoo.com/quote/%5EN225/",
-                "claim_type": "measurement",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Bloomberg via Swissinfo",
-                "url": "https://www.swissinfo.ch/eng/asian-stocks-erase-gain%2C-bonds-slide-before-us-ppi%3A-markets-wrap/92374084",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Investing.com",
-                "url": "https://au.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-4767556",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Handelsblatt",
-                "url": "https://www.handelsblatt.com/finanzen/maerkte/marktberichte/nikkei-yen-hang-seng-erholung-nach-nvidia-schock-asienboersen-starten-im-plus/100269580.html",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "rates-fx",
-        "cards": [
-          {
-            "id": "aud-rates-1113",
-            "headline": "Australian dollar at its lowest since January as Australian yields slip below US yields",
-            "takeaway": "Markets still price a hold by the RBA in December; US rate-rise bets keep building.",
-            "tags": [
-              "AUD",
+              "Australia",
               "RBA",
-              "yields"
+              "Data"
             ],
-            "key_figure": "AUD/USD 0.6802 · −0.59% (4:23pm Sydney time)",
-            "what_happened": "The Australian dollar was at US$0.6802 at 4:23pm, down 0.59% from Thursday (close snapshot), its lowest since January ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again); [ABC, with Reuters](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). The Australian 10-year yield was 5.13% at 3pm, up 9 basis points ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). The gap between Australian and US 10-year yields fell to −2 basis points in early trade, on track for its first negative close since August 2025 ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)). The latest official RBA yields in our snapshot are from 11 November.",
-            "why_it_matters": "ASX 30-day cash rate futures implied a 96% chance of a hold at 4.85% on 8 December and 4% for a 0.25-point rise on Friday, from 97% and 3% at Thursday's close ([RBA Watch, from ASX futures](https://rbawatch.com/rba-meeting/december-2026)). Westpac's Luci Ellis said the RBA is likely done raising rates, with a February rise possible only after a material new inflation shock ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). CBA expects the Australia–US 10-year gap to reach −10 to −15 basis points next year ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)).",
-            "sources": [
+            "key_figure": "WPI forecast +1.0% q/q; jobs forecast +27.5k, 4.7% unemployment (market forecasts via Westpac)",
+            "what_happened": "The RBA publishes minutes of its November meeting, when it raised the cash rate 25 bp to 4.85%, on Tuesday, and Governor Michele Bullock speaks on a panel at the ASIC Annual Forum the same day ([CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf)). The September-quarter wage price index on Wednesday is forecast to rise 1.0% after 0.8%, and October employment on Thursday is forecast to rise 27,500 after a 39,300 fall, with unemployment steady at 4.7%, according to market forecasts compiled by Westpac ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf)). China releases October retail sales and industrial production on Monday ([CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf)).",
+            "why_it_matters": "CommSec says stronger wage or jobs data could reinforce expectations that rates stay higher for longer, while Westpac expects November's rise to be the last.",
+            "competing_views": [
               {
-                "label": "Yahoo Finance (close snapshot)",
-                "url": "https://finance.yahoo.com/quote/AUDUSD%3DX/",
-                "claim_type": "measurement",
-                "date": "13 Nov 2026"
+                "who": "Luci Ellis, Westpac",
+                "view": "Said Westpac's conviction that the RBA is done hiking has strengthened, and that a February rise is looking even less likely given weaker housing, business and consumer data.",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+                  "claim_type": "forecast",
+                  "date": "16 Nov 2026"
+                }
               },
               {
-                "label": "ABC markets live",
-                "url": "https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368",
+                "who": "CommSec",
+                "view": "Said a stronger jobs report or wage growth could reinforce concerns about inflation and expectations that rates may need to remain higher for longer.",
+                "source": {
+                  "label": "CommSec week ahead",
+                  "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf",
+                  "claim_type": "opinion",
+                  "date": "13 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Tone of the minutes on the 6–3 vote; wage breadth beyond the award increase.",
+            "sources": [
+              {
+                "label": "CommSec week ahead",
+                "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again",
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+                "claim_type": "forecast",
+                "date": "16 Nov 2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rates-expectations",
+        "cards": [
+          {
+            "id": "yields-week-us-au",
+            "headline": "US yields jump; Australian 10-year falls below the US",
+            "takeaway": "US 2-year and 10-year yields rose sharply on Fed hike bets, and the Australia–US 10-year gap dipped below zero on Friday.",
+            "tags": [
+              "Bonds",
+              "Rates"
+            ],
+            "key_figure": "US 2Y 4.86% (+40 bp week); US 10Y 5.10% (+26 bp week); AU 10Y 5.04% as at 11 Nov",
+            "what_happened": "In our data, the US 2-year yield rose 40 bp over the five sessions to Thursday to 4.86% and the 10-year 26 bp to 5.10%. Australia's RBA-published yields, lagged to 11 November, showed the 10-year at 5.04% (−4 bp week) and the 2-year at 4.81% (−2 bp week), a 10-year–2-year curve of +24 bp. On Friday the US 10-year yield reached 5.17% intraday before settling near 5.13% after the PPI release ([CNBC](https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html)). The Australian 10-year yield was 5.13% at 3pm Friday ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)), and the gap between Australian and US 10-year yields fell to −2 bp in early trade, on track for its first negative close since August 2025 ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)). ASX futures put the chance of an RBA hold on 8 December at 97% at Friday's close ([RBA Watch](https://rbawatch.com/rba-meeting/december-2026)).",
+            "why_it_matters": "The Australia–US yield gap is one input into the Australian dollar. With US rates expected to rise and the RBA priced to hold, it is a gauge to watch for the currency and local bond yields.",
+            "market_reaction": "Dashboard: US 10Y 5.10% (+12 bp day, +26 bp week); US 2Y 4.86% (+13 bp day, +40 bp week), Treasury session 12 Nov; AU 10Y 5.04% and AU 2Y 4.81% as at 11 Nov (RBA, lagged); AU curve +24 bp.",
+            "what_to_watch": "RBA minutes Tuesday; Fed minutes Thursday morning Sydney time.",
+            "sources": [
+              {
+                "label": "US Treasury",
+                "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+                "claim_type": "measurement",
+                "date": "12 Nov 2026"
+              },
+              {
+                "label": "RBA statistical tables",
+                "url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
+                "claim_type": "measurement",
+                "date": "11 Nov 2026"
+              },
+              {
+                "label": "CNBC",
+                "url": "https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html",
+                "claim_type": "measurement",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "ABC",
+                "url": "https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
@@ -2106,137 +954,189 @@
         ]
       },
       {
-        "id": "commodities",
+        "id": "global-risk",
         "cards": [
           {
-            "id": "oil-metals-1113",
-            "headline": "Brent holds near US$95 after Trump says no Iran deal is needed",
-            "takeaway": "Oil kept Thursday's jump; gold steadied after a 13-month low.",
+            "id": "iran-no-deal-blockade",
+            "headline": "Trump says no Iran deal is needed and keeps the blockade",
+            "takeaway": "The US is relying on the naval blockade and sanctions; Iran says its seven conditions must be met first and has refused IAEA inspections while under threat.",
             "tags": [
-              "oil",
-              "gold",
-              "copper",
-              "Iran"
-            ],
-            "key_figure": "Brent futures US$95.51 · −0.3% (about 4:14pm Sydney time)",
-            "what_happened": "At about 4:14pm Sydney time Brent futures were at US$95.51, down 0.3% on Thursday's settlement of US$95.82, gold futures at US$3,918.1, up 0.8%, and copper futures at US$6.20 a pound, up 0.2% (close snapshot). Brent rose 3.3% on Thursday ([ABC, with Reuters](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). Iron ore was US$91.60 a tonne at Thursday's close (close snapshot).",
-            "why_it_matters": "President Trump wrote on Truth Social on Thursday, US time, \"We don't need a deal with Iran. Those days have long since passed,\" and directed Vice President Vance to focus instead on what he called corruption and crime in Democratic-run cities and states ([CNBC](https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html); [Nine, with AP](https://www.nine.com.au/world-news/usa/oil-price-jumps-as-trump-says-no-need-for-iran-deal-20261113-p61dw5.html)). Iran said it will not remove enriched nuclear material from the country ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)). The UK Maritime Trade Operations centre reported two tankers struck this week, and attacks on Saudi energy infrastructure were reported ([Nine, with AP](https://www.nine.com.au/world-news/usa/oil-price-jumps-as-trump-says-no-need-for-iran-deal-20261113-p61dw5.html); [ABC, with Reuters](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). At Thursday's settlement Brent and WTI were both down about 2.5% for the week ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)).",
-            "sources": [
-              {
-                "label": "Yahoo Finance (close snapshot)",
-                "url": "https://finance.yahoo.com/quote/BZ%3DF/",
-                "claim_type": "measurement",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "Nine, with AP",
-                "url": "https://www.nine.com.au/world-news/usa/oil-price-jumps-as-trump-says-no-need-for-iran-deal-20261113-p61dw5.html",
-                "claim_type": "reporting",
-                "date": "12 Nov 2026"
-              },
-              {
-                "label": "ABC markets live",
-                "url": "https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Market Index",
-                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "tonight",
-        "cards": [
-          {
-            "id": "tonight-1113",
-            "headline": "Eurozone GDP and US producer prices tonight",
-            "takeaway": "US PPI is the last major data before next week's Nvidia results.",
-            "tags": [
-              "Europe",
-              "US",
-              "PPI",
-              "calendar"
-            ],
-            "what_happened": "French CPI is due at 6:45pm Sydney time, the IEA's monthly oil report at 8pm and eurozone third-quarter GDP at 9pm. US October producer prices are due at 12:30am Saturday Sydney time, with several Fed officials, including Collins, Bowman and Daly, speaking later ([Bent Pine Capital](https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13)). A 0.4% rise in October producer prices is expected after September's 1.3% ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)).",
-            "why_it_matters": "Futures price a quarter-point Fed rise in December with an outside chance of half a point ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november); [Bloomberg via Swissinfo](https://www.swissinfo.ch/eng/asian-stocks-erase-gain%2C-bonds-slide-before-us-ppi%3A-markets-wrap/92374084)). S&P 500 futures were little changed in Asian trade ([Bloomberg via Swissinfo](https://www.swissinfo.ch/eng/asian-stocks-erase-gain%2C-bonds-slide-before-us-ppi%3A-markets-wrap/92374084)).",
-            "sources": [
-              {
-                "label": "Bent Pine Capital calendar",
-                "url": "https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13",
-                "claim_type": "reporting",
-                "date": "9 Nov 2026"
-              },
-              {
-                "label": "Market Index",
-                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Bloomberg via Swissinfo",
-                "url": "https://www.swissinfo.ch/eng/asian-stocks-erase-gain%2C-bonds-slide-before-us-ppi%3A-markets-wrap/92374084",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "still-open",
-        "cards": [
-          {
-            "id": "still-open-1113",
-            "headline": "Nvidia's CEO search, Iran, the yen and Australian jobs data remain open",
-            "takeaway": "Each could move prices next week.",
-            "tags": [
-              "Nvidia",
               "Iran",
-              "yen",
-              "jobs"
+              "Hormuz",
+              "US policy"
             ],
-            "what_happened": "Nvidia's board is searching for a permanent chief executive, with CFO Colette Kress as interim CEO; Nvidia is due to report results on 17 November, US time ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)). Senate Banking Committee chair Tim Scott asked Jensen Huang and Commerce Secretary Howard Lutnick to testify on national security concerns ([ABC](https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368)). Ingenia's board gave AVID until 15 November to respond to Warburg Pincus's revised proposal ([Market Index](https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november)).",
-            "why_it_matters": "China's October retail sales and industrial output are due at 1pm on Monday, RBA minutes on Tuesday and Australia's October labour force data on Thursday 19 November at 11:30am ([LiteFinance](https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-16112026-22112026/)). Japanese officials said they will keep in contact with the US Treasury on the yen near 160 per dollar ([Investing.com](https://au.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-4767556)). IDP Education's board has not yet responded to Blackstone's revised A$3.00 proposal ([ASX announcements](https://asx.api.markitdigital.com/asx-research/1.0/companies/IEL/announcements)).",
+            "key_figure": "US government funding deadline 11 Dec",
+            "what_happened": "President Trump wrote on Thursday that \"we don't need a deal with Iran\" and told Vice President JD Vance, who had led talks, to focus on corruption and crime in Democratic-run cities and states ([CBS News](https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/), [Al Jazeera](https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance)). The Washington Post reported he was leaving the naval blockade in place and continuing economic pressure ([Washington Post](https://www.washingtonpost.com/politics/2026/11/12/trump-shuts-down-vance-iran-negotiating-efforts-says-no-deal-needed/)). Iranian parliament speaker Mohammad Bagher Ghalibaf said Tehran had sent a ceasefire and strait-reopening proposal via Qatar and was awaiting a US response, with conditions including an end to the blockade and sanctions and the release of frozen funds ([Al Jazeera](https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance)). Iran told the IAEA inspections cannot resume under US threats; the IRGC said it hit a US radar in Bahrain, while US Central Command said it shot down two Iranian drones heading for Bahrain ([Fox News](https://www.foxnews.com/live-news/oil-prices-war-strikes-donald-trump-iran-11-13-26)). Four Senate Democrats said they would oppose any short-term funding bill before the 11 December deadline that includes Iran war funding ([Fox News](https://www.foxnews.com/live-news/oil-prices-war-strikes-donald-trump-iran-11-13-26)).",
+            "why_it_matters": "Reuters linked Friday's softer oil prices to the US focus on the blockade easing fears of renewed direct conflict, while AAP linked Brent's rise above US$95 to Trump playing down hopes of a diplomatic solution. The strait's reopening still has no timetable, and the IEA says diesel remains tight.",
+            "competing_views": [
+              {
+                "who": "President Trump",
+                "view": "Wrote that \"those days have long since passed. We've got their money, Hundreds of Billions of Dollars, and we've got their Strait!\"",
+                "source": {
+                  "label": "CBS News",
+                  "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/",
+                  "claim_type": "official_statement",
+                  "date": "12 Nov 2026"
+                }
+              },
+              {
+                "who": "Mohammad Bagher Ghalibaf, Iran's parliament speaker",
+                "view": "Said \"the ball is now in the American court\" after Iran sent its proposal via Qatari mediators.",
+                "source": {
+                  "label": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance",
+                  "claim_type": "official_statement",
+                  "date": "13 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Any US reply to Iran's proposal; IAEA access; incidents in the strait and the Gulf.",
             "sources": [
               {
-                "label": "Market Index",
-                "url": "https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november",
+                "label": "CBS News",
+                "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/",
+                "claim_type": "reporting",
+                "date": "12 Nov 2026"
+              },
+              {
+                "label": "Al Jazeera",
+                "url": "https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "ABC markets live",
-                "url": "https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368",
+                "label": "Washington Post",
+                "url": "https://www.washingtonpost.com/politics/2026/11/12/trump-shuts-down-vance-iran-negotiating-efforts-says-no-deal-needed/",
+                "claim_type": "reporting",
+                "date": "12 Nov 2026"
+              },
+              {
+                "label": "Fox News",
+                "url": "https://www.foxnews.com/live-news/oil-prices-war-strikes-donald-trump-iran-11-13-26",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "LiteFinance calendar",
-                "url": "https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-16112026-22112026/",
+                "label": "Reuters via Euronext",
+                "url": "https://live.euronext.com/en/financial-news/stocks-fall-tech-nvidia-concerns-us-dollar-climbs",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "Investing.com",
-                "url": "https://au.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-4767556",
+                "label": "AAP",
+                "url": "https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "ASX announcements (IEL)",
-                "url": "https://asx.api.markitdigital.com/asx-research/1.0/companies/IEL/announcements",
+                "label": "IEA Oil Market Report",
+                "url": "https://www.iea.org/reports/oil-market-report-november-2026",
+                "claim_type": "official_statement",
+                "date": "13 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "dollar-high-yen-aud",
+            "headline": "US dollar at a 19-month high; yen at 160; AUD lowest since January",
+            "takeaway": "The US dollar rose as traders added to Fed hike bets; Japan warned again that it could intervene, and the Australian dollar fell to its lowest since January.",
+            "tags": [
+              "FX",
+              "Japan",
+              "Australia"
+            ],
+            "key_figure": "AUD/USD 0.6804 (−1.4% week, RBA 4pm 13 Nov); gold futures 3,878.1 (−4.8% week)",
+            "what_happened": "The US dollar index rose to its highest since April 2025 on Friday ([Reuters via Euronext](https://live.euronext.com/en/financial-news/stocks-fall-tech-nvidia-concerns-us-dollar-climbs)). The yen weakened past 160 per US dollar for the first time since early September, and Japanese Finance Minister Satsuki Katayama said Tokyo stood ready to act again after record intervention in July and August ([CNA/Reuters](https://www.channelnewsasia.com/business/japans-finance-minister-vows-action-yen-breaches-160-threshold-6548181)). The Australian dollar traded at its lowest since January on Friday ([AAP](https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again)). In our data AUD/USD was 0.6804 at the RBA's 4pm Friday fix, down 1.4% for the week, and gold futures fell 4.8% for the week to 3,878.1.",
+            "why_it_matters": "A weaker Australian dollar raises import and fuel costs priced in US dollars, which matters for the RBA's inflation outlook, but supports exporters' Australian-dollar earnings. Gold miners are exposed to the US dollar and yields.",
+            "market_reaction": "Dashboard: AUD/USD 0.6804 (−0.54% day, −1.4% week); gold futures 3,878.1 (−0.2% day, −4.8% week).",
+            "competing_views": [
+              {
+                "who": "Tohru Sasaki, Fukuoka Financial Group",
+                "view": "Said the small US share of the summer intervention shows coordinated intervention is less powerful than markets had feared.",
+                "source": {
+                  "label": "CNA/Reuters",
+                  "url": "https://www.channelnewsasia.com/business/japans-finance-minister-vows-action-yen-breaches-160-threshold-6548181",
+                  "claim_type": "opinion",
+                  "date": "13 Nov 2026"
+                }
+              },
+              {
+                "who": "Akira Moroga, Aozora Bank",
+                "view": "Said 160 yen is a closely watched line, and Japan can still intervene on a large scale even if the US does not.",
+                "source": {
+                  "label": "CNA/Reuters",
+                  "url": "https://www.channelnewsasia.com/business/japans-finance-minister-vows-action-yen-breaches-160-threshold-6548181",
+                  "claim_type": "opinion",
+                  "date": "13 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Japanese officials' comments near 160; US data that moves Fed pricing.",
+            "sources": [
+              {
+                "label": "Reuters via Euronext",
+                "url": "https://live.euronext.com/en/financial-news/stocks-fall-tech-nvidia-concerns-us-dollar-climbs",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "CNA/Reuters",
+                "url": "https://www.channelnewsasia.com/business/japans-finance-minister-vows-action-yen-breaches-160-threshold-6548181",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "AAP",
+                "url": "https://aapnews.aap.com.au/news/australian-shares-dip-as-risk-sentiment-sours-again",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "ukraine-talks-dublin",
+            "headline": "US envoys meet Putin and Zelensky; next round to include Europe",
+            "takeaway": "A new round of trilateral talks has been agreed, but Moscow's territorial position has not changed.",
+            "tags": [
+              "Russia",
+              "Ukraine",
+              "Energy"
+            ],
+            "what_happened": "US envoys Steve Witkoff and Jared Kushner met President Putin in Moscow and then President Zelensky in Dublin; Witkoff said a new round of trilateral talks had been agreed and that Europeans would join it ([BBC](https://www.bbc.com/news/articles/cwrkgmymk55zo)). Putin said territory remains the key dispute, and Zelensky said Ukraine's military was again facing restrictions on Starlink's military service ([BBC](https://www.bbc.com/news/articles/cwrkgmymk55zo)). The IEA said attacks on Russian energy infrastructure continue to restrict Russia's diesel exports ([IEA](https://www.iea.org/reports/oil-market-report-november-2026)).",
+            "why_it_matters": "Russian diesel supply is part of the global diesel shortage the IEA highlighted. Progress towards a ceasefire would affect European energy and defence stocks, while a stalemate keeps those risks in place.",
+            "competing_views": [
+              {
+                "who": "Kaja Kallas, EU foreign policy chief",
+                "view": "Said the presence of a European official at the next meeting showed the Kremlin now recognised Europe as a major player.",
+                "source": {
+                  "label": "BBC",
+                  "url": "https://www.bbc.com/news/articles/cwrkgmymk55zo",
+                  "claim_type": "official_statement",
+                  "date": "12 Nov 2026"
+                }
+              },
+              {
+                "who": "Vladimir Putin",
+                "view": "Said \"for us there is only one line of demarcation: the line of the state border.\"",
+                "source": {
+                  "label": "BBC",
+                  "url": "https://www.bbc.com/news/articles/cwrkgmymk55zo",
+                  "claim_type": "official_statement",
+                  "date": "12 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Date and makeup of the next round; any humanitarian truce proposals.",
+            "sources": [
+              {
+                "label": "BBC",
+                "url": "https://www.bbc.com/news/articles/cwrkgmymk55zo",
+                "claim_type": "reporting",
+                "date": "12 Nov 2026"
+              },
+              {
+                "label": "IEA Oil Market Report",
+                "url": "https://www.iea.org/reports/oil-market-report-november-2026",
                 "claim_type": "official_statement",
                 "date": "13 Nov 2026"
               }
@@ -2248,102 +1148,146 @@
     "rates": {
       "rba": {
         "status": "available",
-        "summary": "ASX 30-day cash rate futures implied a 96% probability of a hold at 4.85% on 8 December and 4% for a 0.25-point rise on 13 November, from 97% and 3% at the 12 November close.",
-        "as_of": "13 Nov 2026",
+        "summary": "Cash rate 4.85%. ASX 30-day cash rate futures implied a 97% chance of a hold and 3% of a 25 bp rise at the 8 December meeting at Friday's close.",
+        "as_of": "13 Nov 2026, ASX close (RBA Watch)",
         "source": {
           "label": "RBA Watch (ASX futures)",
           "url": "https://rbawatch.com/rba-meeting/december-2026",
           "claim_type": "measurement",
           "date": "13 Nov 2026"
-        }
+        },
+        "forecasts": [
+          {
+            "who": "Westpac (Luci Ellis)",
+            "view": "Expects no further rise; says a February hike cannot be ruled out but is looking even less likely.",
+            "source": {
+              "label": "Westpac Weekly",
+              "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+              "claim_type": "forecast",
+              "date": "16 Nov 2026"
+            }
+          }
+        ]
+      },
+      "fed": {
+        "status": "available",
+        "summary": "CME FedWatch put the chance of a rise on 9 December at 100%, with 86% for 25 bp and about 14% for 50 bp.",
+        "as_of": "13 Nov 2026 (CNBC, CME FedWatch)",
+        "source": {
+          "label": "CNBC (CME FedWatch)",
+          "url": "https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html",
+          "claim_type": "measurement",
+          "date": "13 Nov 2026"
+        },
+        "forecasts": [
+          {
+            "who": "Susan Collins, Boston Fed",
+            "view": "Said some additional tightening is warranted soon.",
+            "source": {
+              "label": "investingLive",
+              "url": "https://investinglive.com/central-banks/fed-s-collins-i-would-think-some-additional-policy-tightening-is-warranted-soon/",
+              "claim_type": "official_statement",
+              "date": "13 Nov 2026"
+            }
+          },
+          {
+            "who": "Westpac economics",
+            "view": "Says pricing of hikes in December and January and about 3.5 hikes by September overstates the need for tightening.",
+            "source": {
+              "label": "Westpac Weekly",
+              "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+              "claim_type": "forecast",
+              "date": "16 Nov 2026"
+            }
+          }
+        ]
       }
     },
     "calendar": [
       {
-        "when": "Fri 13 Nov, 6:45pm",
-        "event": "France CPI, October",
-        "country": "EU",
-        "importance": "low",
-        "source": {
-          "label": "Bent Pine Capital calendar",
-          "url": "https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13",
-          "claim_type": "reporting",
-          "date": "9 Nov 2026"
-        }
-      },
-      {
-        "when": "Fri 13 Nov, 8pm",
-        "event": "IEA monthly oil market report",
-        "country": "Global",
-        "importance": "medium",
-        "source": {
-          "label": "Bent Pine Capital calendar",
-          "url": "https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13",
-          "claim_type": "reporting",
-          "date": "9 Nov 2026"
-        }
-      },
-      {
-        "when": "Fri 13 Nov, 9pm",
-        "event": "Eurozone GDP, third quarter",
-        "country": "EU",
-        "importance": "medium",
-        "source": {
-          "label": "Bent Pine Capital calendar",
-          "url": "https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13",
-          "claim_type": "reporting",
-          "date": "9 Nov 2026"
-        }
-      },
-      {
-        "when": "Sat 14 Nov, 12:30am",
-        "event": "US producer prices, October",
-        "country": "US",
-        "importance": "high",
-        "source": {
-          "label": "Bent Pine Capital calendar",
-          "url": "https://www.bentpinecapital.com/post/economic-calendar-for-the-week-of-11-9-through-11-13",
-          "claim_type": "reporting",
-          "date": "9 Nov 2026"
-        }
-      },
-      {
         "when": "Mon 16 Nov, 1pm",
-        "event": "China retail sales and industrial output, October",
+        "event": "China retail sales and industrial production, October",
         "country": "CN",
         "importance": "medium",
         "source": {
           "label": "LiteFinance calendar",
           "url": "https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-16112026-22112026/",
-          "claim_type": "reporting",
-          "date": "13 Nov 2026"
+          "claim_type": "reporting"
+        }
+      },
+      {
+        "when": "Tue 17 Nov, morning",
+        "event": "RBA Governor Bullock panel, ASIC Annual Forum",
+        "country": "AU",
+        "importance": "medium",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+          "claim_type": "reporting"
         }
       },
       {
         "when": "Tue 17 Nov, 11:30am",
-        "event": "RBA minutes; Governor Bullock speaks at 11am",
+        "event": "RBA minutes, November meeting",
         "country": "AU",
         "importance": "medium",
         "source": {
-          "label": "LiteFinance calendar",
-          "url": "https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-16112026-22112026/",
-          "claim_type": "reporting",
-          "date": "13 Nov 2026"
+          "label": "CommSec week ahead",
+          "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf",
+          "claim_type": "reporting"
         }
       },
       {
-        "when": "Thu 19 Nov, 11:30am",
-        "event": "Australian labour force, October",
+        "when": "Wed 18 Nov, 12:30am",
+        "event": "US retail sales, October (m/m)",
+        "country": "US",
+        "importance": "high",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+          "claim_type": "reporting"
+        },
+        "prior": "+0.8%",
+        "consensus": "+0.2%",
+        "consensus_source": "Westpac Weekly (market forecast)"
+      },
+      {
+        "when": "Wed 18 Nov, about 8:20am",
+        "event": "Nvidia third-quarter results",
+        "country": "US",
+        "importance": "high",
+        "source": {
+          "label": "Nvidia investor relations",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
+          "claim_type": "reporting"
+        }
+      },
+      {
+        "when": "Wed 18 Nov, 11:30am",
+        "event": "Wage price index, September quarter (q/q)",
         "country": "AU",
         "importance": "high",
         "source": {
-          "label": "LiteFinance calendar",
-          "url": "https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-16112026-22112026/",
-          "claim_type": "reporting",
-          "date": "13 Nov 2026"
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+          "claim_type": "reporting"
+        },
+        "prior": "+0.8%",
+        "consensus": "+1.0%",
+        "consensus_source": "Westpac Weekly (market forecast)"
+      },
+      {
+        "when": "Thu 19 Nov, 6am",
+        "event": "FOMC minutes, October meeting",
+        "country": "US",
+        "importance": "high",
+        "source": {
+          "label": "Newsquawk",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-release-16th"
         }
       }
     ]
   },
+  "close": null,
   "disclaimer": "Information only, not financial advice. Prices are delayed and unofficial."
 }
