@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "type": "markets",
-  "date": "2026-11-15",
-  "generated_at_utc": "2026-11-14T21:34:12Z",
-  "title": "Markets: Sunday 15 November",
-  "edition": "weekend",
+  "date": "2026-11-16",
+  "generated_at_utc": "2026-11-15T21:29:32Z",
+  "title": "Markets: Monday 16 November",
+  "edition": "weekday",
   "morning": {
-    "cutoff_local": "2026-11-15T07:30:00+11:00",
-    "session_note": "Weekend edition · what's new since Saturday, with the week ahead",
+    "cutoff_local": "2026-11-16T07:30:00+11:00",
+    "session_note": "Weekday ASX edition · before the 10:00 open",
     "summary": [
-      "Friday's US closes are now in our dashboard: the S&P 500 finished at 7,561.7 (−0.4% Friday, +2.5% week, its best week since August) and the US 2-year yield at 4.88% (+37 bp week), its biggest weekly rise since October 2024. Nvidia, down about 13% for the week, reports at about 8:20am Wednesday Sydney time ([AP](https://apnews.com/article/stocks-markets-ai-us-oil-f8edd0eeb1494d4d2584715686c5e619), [Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)).",
-      "Trump told advisers he may hold off on new Iran strikes if there are no fresh provocations, Reuters reported on Saturday, while Iran said three tankers hit mines in the Strait of Hormuz, which has not been independently confirmed. Brent futures settled at US$95.84, down 2.5% for the week ([Reuters via Al-Monitor](https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources), [CNA (AFP)](https://www.channelnewsasia.com/world/strait-hormuz-oil-tankers-mines-iran-6551256)).",
-      "Week ahead: the White House confirmed a Trump–Xi–Putin meeting in Shenzhen late in the week, with no tariff changes expected; China's activity data and Japan's GDP come out Monday, followed by RBA minutes Tuesday, wages Wednesday and jobs Thursday ([BBC](https://www.bbc.com/news/articles/ckz74jzpy18do), [Newsquawk](https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs))."
+      "ASX futures pointed to a flat start (9,114 at about 7am) after Friday's ASX 200 close of 9,082.2 (−0.7%). Iran's Revolutionary Guards said they fired drones at a US radar in Bahrain on Sunday, which Bahrain said it intercepted, and that a supertanker sank after hitting a mine, which has not been independently confirmed. Oil futures reopen at 10am, with Brent last at US$95.84 ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134), [BBC](https://www.bbc.com/news/articles/cqn4e2py48kwo), [CNA (AFP)](https://www.channelnewsasia.com/world/iran-hormuz-supertanker-2-million-oil-barrels-sink-mine-6553161)).",
+      "For Australia: the Australian dollar ended the week near 67.7 US cents, its lowest since late January. NAB says the fall is mainly about interest rates; it puts money-market odds of a December RBA rise at 6% (ASX futures: 3% at Friday's close) and says markets are starting to price cuts in 2027. The Senate also votes this week on gas reservation ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134), [SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html)).",
+      "Next catalyst: Japan's GDP at 10:50am and China's October activity data at 1pm today; Fed Chair Warsh speaks at 4am Tuesday, then the RBA minutes at 11:30am Tuesday and Nvidia's results on Wednesday morning ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf), [RBA](https://www.rba.gov.au/coming-up/), [San Francisco Fed](https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/), [CNBC](https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html))."
     ],
     "prices": {
-      "retrieved_at_utc": "2026-11-14 20:31Z",
-      "cutoff_utc": "2026-11-14T20:30:00Z",
+      "retrieved_at_utc": "2026-11-15 21:26Z",
+      "cutoff_utc": "2026-11-15T20:30:00Z",
       "quotes": [
         {
           "id": "asx200",
@@ -43,14 +43,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 9146.799805,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": -64.6,
           "change_pct": -0.71,
-          "display_change": "−0.7%",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 9020.799805,
-          "week_change_pct": 0.68,
-          "display_week_change": "+0.7% wk"
+          "display_change": "−0.7%"
         },
         {
           "id": "sp500",
@@ -78,14 +74,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 7592.399902,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": -30.7,
           "change_pct": -0.4,
           "display_change": "−0.4%",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 7376.859863,
-          "week_change_pct": 2.51,
-          "display_week_change": "+2.5% wk",
           "cross_checks": [
             {
               "provider": "FRED SP500 (S&P Dow Jones Indices)",
@@ -121,14 +113,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 0.6841,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": -0.0037,
           "change_pct": -0.54,
-          "display_change": "−0.54%",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 0.69,
-          "week_change_pct": -1.39,
-          "display_week_change": "−1.4% wk"
+          "display_change": "−0.54%"
         },
         {
           "id": "au10y",
@@ -157,13 +145,9 @@
           "comparison_date": "2026-11-10",
           "comparison_value": 4.989,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_bp": 5.5,
-          "display_change": "+5 bp",
-          "week_comparison_date": "2026-11-04",
-          "week_comparison_value": 5.082,
-          "week_change_bp": -3.8,
-          "display_week_change": "−4 bp wk"
+          "display_change": "+5 bp"
         },
         {
           "id": "brent_spot",
@@ -192,14 +176,10 @@
           "comparison_date": "2026-11-10",
           "comparison_value": 90.16,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": 1.98,
           "change_pct": 2.2,
-          "display_change": "+2.2%",
-          "week_comparison_date": "2026-11-04",
-          "week_comparison_value": 91.84,
-          "week_change_pct": 0.33,
-          "display_week_change": "+0.3% wk"
+          "display_change": "+2.2%"
         },
         {
           "id": "vix",
@@ -227,14 +207,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 18.7,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": 0.6,
           "change_pct": 3.21,
-          "display_change": "+0.60 pts",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 25.64,
-          "week_change_abs": -6.34,
-          "display_week_change": "−6.34 pts wk"
+          "display_change": "+0.60 pts"
         },
         {
           "id": "nasdaq",
@@ -262,14 +238,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 25366.089844,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": -229.8,
           "change_pct": -0.91,
           "display_change": "−0.9%",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 24579.429688,
-          "week_change_pct": 2.27,
-          "display_week_change": "+2.3% wk",
           "cross_checks": [
             {
               "provider": "FRED NASDAQCOM (Nasdaq)",
@@ -304,13 +276,9 @@
           "comparison_date": "2026-11-10",
           "comparison_value": 4.744,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_bp": 6.4,
-          "display_change": "+6 bp",
-          "week_comparison_date": "2026-11-04",
-          "week_comparison_value": 4.826,
-          "week_change_bp": -1.8,
-          "display_week_change": "−2 bp wk"
+          "display_change": "+6 bp"
         },
         {
           "id": "au_curve",
@@ -340,7 +308,7 @@
           "change_bp": -0.9,
           "display_change": "−1 bp",
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "note": "Derived from lagged RBA F2 legs; not a live curve mark."
         },
         {
@@ -369,13 +337,9 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 5.1,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_bp": 5.0,
-          "display_change": "+5 bp",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 4.86,
-          "week_change_bp": 29.0,
-          "display_week_change": "+29 bp wk"
+          "display_change": "+5 bp"
         },
         {
           "id": "us2y",
@@ -403,13 +367,9 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 4.86,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_bp": 2.0,
-          "display_change": "+2 bp",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 4.51,
-          "week_change_bp": 37.0,
-          "display_week_change": "+37 bp wk"
+          "display_change": "+2 bp"
         },
         {
           "id": "brent_fut",
@@ -438,14 +398,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 95.82,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": 0.02,
           "change_pct": 0.02,
-          "display_change": "+0.0%",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 98.32,
-          "week_change_pct": -2.52,
-          "display_week_change": "−2.5% wk"
+          "display_change": "+0.0%"
         },
         {
           "id": "gold_fut",
@@ -474,14 +430,10 @@
           "comparison_date": "2026-11-12",
           "comparison_value": 3885.300049,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_abs": 1.0,
           "change_pct": 0.03,
-          "display_change": "+0.0%",
-          "week_comparison_date": "2026-11-06",
-          "week_comparison_value": 4074.899902,
-          "week_change_pct": -4.63,
-          "display_week_change": "−4.6% wk"
+          "display_change": "+0.0%"
         },
         {
           "id": "rba_cash",
@@ -509,7 +461,7 @@
           "comparison_date": "2026-11-03",
           "comparison_value": 4.6,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-14 20:31Z",
+          "source_vintage": "retrieved 2026-11-15 21:26Z",
           "change_bp": 25.0,
           "display_change": "last move +25 bp (4 Nov)"
         },
@@ -560,64 +512,132 @@
         "id": "market-drivers",
         "cards": [
           {
-            "id": "us-friday-close-ai-test",
-            "headline": "US shares end best week since August; Nvidia reports Wednesday",
-            "takeaway": "Friday's US closes are now in our dashboard: the main indexes rose for the week while Nvidia fell about 13% and investors rotated into other tech names.",
+            "id": "iran-bahrain-tankers-1116",
+            "headline": "Iran fires drones at Bahrain base; IRGC says a supertanker sank",
+            "takeaway": "Two new Iranian actions on Sunday came before oil futures reopen at 10am Sydney time; neither the sinking nor the mine strikes has been independently confirmed.",
             "tags": [
-              "Equities",
-              "AI",
-              "US"
+              "Oil",
+              "Iran",
+              "Geopolitics"
             ],
-            "key_figure": "S&P 500 7,561.7 (−0.4% day, +2.5% week); Nasdaq 25,136.3 (+2.3% week), 13 Nov session",
-            "new_since_last_issue": "Saturday's dashboard still carried Thursday's US session and cited Friday's closes only from secondary data. New: Friday's closes are now in our snapshot; Reuters' closing report (chip index −3.4%, an FT report that Nvidia's board approached Arm CEO Rene Haas); HSBC's downgrade; and CNBC's week-ahead views.",
-            "what_happened": "The S&P 500 fell 0.4% on Friday but rose 2.5% for the week ([AP](https://apnews.com/article/stocks-markets-ai-us-oil-f8edd0eeb1494d4d2584715686c5e619)), ending a four-week losing streak ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)); the major averages had their best week since August ([CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)). The Philadelphia semiconductor index fell 3.4% on Friday and Nvidia fell 2%, while the Dow rose 0.1% and the pan-European STOXX 600 recorded its best week since late June ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)). The Financial Times reported that Nvidia's board approached Arm CEO Rene Haas about succeeding Jensen Huang ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)). Nvidia ended the week down about 13%, while the S&P 500 technology sector rose more than 2% for the week and investors rotated into other tech stocks such as Apple, AMD and Broadcom ([CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)). HSBC cut Nvidia to hold from buy, joining Truist, Evercore ISI, William Blair, Oppenheimer and Bernstein in downgrades this week ([CNBC](https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html)). Nvidia reports third-quarter results after the US close on Tuesday, about 8:20am Wednesday Sydney time ([Nvidia](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx)), and Anthropic is due to price its IPO on Wednesday and start trading on Thursday, US time ([CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)).",
-            "why_it_matters": "Nvidia's results and succession news, and demand for Anthropic's shares, are the next scheduled events for AI-linked stocks globally, including ASX technology and data-centre names. Bulls took this week's rotation into other tech stocks as a sign that gains are spreading beyond Nvidia, according to CNBC ([CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)).",
-            "market_reaction": "Dashboard (US session 13 Nov): S&P 500 7,561.7 (−0.4% day, +2.5% week); Nasdaq 25,136.3 (−0.9% day, +2.3% week); VIX 19.30 (+0.60 pts day, −6.34 pts week).",
+            "key_figure": "Brent futures US$95.84/bbl at Friday's settle (13 Nov), before Sunday's events",
+            "new_since_last_issue": "Sunday's issue covered Saturday's reports of three tankers hitting mines. New: Sunday's drone attack on Bahrain, the IRGC statement that a supertanker sank, a UKMTO report of a tanker attack in the Gulf, and the Iranian foreign minister's planned trip to Oman on Tuesday.",
+            "what_happened": "Iran's Revolutionary Guards (IRGC) said they launched six drones at a US air-defence radar at al-Riffa air base in Bahrain on Sunday; Bahrain's military said its air defences intercepted and destroyed the drones, and its foreign ministry said it holds Iran fully responsible ([BBC](https://www.bbc.com/news/articles/cqn4e2py48kwo), [Al Jazeera](https://www.aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know)). It was the second such attack in three days; after Friday's attack, US Central Command said it shot down two drones with no injuries or damage, and it had not commented on Sunday's attack at the time of Al Jazeera's report ([Al Jazeera](https://www.aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know)). Separately, the IRGC said two tankers on an \"unauthorised\" southern route struck mines and that one, a supertanker carrying more than two million barrels of crude, sank; it did not name the ships, Reuters could not independently verify the report and AFP said there was no independent confirmation ([CNBC (Reuters)](https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html), [CNA (AFP)](https://www.channelnewsasia.com/world/iran-hormuz-supertanker-2-million-oil-barrels-sink-mine-6553161)). The UN's International Maritime Organization reported on Friday that October had the most attacks in the strait since the war began ([Ynetnews](https://www.ynetnews.com/article/h1h6grd0gl)). UKMTO said Indian shipping authorities reported a tanker attacked in the Gulf on 15 November with the crew safe, but it was unclear whether this was the same incident ([UKMTO/JMIC advisory](https://www.ukmto.org/-/media/ukmto/products/update-114_jmic_advisory_15-nov.pdf?rev=be65cfbd755a41c4816feba6cef4401c), [CNA (AFP)](https://www.channelnewsasia.com/world/iran-hormuz-supertanker-2-million-oil-barrels-sink-mine-6553161)). In late October, US Central Command said the main transit routes through the strait had been cleared of mines and remain so ([Gulf News](https://gulfnews.com/world/mena/us-military-rejects-iranian-mine-strike-claims-says-hormuz-transit-lanes-remain-clear-1.500727648)). Iran's foreign minister Abbas Araqchi is due to visit Oman on Tuesday, Iranian state media reported ([CNBC (Reuters)](https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html)).",
+            "why_it_matters": "Oil prices feed into Australian petrol costs and inflation and move ASX energy shares. Crude has been leaving the Gulf at near pre-war levels in recent weeks, but attacks on ships have continued ([CNBC (Reuters)](https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html)); the JMIC advisory rates the threat level in the strait as severe and says traffic remains below 2025 levels ([UKMTO/JMIC advisory](https://www.ukmto.org/-/media/ukmto/products/update-114_jmic_advisory_15-nov.pdf?rev=be65cfbd755a41c4816feba6cef4401c)).",
+            "market_reaction": "Not yet observed: oil and US stock futures were closed at our 7:30am cutoff and reopen at 10am Sydney time, 6pm Sunday in New York ([Market Sunrise](https://marketsunrise.com/editions/2026-11-15/)).",
             "competing_views": [
               {
-                "who": "Frank Lee, HSBC",
-                "view": "Downgraded Nvidia to hold with a US$170 target, saying uncertainty will prevail until a permanent CEO is named and shows execution, and that tighter export restrictions could cut FY2028 earnings per share by 13%.",
+                "who": "Saeid Golkar, University of Tennessee at Chattanooga",
+                "view": "Said both sides may prefer to avoid a full-scale war but that limited exchanges carry a risk of miscalculation that could lead to a broader conflict.",
                 "source": {
-                  "label": "CNBC (HSBC note)",
-                  "url": "https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html",
+                  "label": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know",
+                  "claim_type": "opinion",
+                  "date": "15 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Brent at the 10am reopen; any CENTCOM or UKMTO statement on Sunday's tanker reports; Araqchi's Oman visit on Tuesday.",
+            "sources": [
+              {
+                "label": "BBC",
+                "url": "https://www.bbc.com/news/articles/cqn4e2py48kwo",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "Al Jazeera",
+                "url": "https://www.aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "CNBC (Reuters)",
+                "url": "https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "Arab News (AFP)",
+                "url": "https://www.arabnews.com/middle-east/two-tankers-on-fire-after-hitting-naval-mines-in-the-strait-of-hormuz-irans-irgc-says-3012053",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "CNA (AFP)",
+                "url": "https://www.channelnewsasia.com/world/iran-hormuz-supertanker-2-million-oil-barrels-sink-mine-6553161",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "Ynetnews",
+                "url": "https://www.ynetnews.com/article/h1h6grd0gl",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "UKMTO/JMIC advisory 114",
+                "url": "https://www.ukmto.org/-/media/ukmto/products/update-114_jmic_advisory_15-nov.pdf?rev=be65cfbd755a41c4816feba6cef4401c",
+                "claim_type": "official_statement",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "Gulf News (CENTCOM statement)",
+                "url": "https://gulfnews.com/world/mena/us-military-rejects-iranian-mine-strike-claims-says-hormuz-transit-lanes-remain-clear-1.500727648",
+                "claim_type": "official_statement",
+                "date": "29 Oct 2026"
+              },
+              {
+                "label": "Market Sunrise week ahead",
+                "url": "https://marketsunrise.com/editions/2026-11-15/",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "ai-week-nvidia-anthropic-1116",
+            "headline": "Nvidia results and Anthropic listing test AI stocks this week",
+            "takeaway": "Analysts expect Nvidia revenue of about US$109 billion on Wednesday morning Sydney time, and Anthropic is due to list on Thursday, US time.",
+            "tags": [
+              "AI",
+              "Equities",
+              "US"
+            ],
+            "key_figure": "LSEG consensus for Nvidia: revenue US$109.08 billion, EPS US$2.47",
+            "new_since_last_issue": "Sunday's issue covered the timing of both events. New: LSEG's consensus figures, Nvidia's month-to-date fall, and a Bloomberg report that the Anthropic deal is six times oversubscribed.",
+            "what_happened": "Nvidia reports third-quarter results after the US close on Tuesday, with its call at 5pm New York time, 9am Wednesday Sydney time; it is the company's first report without Jensen Huang as CEO, and analysts expect revenue of US$109.08 billion and EPS of US$2.47, according to LSEG ([CNBC](https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html)). The stock is down 20% so far in November, on pace for its worst month since late 2022 ([CNBC](https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html)). Anthropic is expected to price its IPO on Wednesday and start trading on Thursday, US time, seeking to raise up to US$64.4 billion alongside a US$26 billion private placement; Bloomberg News reported the deal is six times oversubscribed ([CNBC](https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html)). The expected price range is US$70–78 a share, under the ticker ANT ([CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)).",
+            "why_it_matters": "The AI industry has been responsible for much of Wall Street's gains and big swings ([Brisbane Times (AP)](https://www.brisbanetimes.com.au/business/markets/asx-set-for-flat-start-nvidia-scandal-weighs-on-wall-street-20261116-p61eck.html)), so Nvidia's guidance and demand for Anthropic shares can move global risk appetite, and with it ASX technology and data-centre names.",
+            "market_reaction": "Last US session (13 Nov, our dashboard): S&P 500 7,561.7 (−0.4%), Nasdaq 25,136.3 (−0.9%), VIX 19.30 (+0.60 pts).",
+            "competing_views": [
+              {
+                "who": "Dan Ives, Yorkville Ives & Co",
+                "view": "Has a 12-month Nvidia price target of US$225 without Huang as CEO and sees the current price as a buying opportunity.",
+                "source": {
+                  "label": "CNBC",
+                  "url": "https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html",
                   "claim_type": "forecast",
                   "date": "13 Nov 2026"
                 }
               },
               {
-                "who": "Jeff Kilburg, KKM Financial",
-                "view": "Said the opportunity is to buy Nvidia, citing about a trillion dollars in verified demand through 2028.",
+                "who": "Angelo Kourkafas, Edward Jones",
+                "view": "Said Nvidia's pullback is a reminder of the concentration risk in a market where a few mega-cap tech stocks have driven an outsized share of returns.",
                 "source": {
-                  "label": "CNBC week ahead",
-                  "url": "https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html",
+                  "label": "Brisbane Times (AP)",
+                  "url": "https://www.brisbanetimes.com.au/business/markets/asx-set-for-flat-start-nvidia-scandal-weighs-on-wall-street-20261116-p61eck.html",
                   "claim_type": "opinion",
-                  "date": "13 Nov 2026"
-                }
-              },
-              {
-                "who": "Mark Hackett, Nationwide",
-                "view": "Said \"the Nvidia story is now idiosyncratic\" and that a lot of nervousness is already priced in.",
-                "source": {
-                  "label": "CNBC week ahead",
-                  "url": "https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html",
-                  "claim_type": "opinion",
-                  "date": "13 Nov 2026"
+                  "date": "16 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "Nvidia revenue and guidance and any succession update (Wednesday morning Sydney time); Anthropic pricing and first trade.",
+            "what_to_watch": "Nvidia revenue, guidance and any CEO succession news (Wednesday morning AEDT); Anthropic pricing (Thursday morning AEDT) and first trade (Friday morning AEDT).",
             "sources": [
               {
-                "label": "AP",
-                "url": "https://apnews.com/article/stocks-markets-ai-us-oil-f8edd0eeb1494d4d2584715686c5e619",
+                "label": "CNBC Investing Club",
+                "url": "https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Reuters via Yahoo Finance",
-                "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
+                "date": "15 Nov 2026"
               },
               {
                 "label": "CNBC week ahead",
@@ -626,129 +646,86 @@
                 "date": "13 Nov 2026"
               },
               {
-                "label": "CNBC (HSBC note)",
-                "url": "https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html",
-                "claim_type": "forecast",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Nvidia investor relations",
-                "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
-                "claim_type": "official_statement",
-                "date": "28 Oct 2026"
+                "label": "Brisbane Times (AP)",
+                "url": "https://www.brisbanetimes.com.au/business/markets/asx-set-for-flat-start-nvidia-scandal-weighs-on-wall-street-20261116-p61eck.html",
+                "claim_type": "reporting",
+                "date": "16 Nov 2026"
               }
             ]
           },
           {
-            "id": "faa-ground-stop-airlines",
-            "headline": "US flights grounded for four hours; FAA expects recovery by Sunday",
-            "takeaway": "A telecoms fault in air traffic control led to the longest nationwide ground stop since 2001, hitting airline shares late on Friday.",
+            "id": "aud-lowest-since-january-1116",
+            "headline": "Australian dollar ends the week at its lowest since January",
+            "takeaway": "The Australian dollar is the weakest G10 currency this month as US yields rise faster than Australian ones.",
             "tags": [
-              "US",
-              "Airlines",
-              "Travel"
+              "FX",
+              "AUD",
+              "Rates"
             ],
-            "key_figure": "NYSE Arca airline index −1.4% (13 Nov close)",
-            "new_since_last_issue": "Not covered on Saturday; the ground stop began near the end of Friday's US session.",
-            "what_happened": "The FAA ordered a nationwide ground stop at about 4pm US Eastern time on Friday after communication and radar problems, and lifted it at about 8:15pm ([Weather.com](https://weather.com/2026/11/13/travel/faa-nationwide-ground-stop-equipment-outage-flights), [Reuters](https://www.reuters.com/5f374b32b07b/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/)). By 11:30pm nearly 10,000 flights had been cancelled, including more than 2,200 each at Delta and American and 1,800 at United, according to Flightradar24 ([Reuters](https://www.reuters.com/5f374b32b07b/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/)). Transportation Secretary Sean Duffy said a contractor's router, installed while switching an old copper line to fiber on a network owned by L3Harris, flooded other routers in the system, and that the cause, equipment or installation error, has not been determined ([US DOT](https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace)). FAA Administrator Bryan Bedford said schedules should be back to normal by the end of Sunday, US time ([Weather.com](https://weather.com/2026/11/13/travel/faa-nationwide-ground-stop-equipment-outage-flights)). The NYSE Arca airline index closed down 1.4% ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)).",
-            "why_it_matters": "Cancellations carry costs for US airlines and travellers, and Duffy linked the outage to the age of the FAA's telecommunications network ([US DOT](https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace)). European authorities suspended US-bound departures during the stop, so the disruption reached international routes.",
-            "what_to_watch": "Airline shares at Monday's US open; any FAA or DOT finding on the cause.",
+            "key_figure": "AUD/USD 0.6804 at the RBA 4pm fixing, 13 Nov (−0.54% on the day)",
+            "new_since_last_issue": "Saturday's issue reported the fall to the lowest since January. New: Friday's late-session level and NAB's explanation for the fall.",
+            "what_happened": "The Australian dollar fell another 0.5% on Friday to about 67.7 US cents, a weekly fall of 1.4% and its lowest level since late January, making it the worst-performing G10 currency this month ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134)). NAB's head of FX strategy Ray Attrill said the fall this month is \"much more of an interest rate story than it is about risk sentiment\", citing the narrowing of longer-term Australia–US yield spreads, \"driven more from the US side\" ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134)). The US dollar rose to a two-month high against major currencies as the US 2-year yield posted its biggest weekly rise in more than two years ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134), [Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)).",
+            "why_it_matters": "A weaker dollar raises the local cost of imports, including fuel, and lifts the Australian-dollar value of overseas earnings for exporters and ASX companies that earn abroad.",
+            "market_reaction": "Dashboard: US 2-year 4.88% (+2 bp) and US 10-year 5.15% (+5 bp) on 13 Nov; Australian 10-year 5.04% on 11 Nov (RBA data lag about two business days).",
+            "comparison": {
+              "title": "Which Australian dollar rate?",
+              "why_different": "The figures are taken at different times. The RBA rate is fixed at 4pm Sydney time on Friday, before the US session; the reported figures include Friday trading in New York, when the US dollar rose further.",
+              "resolution": "explained",
+              "rows": [
+                {
+                  "source": "RBA F11.1 (our dashboard)",
+                  "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
+                  "figure": "US$0.6804",
+                  "measure": "WM/Reuters 4pm Sydney rate",
+                  "timestamp": "13 Nov 2026, 16:00 AEDT",
+                  "method": "Official daily fixing",
+                  "status": "primary measured"
+                },
+                {
+                  "source": "Brisbane Times (AP)",
+                  "url": "https://www.brisbanetimes.com.au/business/markets/asx-set-for-flat-start-nvidia-scandal-weighs-on-wall-street-20261116-p61eck.html",
+                  "figure": "US67.92¢",
+                  "measure": "Spot rate quoted in the US close report",
+                  "timestamp": "16 Nov 2026, 4:21am AEDT",
+                  "method": "Market quote cited by reporter",
+                  "status": "independently reported"
+                },
+                {
+                  "source": "ABC (NAB note)",
+                  "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
+                  "figure": "US$0.6772",
+                  "measure": "Spot rate after the Friday New York session",
+                  "timestamp": "16 Nov 2026, about 7am AEDT",
+                  "method": "Market quote cited by reporter",
+                  "status": "independently reported"
+                }
+              ]
+            },
+            "what_to_watch": "China's October activity data at 1pm today, and the RBA minutes on Tuesday.",
             "sources": [
               {
-                "label": "US Department of Transportation",
-                "url": "https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace",
-                "claim_type": "official_statement",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "Reuters",
-                "url": "https://www.reuters.com/5f374b32b07b/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/",
+                "label": "ABC markets blog",
+                "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Weather.com",
-                "url": "https://weather.com/2026/11/13/travel/faa-nationwide-ground-stop-equipment-outage-flights",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "AP",
-                "url": "https://apnews.com/article/flights-halted-airports-faa-f81b0904331dafad6133f291e5f531a8",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
+                "date": "16 Nov 2026"
               },
               {
                 "label": "Reuters via Yahoo Finance",
                 "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html",
                 "claim_type": "reporting",
                 "date": "13 Nov 2026"
-              }
-            ]
-          },
-          {
-            "id": "oil-week-settle-hormuz-mines",
-            "headline": "Brent settles lower for the week; Iran reports more tanker mine strikes",
-            "takeaway": "Brent futures fell 2.5% for a second weekly fall, while Iran's reports of tanker mine strikes on Saturday remain unverified.",
-            "tags": [
-              "Oil",
-              "Hormuz",
-              "Iran"
-            ],
-            "key_figure": "Brent futures US$95.84 (+0.0% day, −2.5% week, 13 Nov session)",
-            "new_since_last_issue": "Saturday used an earlier Brent print (US$95.94) and covered the IEA surplus view. New: the Friday settlement in our snapshot, Iranian reports on Saturday of three tankers hitting mines, UKMTO's latest traffic estimate and a CENTCOM shipping figure.",
-            "what_happened": "Brent futures settled at US$95.84 on Friday, little changed on the day, and fell for a second week; Washington's focus on blockading Iran and other economic pressure eased fears of renewed direct conflict, according to Reuters ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)). On Saturday Iran's Revolutionary Guards navy said two tankers that had switched off their tracking systems struck a mine and caught fire in the south of the strait, and Iran's regular navy said a third tanker was hit east of the strait; neither named the vessels ([CNA (AFP)](https://www.channelnewsasia.com/world/strait-hormuz-oil-tankers-mines-iran-6551256)). The US military says it has cleared the main routes of mines ([CNA (AFP)](https://www.channelnewsasia.com/world/strait-hormuz-oil-tankers-mines-iran-6551256)), and the reports had not been confirmed by UKMTO, the US or another independent source ([UK Fact Check](https://www.ukfactcheck.com/live/iran-usa-conflict-live-blog-updates/iran-s-navy-says-an-oil-tanker-hit-a-mine-and-caught-fire-ea)). UKMTO said Hormuz traffic remains 65% below pre-war levels ([The National](https://www.thenationalnews.com/news/mena/2026/11/14/iran-war-live-irgc-strait-of-hormuz/)). CENTCOM said more than 1.7 billion barrels of crude have shipped through the strait under US protection, without giving a period ([Iran International](https://www.iranintl.com/en/liveblog/202611143682)).",
-            "why_it_matters": "Brent has fallen for two weeks while Gulf supply recovers, but UKMTO puts strait traffic well below pre-war levels and the IEA says attacks on shipping are a downside risk to a sustained recovery ([IEA](https://www.iea.org/reports/oil-market-report-november-2026)). Fuel costs feed into inflation in Australia and the US, where markets price a December Fed rise.",
-            "market_reaction": "Dashboard: Brent futures 95.84 (+0.0% day, −2.5% week); Brent spot 92.14 as at 11 Nov (EIA spot assessment via FRED, lagged; a different measure from futures, +0.3% week).",
-            "what_to_watch": "Independent confirmation of the tanker reports; Monday's oil open; weekly EIA stocks on Thursday morning Sydney time.",
-            "sources": [
+              },
               {
-                "label": "Yahoo Finance (BZ=F), via our snapshot",
-                "url": "https://finance.yahoo.com/quote/BZ%3DF/",
+                "label": "RBA exchange-rate tables",
+                "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
                 "claim_type": "measurement",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "Reuters via Yahoo Finance",
-                "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html",
+                "label": "Brisbane Times (AP)",
+                "url": "https://www.brisbanetimes.com.au/business/markets/asx-set-for-flat-start-nvidia-scandal-weighs-on-wall-street-20261116-p61eck.html",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "CNA (AFP)",
-                "url": "https://www.channelnewsasia.com/world/strait-hormuz-oil-tankers-mines-iran-6551256",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "UK Fact Check",
-                "url": "https://www.ukfactcheck.com/live/iran-usa-conflict-live-blog-updates/iran-s-navy-says-an-oil-tanker-hit-a-mine-and-caught-fire-ea",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "The National",
-                "url": "https://www.thenationalnews.com/news/mena/2026/11/14/iran-war-live-irgc-strait-of-hormuz/",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "Iran International",
-                "url": "https://www.iranintl.com/en/liveblog/202611143682",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "IEA Oil Market Report",
-                "url": "https://www.iea.org/reports/oil-market-report-november-2026",
-                "claim_type": "official_statement",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/liveblog/2026/11/14/iran-war-live-fighting-grips-yemen-as-qatar-turkiye-sign-defence-deal",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
+                "date": "16 Nov 2026"
               }
             ]
           }
@@ -758,117 +735,99 @@
         "id": "australia-asx",
         "cards": [
           {
-            "id": "asia-data-monday-china-japan",
-            "headline": "China activity data and Japan's GDP open the week on Monday",
-            "takeaway": "Forecasters expect slower Chinese retail and industrial growth and near-flat Japanese growth, both relevant to Australian exporters and the yen.",
+            "id": "asx-open-flat-1116",
+            "headline": "ASX futures point to a flat start after Friday’s fall",
+            "takeaway": "The ASX 200 fell 0.7% on Friday but rose for a third straight week; futures signalled little change at Monday's open.",
             "tags": [
-              "China",
-              "Japan",
-              "ASX"
+              "ASX",
+              "Equities"
             ],
-            "key_figure": "China retail sales forecast +0.8% y/y (prior 1.1%); Japan Q3 GDP forecast +0.1% q/q",
-            "new_since_last_issue": "Saturday listed China's data in the calendar without forecasts and did not cover Japan's GDP. New: published forecasts for both releases.",
-            "what_happened": "China's October industrial production is forecast to rise 5.3% from a year earlier (prior 5.5%) and retail sales 0.8% (prior 1.1%), while year-to-date fixed asset investment is forecast to fall about 7%, according to Newsquawk's preview ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs)). Japan's preliminary third-quarter GDP, due at 10:50am Monday Sydney time, is forecast to rise 0.1% for the quarter, or 0.3% annualised, after 1.4% annualised growth in the second quarter, according to the median of 16 economists in a Reuters poll; private consumption is forecast to fall 0.2% ([CNA (Reuters poll)](https://www.channelnewsasia.com/business/japan-q3-gdp-growth-seen-slowing-sharply-consumption-external-demand-drag-reuters-poll-6529916)). ASX 200 futures are unavailable in our data, so there is no verified read on Monday's local open.",
-            "why_it_matters": "China is Australia's largest export market, so its activity data matter for miners and the Australian dollar. Japan's growth figure is one input for the Bank of Japan's December decision; money markets priced about an 84% chance of a rise, according to Newsquawk ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs)).",
-            "market_reaction": "Dashboard: ASX 200 9,082.2 (−0.7% Friday, +0.7% week). ASX 200 futures and iron ore unavailable.",
-            "competing_views": [
-              {
-                "who": "Goldman Sachs (via Newsquawk)",
-                "view": "Expects base effects to weigh on Chinese retail sales in the fourth quarter.",
-                "source": {
-                  "label": "Newsquawk week in focus",
-                  "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
-                  "claim_type": "forecast",
-                  "date": "13 Nov 2026"
+            "key_figure": "S&P/ASX 200 9,082.2 (−0.7%), 13 Nov close",
+            "new_since_last_issue": "Weekend issues carried Friday's close. New: Monday-morning futures readings and the gap to the record high.",
+            "what_happened": "The S&P/ASX 200 closed Friday at 9,082.2, down 0.71%, but rose 0.7% over the week, its third weekly gain in a row ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134)). ASX 200 futures were flat at 9,114 points at about 7am after Wall Street mostly closed lower on Friday ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134)); the AFR said futures indicated an open 2 points lower ([AFR](https://www.afr.com/markets/equity-markets/asx-set-to-stall-as-nvidia-anthropic-put-ai-boom-to-the-test-20261115-p61dvy)). A soft open would leave the index 215 points below the record high set in August ([AFR](https://www.afr.com/markets/equity-markets/asx-set-to-stall-as-nvidia-anthropic-put-ai-boom-to-the-test-20261115-p61dvy)). Over the week, Japanese shares rose 6.5% and eurozone shares more than 3% ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134)).",
+            "why_it_matters": "With no US session since Friday, the first local drivers today are the oil reopening at 10am and China's activity data at 1pm, which matter for energy and mining shares.",
+            "market_reaction": "ASX 200 futures (SPI) are not in our data feed; the futures figures here are reported, not measured by us.",
+            "comparison": {
+              "title": "Where did ASX futures point?",
+              "why_different": "ABC gives the futures level (described as flat) and the AFR the move in index points against the futures' own previous close. Stockhead's −0.7% matches Friday's fall in the cash index and may not be an overnight futures move, but Stockhead does not say what it measures.",
+              "resolution": "unresolved",
+              "rows": [
+                {
+                  "source": "ABC markets blog",
+                  "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
+                  "figure": "Flat at 9,114",
+                  "measure": "ASX 200 futures, level and change",
+                  "timestamp": "16 Nov 2026, about 7am AEDT",
+                  "method": "Market quote cited by reporter",
+                  "status": "independently reported"
+                },
+                {
+                  "source": "AFR",
+                  "url": "https://www.afr.com/markets/equity-markets/asx-set-to-stall-as-nvidia-anthropic-put-ai-boom-to-the-test-20261115-p61dvy",
+                  "figure": "−2 points",
+                  "measure": "Futures-implied ASX 200 open",
+                  "timestamp": "15 Nov 2026, 12:24pm AEDT",
+                  "method": "Market quote cited by reporter",
+                  "status": "independently reported"
+                },
+                {
+                  "source": "Stockhead",
+                  "url": "https://stockhead.com.au/news/rise-and-shine-everything-you-need-to-know-before-the-asx-opens-925/",
+                  "figure": "−0.7%",
+                  "measure": "\"S&P ASX 200 futures\" (basis not stated)",
+                  "timestamp": "16 Nov 2026, 7am AEDT",
+                  "method": "Market quote cited by reporter",
+                  "status": "unverified"
                 }
-              },
-              {
-                "who": "SMBC Nikko Securities",
-                "view": "Said services consumption was firm in July–September, but durable goods spending contracted and non-durables were weak because of rising inflation.",
-                "source": {
-                  "label": "CNA (Reuters poll)",
-                  "url": "https://www.channelnewsasia.com/business/japan-q3-gdp-growth-seen-slowing-sharply-consumption-external-demand-drag-reuters-poll-6529916",
-                  "claim_type": "opinion",
-                  "date": "6 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Whether weak Chinese data raise expectations of support before Friday's loan prime rate setting.",
+              ]
+            },
+            "what_to_watch": "Energy shares after the oil reopen at 10am; miners and the Australian dollar after China data at 1pm.",
             "sources": [
               {
-                "label": "Newsquawk week in focus",
-                "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
+                "label": "ABC markets blog",
+                "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
+                "date": "16 Nov 2026"
               },
               {
-                "label": "CNA (Reuters poll)",
-                "url": "https://www.channelnewsasia.com/business/japan-q3-gdp-growth-seen-slowing-sharply-consumption-external-demand-drag-reuters-poll-6529916",
-                "claim_type": "forecast",
-                "date": "6 Nov 2026"
+                "label": "AFR",
+                "url": "https://www.afr.com/markets/equity-markets/asx-set-to-stall-as-nvidia-anthropic-put-ai-boom-to-the-test-20261115-p61dvy",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "Stockhead",
+                "url": "https://stockhead.com.au/news/rise-and-shine-everything-you-need-to-know-before-the-asx-opens-925/",
+                "claim_type": "reporting",
+                "date": "16 Nov 2026"
               }
             ]
           },
           {
-            "id": "rba-minutes-wages-jobs-preview",
-            "headline": "RBA minutes Tuesday: focus on the three dissenters",
-            "takeaway": "Previews say the minutes matter mainly for how much support there is for another rise; wages and jobs follow on Wednesday and Thursday.",
+            "id": "gas-reservation-senate-1116",
+            "headline": "Senate to vote on gas reservation; business and unions back bill",
+            "takeaway": "The bill would require LNG exporters to hold back up to 20% of exports for the local market from 2028; it needs Coalition or Greens support, and both want changes.",
             "tags": [
-              "RBA",
-              "Australia",
-              "Data"
+              "Energy",
+              "Policy",
+              "ASX"
             ],
-            "key_figure": "Jobs forecast +27.5k, 4.7% unemployment (market); Westpac +30k",
-            "new_since_last_issue": "Saturday covered the dates and market forecasts. New: Newsquawk's preview of what the minutes may show and Westpac's own jobs forecast, which is above the market figure.",
-            "what_happened": "The minutes of the 2–3 November meeting, when the RBA raised the cash rate 25 bp to 4.85% on a 6–3 vote with the dissenters favouring a pause, are due at 11:30am Tuesday ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs), [CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf)). The RBA's forecasts assumed the cash rate would peak at 4.9% in June 2027 ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs)). October employment on Thursday is forecast to rise 27,500 with unemployment steady at 4.7%; Westpac forecasts +30,000 ([Newsquawk](https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs)). The September-quarter wage price index on Wednesday is forecast to rise 1.0% ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf)).",
-            "why_it_matters": "ASX futures price a hold in December. The minutes, wages and jobs data are the inputs that could change that, which matters for bank shares, local yields and the Australian dollar.",
-            "competing_views": [
-              {
-                "who": "Westpac",
-                "view": "Sees the RBA as done raising rates and expects unemployment to peak above 5%.",
-                "source": {
-                  "label": "Newsquawk week in focus",
-                  "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
-                  "claim_type": "forecast",
-                  "date": "13 Nov 2026"
-                }
-              },
-              {
-                "who": "CommSec",
-                "view": "Said a stronger jobs report or wage growth could reinforce expectations that rates stay higher for longer.",
-                "source": {
-                  "label": "CommSec week ahead",
-                  "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf",
-                  "claim_type": "opinion",
-                  "date": "13 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "The dissenters' reasoning in the minutes; whether wage growth broadens beyond the award increase.",
+            "new_since_last_issue": "Not covered in previous issues. New: a joint business–union letter published ahead of this week’s Senate sitting.",
+            "what_happened": "The Senate sits this week, and the government's bill to require LNG exporters to set aside up to 20% of annual exports for domestic use from 2028 is due for a vote ([SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html), [AAP](https://aapnews.aap.com.au/news/end-of-year-deadline-looms-for-gas-reserve-fight)). Eight organisations, including the Australian Industry Group, the ACTU, Manufacturing Australia and the Australian Workers Union, signed an open letter asking senators to pass it, saying \"Delay is not a neutral outcome\" ([SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html), [AAP](https://aapnews.aap.com.au/news/end-of-year-deadline-looms-for-gas-reserve-fight)). Opposition resources spokeswoman Susan McDonald said the Coalition would work with Labor but would not back the bill in its current form, saying it \"will drive away investment, destroy domestic-only producers, discourage new production and ultimately leave Australians with less gas and higher prices\" ([SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html)). The Greens have rejected the bill and want a 25% tax on gas exports instead ([SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html)). Beach Energy chair Ryan Stokes said last week the scheme would not add gas to the system and would undercut existing suppliers ([SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html)).",
+            "why_it_matters": "The scheme would apply for the first time to the three Queensland LNG export ventures operated by Shell, Origin Energy and Santos ([SMH](https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html)), so the outcome matters for ASX gas producers and for manufacturers' energy costs.",
+            "what_to_watch": "Senate debate this week, the last two sitting weeks of 2026; any amendments agreed with the Coalition.",
             "sources": [
               {
-                "label": "Newsquawk week in focus",
-                "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
+                "label": "SMH",
+                "url": "https://www.smh.com.au/business/companies/coalition-threat-to-sink-gas-reform-triggers-rare-industry-backlash-20261116-p61e7n.html",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "CommSec week ahead",
-                "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Westpac Weekly",
-                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
-                "claim_type": "forecast",
                 "date": "16 Nov 2026"
               },
               {
-                "label": "RBA Watch (ASX futures)",
-                "url": "https://rbawatch.com/rba-meeting/december-2026",
-                "claim_type": "measurement",
-                "date": "13 Nov 2026"
+                "label": "AAP",
+                "url": "https://aapnews.aap.com.au/news/end-of-year-deadline-looms-for-gas-reserve-fight",
+                "claim_type": "reporting",
+                "date": "16 Nov 2026"
               }
             ]
           }
@@ -878,23 +837,112 @@
         "id": "rates-expectations",
         "cards": [
           {
-            "id": "us-2y-biggest-week-since-2024",
-            "headline": "US 2-year yield posts its biggest weekly rise since October 2024",
-            "takeaway": "Friday's Treasury close is now in our dashboard: the 2-year yield rose 37 bp for the week and the 10-year 29 bp; Australian yields are lagged to Wednesday.",
+            "id": "rba-pricing-minutes-1116",
+            "headline": "Markets price almost no chance of a December RBA rise",
+            "takeaway": "Money markets have priced out most of the risk of a December rise and are starting to price cuts in 2027; the November minutes are out on Tuesday.",
             "tags": [
-              "Bonds",
-              "Fed",
-              "Rates"
+              "RBA",
+              "Rates",
+              "Australia"
             ],
-            "key_figure": "US 2Y 4.88% (+37 bp week); US 10Y 5.15% (+29 bp week), Treasury close 13 Nov",
-            "new_since_last_issue": "Saturday's dashboard used the 12 November Treasury session (+40 bp and +26 bp over five sessions to Thursday). New: Friday's close is now in our snapshot, plus Reuters' late-Friday FedWatch reading and TD Securities' view.",
-            "what_happened": "In our data the US 2-year yield closed Friday at 4.88%, up 2 bp on the day and 37 bp for the week, and the 10-year at 5.15%, up 5 bp and 29 bp. That was the 2-year yield's biggest weekly increase since the first week of October 2024 ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)). Fed funds futures priced an 11% chance of a 50 bp rise at the 8–9 December meeting late on Friday, from zero a week earlier, according to CME FedWatch data cited by Reuters ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)). Australia's RBA-published yields are lagged to 11 November: 10-year 5.04% (−4 bp week), 2-year 4.81% (−2 bp week).",
-            "why_it_matters": "Over the same week the US dollar index reached its highest since April 2025 ([Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)), while the Australian dollar fell 1.4% and gold futures 4.6% in our dashboard. US retail sales and the Fed minutes this week are the next inputs for Fed pricing.",
-            "market_reaction": "Dashboard: US 10Y 5.15% (+5 bp day, +29 bp week); US 2Y 4.88% (+2 bp day, +37 bp week), Treasury session 13 Nov; AU 10Y 5.04% and AU 2Y 4.81% as at 11 Nov (RBA, lagged); AU curve +24 bp.",
+            "key_figure": "RBA cash rate 4.85% (last move +25 bp (4 Nov))",
+            "new_since_last_issue": "Sunday's issue gave ASX futures pricing. New: NAB's read of money-market pricing, including OIS pricing below the cash rate for August 2027, and Westpac's updated note.",
+            "what_happened": "ASX 30-day interbank cash rate futures implied a 97% chance of a hold and 3% of a 25 bp rise at the 8 December meeting at Friday's close ([RBA Watch](https://rbawatch.com/rba-meeting/december-2026)). NAB's Ray Attrill said money markets had priced out almost all of the risk of a December rise, which he put at 6%, and that August 2027 OIS pricing ended Friday at 4.80%, below the 4.85% cash rate and down from 4.91% at the end of October ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134)). Governor Michele Bullock joins a panel at the ASIC Annual Forum at 10am on Tuesday, and the minutes of the November meeting follow at 11:30am ([RBA](https://www.rba.gov.au/coming-up/)); the board raised the cash rate on a 6–3 vote ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf)).",
+            "why_it_matters": "Expected rate cuts in 2027 would affect bank margins, mortgage costs and the Australian dollar; the minutes may show how strongly the three dissenters argued for a pause.",
+            "market_reaction": "Dashboard (RBA data, 11 Nov): Australian 2-year 4.81% (+6 bp), 10-year 5.04% (+5 bp); later sessions are not yet published.",
+            "comparison": {
+              "title": "How likely is a December RBA rise?",
+              "why_different": "The two figures come from different instruments: ASX 30-day interbank futures settle on the monthly average cash rate, while NAB cites money-market (OIS) pricing. Neither source reconciles the gap.",
+              "resolution": "unresolved",
+              "rows": [
+                {
+                  "source": "RBA Watch (ASX 30-day futures)",
+                  "url": "https://rbawatch.com/rba-meeting/december-2026",
+                  "figure": "3% chance of a 25 bp rise",
+                  "measure": "Futures-implied probability, 8 Dec meeting",
+                  "timestamp": "13 Nov 2026, ASX close",
+                  "method": "Implied rate after meeting vs current rate",
+                  "status": "estimate"
+                },
+                {
+                  "source": "NAB (Ray Attrill) via ABC",
+                  "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
+                  "figure": "6%",
+                  "measure": "Money-market pricing of a December rise",
+                  "timestamp": "End of Friday 13 Nov 2026",
+                  "method": "Not stated",
+                  "status": "estimate"
+                }
+              ]
+            },
+            "competing_views": [
+              {
+                "who": "Westpac (Luci Ellis)",
+                "view": "Has greater conviction that the RBA is done raising rates; says a February 2027 rise cannot be ruled out but looks even less likely, and agrees with the dissenters that downside risks need more attention.",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+                  "claim_type": "forecast",
+                  "date": "13 Nov 2026"
+                }
+              },
+              {
+                "who": "Ray Attrill, NAB",
+                "view": "Says markets are \"more seriously flirting with the possibility of rate cuts next year\".",
+                "source": {
+                  "label": "ABC",
+                  "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
+                  "claim_type": "opinion",
+                  "date": "16 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Bullock's remarks (Tuesday 10am) and the minutes (Tuesday 11:30am); wages on Wednesday and jobs on Thursday.",
+            "sources": [
+              {
+                "label": "RBA Watch",
+                "url": "https://rbawatch.com/rba-meeting/december-2026",
+                "claim_type": "measurement",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "ABC markets blog (NAB note)",
+                "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
+                "claim_type": "reporting",
+                "date": "16 Nov 2026"
+              },
+              {
+                "label": "RBA coming up",
+                "url": "https://www.rba.gov.au/coming-up/",
+                "claim_type": "official_statement"
+              },
+              {
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+                "claim_type": "forecast",
+                "date": "13 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "warsh-ai-forum-fed-1116",
+            "headline": "Warsh opens Fed AI forum as colleagues link AI spending to inflation",
+            "takeaway": "Fed Chair Kevin Warsh speaks at 4am Tuesday Sydney time; markets expect a December Fed rise, with some chance of a 50 bp move.",
+            "tags": [
+              "Fed",
+              "Rates",
+              "AI",
+              "US"
+            ],
+            "key_figure": "US 2-year 4.88% (+2 bp), 13 Nov",
+            "new_since_last_issue": "Not covered in previous issues: the San Francisco Fed forum on Monday, US time, and reporting on the split among Fed officials over AI and inflation.",
+            "what_happened": "Warsh gives opening remarks at a Fed conference on the economic effects of AI at 9am Monday Pacific time, 4am Tuesday Sydney time, followed by panels including Palo Alto Networks CEO Nikesh Arora and Stripe's Patrick Collison ([San Francisco Fed](https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/)). Warsh argued, when nominated, that the AI boom would help lower inflation; more than a dozen Fed colleagues now say AI is adding to it ([Washington Post](https://www.washingtonpost.com/business/2026/11/13/more-top-fed-officials-say-ai-is-fueling-inflation-kevin-warsh-is-an-outlier/)). Many Fed officials are increasingly concerned that the AI build-out is pushing up prices ([Reuters via Investing.com](https://www.investing.com/news/economy-news/feds-warsh-to-take-stock-of-ai-revolution-as-us-public-grows-wary-5024808)). New York Fed President John Williams said on Thursday that inflation is \"far too high\" and the Fed will need to act to bring it back to 2% ([CNBC-TV18](https://www.cnbctv18.com/economy/federal-reserve-bank-of-new-york-president-john-williams-says-inflation-far-too-high-20033102.htm)). Friday's slightly softer US producer price data did little to change the view that the Fed will raise rates next month, and CME FedWatch put an 11% chance on a 50 bp move ([ABC](https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134), [Reuters via Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html)).",
+            "why_it_matters": "Higher US rates have pushed US yields above Australian yields and weighed on the Australian dollar; the AI debate at the Fed bears on how far it raises rates.",
+            "market_reaction": "Dashboard (13 Nov): US 2-year 4.88% (+2 bp), US 10-year 5.15% (+5 bp).",
             "competing_views": [
               {
                 "who": "Molly Brooks, TD Securities",
-                "view": "Said inflation is stubbornly high and the Fed will need to act \"a little bit quicker and a little bit more aggressively.\"",
+                "view": "Said the Fed is \"going to need to act a little bit quicker and a little bit more aggressively\".",
                 "source": {
                   "label": "Reuters via Yahoo Finance",
                   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html",
@@ -904,28 +952,39 @@
               },
               {
                 "who": "Westpac economics",
-                "view": "Said market pricing of hikes in December and January, and about 3.5 hikes by September, overstates the need for tightening.",
+                "view": "Says market pricing of Fed rises in December and January overstates the need for tightening.",
                 "source": {
                   "label": "Westpac Weekly",
                   "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
                   "claim_type": "forecast",
-                  "date": "16 Nov 2026"
+                  "date": "13 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "US retail sales (12:30am Wednesday Sydney time; forecast +0.2% m/m per Newsquawk) and the FOMC minutes (6am Thursday).",
+            "what_to_watch": "Warsh's remarks (Tuesday 4am AEDT); US retail sales (Wednesday 12:30am AEDT); FOMC minutes (Thursday 6am AEDT).",
             "sources": [
               {
-                "label": "US Treasury",
-                "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
-                "claim_type": "measurement",
+                "label": "San Francisco Fed",
+                "url": "https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/",
+                "claim_type": "official_statement"
+              },
+              {
+                "label": "Washington Post",
+                "url": "https://www.washingtonpost.com/business/2026/11/13/more-top-fed-officials-say-ai-is-fueling-inflation-kevin-warsh-is-an-outlier/",
+                "claim_type": "reporting",
                 "date": "13 Nov 2026"
               },
               {
-                "label": "RBA statistical tables",
-                "url": "https://www.rba.gov.au/statistics/tables/#interest-rates",
-                "claim_type": "measurement",
-                "date": "11 Nov 2026"
+                "label": "Reuters via Investing.com",
+                "url": "https://www.investing.com/news/economy-news/feds-warsh-to-take-stock-of-ai-revolution-as-us-public-grows-wary-5024808",
+                "claim_type": "reporting",
+                "date": "13 Nov 2026"
+              },
+              {
+                "label": "CNBC-TV18",
+                "url": "https://www.cnbctv18.com/economy/federal-reserve-bank-of-new-york-president-john-williams-says-inflation-far-too-high-20033102.htm",
+                "claim_type": "official_statement",
+                "date": "13 Nov 2026"
               },
               {
                 "label": "Reuters via Yahoo Finance",
@@ -934,16 +993,10 @@
                 "date": "13 Nov 2026"
               },
               {
-                "label": "Westpac Weekly",
-                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
-                "claim_type": "forecast",
-                "date": "16 Nov 2026"
-              },
-              {
-                "label": "Newsquawk week in focus",
-                "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
+                "label": "ABC markets blog",
+                "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
                 "claim_type": "reporting",
-                "date": "13 Nov 2026"
+                "date": "16 Nov 2026"
               }
             ]
           }
@@ -953,196 +1006,93 @@
         "id": "global-risk",
         "cards": [
           {
-            "id": "trump-may-hold-off-iran-strikes",
-            "headline": "Reuters: Trump told advisers he may hold off on new Iran strikes",
-            "takeaway": "Three people told Reuters Trump is considering holding off on strikes absent provocations; a third carrier is rotating into the region, and Iran's foreign ministry says US remarks on the blockade threaten Iranians' food supply.",
+            "id": "yemen-bab-el-mandeb-1116",
+            "headline": "Yemen government forces pull back from Bab el-Mandeb area",
+            "takeaway": "The withdrawal leaves the Houthis in control of the area overlooking the Red Sea chokepoint, while the Houthis said they struck Saudi pipeline pumping stations.",
             "tags": [
-              "Iran",
-              "US policy",
-              "Hormuz"
+              "Oil",
+              "Shipping",
+              "Middle East"
             ],
-            "new_since_last_issue": "Saturday covered Trump's \"no deal needed\" post and the blockade. New: Reuters' Saturday report on his private deliberations, the White House response, a third carrier deployment and Iran's foreign ministry response.",
-            "what_happened": "President Trump has told senior advisers he may hold off on attacking Iran if there are no new provocations from Tehran or the Houthis, Reuters reported on Saturday, citing three people familiar with the matter; Saudi Crown Prince Mohammed bin Salman and Turkish President Tayyip Erdogan both urged him not to resume attacks, according to a senior US official and another person ([Reuters via Al-Monitor](https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources)). A White House official said \"only President Trump knows what he will do, and when,\" and that the US is in a strong position with control of the strait. The same report said a third aircraft carrier is moving to the Middle East to replace one of the two there, though all three could stay if needed, and that Israeli officials continue to press for a new campaign, according to a US official ([Reuters via Al-Monitor](https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources)). Iran's foreign ministry spokesman Esmail Baghaei said comments by Secretary of State Marco Rubio on the blockade amounted to a threat to starve Iranians; Rubio had said sanctions and the blockade could push Tehran's leaders to reconsider their demands ([Iran International](https://www.iranintl.com/en/liveblog/202611143682)). Current and former officials told Reuters that Trump does not appear to have decided how to resolve the conflict ([Reuters via Al-Monitor](https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources)).",
-            "why_it_matters": "Oil's second weekly fall came as the US focused on the blockade and economic pressure rather than new strikes, according to Reuters, while three people familiar with US planning said the military is ready to escalate if needed ([Reuters via Al-Monitor](https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources)). Strait traffic, which affects oil supply, remains below pre-war levels.",
+            "new_since_last_issue": "Not covered in previous issues; the withdrawal and the Houthi statement were on Sunday.",
+            "what_happened": "Southern Yemeni forces fighting for the Saudi-backed government said on Sunday they were redeploying from Dhubab airport and the Bab el-Mandeb area to secure Aden and nearby provinces, leaving the Houthis in control of the area ([NBC News (Reuters)](https://www.nbcnews.com/world/yemen/yemen-forces-withdraw-area-bab-el-mandeb-strait-houthis-rcna609389), [The National](https://www.thenationalnews.com/news/mena/2026/11/15/southern-yemeni-forces-withdraw-from-area-near-bab-al-mandab/)). The Houthis said they attacked King Khalid International Airport and a financial centre in Riyadh and two pumping stations on Saudi Arabia's East-West oil pipeline; there was no immediate Saudi confirmation of those strikes ([CNBC (Reuters)](https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html), [RIA Novosti](https://ria.ru/20261115/er-riyad-2131730117.html)). The Saudi-led coalition said it intercepted two ballistic missiles aimed at Riyadh and three drones over the Eastern Province ([RIA Novosti](https://ria.ru/20261115/er-riyad-2131730117.html)). Saudi Arabia has rerouted about 4 million barrels a day of crude through that pipeline to Yanbu on the Red Sea, about 4% of global supply ([CNBC (Reuters)](https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html)).",
+            "why_it_matters": "With Iran restricting Hormuz on the other side of the Arabian Peninsula, Houthi control near Bab el-Mandeb would further isolate Gulf oil producers from their main shipping routes, according to Reuters ([NBC News (Reuters)](https://www.nbcnews.com/world/yemen/yemen-forces-withdraw-area-bab-el-mandeb-strait-houthis-rcna609389)); that bears on oil supply and freight costs for Asian importers, including Australia.",
+            "market_reaction": "Not yet observed; oil futures reopen at 10am Sydney time.",
+            "what_to_watch": "Any Saudi statement on the pipeline; shipping advisories for the Red Sea.",
+            "sources": [
+              {
+                "label": "NBC News (Reuters)",
+                "url": "https://www.nbcnews.com/world/yemen/yemen-forces-withdraw-area-bab-el-mandeb-strait-houthis-rcna609389",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "The National",
+                "url": "https://www.thenationalnews.com/news/mena/2026/11/15/southern-yemeni-forces-withdraw-from-area-near-bab-al-mandab/",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "CNBC (Reuters)",
+                "url": "https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              },
+              {
+                "label": "RIA Novosti (Houthi statement)",
+                "url": "https://ria.ru/20261115/er-riyad-2131730117.html",
+                "claim_type": "reporting",
+                "date": "15 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "ukraine-nato-donbas-1116",
+            "headline": "Zelensky says US raised NATO membership in exchange for Donbas",
+            "takeaway": "Zelensky said US envoys asked whether Ukraine would withdraw from Donbas if it joined NATO; Washington and Moscow have not confirmed or responded directly.",
+            "tags": [
+              "Ukraine",
+              "Russia",
+              "Geopolitics"
+            ],
+            "new_since_last_issue": "Sunday's issue covered the rejected energy ceasefire. New: Zelensky's account of the NATO question and Jared Kushner's response.",
+            "what_happened": "Zelensky said in comments released on Saturday that US envoys asked: \"What if Ukraine joins NATO? Would Ukraine withdraw from Donbas?\", and that this was the first time the idea had been raised ([AFP](https://www.afp.com/en/us-suggested-kyiv-cede-land-russia-exchange-joining-nato-zelensky-says)). He said Ukraine would not recognise land taken by Russia but would put a deal to a referendum if it included security guarantees, a strong army and reconstruction funds ([Al Jazeera](https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia)). Kushner posted that the media had reported \"maximalist propositions proposed by both sides\" and that several new ideas from the talks are being explored ([AFP](https://www.afp.com/en/us-suggested-kyiv-cede-land-russia-exchange-joining-nato-zelensky-says)). NATO and Washington had not commented directly, and the Kremlin, which has called Ukraine's NATO membership a red line, had not responded ([AFP](https://www.afp.com/en/us-suggested-kyiv-cede-land-russia-exchange-joining-nato-zelensky-says), [Al Jazeera](https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia)).",
+            "why_it_matters": "Progress or setbacks in the talks bear on European energy prices and defence spending, and on the outlook for Russian fuel exports.",
             "competing_views": [
               {
-                "who": "White House official",
-                "view": "Said the US \"is in a very strong position with control of the Strait of Hormuz and the Iranian economy collapsing.\"",
+                "who": "Ian Lesser, German Marshall Fund",
+                "view": "Said the NATO element \"seems very doubtful\" and that it is hard to imagine Moscow agreeing to it.",
                 "source": {
-                  "label": "Reuters via Al-Monitor",
-                  "url": "https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources",
-                  "claim_type": "official_statement",
-                  "date": "14 Nov 2026"
+                  "label": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia",
+                  "claim_type": "opinion",
+                  "date": "15 Nov 2026"
                 }
               },
               {
-                "who": "Esmail Baghaei, Iran foreign ministry",
-                "view": "Said Rubio's remarks were an open threat to starve Iranians and showed policies that violate international law.",
+                "who": "Chris Featherstone, University of York",
+                "view": "Said NATO membership in a settlement would give Ukraine significant support if Russia restarted the conflict.",
                 "source": {
-                  "label": "Iran International",
-                  "url": "https://www.iranintl.com/en/liveblog/202611143682",
-                  "claim_type": "official_statement",
-                  "date": "14 Nov 2026"
+                  "label": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia",
+                  "claim_type": "opinion",
+                  "date": "15 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "Any Houthi or Iranian action the US treats as a provocation; Trump's Iran discussion with Xi and Putin later in the week.",
+            "what_to_watch": "Any Kremlin or White House response; the next round of talks, which European representatives are due to join.",
             "sources": [
               {
-                "label": "Reuters via Al-Monitor",
-                "url": "https://www.al-monitor.com/originals/2026/11/trump-tells-advisers-he-may-hold-iran-attacks-barring-new-provocations-sources",
+                "label": "AFP",
+                "url": "https://www.afp.com/en/us-suggested-kyiv-cede-land-russia-exchange-joining-nato-zelensky-says",
                 "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "Iran International",
-                "url": "https://www.iranintl.com/en/liveblog/202611143682",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
+                "date": "15 Nov 2026"
               },
               {
                 "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/liveblog/2026/11/14/iran-war-live-fighting-grips-yemen-as-qatar-turkiye-sign-defence-deal",
+                "url": "https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia",
                 "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              }
-            ]
-          },
-          {
-            "id": "apec-trump-xi-putin-shenzhen",
-            "headline": "White House confirms Trump–Xi–Putin meeting in Shenzhen",
-            "takeaway": "Trump meets Xi on Thursday and then Xi and Putin together; US officials expect no agreement and no tariff changes, and China has not confirmed the three-way meeting.",
-            "tags": [
-              "China",
-              "Trade",
-              "US policy",
-              "Russia"
-            ],
-            "key_figure": "US–China tariff truce suspensions extended to 10 Jan 2027",
-            "new_since_last_issue": "Not covered on Saturday. New: White House confirmation on Friday, US time, of the trilateral meeting and the trip schedule.",
-            "what_happened": "White House spokeswoman Olivia Wales said Trump will end his China visit with a trilateral meeting with Xi Jinping and Vladimir Putin on the sidelines of the APEC summit in Shenzhen, and will discuss reducing nuclear weapons; Russia has confirmed the meeting and an unnamed senior US official said no agreement is expected ([BBC](https://www.bbc.com/news/articles/ckz74jzpy18do), [SCMP](https://www.scmp.com/news/china/diplomacy/article/3374415/white-house-confirms-us-china-russia-trilateral-apec-sidelines)). Trump attends an ASEAN summit in the Philippines on Tuesday, arrives in Shenzhen late Wednesday and holds bilateral talks with Xi on Thursday ([BBC](https://www.bbc.com/news/articles/ckz74jzpy18do)). A senior US official described the Xi meeting as an \"implementation check-in\" on the trade agreement, with no tariff changes expected ([Anadolu Agency](https://aa.com.tr/en/world/morning-briefing-nov-14-2026/4124855)). China said this week that suspensions including an additional 24% tariff on US imports will continue until 10 January 2027, while a 10% duty remains ([Anadolu Agency explainer](https://www.aa.com.tr/en/asia-pacific/explainer-trade-technology-and-possible-putin-talks-what-awaits-trump-in-asia/4124280)). Chinese state media have reported only bilateral talks, and Reuters reported that Xi is wary of hosting the three-way meeting ([BBC](https://www.bbc.com/news/articles/ckz74jzpy18do), [Reuters](https://www.reuters.com/5f374b32b07b/world/china/new-yalta-trump-putin-push-meeting-that-xi-is-wary-hosting-2026-11-14/)).",
-            "why_it_matters": "US–China trade terms, rare earth exports and chip export rules affect Australian miners, technology stocks and the Australian dollar. Iran may also be discussed, according to the BBC, which links the meeting to the oil outlook ([BBC](https://www.bbc.com/news/articles/ckz74jzpy18do)).",
-            "competing_views": [
-              {
-                "who": "Victor Cha, CSIS",
-                "view": "Said the administration appears to be lowering expectations for a major breakthrough in Shenzhen, and that more substantive talks could follow at December's G20 in Florida.",
-                "source": {
-                  "label": "Anadolu Agency explainer",
-                  "url": "https://www.aa.com.tr/en/asia-pacific/explainer-trade-technology-and-possible-putin-talks-what-awaits-trump-in-asia/4124280",
-                  "claim_type": "opinion",
-                  "date": "13 Nov 2026"
-                }
-              },
-              {
-                "who": "Brookings",
-                "view": "Said neither side is preparing ambitious deliverables, but the leaders may endorse a bilateral AI dialogue and incident-reporting channel.",
-                "source": {
-                  "label": "Brookings",
-                  "url": "https://www.brookings.edu/articles/trump-xi-and-putin-what-to-expect-from-the-apec-summit/",
-                  "claim_type": "opinion",
-                  "date": "Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "China's confirmation and format of the trilateral; any statement on rare earths, chips or the truce deadline.",
-            "sources": [
-              {
-                "label": "BBC",
-                "url": "https://www.bbc.com/news/articles/ckz74jzpy18do",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "South China Morning Post",
-                "url": "https://www.scmp.com/news/china/diplomacy/article/3374415/white-house-confirms-us-china-russia-trilateral-apec-sidelines",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "Anadolu Agency morning briefing",
-                "url": "https://aa.com.tr/en/world/morning-briefing-nov-14-2026/4124855",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "Anadolu Agency explainer",
-                "url": "https://www.aa.com.tr/en/asia-pacific/explainer-trade-technology-and-possible-putin-talks-what-awaits-trump-in-asia/4124280",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "Reuters",
-                "url": "https://www.reuters.com/5f374b32b07b/world/china/new-yalta-trump-putin-push-meeting-that-xi-is-wary-hosting-2026-11-14/",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "Brookings",
-                "url": "https://www.brookings.edu/articles/trump-xi-and-putin-what-to-expect-from-the-apec-summit/",
-                "claim_type": "opinion",
-                "date": "Nov 2026"
-              }
-            ]
-          },
-          {
-            "id": "ukraine-energy-truce-rejected",
-            "headline": "Zelensky says Putin rejected an energy ceasefire",
-            "takeaway": "No energy truce has been agreed, and the IEA says attacks on Russian energy sites are limiting diesel exports; the Kremlin has not confirmed Europe's role in the next talks.",
-            "tags": [
-              "Russia",
-              "Ukraine",
-              "Energy"
-            ],
-            "new_since_last_issue": "Saturday covered the Witkoff–Kushner meetings and Europe joining the next round. New: Zelensky's account that Putin personally rejected the energy truce, and the Kremlin's conditions on European participation.",
-            "what_happened": "President Zelensky said on 13 November that after US envoys raised a bilateral energy ceasefire with President Putin in Moscow, \"a ceasefire is not supported personally by Putin\" ([Kyiv Post](https://www.kyivpost.com/post/90119), [CGTN](https://news.cgtn.com/news/2026-11-14/news-1S49yXrxQd2/p.html)). Kremlin spokesman Dmitry Peskov said a decision on expanding talks to include Europe would depend on Moscow's view of Europe's \"genuine intention and readiness to contribute to the peace process\" ([RFE/RL](https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html)). Russian officials said Ukrainian drone attacks on industrial sites in the Volgograd and Samara regions killed eight people, with a Volgograd refinery reportedly among the targets ([RFE/RL](https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html)). The IEA said this week that attacks on Russian energy infrastructure continue to restrict Russia's diesel exports ([IEA](https://www.iea.org/reports/oil-market-report-november-2026)).",
-            "why_it_matters": "No energy truce has been agreed, and the IEA says attacks on Russian energy infrastructure continue to choke off Russia's diesel exports at a time when diesel tightness is the market's overriding concern ([IEA](https://www.iea.org/reports/oil-market-report-november-2026)).",
-            "competing_views": [
-              {
-                "who": "Jared Kushner, US envoy",
-                "view": "Described the three days of diplomacy as \"meaningful progress\" and said both sides agreed to include European partners in the next round.",
-                "source": {
-                  "label": "RFE/RL",
-                  "url": "https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html",
-                  "claim_type": "official_statement",
-                  "date": "13 Nov 2026"
-                }
-              },
-              {
-                "who": "Dmitry Peskov, Kremlin",
-                "view": "Said expanded talks depend on Europe showing genuine readiness to contribute to the peace process.",
-                "source": {
-                  "label": "RFE/RL",
-                  "url": "https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html",
-                  "claim_type": "official_statement",
-                  "date": "13 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Date of the next round; any energy-infrastructure strikes on either side; whether Ukraine comes up in Shenzhen (the BBC understands it will not).",
-            "sources": [
-              {
-                "label": "Kyiv Post",
-                "url": "https://www.kyivpost.com/post/90119",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "CGTN",
-                "url": "https://news.cgtn.com/news/2026-11-14/news-1S49yXrxQd2/p.html",
-                "claim_type": "reporting",
-                "date": "14 Nov 2026"
-              },
-              {
-                "label": "RFE/RL",
-                "url": "https://www.rferl.org/a/ukraine-russia-us-peace-talks/33897813.html",
-                "claim_type": "reporting",
-                "date": "13 Nov 2026"
-              },
-              {
-                "label": "IEA Oil Market Report",
-                "url": "https://www.iea.org/reports/oil-market-report-november-2026",
-                "claim_type": "official_statement",
-                "date": "13 Nov 2026"
+                "date": "15 Nov 2026"
               }
             ]
           }
@@ -1152,34 +1102,44 @@
     "rates": {
       "rba": {
         "status": "available",
-        "summary": "Cash rate 4.85%. ASX 30-day cash rate futures implied a 97% chance of a hold and 3% of a 25 bp rise at the 8 December meeting at Friday's close.",
-        "as_of": "13 Nov 2026, ASX close (RBA Watch)",
+        "summary": "Cash rate 4.85%. ASX 30-day interbank futures implied a 97% chance of a hold and 3% of a 25 bp rise at the 8 December meeting at Friday's close (RBA Watch). NAB's Ray Attrill put the December rise risk at 6% on money-market pricing, with August 2027 OIS at 4.80%, below the cash rate (ABC, 16 Nov).",
+        "as_of": "13 Nov 2026, ASX close (RBA Watch); NAB note 16 Nov 2026",
         "source": {
-          "label": "RBA Watch (ASX futures)",
+          "label": "RBA Watch (ASX 30-day futures)",
           "url": "https://rbawatch.com/rba-meeting/december-2026",
           "claim_type": "measurement",
           "date": "13 Nov 2026"
         },
         "forecasts": [
           {
-            "who": "Westpac",
-            "view": "Sees the RBA as done raising rates; expects unemployment to peak above 5%.",
+            "who": "Westpac (Luci Ellis)",
+            "view": "RBA likely done raising rates; a February 2027 rise cannot be ruled out but looks even less likely. Forecasts the cash rate at 4.85% to June 2027, then cuts to 4.60% by September 2027; unemployment to peak above 5%.",
             "source": {
-              "label": "Newsquawk week in focus",
-              "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
+              "label": "Westpac Weekly",
+              "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
               "claim_type": "forecast",
               "date": "13 Nov 2026"
+            }
+          },
+          {
+            "who": "Ray Attrill, NAB",
+            "view": "Says markets are \"more seriously flirting with the possibility of rate cuts next year\".",
+            "source": {
+              "label": "ABC",
+              "url": "https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134",
+              "claim_type": "opinion",
+              "date": "16 Nov 2026"
             }
           }
         ]
       },
       "fed": {
         "status": "available",
-        "summary": "CME FedWatch put the chance of a rise at the 9 December meeting at 100% on Friday, with almost 87% for 25 bp and about 13% for 50 bp (CNBC, 4:17am US Eastern time, before the open); Reuters cited 11% for 50 bp late on Friday.",
-        "as_of": "13 Nov 2026, early (CNBC) and late (Reuters) US session, CME FedWatch",
+        "summary": "CME FedWatch priced an 11% chance of a 50 bp rise at the 8–9 December meeting late on Friday 13 November, against zero a week earlier.",
+        "as_of": "13 Nov 2026, late US session (Reuters, CME FedWatch)",
         "source": {
-          "label": "CNBC (CME FedWatch)",
-          "url": "https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html",
+          "label": "Reuters via Yahoo Finance (CME FedWatch)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html",
           "claim_type": "measurement",
           "date": "13 Nov 2026"
         },
@@ -1196,12 +1156,12 @@
           },
           {
             "who": "Westpac economics",
-            "view": "Says pricing of hikes in December and January overstates the need for tightening.",
+            "view": "Says pricing of rises in December and January overstates the need for tightening; forecasts the fed funds rate peaking at 4.375%.",
             "source": {
               "label": "Westpac Weekly",
               "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
               "claim_type": "forecast",
-              "date": "16 Nov 2026"
+              "date": "13 Nov 2026"
             }
           }
         ]
@@ -1209,45 +1169,93 @@
     },
     "calendar": [
       {
+        "when": "Mon 16 Nov, 10:00am",
+        "event": "ASX opens; oil and US stock futures reopen (6pm Sunday, New York)",
+        "country": "AU/US",
+        "importance": "high",
+        "source": {
+          "label": "Market Sunrise week ahead",
+          "url": "https://marketsunrise.com/editions/2026-11-15/",
+          "claim_type": "reporting",
+          "date": "15 Nov 2026"
+        }
+      },
+      {
         "when": "Mon 16 Nov, 10:50am",
         "event": "Japan GDP, Q3 preliminary (q/q)",
         "country": "JP",
         "importance": "medium",
-        "prior": "+1.4% annualised (Q2)",
-        "consensus": "+0.1% q/q (+0.3% annualised)",
-        "consensus_source": "Reuters poll (median of 16 economists)",
+        "prior": "0.4%",
+        "consensus": "0.1%",
+        "consensus_source": "Westpac Weekly (market forecast)",
         "source": {
-          "label": "CNA (Reuters poll)",
-          "url": "https://www.channelnewsasia.com/business/japan-q3-gdp-growth-seen-slowing-sharply-consumption-external-demand-drag-reuters-poll-6529916",
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
           "claim_type": "forecast",
-          "date": "6 Nov 2026"
+          "date": "13 Nov 2026"
         }
       },
       {
-        "when": "Mon 16 Nov, 1pm",
-        "event": "China industrial production and retail sales, October (y/y)",
+        "when": "Mon 16 Nov, 1:00pm",
+        "event": "China retail sales, industrial production and fixed asset investment, October",
         "country": "CN",
         "importance": "high",
-        "prior": "IP 5.5%; retail 1.1%",
-        "consensus": "IP 5.3%; retail 0.8%",
-        "consensus_source": "Newsquawk preview",
+        "prior": "Retail sales 1.1%; FAI −7.2% (both year to date)",
+        "consensus": "FAI −7.0% (year to date)",
+        "consensus_source": "Westpac Weekly (market forecast)",
         "source": {
-          "label": "Newsquawk week in focus",
-          "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
-          "claim_type": "reporting",
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+          "claim_type": "forecast",
           "date": "13 Nov 2026"
+        }
+      },
+      {
+        "when": "Tue 17 Nov, 12:30am",
+        "event": "US Empire State manufacturing index, November",
+        "country": "US",
+        "importance": "low",
+        "prior": "25.5",
+        "consensus": "19.0",
+        "consensus_source": "Westpac Weekly (market forecast)",
+        "source": {
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+          "claim_type": "forecast",
+          "date": "13 Nov 2026"
+        }
+      },
+      {
+        "when": "Tue 17 Nov, 4:00am",
+        "event": "Fed Chair Warsh opens the Fed productivity and jobs (AI) conference, San Francisco",
+        "country": "US",
+        "importance": "medium",
+        "source": {
+          "label": "San Francisco Fed",
+          "url": "https://www.frbsf.org/news-and-media/events/2026/11/productivity-and-jobs-task-force-conference/",
+          "claim_type": "official_statement"
+        }
+      },
+      {
+        "when": "Tue 17 Nov, 10:00am",
+        "event": "RBA Governor Bullock, panel at the ASIC Annual Forum",
+        "country": "AU",
+        "importance": "medium",
+        "source": {
+          "label": "RBA",
+          "url": "https://www.rba.gov.au/coming-up/",
+          "claim_type": "official_statement"
         }
       },
       {
         "when": "Tue 17 Nov, 11:30am",
         "event": "RBA minutes, November meeting",
         "country": "AU",
-        "importance": "medium",
+        "importance": "high",
         "source": {
-          "label": "CommSec week ahead",
-          "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_131126-Week-Ahead.pdf",
-          "claim_type": "reporting",
-          "date": "13 Nov 2026"
+          "label": "RBA",
+          "url": "https://www.rba.gov.au/coming-up/",
+          "claim_type": "official_statement"
         }
       },
       {
@@ -1255,26 +1263,28 @@
         "event": "US retail sales, October (m/m)",
         "country": "US",
         "importance": "high",
-        "prior": "+0.8%",
-        "consensus": "+0.2%",
-        "consensus_source": "Newsquawk preview",
+        "prior": "0.8%",
+        "consensus": "0.2%",
+        "consensus_source": "Westpac Weekly (market forecast)",
         "source": {
-          "label": "Newsquawk week in focus",
-          "url": "https://www.newsquawk.com/headlines/week-in-focus--16-20th-november-2026-highlights-include-us-retail-sales-fomc-minutes-chinese-activity-data-pboc-lpr-rba-minutes-uk-inflation-and-uk-jobs",
-          "claim_type": "reporting",
+          "label": "Westpac Weekly",
+          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
+          "claim_type": "forecast",
           "date": "13 Nov 2026"
         }
       },
       {
-        "when": "Wed 18 Nov, about 8:20am",
-        "event": "Nvidia third-quarter results",
+        "when": "Wed 18 Nov, morning (call 9:00am)",
+        "event": "Nvidia third-quarter results (after Tuesday US close)",
         "country": "US",
         "importance": "high",
+        "consensus": "Revenue US$109.08bn; EPS US$2.47",
+        "consensus_source": "LSEG via CNBC",
         "source": {
-          "label": "Nvidia investor relations",
-          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
-          "claim_type": "official_statement",
-          "date": "28 Oct 2026"
+          "label": "CNBC Investing Club",
+          "url": "https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
+          "claim_type": "reporting",
+          "date": "15 Nov 2026"
         }
       },
       {
@@ -1282,26 +1292,26 @@
         "event": "Wage price index, September quarter (q/q)",
         "country": "AU",
         "importance": "high",
-        "prior": "+0.8%",
-        "consensus": "+1.0%",
+        "prior": "0.8%",
+        "consensus": "1.0%",
         "consensus_source": "Westpac Weekly (market forecast)",
         "source": {
           "label": "Westpac Weekly",
           "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
           "claim_type": "forecast",
-          "date": "16 Nov 2026"
+          "date": "13 Nov 2026"
         }
       },
       {
-        "when": "Thu 19 Nov, 6am",
+        "when": "Thu 19 Nov, 6:00am",
         "event": "FOMC minutes, October meeting",
         "country": "US",
         "importance": "high",
         "source": {
-          "label": "CNBC week ahead",
-          "url": "https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html",
+          "label": "CNBC Investing Club",
+          "url": "https://www.cnbc.com/investingclub/2026/11/15/3-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
           "claim_type": "reporting",
-          "date": "13 Nov 2026"
+          "date": "15 Nov 2026"
         }
       },
       {
@@ -1316,31 +1326,19 @@
           "label": "Westpac Weekly",
           "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261116.pdf",
           "claim_type": "forecast",
-          "date": "16 Nov 2026"
+          "date": "13 Nov 2026"
         }
       },
       {
-        "when": "Thu 19 Nov (Shenzhen)",
-        "event": "Trump–Xi bilateral; Trump–Xi–Putin trilateral follows at the end of the visit (date not given)",
+        "when": "Thu 19 Nov (Shenzhen, time not published)",
+        "event": "Trump–Xi–Putin trilateral meeting on the APEC sidelines (date given by the Kremlin)",
         "country": "CN",
         "importance": "medium",
         "source": {
-          "label": "BBC",
-          "url": "https://www.bbc.com/news/articles/ckz74jzpy18do",
-          "claim_type": "reporting",
-          "date": "14 Nov 2026"
-        }
-      },
-      {
-        "when": "Fri 20 Nov (Thursday US session)",
-        "event": "Anthropic shares due to start trading on Nasdaq (ANT) after pricing on Wednesday, US time",
-        "country": "US",
-        "importance": "medium",
-        "source": {
-          "label": "CNBC week ahead",
-          "url": "https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html",
-          "claim_type": "reporting",
-          "date": "13 Nov 2026"
+          "label": "The Straits Times (AFP)",
+          "url": "https://www.straitstimes.com/world/europe/moscow-confirms-trump-xi-putin-meeting-in-china",
+          "claim_type": "official_statement",
+          "date": "15 Nov 2026"
         }
       }
     ]
