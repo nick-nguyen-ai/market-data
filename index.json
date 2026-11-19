@@ -1,10 +1,17 @@
 {
   "schema_version": 1,
   "latest": {
-    "markets": "2026-11-19",
-    "ai": "2026-11-19"
+    "markets": "2026-11-20",
+    "ai": "2026-11-20"
   },
   "days": [
+    {
+      "date": "2026-11-20",
+      "files": [
+        "ai.json",
+        "markets.json"
+      ]
+    },
     {
       "date": "2026-11-19",
       "files": [
