@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "type": "markets",
-  "date": "2026-11-21",
-  "generated_at_utc": "2026-11-20T21:33:43Z",
-  "title": "Markets: Saturday 21 November",
+  "date": "2026-11-22",
+  "generated_at_utc": "2026-11-21T21:34:40Z",
+  "title": "Markets: Sunday 22 November",
   "edition": "weekend",
   "morning": {
-    "cutoff_local": "2026-11-21T07:30:00+11:00",
-    "session_note": "Weekend edition · the week in review",
+    "cutoff_local": "2026-11-22T07:30:00+11:00",
+    "session_note": "Weekend edition · what's new since Saturday, with the week ahead",
     "summary": [
-      "An AI-led sell-off spread across markets. The ASX 200 fell 5.4% for the week to 8,592.6, its largest weekly point fall since March 2020. On Friday the S&P 500 fell 3.7% and the Nasdaq 5.3%, leaving the S&P 500 down almost 9% for the week and in a correction, 10% or more below its October record, after a report that the SEC is examining Nvidia's accounting; Nvidia and AMD fell about 13–14% and Anthropic 9% ([Dow Jones via Morningstar](https://www.morningstar.com/news/dow-jones/202611203033/spasx-200-benchmark-index-falls-539-this-week-to-859260-data-talk), [CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html), [Reuters via Investing.com](https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460)).",
-      "Fed officials kept arguing for higher rates, but Treasury yields fell as investors moved into bonds; Governor Cook said waiting longer to raise rates \"risks getting behind the curve\", and CME FedWatch put the chance of a quarter-point rise in December at about 92% late on Friday. In Australia, unemployment rose to 4.9%, and ASX futures moved from pricing a small chance of a hike to a 5% chance of a cut on 8 December; the Australian dollar fell 2.0% for the week to 0.6666 ([Federal Reserve](https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm), [CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html), [ABS](https://www.abs.gov.au/media-centre/media-releases/unemployment-rate-rises-49), [RBA Watch](https://rbawatch.com/rba-meeting/december-2026)).",
-      "Brent futures fell for a third week despite more US–Iran strikes around Hormuz and a Houthi threat to Saudi Red Sea ports; January Brent settled at US$92.57 on Friday, and the EIA said Gulf flows have recovered. Gold futures fell 9.3% for the week. Next: Australian October CPI at 11:30am Wednesday and US PCE inflation and GDP at 12:30am Thursday, Sydney time, before US Thanksgiving ([Reuters via Yahoo Finance](https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html), [EIA](https://www.eia.gov/todayinenergy/detail.php?id=68485), [Al Jazeera](https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island), [Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf))."
+      "Official closes confirm Wall Street's worst week since April 2025: the S&P 500 fell 8.6% to 6,910.4 and the Nasdaq 10.0%. Cboe's VIX closed at 35.89, not the 39.51 from delayed data in Saturday's issue. The fall came after the ASX's Friday close, so Monday is the first local reaction ([AP via NPR](https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative), [Cboe](https://www.cboe.com/insights/posts/market-selloff-deepens-as-investors-seek-shelter)).",
+      "On Saturday the UK maritime agency reported two projectile strikes on tankers near Hormuz (possibly the same vessel) and Iran's navy said a tanker hit a mine; a Qatari delegation held talks in Tehran and Trump said any Iran deal must be \"permanent\". Brent futures had settled at US$92.57 on Friday, down 3.4% for the week, before the incidents ([CNBC](https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html), [Al Jazeera](https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping), [Arab News/Reuters](https://www.arabnews.com/middle-east/qatari-delegation-visits-tehran-for-talks-iranian-official-says-3013368)).",
+      "Week ahead: Australia's October CPI at 11:30am Wednesday (Westpac 4.8%, NAB 4.7%, from 4.3%); ASX futures priced a 95% chance of an RBA hold at Friday's close. US PCE and GDP at 12:30am Thursday, then Thanksgiving; OPEC+ meets on 29 November ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf), [NAB](https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf), [RBA Watch](https://rbawatch.com/rba-meeting/december-2026))."
     ],
     "prices": {
-      "retrieved_at_utc": "2026-11-20 21:29Z",
-      "cutoff_utc": "2026-11-20T20:30:00Z",
+      "retrieved_at_utc": "2026-11-21 21:31Z",
+      "cutoff_utc": "2026-11-21T20:30:00Z",
       "quotes": [
         {
           "id": "asx200",
@@ -43,7 +43,7 @@
           "comparison_date": "2026-11-19",
           "comparison_value": 8730.400391,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_abs": -137.8,
           "change_pct": -1.58,
           "display_change": "−1.6%",
@@ -62,7 +62,7 @@
           "currency": "USD",
           "decimals": 1,
           "change_unit": "pct",
-          "expected_session_date": "2026-11-19",
+          "expected_session_date": "2026-11-20",
           "observation_timezone": "America/New_York",
           "status": "ok",
           "provider": "Yahoo Finance (^GSPC)",
@@ -70,29 +70,22 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 7175.830078,
-          "display_value": "7,175.8",
-          "market_session_date": "2026-11-19",
-          "observation_timestamp_utc": "2026-11-19T21:00:00Z",
-          "as_of_sydney": "20 Nov 2026, 08:00 AEDT",
-          "comparison_date": "2026-11-18",
-          "comparison_value": 7323.629883,
+          "value": 6910.390137,
+          "display_value": "6,910.4",
+          "market_session_date": "2026-11-20",
+          "observation_timestamp_utc": "2026-11-20T21:35:54Z",
+          "as_of_sydney": "21 Nov 2026, 08:35 AEDT",
+          "comparison_date": "2026-11-19",
+          "comparison_value": 7175.830078,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
-          "change_abs": -147.8,
-          "change_pct": -2.02,
-          "display_change": "−2.0%",
-          "week_comparison_date": "2026-11-12",
-          "week_comparison_value": 7592.399902,
-          "week_change_pct": -5.49,
-          "display_week_change": "−5.5% wk",
-          "cross_checks": [
-            {
-              "provider": "FRED SP500 (S&P Dow Jones Indices)",
-              "value": 7175.83,
-              "session_date": "2026-11-19"
-            }
-          ]
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
+          "change_abs": -265.4,
+          "change_pct": -3.7,
+          "display_change": "−3.7%",
+          "week_comparison_date": "2026-11-13",
+          "week_comparison_value": 7561.669922,
+          "week_change_pct": -8.61,
+          "display_week_change": "−8.6% wk"
         },
         {
           "id": "audusd",
@@ -121,7 +114,7 @@
           "comparison_date": "2026-11-19",
           "comparison_value": 0.6677,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_abs": -0.0011,
           "change_pct": -0.16,
           "display_change": "−0.16%",
@@ -157,7 +150,7 @@
           "comparison_date": "2026-11-17",
           "comparison_value": 5.135,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_bp": -5.5,
           "display_change": "−5 bp",
           "week_comparison_date": "2026-11-11",
@@ -192,7 +185,7 @@
           "comparison_date": "2026-11-16",
           "comparison_value": 92.9,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_abs": 0.04,
           "change_pct": 0.04,
           "display_change": "+0.0%",
@@ -211,7 +204,7 @@
           "currency": "",
           "decimals": 2,
           "change_unit": "pts",
-          "expected_session_date": "2026-11-19",
+          "expected_session_date": "2026-11-20",
           "observation_timezone": "America/New_York",
           "status": "ok",
           "provider": "Cboe VIX History",
@@ -219,22 +212,22 @@
           "licence_note": "Cboe Global Markets daily VIX history CSV; cite Cboe; personal non-commercial display of single closes.",
           "official": true,
           "source_label": "official",
-          "value": 28.44,
-          "display_value": "28.44",
-          "market_session_date": "2026-11-19",
-          "observation_timestamp_utc": "2026-11-19T21:00:00Z",
-          "as_of_sydney": "20 Nov 2026, 08:00 AEDT",
-          "comparison_date": "2026-11-18",
-          "comparison_value": 24.56,
+          "value": 35.89,
+          "display_value": "35.89",
+          "market_session_date": "2026-11-20",
+          "observation_timestamp_utc": "2026-11-20T21:00:00Z",
+          "as_of_sydney": "21 Nov 2026, 08:00 AEDT",
+          "comparison_date": "2026-11-19",
+          "comparison_value": 28.44,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
-          "change_abs": 3.88,
-          "change_pct": 15.8,
-          "display_change": "+3.88 pts",
-          "week_comparison_date": "2026-11-12",
-          "week_comparison_value": 18.7,
-          "week_change_abs": 9.74,
-          "display_week_change": "+9.74 pts wk"
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
+          "change_abs": 7.45,
+          "change_pct": 26.2,
+          "display_change": "+7.45 pts",
+          "week_comparison_date": "2026-11-13",
+          "week_comparison_value": 19.3,
+          "week_change_abs": 16.59,
+          "display_week_change": "+16.59 pts wk"
         },
         {
           "id": "nasdaq",
@@ -246,7 +239,7 @@
           "currency": "USD",
           "decimals": 1,
           "change_unit": "pct",
-          "expected_session_date": "2026-11-19",
+          "expected_session_date": "2026-11-20",
           "observation_timezone": "America/New_York",
           "status": "ok",
           "provider": "Yahoo Finance (^IXIC)",
@@ -254,29 +247,22 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 23879.199219,
-          "display_value": "23,879.2",
-          "market_session_date": "2026-11-19",
-          "observation_timestamp_utc": "2026-11-19T21:00:00Z",
-          "as_of_sydney": "20 Nov 2026, 08:00 AEDT",
-          "comparison_date": "2026-11-18",
-          "comparison_value": 24429.880859,
+          "value": 22617.730469,
+          "display_value": "22,617.7",
+          "market_session_date": "2026-11-20",
+          "observation_timestamp_utc": "2026-11-20T22:15:59Z",
+          "as_of_sydney": "21 Nov 2026, 09:15 AEDT",
+          "comparison_date": "2026-11-19",
+          "comparison_value": 23879.199219,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
-          "change_abs": -550.7,
-          "change_pct": -2.25,
-          "display_change": "−2.3%",
-          "week_comparison_date": "2026-11-12",
-          "week_comparison_value": 25366.089844,
-          "week_change_pct": -5.86,
-          "display_week_change": "−5.9% wk",
-          "cross_checks": [
-            {
-              "provider": "FRED NASDAQCOM (Nasdaq)",
-              "value": 23879.2,
-              "session_date": "2026-11-19"
-            }
-          ]
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
+          "change_abs": -1261.5,
+          "change_pct": -5.28,
+          "display_change": "−5.3%",
+          "week_comparison_date": "2026-11-13",
+          "week_comparison_value": 25136.269531,
+          "week_change_pct": -10.02,
+          "display_week_change": "−10.0% wk"
         },
         {
           "id": "au2y",
@@ -304,7 +290,7 @@
           "comparison_date": "2026-11-17",
           "comparison_value": 4.862,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_bp": -4.9,
           "display_change": "−5 bp",
           "week_comparison_date": "2026-11-11",
@@ -340,7 +326,7 @@
           "change_bp": -0.6,
           "display_change": "−1 bp",
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "note": "Derived from lagged RBA F2 legs; not a live curve mark."
         },
         {
@@ -369,7 +355,7 @@
           "comparison_date": "2026-11-19",
           "comparison_value": 5.04,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_bp": -12.0,
           "display_change": "−12 bp",
           "week_comparison_date": "2026-11-13",
@@ -403,7 +389,7 @@
           "comparison_date": "2026-11-19",
           "comparison_value": 4.76,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_bp": -13.0,
           "display_change": "−13 bp",
           "week_comparison_date": "2026-11-13",
@@ -430,22 +416,22 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 89.959999,
-          "display_value": "89.96",
+          "value": 92.57,
+          "display_value": "92.57",
           "market_session_date": "2026-11-20",
-          "observation_timestamp_utc": "2026-11-20T21:20:00Z",
-          "as_of_sydney": "21 Nov 2026, 08:20 AEDT",
+          "observation_timestamp_utc": "2026-11-20T21:59:18Z",
+          "as_of_sydney": "21 Nov 2026, 08:59 AEDT",
           "comparison_date": "2026-11-19",
           "comparison_value": 91.980003,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
-          "change_abs": -2.02,
-          "change_pct": -2.2,
-          "display_change": "−2.2%",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
+          "change_abs": 0.59,
+          "change_pct": 0.64,
+          "display_change": "+0.6%",
           "week_comparison_date": "2026-11-13",
           "week_comparison_value": 95.839996,
-          "week_change_pct": -6.14,
-          "display_week_change": "−6.1% wk"
+          "week_change_pct": -3.41,
+          "display_week_change": "−3.4% wk"
         },
         {
           "id": "gold_fut",
@@ -466,21 +452,21 @@
           "licence_note": "Yahoo Finance chart data: delayed, unofficial; Yahoo terms restrict redistribution. Shown as a cited single quote only.",
           "official": false,
           "source_label": "delayed, unofficial",
-          "value": 3518.699951,
-          "display_value": "3,518.7",
+          "value": 3515.399902,
+          "display_value": "3,515.4",
           "market_session_date": "2026-11-20",
-          "observation_timestamp_utc": "2026-11-20T21:20:45Z",
-          "as_of_sydney": "21 Nov 2026, 08:20 AEDT",
+          "observation_timestamp_utc": "2026-11-20T21:59:57Z",
+          "as_of_sydney": "21 Nov 2026, 08:59 AEDT",
           "comparison_date": "2026-11-19",
           "comparison_value": 3685.5,
           "freshness_state": "latest_official_close",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
-          "change_abs": -166.8,
-          "change_pct": -4.53,
-          "display_change": "−4.5%",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
+          "change_abs": -170.1,
+          "change_pct": -4.62,
+          "display_change": "−4.6%",
           "week_comparison_date": "2026-11-13",
           "week_comparison_value": 3886.300049,
-          "week_change_pct": -9.46,
+          "week_change_pct": -9.54,
           "display_week_change": "−9.5% wk"
         },
         {
@@ -509,7 +495,7 @@
           "comparison_date": "2026-11-03",
           "comparison_value": 4.6,
           "freshness_state": "scheduled_lag",
-          "source_vintage": "retrieved 2026-11-20 21:29Z",
+          "source_vintage": "retrieved 2026-11-21 21:31Z",
           "change_bp": 25.0,
           "display_change": "last move +25 bp (4 Nov)"
         },
@@ -560,369 +546,156 @@
         "id": "market-drivers",
         "cards": [
           {
-            "id": "ai-selloff-correction",
-            "headline": "AI sell-off pushes the S&P 500 and Dow into a correction",
-            "takeaway": "Tech-led selling ran through Asia, Australia and Wall Street, and investors moved into defensive shares and government bonds.",
+            "id": "us-final-closes-vix",
+            "headline": "Official closes: Wall Street's worst week since April 2025; VIX at 35.89",
+            "takeaway": "Final figures confirm the S&P 500 fell 8.6% and the Nasdaq 10.0% last week; Cboe's official VIX close was 35.89, lower than the figure in Saturday's issue.",
             "tags": [
               "Equities",
               "AI",
               "US",
-              "Asia"
+              "Volatility"
             ],
-            "key_figure": "S&P 500 6,910.4 (−3.7% Fri; Yahoo Finance delayed close); dashboard 7,175.8 (Thu 19 Nov)",
-            "what_happened": "On Friday the S&P 500 fell 3.7%, the Nasdaq Composite 5.28% and the Dow 1.93%, leaving the S&P 500 and the Dow 10% below their closing records and the Nasdaq down 2.7% for the year; over the week the S&P 500 fell almost 9%, the Nasdaq about 10% and the Dow 8% ([CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html)). It was the S&P 500's seventh straight daily fall, and the VIX closed at 39.51, from 28.44 on Thursday ([Yahoo Finance delayed data](https://finance.yahoo.com/quote/%5EGSPC/)). Chip stocks led: AMD and Nvidia fell about 13% each and Micron almost 14%, while Walmart, Costco, Johnson & Johnson and Procter & Gamble rose ([CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html)). In Asia, Japanese and Korean benchmarks fell more than 5% on Friday, Taiwan's index lost 17% for the week, its largest weekly fall since 1990, and MSCI's Asia-Pacific index outside Japan fell 8.3%, its largest weekly drop since March 2020 ([Reuters](https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/)).",
-            "why_it_matters": "Betashares' Tom Wickenden said the ASX 200 rose in the two previous tech-led sell-offs as investors moved into banks and miners, but that this week the rotation broke down as selling spread into commodities ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)). LPL Financial's Lawrence Gillum said that if the sell-off tightens financial conditions, the Fed has room to slow down ([CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html)); Fed Governor Cook said on Friday that equity prices continue to support consumer spending, one reason she gave for judging financial conditions too accommodative ([Federal Reserve](https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm)).",
-            "market_reaction": "Dashboard (sessions to Thursday 19 Nov): S&P 500 7,175.8 (−2.0% day, −5.5% vs 12 Nov); Nasdaq 23,879.2 (−5.9%); VIX 28.44 (+9.74 pts). Friday closes, taken at review from Yahoo Finance delayed data after the 8:00am Sydney close: S&P 500 6,910.4 (−3.7%), Nasdaq 22,617.7 (−5.3%), Dow 48,147.3 (−1.9%), VIX 39.51.",
+            "key_figure": "S&P 500 6,910.4 (−3.7% day, −8.6% week); VIX 35.89 (+16.59 pts week), 20 Nov session",
+            "new_since_last_issue": "Saturday's issue gave Friday's closes from Yahoo Finance delayed data, including a VIX close of 39.51. New: Cboe's official VIX close of 35.89 (a correction), the Nasdaq-100's intraday bear-market reading, market breadth, the Dow's worst week since March 2020, and strategists' views on the week ahead.",
+            "what_happened": "The S&P 500 fell 3.7% to 6,910.39 on Friday, its seventh straight fall and its worst week since April 2025, and it is now more than 10% below its 6 October record, a correction ([AP via NPR](https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative)). The Nasdaq Composite fell 5.28% and turned negative for 2026; the Dow fell 1.93% and had its worst week since March 2020 ([CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html)). The Nasdaq-100 fell 5.6% and was briefly 20% below its recent high during the session ([CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html)). Decliners outnumbered gainers 357 to 125 in the S&P 500 ([investingLive](https://investinglive.com/stocks/nasdaq-100-posts-worst-week-since-march-2020/)). Cboe said the VIX rose nearly 26%, to near 36, its highest level since April 2025 ([Cboe](https://www.cboe.com/insights/posts/market-selloff-deepens-as-investors-seek-shelter)). Correction: Saturday's issue put Friday's VIX close at 39.51 from Yahoo Finance delayed data; Cboe's daily history, used in our dashboard, shows 35.89.",
+            "why_it_matters": "Wall Street's final fall came after the ASX closed on Friday, so Monday's local session is the first chance for Australian shares to react to it; ASX 200 futures are unavailable in our data. CNBC listed the Fed's 9 December meeting, a possible US government shutdown and the Iran war among the risks that could keep volatility high before year-end ([CNBC](https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html)).",
+            "market_reaction": "Dashboard (US session 20 Nov): S&P 500 6,910.4 (−3.7% day, −8.6% week); Nasdaq 22,617.7 (−5.3% day, −10.0% week); VIX 35.89 (+7.45 pts day, +16.59 pts week).",
             "competing_views": [
               {
-                "who": "Daniela Hathorn, Capital.com",
-                "view": "Said markets are entering a more defensive phase, and strong AI demand and successful listings are no longer enough to sustain risk appetite while investors question valuations, borrowing costs and profits.",
+                "who": "Ben Snider, Goldman Sachs",
+                "view": "Expects the S&P 500 to rise 17% to 8,700 by the end of 2027, with the outlook depending on earnings, rates and AI investment.",
                 "source": {
-                  "label": "Reuters",
-                  "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
-                  "claim_type": "opinion",
+                  "label": "CNBC week ahead",
+                  "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
+                  "claim_type": "reporting",
                   "date": "20 Nov 2026"
                 }
               },
               {
-                "who": "Brett Winton, ARK Investment Management",
-                "view": "Said the market is sceptical about \"all layers of the AI layer cake\", which can be a \"great setup for investors\"; he holds Anthropic in all his portfolios.",
+                "who": "Katie Stockton, Fairlead Strategies",
+                "view": "\"This isn't a time at which we're recommending new long positions\"; advises clients not to sell into weakness and to consider using rallies to reduce exposure.",
                 "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html",
-                  "claim_type": "opinion",
+                  "label": "CNBC week ahead",
+                  "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
+                  "claim_type": "reporting",
+                  "date": "20 Nov 2026"
+                }
+              },
+              {
+                "who": "Michael Hartnett, Bank of America",
+                "view": "Wrote that the risk of a hard landing grows next year if the Fed turns tough on inflation.",
+                "source": {
+                  "label": "CNBC week ahead",
+                  "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
+                  "claim_type": "reporting",
+                  "date": "20 Nov 2026"
+                }
+              },
+              {
+                "who": "Jay Woods, Freedom Capital Markets",
+                "view": "\"The market is finally cracked... And now we're in the midst of a washout\"; expects volatility to stay high.",
+                "source": {
+                  "label": "CNBC week ahead",
+                  "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
+                  "claim_type": "reporting",
                   "date": "20 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "Monday's US flash PMIs and Wednesday's US PCE inflation (US time); US markets are shut on Thursday for Thanksgiving and close early on Friday ([XM via FXStreet](https://www.fxstreet.com/analysis/week-ahead-flash-pmis-and-pce-inflation-in-focus-ahead-of-thanksgiving-202611201011)).",
-            "comparison": {
-              "title": "Which S&P 500 move?",
-              "why_different": "Different sessions and times. Our dashboard holds the last official close before the 7:30am Sydney cutoff (Thursday 19 November). Friday's close came at 8:00am Sydney time and was taken at review from Yahoo Finance delayed data; Reuters' figure is from earlier in Friday's session.",
-              "resolution": "explained",
-              "rows": [
-                {
-                  "source": "Dashboard (Yahoo Finance ^GSPC, FRED cross-check)",
-                  "figure": "7,175.8 (−2.0% day; −5.5% vs 12 Nov)",
-                  "measure": "Index close",
-                  "timestamp": "Thu 19 Nov session",
-                  "method": "Official close, delayed data",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Yahoo Finance (^GSPC), at review",
-                  "url": "https://finance.yahoo.com/quote/%5EGSPC/",
-                  "figure": "6,910.4 (−3.70%)",
-                  "measure": "Index close",
-                  "timestamp": "Fri 20 Nov session (8:00am AEDT Sat)",
-                  "method": "Delayed, unofficial data",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Reuters",
-                  "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
-                  "figure": "7,089.64 (−1.20%)",
-                  "measure": "Index level during Friday trade",
-                  "timestamp": "Fri 20 Nov, intraday",
-                  "method": "Wire report",
-                  "status": "independently reported"
-                }
-              ]
-            },
+            "what_to_watch": "Whether Monday's US flash PMIs (1:45am Tuesday, Sydney time) and Wednesday's US inflation data (12:30am Thursday, Sydney time) steady the market before Thursday's Thanksgiving closure.",
             "sources": [
               {
-                "label": "CNBC",
+                "label": "AP via NPR",
+                "url": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
+                "claim_type": "reporting",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "CNBC market close",
                 "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html",
                 "claim_type": "reporting",
                 "date": "20 Nov 2026"
               },
               {
-                "label": "Yahoo Finance (delayed closes)",
-                "url": "https://finance.yahoo.com/quote/%5EGSPC/",
+                "label": "investingLive closing levels",
+                "url": "https://investinglive.com/stocks/nasdaq-100-posts-worst-week-since-march-2020/",
                 "claim_type": "measurement",
                 "date": "20 Nov 2026"
               },
               {
-                "label": "Reuters",
-                "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
+                "label": "Cboe Insights (JJ Kinahan)",
+                "url": "https://www.cboe.com/insights/posts/market-selloff-deepens-as-investors-seek-shelter",
                 "claim_type": "reporting",
                 "date": "20 Nov 2026"
               },
               {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years",
+                "label": "CNBC week ahead",
+                "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
                 "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Federal Reserve (Cook)",
-                "url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-                "claim_type": "official_statement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "XM via FXStreet",
-                "url": "https://www.fxstreet.com/analysis/week-ahead-flash-pmis-and-pce-inflation-in-focus-ahead-of-thanksgiving-202611201011",
-                "claim_type": "forecast",
                 "date": "20 Nov 2026"
               }
-            ],
-            "new_since_last_issue": "Friday's US session: the S&P 500 fell 3.7% and the Nasdaq 5.3%, and both the S&P 500 and the Dow ended 10% or more below their records."
+            ]
           },
           {
-            "id": "nvidia-sec-anthropic",
-            "headline": "Nvidia falls on SEC accounting report; Anthropic gives back gains",
-            "takeaway": "Two of the AI trade's biggest names added to the selling on Friday: one on regulatory news, one on its first full trading day.",
-            "tags": [
-              "Nvidia",
-              "Anthropic",
-              "AI"
-            ],
-            "key_figure": "Nvidia US$125.53 (−14.0% Fri); Anthropic US$88.91 (−8.5%) vs US$83 IPO price (Yahoo Finance delayed closes)",
-            "what_happened": "Two people briefed on the matter said SEC enforcement staff are examining potential accounting issues at Nvidia; the SEC declined to comment, Nvidia did not immediately respond, and an investigation is not evidence of wrongdoing ([Reuters via Investing.com](https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460)). Nvidia shares were down more than 6% before the report ([Reuters via Investing.com](https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460)) and closed 14.0% lower at US$125.53 ([Yahoo Finance](https://finance.yahoo.com/quote/NVDA/)); they had fallen 22% this year to Thursday ([Bloomberg Tax](https://news.bloombergtax.com/financial-accounting/wall-street-regulator-probing-nvidias-accounting-reuters-says)). Its quarterly filing will come \"in the coming weeks\" rather than with the results, and Treasury Secretary Scott Bessent said on Tuesday he wants answers from the board and outside counsel within 10 days ([Yahoo Finance](https://finance.yahoo.com/markets/article/nvidia-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194254356.html)). On Thursday California Attorney General Rob Bonta said his office had sent Nvidia an investigative subpoena over whether its chips or confidential information reached China ([CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html)). Anthropic raised US$81.3 billion at US$83 a share, the largest IPO on record, closed its first day at US$97.17 and fell 9% on Friday ([CNBC](https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html)). At his news conference, President Trump said he would \"love to see\" Jensen Huang return as Nvidia's chief executive ([CBS News](https://www.cbsnews.com/live-updates/trump-press-conference-live-stream-2026-11-20/)).",
-            "why_it_matters": "Nvidia is a large weight in US and global share indices and a major supplier to the data-centre build-out. Reuters noted investor concern about circular AI financing deals, in which chipmakers help customers fund chip purchases, because such arrangements can make the quality of revenue harder to assess ([Reuters via Investing.com](https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460)).",
-            "market_reaction": "Nvidia fell for a seventh straight session; Yahoo Finance said during the session that it was on track for its worst day since January 2025. Closes are Yahoo Finance delayed data taken at review; no company-specific prices are in our snapshot.",
-            "competing_views": [
-              {
-                "who": "Seaport Research",
-                "view": "Neutral rating on Anthropic; said its valuation asks for \"an incredible leap of faith\" and needs much higher growth over two years.",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
-                }
-              },
-              {
-                "who": "William Blair",
-                "view": "Outperform rating on Anthropic; expects it can become \"a significantly profitable business over time\" despite heavy infrastructure costs.",
-                "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "Nvidia's delayed quarterly filing and any response from the company to the reported SEC focus.",
-            "sources": [
-              {
-                "label": "Reuters via Investing.com",
-                "url": "https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Bloomberg Tax",
-                "url": "https://news.bloombergtax.com/financial-accounting/wall-street-regulator-probing-nvidias-accounting-reuters-says",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance",
-                "url": "https://finance.yahoo.com/markets/article/nvidia-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194254356.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CBS News",
-                "url": "https://www.cbsnews.com/live-updates/trump-press-conference-live-stream-2026-11-20/",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Yahoo Finance (NVDA delayed close)",
-                "url": "https://finance.yahoo.com/quote/NVDA/",
-                "claim_type": "measurement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CNBC (live updates)",
-                "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              }
-            ],
-            "new_since_last_issue": "Reuters' report on the SEC's accounting focus, California's subpoena to Nvidia, and Anthropic's first full trading day."
-          },
-          {
-            "id": "oil-third-weekly-fall",
-            "headline": "Oil falls for a third week as Gulf flows recover",
-            "takeaway": "Oil fell for a third week, which wire reports linked to recovering Gulf exports, despite new attacks on shipping and Gulf states; the EIA estimates inventories have begun to rebuild.",
+            "id": "oil-hormuz-opec-week",
+            "headline": "Brent settled before Saturday's tanker incidents; OPEC+ meets 29 November",
+            "takeaway": "Brent futures fell 3.4% last week; Saturday's tanker incidents near Hormuz came after markets closed, and OPEC+ is due to set its 2027 output framework on 29 November.",
             "tags": [
               "Oil",
-              "Hormuz",
-              "EIA",
-              "IEA"
+              "Iran",
+              "OPEC+"
             ],
-            "key_figure": "Brent January futures settled US$92.57 on Fri (+0.6% day); US$95.84 a week earlier",
-            "what_happened": "Crude shipments through Middle East chokepoints rose 19% in the September quarter, and Gulf producers pumped 23.1 million barrels a day in October, the most since the conflict began ([EIA](https://www.eia.gov/todayinenergy/detail.php?id=68485)). The EIA said steady increases in Hormuz flows helped push the Brent spot price down more than US$30 from its October average of US$124, and it forecasts Brent at US$99 in December and US$86 next year ([EIA](https://www.eia.gov/todayinenergy/detail.php?id=68485)). US commercial crude stocks rose 3.4 million barrels in the week to 13 November, against expectations of about 400,000 ([Anadolu](https://www.aa.com.tr/en/energy/oil/oil-set-for-weekly-drop-as-supply-surplus-concerns-outweigh-middle-east-risks/61175)). Risks rose too: Iran's Revolutionary Guards Navy said in a statement carried by Iranian state media that two tankers hit mines in the Strait and were burning, and on Friday the Houthis told people near Saudi Arabia's Red Sea ports to evacuate, saying they would target Jeddah if a Saudi-led coalition strikes Yemen's Hodeidah port ([Reuters via Yahoo Finance](https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html)). January Brent settled at US$92.57 on Friday, up 59 cents, and Reuters said it was on track for a weekly fall of nearly 4% ([Reuters via Yahoo Finance](https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html)); it had closed at US$95.84 a week earlier ([Anadolu](https://www.aa.com.tr/en/energy/oil/oil-set-for-weekly-drop-as-supply-surplus-concerns-outweigh-middle-east-risks/61175)). Brent traded between US$90 and US$96 over the week ([Al-Monitor](https://www.al-monitor.com/originals/2026/11/oil-heads-third-weekly-loss-iran-tests-us-blockade-crude-transfer)). The IEA's World Energy Outlook said countries are confronting the largest energy supply shock in history ([IEA](https://www.iea.org/news/as-an-unprecedented-shock-reshapes-the-energy-world-its-duration-will-determine-the-scale-of-the-change)).",
-            "why_it_matters": "Lower crude prices ease the energy component of inflation that central banks, including the RBA and the Fed, have pointed to. But the EIA says global stocks at the end of October were 400 million barrels lower than in early April and US diesel's premium to Brent averaged US$82 a barrel in October, so fuel prices may not fall as fast as crude.",
-            "market_reaction": "Dashboard: Brent futures 89.74 (−6.4% vs 13 Nov). That tile compares the February contract with January's price a week earlier, so it overstates the fall; see the figures table. Brent spot (EIA via FRED) 92.94 on 17 Nov (+3.1% vs 10 Nov, published with a lag).",
+            "key_figure": "Brent futures US$92.57/bbl (+0.6% day, −3.4% week), 20 Nov settlement",
+            "new_since_last_issue": "Saturday gave the US$92.57 settlement from Reuters and explained that our dashboard's −6.4% compared two contract months. New: the dashboard now compares the January contract like-for-like (−3.4% week, matching Dow Jones data), Saturday's tanker incidents, and the OPEC+ meeting date.",
+            "what_happened": "Front-month Brent futures settled at US$92.57 a barrel on Friday, down 3.41% for the week and 21.3% over three straight weekly falls ([Morningstar/Dow Jones](https://www.morningstar.com/news/dow-jones/202611207288/front-month-ice-brent-crude-fell-341-this-week-to-settle-at-9257-data-talk)). On Saturday, the UK Maritime Trade Operations centre reported two tankers hit by unidentified projectiles near Oman's Khasab ([CNBC](https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html)); details are in the Iran card. All 21 OPEC+ members are due to meet on 29 November, when analysts expect them to decide 2027 quotas, Reuters reported on 1 November ([Reuters via Investing.com](https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-targets-steady-sources-say-4989496)).",
+            "why_it_matters": "Transport, almost entirely auto fuel, is the largest contributor in Westpac's forecast for Australia's October CPI ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf)), so oil prices feed into the inflation figures the RBA is watching. Oil futures had not traded on Saturday's incidents by our cutoff.",
+            "market_reaction": "Dashboard: Brent futures 92.57 (+0.6% day, −3.4% week, 20 Nov); Brent spot (EIA, lagged) 92.94 on 17 Nov (+3.1% week).",
             "competing_views": [
               {
-                "who": "Phil Flynn, Price Futures Group",
-                "view": "Said a tanker hitting a mine seems \"somewhat priced in\" and weakness is the base case for the market.",
+                "who": "Jorge Leon, Rystad Energy",
+                "view": "Said OPEC+ faces \"an extremely difficult call for 2027\", planning around the Iran war, the pace of recovery through Hormuz and the surplus that could emerge once disrupted barrels return.",
                 "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/oil-wti-brent-hormuz.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-targets-steady-sources-say-4989496",
+                  "claim_type": "reporting",
+                  "date": "1 Nov 2026"
                 }
               },
               {
-                "who": "UOB Group",
-                "view": "Said Iran's attacks on tankers, running at about one incident a day in November, still add a meaningful risk premium to oil.",
+                "who": "International Energy Agency (as reported by Reuters)",
+                "view": "Has warned, with other forecasters, of excess supply in 2027 should Gulf flows return to normal (Reuters, 1 November).",
                 "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/oil-wti-brent-hormuz.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
-                }
-              },
-              {
-                "who": "EIA",
-                "view": "Forecasts Brent averaging US$99 a barrel in December and US$86 in 2027 as inventories rebuild.",
-                "source": {
-                  "label": "EIA",
-                  "url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
-                  "claim_type": "forecast",
-                  "date": "19 Nov 2026"
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-targets-steady-sources-say-4989496",
+                  "claim_type": "reporting",
+                  "date": "1 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "EIA weekly stocks on Wednesday night (Thursday morning Sydney time) and any change in Hormuz traffic or US–Iran contacts.",
-            "comparison": {
-              "title": "How much did Brent fall this week?",
-              "why_different": "Different contract months and times. Yahoo's BZ=F series, behind our dashboard tile, moved to the February 2027 contract on 20 November (explained in Friday's Close tab), but its weekly change is measured against the January contract's price on 13 November, so −6.4% overstates the fall. Like-for-like, January Brent settled at US$92.57 on Friday against US$95.84 a week earlier. The Anadolu and CNBC figures were taken earlier in Friday's session.",
-              "resolution": "explained",
-              "rows": [
-                {
-                  "source": "Dashboard (Yahoo Finance BZ=F)",
-                  "figure": "US$89.74 (−6.4% vs 13 Nov)",
-                  "measure": "February 2027 contract vs January contract a week earlier",
-                  "timestamp": "7:16am AEDT Sat 21 Nov",
-                  "method": "Delayed futures data; mixed contracts",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Reuters via Yahoo Finance",
-                  "url": "https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html",
-                  "figure": "US$92.57 (+0.64% day); \"near 4%\" weekly fall",
-                  "measure": "Brent futures settlement (January)",
-                  "timestamp": "Fri 20 Nov settlement",
-                  "method": "Wire report",
-                  "status": "independently reported"
-                },
-                {
-                  "source": "Anadolu",
-                  "url": "https://www.aa.com.tr/en/energy/oil/oil-set-for-weekly-drop-as-supply-surplus-concerns-outweigh-middle-east-risks/61175",
-                  "figure": "US$91.63 (−4.4% vs US$95.84 a week earlier)",
-                  "measure": "January Brent futures",
-                  "timestamp": "Fri 20 Nov, 1200 GMT",
-                  "method": "Wire report",
-                  "status": "independently reported"
-                },
-                {
-                  "source": "CNBC (Reuters)",
-                  "url": "https://www.cnbc.com/2026/11/20/oil-wti-brent-hormuz.html",
-                  "figure": "US$92.22; nearly −4% for the week",
-                  "measure": "Brent futures",
-                  "timestamp": "Fri 20 Nov, 2:56pm ET",
-                  "method": "Wire report",
-                  "status": "independently reported"
-                }
-              ]
-            },
+            "what_to_watch": "Monday's reopening of oil futures; the US EIA inventory report on Wednesday, US time; the OPEC+ decision on 29 November.",
             "sources": [
               {
-                "label": "EIA",
-                "url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
-                "claim_type": "official_statement",
-                "date": "19 Nov 2026"
-              },
-              {
-                "label": "IEA",
-                "url": "https://www.iea.org/news/as-an-unprecedented-shock-reshapes-the-energy-world-its-duration-will-determine-the-scale-of-the-change",
-                "claim_type": "official_statement",
-                "date": "19 Nov 2026"
-              },
-              {
-                "label": "Reuters via Yahoo Finance",
-                "url": "https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html",
-                "claim_type": "reporting",
+                "label": "Morningstar/Dow Jones Data Talk",
+                "url": "https://www.morningstar.com/news/dow-jones/202611207288/front-month-ice-brent-crude-fell-341-this-week-to-settle-at-9257-data-talk",
+                "claim_type": "measurement",
                 "date": "20 Nov 2026"
               },
               {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/20/oil-wti-brent-hormuz.html",
+                "label": "CNBC (Reuters)",
+                "url": "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html",
                 "claim_type": "reporting",
-                "date": "20 Nov 2026"
+                "date": "21 Nov 2026"
               },
               {
-                "label": "Anadolu",
-                "url": "https://www.aa.com.tr/en/energy/oil/oil-set-for-weekly-drop-as-supply-surplus-concerns-outweigh-middle-east-risks/61175",
+                "label": "Reuters via Investing.com",
+                "url": "https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-targets-steady-sources-say-4989496",
                 "claim_type": "reporting",
-                "date": "20 Nov 2026"
+                "date": "1 Nov 2026"
               },
               {
-                "label": "Al-Monitor",
-                "url": "https://www.al-monitor.com/originals/2026/11/oil-heads-third-weekly-loss-iran-tests-us-blockade-crude-transfer",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              }
-            ],
-            "new_since_last_issue": "Friday's settlement and the Houthi warning to people near Saudi Red Sea ports; the dashboard's Brent weekly change mixes contract months (see table)."
-          },
-          {
-            "id": "gold-lowest-since-2025",
-            "headline": "Gold futures fall 9% in a week; spot gold at lowest since September 2025",
-            "takeaway": "Gold fell alongside shares this week; the US dollar eased on Friday after reaching a 19-month high on Thursday.",
-            "tags": [
-              "Gold",
-              "US dollar",
-              "Commodities"
-            ],
-            "key_figure": "COMEX gold futures 3,523.2 (−9.3% week)",
-            "what_happened": "Spot gold fell 2.0% on Friday to US$3,548.53 an ounce and silver 2.5% to US$41.66, both their lowest since September 2025; copper fell 2.7% ([Reuters](https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/)). The US dollar index eased 0.2% to 103.73 on Friday after reaching a 19-month high on Thursday, a rally Reuters linked to bets on tighter Fed policy after higher-than-expected US inflation data ([Reuters](https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/)).",
-            "why_it_matters": "Gold's fall bears on ASX gold miners; Betashares' Tom Wickenden said this week's sell-off spread from AI stocks into commodities ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)). Gold pays no interest, so expectations of higher US rates and a firmer dollar can weigh on it.",
-            "market_reaction": "Dashboard: COMEX gold futures 3,523.2 (−4.4% day on our feed, −9.3% week). The 2.0% fall in spot gold reported by Reuters measures a different instrument over a different period, so the two are not compared directly.",
-            "competing_views": [
-              {
-                "who": "Marc Chandler, Bannockburn Capital Markets",
-                "view": "Said momentum has stalled for the dollar but it is \"a little bit early to pick a top\".",
-                "source": {
-                  "label": "Reuters",
-                  "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "US PCE inflation on Wednesday (US time) for the next move in rate expectations and the dollar.",
-            "sources": [
-              {
-                "label": "Reuters",
-                "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years",
-                "claim_type": "reporting",
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                "claim_type": "forecast",
                 "date": "20 Nov 2026"
               }
             ]
@@ -933,41 +706,72 @@
         "id": "australia-asx",
         "cards": [
           {
-            "id": "asx-worst-week-since-2020",
-            "headline": "ASX 200 falls 5.4%, its biggest weekly point drop since 2020",
-            "takeaway": "The Australian market did not act as a haven this time: miners, tech and banks all fell, and only utilities ended the week higher.",
+            "id": "asx-monday-setup-aud",
+            "headline": "Australian dollar down 2% for the week; ALS results and a busy AGM week ahead",
+            "takeaway": "Monday is the ASX's first session after the S&P 500's 3.7% Friday fall; the Australian dollar fell about 2% last week after ten straight daily falls.",
             "tags": [
               "ASX",
-              "Australia",
               "AUD"
             ],
-            "key_figure": "ASX 200 8,592.6 (−1.6% Friday, −5.4% week)",
-            "what_happened": "The ASX 200 fell 137.8 points, or 1.58%, on Friday to 8,592.6; the All Ordinaries fell 5.56% for the week, about A$174 billion in market value ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)). The index lost 489.65 points, or 5.39%: Dow Jones data show the largest one-week point decline since the week ending 20 March 2020 and the largest percentage decline since the week ending 17 June 2022, and the index fell for a seventh straight day ([Morningstar (Dow Jones)](https://www.morningstar.com/news/dow-jones/202611203033/spasx-200-benchmark-index-falls-539-this-week-to-859260-data-talk)); AAP described it as the worst week since March 2020 ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)). Correction: Friday's close edition said the worst week since June 2020. All 11 sectors fell on Friday and utilities were the only sector up for the week; materials fell more than 10% from Monday to Thursday, and financials lost more than 3.5% for the week ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)). The Australian dollar was at 66.67 US cents on Friday afternoon, from above 72 cents in September ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)).",
-            "why_it_matters": "Betashares' Tom Wickenden said that in the two previous tech-led sell-offs the ASX 200 rose about 1% as investors moved into banks and miners, but this week that rotation broke down as copper fell on global growth worries and weak Chinese demand ([AAP](https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years)). CommSec named Wednesday's October CPI as the key local focus next week ([CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf)).",
-            "market_reaction": "Dashboard: ASX 200 8,592.6 (−1.6% day, −5.4% week); AUD/USD 0.6666 (−0.16% day, −2.0% week). ASX 200 futures and iron ore unavailable.",
+            "key_figure": "AUD/USD 0.6666 (RBA 4pm, −2.0% week), 20 Nov",
+            "new_since_last_issue": "Saturday reported the ASX's 5.4% weekly fall. New: Friday's completed US session, the late New York Australian dollar level (which differs from the RBA 4pm rate in our dashboard), and this week's local company calendar.",
+            "what_happened": "The S&P 500's full-day fall of 3.7% came after the ASX closed on Friday ([AP via NPR](https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative)). The Australian dollar fell 2.3% for the week to about US66.1c in US trading on Friday, the weakest of the major currencies against the US dollar, after ten straight daily falls ([investingLive](https://investinglive.com/technical-analysis/audusd-is-the-biggest-mover-of-the-major-currencies-this-week-the-price-falls-2-30-for-the-week/)). This week's local reporting includes half-year results from ALS on Monday and Fisher & Paykel Healthcare on Thursday, and AGMs including Pro Medicus and Lendlease on Wednesday and WiseTech Global and Washington H. Soul Pattinson on Friday ([CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf)). Victorians vote in a state election on Saturday 28 November ([NAB](https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf)).",
+            "why_it_matters": "A weaker Australian dollar raises the local price of imports, including fuel, ahead of Wednesday's CPI, and raises the Australian-dollar value of overseas earnings. ASX 200 futures are unavailable in our data, so we cannot show where the market is indicated to open.",
+            "market_reaction": "Dashboard: ASX 200 8,592.6 (−1.6% day, −5.4% week, 20 Nov); AUD/USD 0.6666 (RBA 4pm, −2.0% week).",
             "competing_views": [
               {
-                "who": "Tom Wickenden, Betashares",
-                "view": "Said the market \"lost the cushion it has offered in recent sell-offs\"; if the hiking cycle is done, investors will look ahead to cuts, and commodities have room to recover if global capital spending holds up.",
+                "who": "Westpac",
+                "view": "Forecasts AUD/USD at 0.70 by December 2026 and 0.71 by mid-2027.",
                 "source": {
-                  "label": "AAP",
-                  "url": "https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years",
-                  "claim_type": "opinion",
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                  "claim_type": "forecast",
                   "date": "20 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "October CPI on Wednesday and September-quarter capex on Thursday; a busy AGM week including Ramsay, Pro Medicus, Lynas, WiseTech and Soul Patts (CommSec).",
+            "comparison": {
+              "title": "How far did the Australian dollar fall last week?",
+              "why_different": "Different time stamps: the RBA rate is fixed at 4pm Sydney on Friday, before the US sell-off deepened; investingLive measures to US trading later on Friday.",
+              "resolution": "explained",
+              "rows": [
+                {
+                  "source": "RBA F11.1 (dashboard)",
+                  "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
+                  "figure": "0.6666 (−2.0% week)",
+                  "measure": "AUD/USD official 4pm Sydney rate",
+                  "timestamp": "20 Nov 2026, 4pm AEDT",
+                  "method": "WM/Reuters 4pm fix published by the RBA",
+                  "status": "primary measured"
+                },
+                {
+                  "source": "investingLive",
+                  "url": "https://investinglive.com/technical-analysis/audusd-is-the-biggest-mover-of-the-major-currencies-this-week-the-price-falls-2-30-for-the-week/",
+                  "figure": "0.6613 (−2.3% week)",
+                  "measure": "AUD/USD spot, US session",
+                  "timestamp": "20 Nov 2026, US session",
+                  "method": "Market spot rate vs prior Friday",
+                  "status": "independently reported"
+                }
+              ]
+            },
+            "what_to_watch": "Monday's open; CPI on Wednesday; whether AUD/USD holds above 0.6591, the next support level cited by investingLive ([investingLive](https://investinglive.com/technical-analysis/audusd-is-the-biggest-mover-of-the-major-currencies-this-week-the-price-falls-2-30-for-the-week/)).",
             "sources": [
               {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/aussie-share-market-on-track-for-worst-week-in-years",
+                "label": "AP via NPR",
+                "url": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
                 "claim_type": "reporting",
                 "date": "20 Nov 2026"
               },
               {
-                "label": "Morningstar (Dow Jones)",
-                "url": "https://www.morningstar.com/news/dow-jones/202611203033/spasx-200-benchmark-index-falls-539-this-week-to-859260-data-talk",
+                "label": "investingLive AUD/USD",
+                "url": "https://investinglive.com/technical-analysis/audusd-is-the-biggest-mover-of-the-major-currencies-this-week-the-price-falls-2-30-for-the-week/",
+                "claim_type": "measurement",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "RBA F11.1 exchange rates",
+                "url": "https://www.rba.gov.au/statistics/tables/#exchange-rates",
                 "claim_type": "measurement",
                 "date": "20 Nov 2026"
               },
@@ -976,63 +780,75 @@
                 "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf",
                 "claim_type": "reporting",
                 "date": "20 Nov 2026"
+              },
+              {
+                "label": "NAB What to Watch",
+                "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
               }
-            ],
-            "new_since_last_issue": "Dow Jones weekly data and the correction to Friday's close edition (worst week since March 2020, not June 2020)."
+            ]
           },
           {
-            "id": "china-data-albanese-xi",
-            "headline": "China data slows; Albanese and Xi agree AI dialogue",
-            "takeaway": "China's October numbers missed forecasts, and the leaders' meeting set up new dialogues but brought no change on beef quotas or iron ore buying.",
+            "id": "capex-data-centres",
+            "headline": "Capex data this week tests the data-centre investment boom",
+            "takeaway": "Construction and business investment figures on Wednesday and Thursday are the first inputs to September-quarter GDP, with forecasts depending on data-centre spending.",
             "tags": [
-              "China",
-              "Iron ore",
-              "Trade"
+              "Australia",
+              "Investment",
+              "GDP"
             ],
-            "key_figure": "China retail sales +0.4% y/y (Oct); fixed-asset investment −8.1% (Jan–Oct)",
-            "what_happened": "China's retail sales rose 0.4% from a year earlier in October against a 0.8% forecast, industrial output grew 4.8% against 5.3% expected, and fixed-asset investment fell 8.1% in the first ten months ([CNBC](https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html), [NBS](https://www.stats.gov.cn/english/PressRelease/202611/t20261116_1965843.html)). On Monday, Resources Minister Madeleine King said the activity of China's state buyer China Mineral Resources Group was against international trade rules; Fortescue has said its sales were 3.9 million tonnes lower because of continuing negotiations ([CNA (Reuters)](https://www.channelnewsasia.com/world/australia-calls-out-china-iron-ore-trade-manipulation-6554051)). On Friday Xi Jinping told Prime Minister Anthony Albanese he had led a \"full turnaround\" in relations; at a Beijing CEO roundtable Premier Li Qiang said China took business concerns seriously, but there was no progress on beef quotas ([AAP](https://aapnews.aap.com.au/news/tough-act-to-follow-pm-s-xi-meeting-overshadowed)). The joint statement set up an AI dialogue and backed \"continued market-based trade in energy and resources\" ([Joint statement](https://ir.china-embassy.gov.cn/eng/zyxw/202611/P020261120855709853078.pdf)). Opposition Leader Angus Taylor said increasing trade should be at the top of the list ([ABC](https://www.abc.net.au/news/2026-11-20/federal-politics-live-blog-recession-concerns/107407116)).",
-            "why_it_matters": "China buys about three-quarters of Australia's iron ore. Weak Chinese investment and centralised buying both bear on iron ore prices, miners' earnings and federal revenue.",
-            "market_reaction": "Iron ore prices are unavailable in our snapshot. Materials fell more than 10% on the ASX from Monday to Thursday (AAP).",
-            "what_to_watch": "China industrial profits on Friday and whether Fortescue's CMRG talks conclude by December.",
-            "sources": [
+            "new_since_last_issue": "Not covered on Saturday beyond a calendar row. New: bank previews published for the week, with forecasts that differ widely.",
+            "what_happened": "The ABS releases construction work done for the September quarter at 11:30am on Wednesday and private new capital expenditure at 11:30am on Thursday ([ABS](https://www.abs.gov.au/release-calendar/future-releases/202611)). Private capex fell 3.6% in the June quarter as data-centre equipment investment pulled back; Westpac said nominal imports of computer (ADP) equipment rose 83% in the September quarter to a record ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf)). September-quarter GDP follows on 2 December ([NAB](https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf)).",
+            "why_it_matters": "The figures are the first inputs to September-quarter GDP, due on 2 December, after unemployment rose to 4.9% ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf)). Forecasts differ widely, and NAB notes that much of the data-centre equipment is imported, so its net contribution to GDP is smaller ([NAB](https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf)).",
+            "competing_views": [
               {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
-                "claim_type": "reporting",
-                "date": "16 Nov 2026"
+                "who": "Westpac",
+                "view": "Forecasts private capex up 10.0% in the quarter, against a market forecast of 4.5%, \"with data centres again leading the charge\"; construction work done +0.8% (market +0.7%).",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                  "claim_type": "forecast",
+                  "date": "20 Nov 2026"
+                }
               },
               {
-                "label": "National Bureau of Statistics",
-                "url": "https://www.stats.gov.cn/english/PressRelease/202611/t20261116_1965843.html",
-                "claim_type": "official_statement",
-                "date": "16 Nov 2026"
-              },
-              {
-                "label": "CNA (Reuters)",
-                "url": "https://www.channelnewsasia.com/world/australia-calls-out-china-iron-ore-trade-manipulation-6554051",
-                "claim_type": "reporting",
-                "date": "16 Nov 2026"
-              },
-              {
-                "label": "AAP",
-                "url": "https://aapnews.aap.com.au/news/tough-act-to-follow-pm-s-xi-meeting-overshadowed",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "China–Australia joint outcomes statement",
-                "url": "https://ir.china-embassy.gov.cn/eng/zyxw/202611/P020261120855709853078.pdf",
-                "claim_type": "official_statement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "ABC politics live",
-                "url": "https://www.abc.net.au/news/2026-11-20/federal-politics-live-blog-recession-concerns/107407116",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
+                "who": "NAB",
+                "view": "Expects strong capex driven by data centres and renewables, but says the contribution to GDP will be \"largely netted out in imports\" and that investment intentions show slowing growth concentrated in data-centre spending.",
+                "source": {
+                  "label": "NAB What to Watch",
+                  "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+                  "claim_type": "forecast",
+                  "date": "20 Nov 2026"
+                }
               }
             ],
-            "new_since_last_issue": "Friday's Xi–Albanese meeting outcomes and joint statement; the October China data and Minister King's comments are recapped from earlier in the week."
+            "what_to_watch": "Firms' 2026/27 investment intentions in Thursday's release; whether non-data-centre investment is still falling.",
+            "sources": [
+              {
+                "label": "ABS release calendar",
+                "url": "https://www.abs.gov.au/release-calendar/future-releases/202611",
+                "claim_type": "official_statement"
+              },
+              {
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "NAB What to Watch",
+                "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
+              }
+            ]
           }
         ]
       },
@@ -1040,33 +856,24 @@
         "id": "rates-expectations",
         "cards": [
           {
-            "id": "fed-hikes-yields-fall",
-            "headline": "Fed officials argue for hikes as Treasury yields fall",
-            "takeaway": "Futures still price a December Fed rise, but the move into government bonds pulled Treasury yields lower over the week.",
+            "id": "au-cpi-rba-pricing",
+            "headline": "October CPI on Wednesday: banks expect inflation of 4.7–4.8%",
+            "takeaway": "Wednesday's monthly CPI is the main local event; ASX futures priced a 95% chance of an RBA hold on 8 December at Friday's close.",
             "tags": [
-              "Fed",
-              "Treasuries",
-              "US"
+              "RBA",
+              "Inflation",
+              "Yields"
             ],
-            "key_figure": "US 2Y 4.76% (−10 bp week to Thu); FedWatch about 92% for a December quarter-point rise (CNBC, late 20 Nov)",
-            "what_happened": "Fed Governor Lisa Cook said financial conditions are too accommodative, that \"waiting longer to implement rate increases risks getting behind the curve\", and that she dissented in October, when the Fed held its target range at 3.75–4.00%, because she preferred another quarter-point rise ([Federal Reserve](https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm)). She said she is sceptical that September's single quarter-point rise will be enough and that there is \"little evidence inflation is declining\" ([Reuters via Investing.com](https://www.investing.com/news/economy-news/feds-cook-says-rate-hikes-needed-to-lower-high-inflation-5042321)). Governor Christopher Waller told CNBC on Wednesday that a half-point rise is likely needed next month ([CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html)); his Friday welcoming remarks did not discuss the policy outlook ([Federal Reserve](https://www.federalreserve.gov/newsevents/speech/waller20261120a.htm)). The October minutes said several members judged price pressures were spreading beyond industries tied to data-centre building ([Westpac Weekly](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf)). Late on Friday the 10-year yield was down about 12 bp at 4.932% and the 2-year more than 14 bp lower at 4.634% as shares fell ([CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html)). The University of Michigan's November sentiment index was 51.5, in line with expectations ([CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html)).",
-            "why_it_matters": "US Treasury yields feed into global borrowing costs, including Australian bond yields and the Australian dollar. Cook said falling behind could require larger rises later and add stress to the financial system ([Federal Reserve](https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm)), while LPL's Lawrence Gillum said tighter financial conditions would give the Fed room to slow down ([CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html)).",
-            "market_reaction": "Dashboard (Treasury par curve, to Thursday 19 Nov): US 10Y 5.04% (−6 bp week); US 2Y 4.76% (−10 bp week). Friday's further falls are from CNBC and Reuters and are not in the dashboard.",
-            "priced_in": "CME FedWatch: about 92% chance of a 25 bp rise on 9 December, late Friday (CNBC, 20 Nov). Earlier on Friday XM said Fed funds futures fully priced a 25 bp rise, with a nearly 10% chance of 50 bp, and about 80 bp of rises by September 2027 (XM via FXStreet, 20 Nov, 10:11 GMT).",
+            "key_figure": "RBA cash rate 4.85%; Australia 10Y 5.08% (+4 bp week to 18 Nov, RBA, lagged)",
+            "new_since_last_issue": "Saturday listed CPI in the calendar. New: NAB's and Westpac's detailed previews, which differ on headline and trimmed-mean inflation, and the timing of an RBA speech on CPI day.",
+            "what_happened": "The ABS publishes October CPI at 11:30am on Wednesday ([ABS](https://www.abs.gov.au/release-calendar/future-releases/202611)). Annual inflation was 4.3% in September; Westpac puts the market forecast for October at 4.8% ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf)). RBA Head of Domestic Markets David Jacobs speaks at 10:50am that day ([RBA](https://www.rba.gov.au/coming-up/)). ASX 30-day interbank futures implied a 95% chance of a hold and 5% of a cut on 8 December at Friday's close, compared with 97% hold and 3% hike on Wednesday ([RBA Watch](https://rbawatch.com/rba-meeting/december-2026)).",
+            "why_it_matters": "The RBA raised the cash rate to 4.85% this month, and unemployment has since risen to 4.9% ([Westpac](https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf)). CommSec says another strong inflation reading could reinforce expectations that rates stay higher for longer and shift the expected path of rates ([CommSec](https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf)). Rate expectations feed into mortgage rates and the Australian dollar.",
+            "market_reaction": "Dashboard (RBA tables, lagged to 18 Nov): Australia 2Y 4.81% (+1 bp week); 10Y 5.08% (+4 bp week). Thursday's and Friday's local bond moves are not yet in the official series.",
+            "priced_in": "95% hold, 5% cut for 8 December at the 20 November ASX close (RBA Watch).",
             "competing_views": [
               {
-                "who": "Lisa Cook, Fed Governor",
-                "view": "Said waiting longer risks falling behind the curve, which could require larger rises later.",
-                "source": {
-                  "label": "Federal Reserve",
-                  "url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-                  "claim_type": "official_statement",
-                  "date": "20 Nov 2026"
-                }
-              },
-              {
-                "who": "Westpac economics",
-                "view": "Forecasts 25 bp rises at the December and January meetings, with further tightening in 2027 if necessary.",
+                "who": "Westpac",
+                "view": "Expects headline CPI of 4.8% and trimmed mean of 3.7% (market 3.6%), calling October the likely peak and seeing risks to the trimmed mean \"slightly tilted to the upside\". Forecasts the cash rate on hold at 4.85% until mid-2027, with the first cut by September 2027.",
                 "source": {
                   "label": "Westpac Weekly",
                   "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
@@ -1075,169 +882,32 @@
                 }
               },
               {
-                "who": "Lawrence Gillum, LPL Financial",
-                "view": "Said the Fed has flexibility to slow down if the AI sell-off tightens financial conditions.",
+                "who": "NAB",
+                "view": "Expects headline CPI of 4.7% and trimmed mean of 3.6% (0.4% for the month), partly reflecting card-surcharging changes from 1 October, and sees October as the peak for headline inflation.",
                 "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
-                }
-              }
-            ],
-            "what_to_watch": "October PCE inflation and the second estimate of Q3 GDP at 12:30am Thursday, and the Beige Book at 6am Thursday, Sydney time.",
-            "comparison": {
-              "title": "Which US 10-year yield?",
-              "why_different": "Different days and times. The dashboard uses the US Treasury's official par yield for Thursday; Reuters and CNBC report Friday's market yield at different points in the session.",
-              "resolution": "explained",
-              "rows": [
-                {
-                  "source": "Dashboard (US Treasury par yield curve)",
-                  "figure": "5.04%",
-                  "measure": "10-year par yield, end of day",
-                  "timestamp": "Thu 19 Nov",
-                  "method": "Official daily curve",
-                  "status": "primary measured"
-                },
-                {
-                  "source": "Reuters",
-                  "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
-                  "figure": "4.948%",
-                  "measure": "10-year note market yield",
-                  "timestamp": "Fri 20 Nov, during trade",
-                  "method": "Wire report",
-                  "status": "independently reported"
-                },
-                {
-                  "source": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
-                  "figure": "4.932% (about −12 bp)",
-                  "measure": "10-year note market yield",
-                  "timestamp": "Fri 20 Nov, late session",
-                  "method": "Live report",
-                  "status": "independently reported"
-                }
-              ]
-            },
-            "sources": [
-              {
-                "label": "Federal Reserve (Cook)",
-                "url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-                "claim_type": "official_statement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Reuters via Investing.com",
-                "url": "https://www.investing.com/news/economy-news/feds-cook-says-rate-hikes-needed-to-lower-high-inflation-5042321",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Federal Reserve (Waller)",
-                "url": "https://www.federalreserve.gov/newsevents/speech/waller20261120a.htm",
-                "claim_type": "official_statement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
-                "claim_type": "measurement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Reuters",
-                "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Westpac Weekly",
-                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
-                "claim_type": "forecast",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "XM via FXStreet",
-                "url": "https://www.fxstreet.com/analysis/week-ahead-flash-pmis-and-pce-inflation-in-focus-ahead-of-thanksgiving-202611201011",
-                "claim_type": "forecast",
-                "date": "20 Nov 2026"
-              }
-            ],
-            "new_since_last_issue": "Cook's speech on Friday, Friday's fall in yields and Michigan sentiment."
-          },
-          {
-            "id": "au-jobs-rba-pricing",
-            "headline": "Unemployment rises to 4.9%; traders move toward RBA cuts",
-            "takeaway": "A second monthly fall in jobs shifted market pricing away from more hikes, even as wages rose the most since 2023.",
-            "tags": [
-              "RBA",
-              "Jobs",
-              "Australia"
-            ],
-            "key_figure": "Unemployment 4.9% (Oct); ASX futures 95% hold, 5% cut for 8 Dec (20 Nov close)",
-            "what_happened": "Unemployment rose to 4.9% in October, the highest since October 2021, with 44,000 fewer people employed and participation down 0.2 points to 66.6% ([ABS](https://www.abs.gov.au/media-centre/media-releases/unemployment-rate-rises-49)). The day before, the wage price index rose 1.1% in the September quarter and 3.5% over the year, the strongest quarterly rise since December 2023, with the Fair Work Commission's 4.75% award increase a key driver of private-sector wages ([ABS](https://www.abs.gov.au/media-centre/media-releases/highest-quarterly-wage-growth-december-quarter-2023)). Minutes of the November meeting showed six members voted for the rise to 4.85% and three for a hold; the minority said the economy \"might be near the point of entering a materially sharper downturn\" ([RBA](https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-11-03.html)). After the jobs data, traders priced a cut as early as February and were fully priced for a lower cash rate by September ([AFR](https://www.afr.com/markets/debt-markets/rba-will-not-hike-again-traders-eye-early-rate-cut-on-jobs-crunch-20261119-p61ddw)). Deputy Liberal leader Jane Hume called on the government to \"pull out all stops\" to get inflation down; Health Minister Mark Butler said Treasury and the RBA are not forecasting a recession but \"I don't think any of us are blasé about the very serious risks to the economy\" ([ABC](https://www.abc.net.au/news/2026-11-20/federal-politics-live-blog-recession-concerns/107407116)).",
-            "why_it_matters": "Rising unemployment and still-high inflation pull rate expectations in opposite directions, which is why Wednesday's October CPI matters for mortgage rates, the Australian dollar and bank and property shares.",
-            "market_reaction": "Dashboard (RBA F2, to Wed 18 Nov, published with a lag): AU 2Y 4.81% (+1 bp week); AU 10Y 5.08% (+4 bp week); 10Y–2Y curve +27 bp. Cash rate 4.85%.",
-            "priced_in": "ASX 30-day interbank futures: 95% hold and 5% cut for 8 December at Friday's close, from 97% hold and 3% hike on Wednesday (RBA Watch).",
-            "competing_views": [
-              {
-                "who": "Westpac (Luci Ellis)",
-                "view": "Forecasts slow growth rather than a downturn, despite concerning jobs data; Westpac now sees unemployment at 4.9% at year-end and a baseline peak of 5.2% in mid-2027.",
-                "source": {
-                  "label": "Westpac Weekly",
-                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                  "label": "NAB What to Watch",
+                  "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
                   "claim_type": "forecast",
                   "date": "20 Nov 2026"
                 }
               },
               {
                 "who": "CommSec",
-                "view": "Said another strong inflation reading could reinforce expectations that rates stay higher for longer, though the market expects a December hold.",
+                "view": "Says the market expects rates to remain on hold in December, but another strong inflation reading could reinforce expectations that rates need to stay higher for longer.",
                 "source": {
                   "label": "CommSec week ahead",
                   "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf",
-                  "claim_type": "forecast",
+                  "claim_type": "reporting",
                   "date": "20 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "October CPI at 11:30am Wednesday: Westpac and the market forecast annual headline inflation of 4.8%, from 4.3%.",
+            "what_to_watch": "Trimmed mean versus 3.6%; services inflation; any comment on market conditions in Jacobs' speech.",
             "sources": [
               {
-                "label": "ABS (labour force)",
-                "url": "https://www.abs.gov.au/media-centre/media-releases/unemployment-rate-rises-49",
-                "claim_type": "official_statement",
-                "date": "19 Nov 2026"
-              },
-              {
-                "label": "ABS (wages)",
-                "url": "https://www.abs.gov.au/media-centre/media-releases/highest-quarterly-wage-growth-december-quarter-2023",
-                "claim_type": "official_statement",
-                "date": "18 Nov 2026"
-              },
-              {
-                "label": "RBA minutes",
-                "url": "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-11-03.html",
-                "claim_type": "official_statement",
-                "date": "17 Nov 2026"
-              },
-              {
-                "label": "AFR",
-                "url": "https://www.afr.com/markets/debt-markets/rba-will-not-hike-again-traders-eye-early-rate-cut-on-jobs-crunch-20261119-p61ddw",
-                "claim_type": "reporting",
-                "date": "19 Nov 2026"
-              },
-              {
-                "label": "RBA Watch (ASX futures)",
-                "url": "https://rbawatch.com/rba-meeting/december-2026",
-                "claim_type": "measurement",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "ABC politics live",
-                "url": "https://www.abc.net.au/news/2026-11-20/federal-politics-live-blog-recession-concerns/107407116",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
+                "label": "ABS release calendar",
+                "url": "https://www.abs.gov.au/release-calendar/future-releases/202611",
+                "claim_type": "official_statement"
               },
               {
                 "label": "Westpac Weekly",
@@ -1246,13 +916,116 @@
                 "date": "20 Nov 2026"
               },
               {
+                "label": "NAB What to Watch",
+                "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "RBA Coming Up",
+                "url": "https://www.rba.gov.au/coming-up/",
+                "claim_type": "official_statement"
+              },
+              {
+                "label": "RBA Watch (ASX 30-day futures)",
+                "url": "https://rbawatch.com/rba-meeting/december-2026",
+                "claim_type": "measurement",
+                "date": "20 Nov 2026"
+              },
+              {
                 "label": "CommSec week ahead",
                 "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf",
+                "claim_type": "reporting",
+                "date": "20 Nov 2026"
+              }
+            ]
+          },
+          {
+            "id": "us-yields-pce-fed",
+            "headline": "Treasury yields fall for the week; US inflation data due Thursday",
+            "takeaway": "US 2-year yields fell 25 bp last week, and futures still price a December Fed hike ahead of Wednesday's PCE data, US time.",
+            "tags": [
+              "Fed",
+              "Treasuries",
+              "Inflation"
+            ],
+            "key_figure": "US 2Y 4.63% (−25 bp week); US 10Y 4.92% (−23 bp week), Treasury par curve, 20 Nov",
+            "new_since_last_issue": "Saturday covered Fed speeches and Thursday-to-Thursday yield moves. New: official Friday closes from the US Treasury in our dashboard, and bank and nowcast previews of October PCE.",
+            "what_happened": "Treasury yields fell on Friday as investors moved into safer assets; CNBC cited the CME FedWatch tool at about 92% for a 25 bp rise on 9 December, down from Thursday ([CNBC](https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html)). Four- and eight-week bills, which mature after the December meeting, did not join the rally ([TreasuryBonds.com](https://treasurybonds.com/news/2026-11-20-bond-market-wrap-up-treasuries-rally-hard-as-tech-stocks-slide-and-rate-hike-fears-cool/)). October PCE inflation and the second estimate of September-quarter GDP are due at 8:30am Wednesday, US Eastern time, 12:30am Thursday in Sydney ([CNBC](https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html)). The Treasury also auctions 2-, 5- and 7-year notes from Monday to Wednesday ([TreasuryBonds.com](https://treasurybonds.com/news/2026-11-20-bond-market-wrap-up-treasuries-rally-hard-as-tech-stocks-slide-and-rate-hike-fears-cool/)).",
+            "why_it_matters": "US yields influence Australian bond yields and the Australian dollar. CNBC noted that softer inflation data could ease fears of a half-point Fed hike in December ([CNBC](https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html)); NAB says a 0.3% core reading would confirm inflation is too high and moving in the wrong direction ([NAB](https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf)).",
+            "market_reaction": "Dashboard (20 Nov): US 2Y 4.63% (−13 bp day, −25 bp week); US 10Y 4.92% (−12 bp day, −23 bp week).",
+            "priced_in": "About 92% for a 25 bp Fed hike on 9 December (CME FedWatch via CNBC, late 20 Nov). NAB wrote on 20 Nov that a December hike is fully priced, with 42 bp priced by January.",
+            "competing_views": [
+              {
+                "who": "NAB",
+                "view": "Mapping from CPI and PPI suggests core PCE of 0.3% for the month, lifting the annual rate to 3.2–3.3%; expects Fed hikes in December and January and sees risk of more tightening in early 2027.",
+                "source": {
+                  "label": "NAB What to Watch",
+                  "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+                  "claim_type": "forecast",
+                  "date": "20 Nov 2026"
+                }
+              },
+              {
+                "who": "Neil Wilson, Saxo",
+                "view": "Cites the Cleveland Fed nowcast of 0.3% monthly for both headline and core PCE (3.8% and 3.2% annual), and says the market sell-off means \"the Fed may not need to move very far at all\".",
+                "source": {
+                  "label": "Saxo week ahead (Neil Wilson)",
+                  "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-20-nov-20112026",
+                  "claim_type": "forecast",
+                  "date": "20 Nov 2026"
+                }
+              },
+              {
+                "who": "Westpac",
+                "view": "Forecasts 25 bp hikes in December and January, taking the fed funds target midpoint to 4.375%.",
+                "source": {
+                  "label": "Westpac Weekly",
+                  "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
+                  "claim_type": "forecast",
+                  "date": "20 Nov 2026"
+                }
+              }
+            ],
+            "what_to_watch": "Core PCE against 0.3%; whether 2-year yields keep falling if shares stabilise.",
+            "sources": [
+              {
+                "label": "CNBC Treasuries",
+                "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
+                "claim_type": "reporting",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "TreasuryBonds.com wrap",
+                "url": "https://treasurybonds.com/news/2026-11-20-bond-market-wrap-up-treasuries-rally-hard-as-tech-stocks-slide-and-rate-hike-fears-cool/",
+                "claim_type": "reporting",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "CNBC week ahead",
+                "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
+                "claim_type": "reporting",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "NAB What to Watch",
+                "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "Saxo week ahead (Neil Wilson)",
+                "url": "https://www.home.saxo/en-gb/content/articles/equities/week-ahead-20-nov-20112026",
+                "claim_type": "forecast",
+                "date": "20 Nov 2026"
+              },
+              {
+                "label": "Westpac Weekly",
+                "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
                 "claim_type": "forecast",
                 "date": "20 Nov 2026"
               }
-            ],
-            "new_since_last_issue": "Friday's ASX futures close (5% cut chance), the Westpac outlook and new comments from Jane Hume and Mark Butler."
+            ]
           }
         ]
       },
@@ -1260,206 +1033,160 @@
         "id": "global-risk",
         "cards": [
           {
-            "id": "iran-gulf-strikes",
-            "headline": "US–Iran strikes resume around Hormuz; Trump delays decision",
-            "takeaway": "Kuwait reported its first Iranian drone attack since early September, yet oil fell; Washington is still weighing larger strike options.",
+            "id": "hormuz-tankers-qatar-talks",
+            "headline": "Tanker incidents near Hormuz as Qatar holds talks in Tehran",
+            "takeaway": "Saturday brought new tanker incidents near Hormuz, a Qatari visit to Tehran, and new statements from Washington and Tehran on the terms for any deal.",
             "tags": [
               "Iran",
-              "Hormuz",
-              "Geopolitics"
+              "Shipping",
+              "Oil",
+              "US"
             ],
-            "key_figure": "Brent range US$90–96 this week (Al-Monitor)",
-            "what_happened": "The US struck a missile launch site on Iran's Qeshm Island on Tuesday, saying it was responding to an Iranian attack on a US radar in Bahrain; Iran then targeted an air base used by the US in Kuwait and attacked Bahrain, and said its strikes responded to US drone surveillance and an attack on communications towers ([Al Jazeera](https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island)). Saudi Arabia, the GCC, Qatar and the Arab League condemned the attacks on Gulf states; Iran's army chief said Iran's response to any misstep by the US and its \"backers\" would be \"even more crushing\" ([Al Jazeera](https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island)). On Thursday a Houthi missile damaged the Public Investment Fund tower in Riyadh with no injuries, Saudi civil defence said ([Fox News](https://www.foxnews.com/world/iran-backed-houthi-terrorist-attack-hits-riyadh-tallest-skyscraper-hq-saudi-public-investment-fund)); on Friday the Houthis warned people near Saudi Red Sea ports to evacuate ([Reuters via Yahoo Finance](https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html)). President Trump told Axios: \"I am not rushing into any decision [on Iran]. We will see what happens after the beginning of the year\"; Axios reported he is still considering a joint attack with Israel ([Axios](https://www.axios.com/2026/11/19/trump-iran-attacks-israel-new-year)).",
-            "why_it_matters": "The White House has asked whether any strike option would avoid Iranian retaliation against Gulf oil and gas facilities ([Axios](https://www.axios.com/2026/11/19/trump-iran-attacks-israel-new-year)). Those facilities supply the export recovery that the EIA says has helped push oil prices down ([EIA](https://www.eia.gov/todayinenergy/detail.php?id=68485)), which bears on energy shares, airlines and inflation forecasts.",
-            "market_reaction": "Brent fell over the week despite the attacks; see the oil card.",
+            "new_since_last_issue": "Saturday covered the Qeshm strike and Iranian attacks on Kuwait and Bahrain. New: Saturday's tanker incidents, Iran's statement on a mine strike, a Qatari visit to Tehran, Iran's stated conditions for reopening the strait, Trump's Saturday interview, and CENTCOM's response to an Iranian statement.",
+            "what_happened": "The UK Maritime Trade Operations centre reported a tanker hit on its stern by an unidentified projectile about 11 nautical miles north of Khasab, Oman, and a tanker hit in its engine room 17 nautical miles east of Khasab; it was unclear whether they were the same vessel, and no casualties were reported ([CNBC](https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html), [Al Jazeera](https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping)). In a statement carried by Iranian state television, Iran's navy said a tanker caught fire after hitting a mine in a restricted area east of the strait and that the vessel had ignored warnings; Reuters could not independently verify the account or establish whether it referred to the UKMTO incidents ([Al Jazeera](https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping), [CNBC](https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html), [Iran International](https://www.iranintl.com/en/202611210864)). Deputy Foreign Minister Kazem Gharibabadi said a Qatari delegation held talks in Tehran on Friday, saying Tehran remained in contact with mediators to see \"whether another opportunity can be given to diplomacy\" ([Arab News/Reuters](https://www.arabnews.com/middle-east/qatari-delegation-visits-tehran-for-talks-iranian-official-says-3013368)). Foreign Minister Abbas Araghchi said reopening the strait is \"not difficult\" if the US accepts Tehran's conditions ([Iran International](https://www.iranintl.com/en/202611216310)). In a Fox News interview on Saturday, President Trump said: \"I'm going to make a deal that is going to be permanent. I'm not going to let somebody allow them to have a nuclear weapon\" ([IBTimes](https://www.ibtimes.com/trump-permanent-iran-deal-healthcare-talks-democrats-3810055)); he also said Iran violated a memorandum of understanding a day after it was signed ([Arab News/Reuters](https://www.arabnews.com/middle-east/qatari-delegation-visits-tehran-for-talks-iranian-official-says-3013368)). US Central Command said an IRGC statement that it had damaged a US F-16 was false and that all US fighter jets in the region are accounted for ([Mediaite](https://www.mediaite.com/media/news/centcom-dismisses-irans-claim-it-shot-down-us-fighter-jet-as-tankers-struck-in-strait-of-hormuz/)).",
+            "why_it_matters": "The strait carried nearly a fifth of world crude before the war ([CNBC](https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html)). Al Jazeera's Tehran correspondent, citing Iranian armed forces statements, counted about 25 tanker incidents in the week to Saturday ([Al Jazeera](https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping)). Oil futures had not traded on Saturday's events by our cutoff.",
+            "market_reaction": "No market had traded on Saturday's incidents by our cutoff; Brent futures last settled at US$92.57 on Friday (dashboard).",
             "competing_views": [
               {
-                "who": "Aldo Spanjer, BNP Paribas",
-                "view": "Said strong export flows continue and there is a narrative that \"as long as people are talking, maybe there's a deal in the making\", but that he is not in the camp that thinks the risk is over and probably sees a rebound.",
+                "who": "Iranian government (Araghchi)",
+                "view": "Says the strait will reopen \"if Iran's demands are met\", including the US acknowledging its mistakes and meeting earlier commitments.",
                 "source": {
-                  "label": "Reuters via Yahoo Finance",
-                  "url": "https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
+                  "label": "Iran International (Araghchi)",
+                  "url": "https://www.iranintl.com/en/202611216310",
+                  "claim_type": "official_statement",
+                  "date": "21 Nov 2026"
                 }
               },
               {
-                "who": "UOB Group",
-                "view": "Said near-daily tanker incidents still add a meaningful geopolitical risk premium.",
+                "who": "US government (Trump)",
+                "view": "Says any deal must be permanent and stop Iran obtaining a nuclear weapon, and that Iran violated the memorandum of understanding signed in July a day after signing it.",
                 "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/oil-wti-brent-hormuz.html",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
+                  "label": "Arab News (Reuters)",
+                  "url": "https://www.arabnews.com/middle-east/qatari-delegation-visits-tehran-for-talks-iranian-official-says-3013368",
+                  "claim_type": "reporting",
+                  "date": "21 Nov 2026"
                 }
               }
             ],
-            "what_to_watch": "Whether Qatar-mediated talks resume, and any change in US strike planning before January.",
+            "what_to_watch": "Any US military response; whether the Qatari contacts lead to formal talks; tanker transit numbers.",
             "sources": [
+              {
+                "label": "CNBC (Reuters)",
+                "url": "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html",
+                "claim_type": "reporting",
+                "date": "21 Nov 2026"
+              },
               {
                 "label": "Al Jazeera",
-                "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island",
+                "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping",
                 "claim_type": "reporting",
-                "perspective": "Doha-based",
-                "date": "18 Nov 2026"
+                "perspective": "Qatar-based",
+                "date": "21 Nov 2026"
               },
               {
-                "label": "Fox News",
-                "url": "https://www.foxnews.com/world/iran-backed-houthi-terrorist-attack-hits-riyadh-tallest-skyscraper-hq-saudi-public-investment-fund",
+                "label": "Iran International",
+                "url": "https://www.iranintl.com/en/202611210864",
                 "claim_type": "reporting",
-                "perspective": "US, right-leaning",
-                "date": "19 Nov 2026"
+                "perspective": "Iranian opposition-aligned, London-based",
+                "date": "21 Nov 2026"
               },
               {
-                "label": "Axios",
-                "url": "https://www.axios.com/2026/11/19/trump-iran-attacks-israel-new-year",
+                "label": "Arab News (Reuters)",
+                "url": "https://www.arabnews.com/middle-east/qatari-delegation-visits-tehran-for-talks-iranian-official-says-3013368",
+                "claim_type": "reporting",
+                "date": "21 Nov 2026"
+              },
+              {
+                "label": "Iran International (Araghchi)",
+                "url": "https://www.iranintl.com/en/202611216310",
                 "claim_type": "official_statement",
-                "date": "19 Nov 2026"
+                "date": "21 Nov 2026"
               },
               {
-                "label": "Al-Monitor",
-                "url": "https://www.al-monitor.com/originals/2026/11/oil-heads-third-weekly-loss-iran-tests-us-blockade-crude-transfer",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Reuters via Yahoo Finance",
-                "url": "https://finance.yahoo.com/energy/articles/oil-prices-edge-higher-houthi-020004794.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/20/oil-wti-brent-hormuz.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "EIA",
-                "url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
+                "label": "IBTimes (Fox News interview)",
+                "url": "https://www.ibtimes.com/trump-permanent-iran-deal-healthcare-talks-democrats-3810055",
                 "claim_type": "official_statement",
-                "date": "19 Nov 2026"
+                "date": "21 Nov 2026"
+              },
+              {
+                "label": "Mediaite (CENTCOM post)",
+                "url": "https://www.mediaite.com/media/news/centcom-dismisses-irans-claim-it-shot-down-us-fighter-jet-as-tankers-struck-in-strait-of-hormuz/",
+                "claim_type": "official_statement",
+                "perspective": "US",
+                "date": "21 Nov 2026"
               }
-            ],
-            "new_since_last_issue": "The Houthis' Friday warning to people near Saudi Red Sea ports; the Qeshm strike, Gulf attacks and Trump's Axios comments were covered earlier in the week and are recapped here."
+            ]
           },
           {
-            "id": "shenzhen-summit-chips",
-            "headline": "Trump, Xi and Putin pledge more refined fuel; chip rules stay",
-            "takeaway": "The first three-way summit produced a short declaration; the US chip-access rule and China's threatened response remain the trade risk for tech.",
+            "id": "us-shutdown-deadline",
+            "headline": "US government funding runs out on 11 December",
+            "takeaway": "Congress breaks for Thanksgiving with no agreement on funding past 11 December; Democrats are divided over Iran war funding, and Republicans over Pentagon spending.",
             "tags": [
               "US",
-              "China",
-              "Russia",
-              "Chips"
+              "Fiscal",
+              "Politics"
             ],
-            "what_happened": "The three leaders' declaration said the countries \"plan to increase the production and supply of refined petroleum products\" and reaffirmed \"the importance of stable energy flows\", alongside UN reform and a nuclear-risk dialogue ([White House](https://www.whitehouse.gov/briefings-statements/2026/11/u-s-russia-china-heads-of-state-declaration-toward-peace/)). It did not mention the war in Ukraine or Iran ([CNBC](https://www.cnbc.com/2026/11/19/trump-xi-putin-trilateral-meeting-china.html)). Xinhua said Xi called the meeting \"positive, constructive and fruitful\" and warned against \"turbulence\" over Taiwan ([ABC News](https://abcnews.com/Politics/trump-hold-news-conference-friday-asia-trip/story?id=138307456)). At his Friday news conference, Trump said he secured two new trade deals with about 10 more \"coming very soon\", that he and Xi discussed potential AI guardrails, and that he wants to heavily tax US companies that build data centres abroad, without giving details ([CBS News](https://www.cbsnews.com/live-updates/trump-press-conference-live-stream-2026-11-20/), [CNBC](https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html)). On Tuesday China's commerce ministry said it would take countermeasures if the US proceeds with Monday's rule restricting remote access to advanced AI chips ([Reuters via Investing.com](https://www.investing.com/news/world-news/china-says-it-will-take-countermeasures-if-us-imposes-new-chip-curbs-5033368), [Global Times](https://www.globaltimes.cn/page/202611/1374476.shtml)).",
-            "why_it_matters": "A pledge on refined products bears on diesel prices, which remain high. A tax on offshore data centres and the chip-access rule could affect where AI capacity is built, including in Australia, and which chipmakers can sell into China.",
-            "what_to_watch": "Details of any data-centre tax and whether China announces countermeasures to the chip rule.",
-            "sources": [
-              {
-                "label": "White House",
-                "url": "https://www.whitehouse.gov/briefings-statements/2026/11/u-s-russia-china-heads-of-state-declaration-toward-peace/",
-                "claim_type": "official_statement",
-                "date": "19 Nov 2026"
-              },
-              {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/19/trump-xi-putin-trilateral-meeting-china.html",
-                "claim_type": "reporting",
-                "date": "19 Nov 2026"
-              },
-              {
-                "label": "ABC News (US)",
-                "url": "https://abcnews.com/Politics/trump-hold-news-conference-friday-asia-trip/story?id=138307456",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "CBS News",
-                "url": "https://www.cbsnews.com/live-updates/trump-press-conference-live-stream-2026-11-20/",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "Reuters via Investing.com",
-                "url": "https://www.investing.com/news/world-news/china-says-it-will-take-countermeasures-if-us-imposes-new-chip-curbs-5033368",
-                "claim_type": "reporting",
-                "date": "17 Nov 2026"
-              },
-              {
-                "label": "Global Times",
-                "url": "https://www.globaltimes.cn/page/202611/1374476.shtml",
-                "claim_type": "official_statement",
-                "perspective": "Chinese state media",
-                "date": "17 Nov 2026"
-              },
-              {
-                "label": "CNBC (live updates)",
-                "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html",
-                "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              }
-            ],
-            "new_since_last_issue": "Trump's Friday news conference; the declaration itself was covered in Friday's morning issue."
-          },
-          {
-            "id": "japan-inflation-boj",
-            "headline": "Japan's core inflation rises to 2.2%; BoJ hike in focus",
-            "takeaway": "Inflation rose after energy subsidies ended, keeping a December Bank of Japan rise likely in market pricing.",
-            "tags": [
-              "Japan",
-              "BoJ",
-              "Yen"
-            ],
-            "key_figure": "Japan core CPI 2.2% y/y (Oct), below a 2.3% forecast",
-            "what_happened": "Japan's core CPI rose 2.2% in October from 2.1%, below the 2.3% Reuters poll; headline rose to 2.3%, while core-core eased to 2.2% from 2.4% ([CNBC](https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html)). Energy prices rose 2.2% after household subsidies expired in September; Japan reportedly approved bringing subsidies back in December ([CNBC](https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html)). BoJ Governor Kazuo Ueda told parliament the bank was \"mindful\" of the weak yen and higher crude prices ([CNBC](https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html)). The dollar fell 0.6% to 158.7 yen on Friday ([Reuters](https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/)).",
-            "why_it_matters": "A BoJ rise would narrow rate gaps that have kept the yen weak, which matters for global bond flows, Japanese demand for foreign assets and Australian exporters to Japan.",
-            "priced_in": "LSEG data showed a 72% chance of a 25 bp BoJ rise in December (CNBC, 20 Nov); XM put it at about 75%.",
+            "new_since_last_issue": "Not covered in Saturday's issue. Congress now goes into a one-week Thanksgiving break with three weeks left before funding expires.",
+            "what_happened": "Current federal funding expires on 11 December, and lawmakers in both parties warned of a possible pre-Christmas shutdown, with divisions over the Iran war and President Trump's request for US$350 billion in new Pentagon spending ([Reuters via Investing.com](https://www.investing.com/news/economy-news/congress-struggles-to-avert-us-shutdown-as-iran-war-divides-lawmakers-5041259)). Senate Majority Leader John Thune said a shutdown \"would be a colossal mistake\"; Democratic Senator Peter Welch said \"we don't want to fund the war, we don't want to shut down\"; House Democrat Rosa DeLauro said \"shutting the government down doesn't stop the war\" (same source). Senate Republicans are pursuing bipartisan talks on a US$1.1 trillion defence bill containing US$69 billion of the President's request (same source). On Thursday Thune said \"there are ways you could address\" Iran in an appropriations bill with military funding; Democratic Senator Tammy Duckworth said she would vote against any funding bill that does not cut off war spending, while Senator Tammy Baldwin said the caucus is \"committed to keeping the government open\" ([The Washington Sun](https://www.washingtonsun.com/congress/iran-war-funding-government-shutdown-van-hollen-senate)).",
+            "why_it_matters": "Funding expires two days after the Fed's 9 December decision; CNBC listed a possible shutdown among the risks that could add to market volatility before year-end ([CNBC](https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html)).",
             "competing_views": [
               {
-                "who": "Ma Tieying, DBS",
-                "view": "Expects a December rise and two more in 2027, taking the policy rate to 2%, citing wage growth above 3% for nine months.",
+                "who": "Senate Majority Leader John Thune (Republican)",
+                "view": "\"There's an interest in seeing what the traffic will bear with the Democrats\" on an appropriations bill with military funding; \"there are ways you could address\" Iran in it.",
                 "source": {
-                  "label": "CNBC",
-                  "url": "https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html",
-                  "claim_type": "forecast",
+                  "label": "The Washington Sun",
+                  "url": "https://www.washingtonsun.com/congress/iran-war-funding-government-shutdown-van-hollen-senate",
+                  "claim_type": "reporting",
+                  "perspective": "US, centre-right",
                   "date": "20 Nov 2026"
                 }
               },
               {
-                "who": "XM (Charalampos Pissouros)",
-                "view": "Said Prime Minister Takaichi's calls for low rates and possible dovish board appointments are downside risks to the implied BoJ path.",
+                "who": "Senator Mike Rounds (Republican)",
+                "view": "\"We're going to run out of time if we don't expedite either more communications with both sides of the aisle\" or agree on a reconciliation bill.",
                 "source": {
-                  "label": "XM via FXStreet",
-                  "url": "https://www.fxstreet.com/analysis/week-ahead-flash-pmis-and-pce-inflation-in-focus-ahead-of-thanksgiving-202611201011",
-                  "claim_type": "opinion",
-                  "date": "20 Nov 2026"
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/economy-news/congress-struggles-to-avert-us-shutdown-as-iran-war-divides-lawmakers-5041259",
+                  "claim_type": "reporting",
+                  "date": "20 Nov 2026",
+                  "perspective": "wire"
+                }
+              },
+              {
+                "who": "Senator John Hickenlooper (Democrat)",
+                "view": "Declined to state his own position, but suggested high energy prices from the Iran war could justify another funding cutoff: \"This is pretty dire.\"",
+                "source": {
+                  "label": "Reuters via Investing.com",
+                  "url": "https://www.investing.com/news/economy-news/congress-struggles-to-avert-us-shutdown-as-iran-war-divides-lawmakers-5041259",
+                  "claim_type": "reporting",
+                  "date": "20 Nov 2026",
+                  "perspective": "wire"
                 }
               }
             ],
-            "what_to_watch": "Tokyo CPI at 10:30am Friday Sydney time; Westpac cites a 3.1% market forecast, from 2.8%.",
+            "what_to_watch": "Whether a stopgap bill emerges when Congress returns; the 1 December Senate Democratic leadership vote.",
             "sources": [
               {
-                "label": "CNBC",
-                "url": "https://www.cnbc.com/2026/11/20/japan-inflation-cpi-october.html",
+                "label": "Reuters via Investing.com",
+                "url": "https://www.investing.com/news/economy-news/congress-struggles-to-avert-us-shutdown-as-iran-war-divides-lawmakers-5041259",
+                "claim_type": "reporting",
+                "date": "20 Nov 2026",
+                "perspective": "wire"
+              },
+              {
+                "label": "CNBC week ahead",
+                "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
                 "claim_type": "reporting",
                 "date": "20 Nov 2026"
               },
               {
-                "label": "Reuters",
-                "url": "https://www.reuters.com/5f374b32b07b/world/china/global-markets-global-markets-2026-11-20/",
+                "label": "The Washington Sun",
+                "url": "https://www.washingtonsun.com/congress/iran-war-funding-government-shutdown-van-hollen-senate",
                 "claim_type": "reporting",
-                "date": "20 Nov 2026"
-              },
-              {
-                "label": "XM via FXStreet",
-                "url": "https://www.fxstreet.com/analysis/week-ahead-flash-pmis-and-pce-inflation-in-focus-ahead-of-thanksgiving-202611201011",
-                "claim_type": "forecast",
+                "perspective": "US, centre-right",
                 "date": "20 Nov 2026"
               }
-            ],
-            "new_since_last_issue": "BoJ pricing, Friday's yen move and the DBS and XM views; the CPI result itself was in Friday's Close tab."
+            ]
           }
         ]
       }
@@ -1467,18 +1194,18 @@
     "rates": {
       "rba": {
         "status": "available",
-        "summary": "Cash rate 4.85%. ASX 30-day interbank futures implied a 95% chance of a hold and 5% of a 25 bp cut on 8 December at Friday's close, from 97% hold and 3% hike on Wednesday.",
+        "summary": "Cash rate 4.85%. ASX 30-day interbank futures implied a 95% chance of a hold and 5% of a 25 bp cut on 8 December at Friday's ASX close; no trading since.",
         "as_of": "20 Nov 2026, ASX close (RBA Watch)",
         "source": {
-          "label": "RBA Watch (ASX futures)",
+          "label": "RBA Watch (ASX 30-day futures)",
           "url": "https://rbawatch.com/rba-meeting/december-2026",
           "claim_type": "measurement",
           "date": "20 Nov 2026"
         },
         "forecasts": [
           {
-            "who": "Westpac (Luci Ellis)",
-            "view": "Forecasts slow growth, not a downturn; sees unemployment at 4.9% at year-end and peaking at 5.2% in mid-2027.",
+            "who": "Westpac",
+            "view": "Hold at 4.85% until mid-2027; first cut by September 2027.",
             "source": {
               "label": "Westpac Weekly",
               "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
@@ -1487,41 +1214,41 @@
             }
           },
           {
-            "who": "AFR (market pricing)",
-            "view": "Traders priced an RBA cut as early as February and a lower cash rate fully by September after the jobs data.",
+            "who": "CommSec",
+            "view": "Market expects a December hold; a strong CPI could shift expectations for the path of rates.",
             "source": {
-              "label": "AFR",
-              "url": "https://www.afr.com/markets/debt-markets/rba-will-not-hike-again-traders-eye-early-rate-cut-on-jobs-crunch-20261119-p61ddw",
+              "label": "CommSec week ahead",
+              "url": "https://www.commsec.com.au/content/dam/EN/ResearchNews/2026Reports/November/ECO_Insights_201126-Week-Ahead.pdf",
               "claim_type": "reporting",
-              "date": "19 Nov 2026"
+              "date": "20 Nov 2026"
             }
           }
         ]
       },
       "fed": {
         "status": "available",
-        "summary": "CME FedWatch put the chance of a 25 bp rise on 9 December at about 92% late on Friday.",
-        "as_of": "20 Nov 2026, late US session (CNBC, CME FedWatch)",
+        "summary": "CME FedWatch put the chance of a 25 bp rise on 9 December at about 92% late on Friday, down from Thursday.",
+        "as_of": "20 Nov 2026, late US session (CME FedWatch via CNBC)",
         "source": {
-          "label": "CNBC (CME FedWatch)",
+          "label": "CNBC Treasuries",
           "url": "https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html",
-          "claim_type": "measurement",
+          "claim_type": "reporting",
           "date": "20 Nov 2026"
         },
         "forecasts": [
           {
-            "who": "Lisa Cook, Fed Governor",
-            "view": "Prefers further rises; said waiting longer risks having to raise rates by more later.",
+            "who": "NAB",
+            "view": "Expects hikes in December and January, with risk of more in early 2027; said 42 bp was priced by January.",
             "source": {
-              "label": "Federal Reserve",
-              "url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-              "claim_type": "official_statement",
+              "label": "NAB What to Watch",
+              "url": "https://www.nab.com.au/content/dam/nab-email-composer/nabmarketsresearch/economics/pdf/2026-11-20%20-%20What%20to%20Watch%20-%20Week%20of%2023%20November%202026.pdf",
+              "claim_type": "forecast",
               "date": "20 Nov 2026"
             }
           },
           {
-            "who": "Westpac economics",
-            "view": "Forecasts 25 bp rises in December and January.",
+            "who": "Westpac",
+            "view": "25 bp hikes in December and January.",
             "source": {
               "label": "Westpac Weekly",
               "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
@@ -1549,18 +1276,14 @@
         }
       },
       {
-        "when": "Wed 25 Nov, 2am",
-        "event": "US Conference Board consumer confidence, November",
-        "country": "US",
-        "importance": "medium",
-        "prior": "91.7",
-        "consensus": "92.1",
-        "consensus_source": "Westpac Weekly (market forecast)",
+        "when": "Wed 25 Nov, 10:50am",
+        "event": "RBA Head of Domestic Markets David Jacobs speaks (Australian Securitisation conference)",
+        "country": "AU",
+        "importance": "low",
         "source": {
-          "label": "Westpac Weekly",
-          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
-          "claim_type": "forecast",
-          "date": "20 Nov 2026"
+          "label": "RBA Coming Up",
+          "url": "https://www.rba.gov.au/coming-up/",
+          "claim_type": "official_statement"
         }
       },
       {
@@ -1586,9 +1309,9 @@
         "consensus": "+0.3%",
         "consensus_source": "Westpac Weekly (market forecast)",
         "source": {
-          "label": "Westpac Weekly",
-          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
-          "claim_type": "forecast",
+          "label": "CNBC week ahead",
+          "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
+          "claim_type": "reporting",
           "date": "20 Nov 2026"
         }
       },
@@ -1598,9 +1321,9 @@
         "country": "US",
         "importance": "medium",
         "source": {
-          "label": "Westpac Weekly",
-          "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
-          "claim_type": "forecast",
+          "label": "TreasuryBonds.com wrap",
+          "url": "https://treasurybonds.com/news/2026-11-20-bond-market-wrap-up-treasuries-rally-hard-as-tech-stocks-slide-and-rate-hike-fears-cool/",
+          "claim_type": "reporting",
           "date": "20 Nov 2026"
         }
       },
@@ -1635,18 +1358,18 @@
       },
       {
         "when": "Thu 26 Nov (US)",
-        "event": "US Thanksgiving: stock and bond markets closed; early close on Friday",
+        "event": "US Thanksgiving: NYSE closed; early stock close at 5am Saturday Sydney time (1pm Friday ET)",
         "country": "US",
         "importance": "medium",
         "source": {
-          "label": "XM via FXStreet",
-          "url": "https://www.fxstreet.com/analysis/week-ahead-flash-pmis-and-pce-inflation-in-focus-ahead-of-thanksgiving-202611201011",
+          "label": "CNBC week ahead",
+          "url": "https://www.cnbc.com/2026/11/20/stock-market-next-week-outlook-for-nov-23-27-2026.html",
           "claim_type": "reporting",
           "date": "20 Nov 2026"
         }
       },
       {
-        "when": "Fri 27 Nov, 10:30am",
+        "when": "Fri 27 Nov",
         "event": "Tokyo CPI, November (annual)",
         "country": "JP",
         "importance": "medium",
@@ -1658,6 +1381,18 @@
           "url": "https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/11/WestpacWeekly20261123.pdf",
           "claim_type": "forecast",
           "date": "20 Nov 2026"
+        }
+      },
+      {
+        "when": "Sun 29 Nov (time not announced)",
+        "event": "OPEC+ ministerial meeting on 2027 production framework",
+        "country": "Global",
+        "importance": "high",
+        "source": {
+          "label": "Reuters via Investing.com",
+          "url": "https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-targets-steady-sources-say-4989496",
+          "claim_type": "reporting",
+          "date": "1 Nov 2026"
         }
       }
     ]
