@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
   "type": "ai",
-  "date": "2026-11-27",
-  "generated_at_utc": "2026-11-26T21:33:46Z",
-  "title": "Daily AI report · Friday 27 Nov 2026",
+  "date": "2026-11-28",
+  "generated_at_utc": "2026-11-27T21:37:07Z",
+  "title": "Daily AI report · Saturday 28 Nov 2026",
   "top_stories": [
     {
       "section_id": "evals",
-      "card_id": "openai-private-inference-pilot",
-      "headline": "OpenAI starts an alpha test of Private Inference: prompts processed inside confidential computing hardware"
-    },
-    {
-      "section_id": "coding",
-      "card_id": "copilot-cli-1-0-117-pre-mcp-approval",
-      "headline": "Copilot CLI prerelease fixes MCP approvals that also approved built-in shell actions"
+      "card_id": "anthropic-messages-api-rust-verification",
+      "headline": "Anthropic moved its Messages API to Rust, using production traffic to verify Claude's code"
     },
     {
       "section_id": "industry",
-      "card_id": "swiss-ncsc-ai-agent-attacks",
-      "headline": "Swiss cyber agency confirms first AI-agent cyberattacks: five cases, two successful on critical infrastructure"
+      "card_id": "au-digital-duty-of-care-passes",
+      "headline": "Australia passes the Digital Duty of Care, covering AI chatbots, with penalties up to 5% of global revenue"
+    },
+    {
+      "section_id": "industry",
+      "card_id": "truelayer-papa-johns-agentic-pay-by-bank",
+      "headline": "UK's first agentic Pay by Bank payment: bank-set limits and in-app approval, in the FCA sandbox"
     }
   ],
   "sections": [
@@ -27,106 +27,106 @@
       "name": "Coding Agents",
       "cards": [
         {
-          "id": "copilot-cli-1-0-117-pre-mcp-approval",
-          "headline": "Copilot CLI 1.0.117 prereleases stop an MCP approval from also approving built-in actions",
-          "takeaway": "Also new: custom agents opt in to tools explicitly, and plan mode asks before branching or installing.",
+          "id": "copilot-cli-1-0-117-ca-certs",
+          "headline": "Copilot CLI 1.0.117 ships: sandboxed commands can trust your company's TLS proxy certificates",
+          "takeaway": "Stable release; 1.0.118-0 prerelease also keeps Git config and hooks read-only in writable sandboxed repos.",
           "tags": [
             "GitHub Copilot CLI",
-            "Permissions",
-            "MCP"
+            "Sandbox",
+            "Enterprise proxies"
           ],
           "sources": [
             "GitHub releases"
           ],
           "verdict": "Worth trying",
-          "what_changed": "Four GitHub Copilot CLI prereleases, v1.0.117-0 to v1.0.117-3 (26 to 27 Nov, Sydney time). The headline fix (-3): approving an MCP (Model Context Protocol) server's tools for a session or a location no longer also approves Copilot's built-in requests, such as shell commands or memory stores, when the server's name matches a built-in permission type. Also in -0: custom agents get explicit tool exposure, so they opt in to tools. In plan mode, Assisted Permissions now asks before actions such as creating a Git branch or installing packages, rather than approving them automatically before you approve the plan. -1 marks retiring models in the /model picker. -3 also keeps existing repository settings files read-only for sandboxed commands in writable Git worktrees on macOS and Linux.",
-          "why_it_matters": "An approval for one MCP server that quietly widens to shell commands is exactly the kind of permission bleed your agent validation should test for, in Copilot and any other agent.",
-          "caveats": "Prereleases only; a stable 1.0.117 hasn't shipped. The notes don't say which server names collided with built-in permission types.",
-          "how_to_try": "Install the prerelease, name a test MCP server after a built-in permission type, approve its tools for the session, then ask for a shell command and check that Copilot still prompts.",
+          "what_changed": "GitHub Copilot CLI v1.0.117 shipped as stable (28 Nov, Sydney time). New: a sandbox.userPolicy.network.extraCaCertificates setting, in user or managed settings, so sandboxed commands can trust custom CA (certificate authority) certificates when traffic goes through TLS-intercepting proxies. It also brings the prereleases' fixes to stable, including MCP (Model Context Protocol) approvals no longer also approving built-in shell or memory requests. Starting in autopilot now asks before launching each extension instead of denying all of them. Prerelease v1.0.118-0 (28 Nov) shows those extra CA paths in /sandbox policy, keeps Git configuration and hooks read-only in sandboxed repos granted write access through readwritePaths, and keeps a session signed out after /logout.",
+          "why_it_matters": "Corporate networks like yours inspect TLS, which is often why sandboxed agent commands fail on certificate errors; this is a managed, auditable fix rather than turning verification off.",
+          "caveats": "Our 27 Nov issue covered the MCP approval fix as a prerelease; what is new is the stable release and the CA setting. 1.0.118 is still a prerelease.",
+          "how_to_try": "Update Copilot CLI, add your proxy's root certificate under sandbox.userPolicy.network.extraCaCertificates, then run a sandboxed npm or pip install and check /sandbox policy lists the certificate.",
           "links": [
             {
-              "label": "Release v1.0.117-3",
-              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-3"
+              "label": "Release v1.0.117",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117"
             },
             {
-              "label": "Release v1.0.117-0",
-              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-0"
+              "label": "Release v1.0.118-0",
+              "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.118-0"
             }
           ]
         },
         {
-          "id": "opencode-2-4-2-webfetch-scope",
-          "headline": "OpenCode 2.4.2: 'Always allow' for a web fetch now covers one site, not every URL",
-          "takeaway": "Adds a GPT-6.2 system prompt and fixes tools staying visible after a deny rule.",
+          "id": "pi-1-7-0-session-resume",
+          "headline": "Pi 1.7.0 resumes sessions after a terminal restart with the same tool limits, and drops install telemetry",
+          "takeaway": "Also keeps the Copilot prompt cache when you change thinking level on supported Claude 5.x and GPT-6 models.",
           "tags": [
-            "OpenCode",
-            "Permissions",
-            "GPT-6.2"
+            "Pi",
+            "Sessions",
+            "Telemetry"
           ],
           "sources": [
             "GitHub releases"
           ],
           "verdict": "Worth trying",
-          "what_changed": "OpenCode v2.4.2 (26 Nov, Sydney time) narrows 'Always allow' on a web fetch to that site only; it used to allow every URL. Approvals saved by earlier versions stay as they were. GPT-6.2 Sol and Astra, and the gpt-latest aliases, get a system prompt written for GPT-6.2. Fixes include tools staying visible to the model when a blanket deny was followed by narrower denies, Plan mode re-adding its reminder after every compaction (which could loop a session), and sign-in to MCP (Model Context Protocol) servers whose URL has a query string, such as the AWS MCP Server. Image and video generation tools moved into Code Mode, saving about 700 tokens per request.",
-          "why_it_matters": "Per-site fetch approval and the deny-rule fix close two ways an agent could reach more than you meant to allow, which matters when you compare agents' permission models.",
-          "caveats": "Old 'allow every URL' approvals are kept, so check your saved permissions after upgrading.",
-          "how_to_try": "Upgrade, clear saved web-fetch approvals, then approve one site with 'Always allow' and confirm a fetch to a second site still prompts.",
+          "what_changed": "Pi v1.7.0 (28 Nov, Sydney time). Compatible terminals can reopen the current session after a restart through the Program Resume Protocol (OSC 7577); the resume command repeats the restriction flags Pi started with (--tools, --no-extensions, --skill, --system-prompt and similar), so a resumed session can't get more access than it had. A new --agent-dir flag carries a per-project config directory into the resume command. Breaking: install telemetry reporting, the enableInstallTelemetry setting and PI_TELEMETRY are removed. With GitHub Copilot as provider, changing the thinking level keeps the prompt cache on supported Claude 5.x and GPT-6 models. Cloudflare's default model moves to GLM-5.3 because Cloudflare deprecated Kimi K2.6 and K2.7 Code.",
+          "why_it_matters": "A resumed agent session that silently regains tools is a permission bug you'd test for; Pi now pins the original limits, which is a pattern worth copying in your own harness checks.",
+          "caveats": "Resume needs a terminal that supports OSC 7577 (the notes name Rex) and a rule that trusts each flag combination. Anyone relying on PI_TELEMETRY needs to remove it.",
+          "how_to_try": "Update Pi, start a session with --tools limited to read-only tools, restart a supported terminal, and confirm the resumed session still has only those tools.",
           "links": [
             {
-              "label": "Release v2.4.2",
-              "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2"
+              "label": "Release v1.7.0",
+              "url": "https://github.com/earendil-works/pi/releases/tag/v1.7.0"
+            },
+            {
+              "label": "Terminal setup: program resume",
+              "url": "https://github.com/earendil-works/pi/blob/v1.7.0/packages/coding-agent/docs/terminal-setup.md#program-resume"
             }
           ]
         },
         {
-          "id": "codex-gpt-6-2-billing-fix",
-          "headline": "Codex lead says a GPT-6.2 billing error is fixed, so plan limits will be hit 40% faster on Astra and 25% faster on Sol (unverified)",
-          "takeaway": "Social post only; no official OpenAI notice found yet.",
+          "id": "sandcastle-0-14-1-git-hook-fix",
+          "headline": "Sandcastle 0.14.1 closes a path for sandboxed agents to run Git hooks on the host",
+          "takeaway": "Matt Pocock's agent sandbox runner also fixes Claude Code slash-command prompts and adds Codex 'max' effort.",
           "tags": [
-            "Codex",
-            "Pricing",
-            "GPT-6.2"
+            "Sandcastle",
+            "Sandbox escape",
+            "Git"
           ],
           "sources": [
-            "X"
+            "GitHub releases"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "Tibo (thsottiaux), who leads Codex at OpenAI, posted on X (26 Nov, Sydney time) that a billing mistake at the launch of GPT-6.2 incorrectly discounted GPT-6.2 Astra and Sol usage for most users. He says it is fixed, so the same work now uses more of your plan's usage allowance: compared with last week, you will reach your limits 40% faster on GPT-6.2 Astra and 25% faster on Sol, though both should still go further than 6 Astra and 6.1 Sol. Other models weren't affected, past usage won't be charged the difference, and everyone on Go, Plus, Pro and Business gets one banked reset. We found no matching OpenAI help-centre or status notice.",
-          "why_it_matters": "If you run Codex on GPT-6.2 for long validation sessions, expect to hit plan limits sooner than last week and budget for it.",
-          "caveats": "Unverified: from one social post, with no official notice. The 40% and 25% figures are his comparison with last week and may vary by plan and workload.",
-          "how_to_try": "Check your Codex usage page today against last week's for the same kind of task before planning long GPT-6.2 runs.",
+          "verdict": "Worth trying",
+          "what_changed": "Sandcastle v0.14.1 (27 Nov, Sydney time). Security fix: on Git 2.54 and later, which allows hooks defined in Git config, a sandboxed agent using a bind-mount provider (docker(), podman() or a custom one) could plant a hook through a writable config.worktree; that hook could then run during Git commands Sandcastle runs on the host, outside the sandbox. Sandcastle's host Git now disables every hook defined in the repository's config, and config.worktree files are mounted read-only. Isolated providers (vercel(), daytona()) were not affected. Also: claudeCode() prompts starting with a slash command (such as /code-review) now expand, codex() accepts effort 'max', and an aborted run no longer writes to its log after it rejects.",
+          "why_it_matters": "A concrete sandbox-escape pattern (agent writes config, host tooling executes it) to add to your agent security test cases, whatever sandbox you use.",
+          "caveats": "Applies only to bind-mount providers on Git 2.54+ with worktree config, which git sparse-checkout sets. Patch release; no CVE ID is given in the notes.",
+          "how_to_try": "Upgrade, then inside a docker() sandbox try git config --worktree core.hooksPath and check it now fails.",
           "links": [
             {
-              "label": "Tibo (thsottiaux) on X",
-              "url": "https://x.com/thsottiaux/status/2125784147889393806"
+              "label": "Release v0.14.1",
+              "url": "https://github.com/mattpocock/sandcastle/releases/tag/v0.14.1"
             }
           ]
         },
         {
-          "id": "cline-4-1-28-model-catalog",
-          "headline": "Cline 4.1.28 drops deprecated OpenAI model ids such as gpt-4o, gpt-4.1 and o3 from its catalog",
-          "takeaway": "Matching updates in Cline CLI 3.0.76 and desktop 0.0.51.",
+          "id": "kimi-code-2-9-canary",
+          "headline": "Kimi Code 2.9.0 canaries: new worktrees take the active session, and fullscreen mouse support",
+          "takeaway": "Canary builds only, for anyone tracking Moonshot's coding agent.",
           "tags": [
-            "Cline",
-            "Models",
-            "Config"
+            "Kimi Code",
+            "Worktrees",
+            "Canary"
           ],
           "sources": [
             "GitHub releases"
           ],
           "verdict": "Monitor only",
-          "what_changed": "Cline v4.1.28 (26 Nov, Sydney time) refreshes the model catalog. The OpenAI provider no longer lists ids the upstream catalog marks deprecated, including gpt-4o, gpt-4.1, gpt-5, gpt-5-mini, gpt-5.1, gpt-5.3-codex, o3 and o3-pro, and gpt-5.3-codex-spark is no longer listed for ChatGPT subscriptions. It adds the Concentrate and Prima Labs providers. CLI v3.0.76 and desktop v0.0.51 ship the same catalog refresh.",
-          "why_it_matters": "If any of your test configs pin one of these ids, they may stop showing in the picker; worth checking before a scheduled eval run.",
-          "caveats": "Small release; the notes don't say whether pinned ids keep working or only disappear from the list.",
-          "how_to_try": "Update Cline, open the OpenAI provider's model list, and confirm any model your configs pin is still listed.",
+          "what_changed": "MoonshotAI/kimi-code published 2.9.0 canary builds (27 to 28 Nov, Sydney time). The latest moves the active session into a new worktree when you create one, and adds fullscreen mouse support for docked dialogs, selectors, /tasks and takeover viewers. Earlier canaries that day were mostly CI changes.",
+          "why_it_matters": "Worktree-per-task with the session following it is the same isolation pattern Claude Code and Codex use; useful only if you run Kimi Code alongside them.",
+          "caveats": "Canary builds, not a release; the notes list pull requests rather than user-facing documentation.",
+          "how_to_try": "Not yet: wait for a 2.9.0 release unless you already test Kimi Code canaries.",
           "links": [
             {
-              "label": "Release v4.1.28",
-              "url": "https://github.com/cline/cline/releases/tag/v4.1.28"
-            },
-            {
-              "label": "Release cli-v3.0.76",
-              "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.76"
+              "label": "Canary 2.9.0 (27 Nov 13:05 UTC build)",
+              "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127130549-5304618"
             }
           ]
         }
@@ -137,122 +137,86 @@
       "name": "AI Evals, Safety & Governance",
       "cards": [
         {
-          "id": "openai-private-inference-pilot",
-          "headline": "OpenAI starts testing Private Inference: prompts processed inside hardware-isolated confidential computing",
-          "takeaway": "Alpha test with a small group of customers (follow-up to our 2 Nov item); OpenAI hasn't said which chips or how you verify it.",
+          "id": "anthropic-messages-api-rust-verification",
+          "headline": "Anthropic moved its Messages API to Rust by using production traffic to verify what Claude wrote",
+          "takeaway": "Claude wrote a first core request path in about a week; checking parity was the hard part.",
           "tags": [
-            "Confidential computing",
-            "Data privacy",
-            "OpenAI"
+            "Verification",
+            "Shadow testing",
+            "Agent-written code"
           ],
           "sources": [
-            "OpenAI",
-            "The Next Web"
+            "Anthropic blog",
+            "Tech press"
           ],
           "verdict": "Worth reading",
-          "what_changed": "OpenAI CEO Sam Altman said on X (25 Nov, US time) that OpenAI has started testing Private Inference with a small group of customers, as part of OpenAI Private Intelligence. OpenAI's Private Intelligence page lists it as 'Confidential computing, strict verifiable controls', shows it as API Preview in its diagram and now calls it Private Inference (Alpha). New since our 2 Nov item, which covered the page's launch: the first customer testing. Confidential computing runs the model inside a TEE (trusted execution environment): a hardware-isolated area whose memory the machine's operators can't read. It sits alongside Zero Data Retention, which keeps no copy of prompts. OpenAI says it is adding compute capacity to expand the test; no date was given.",
-          "why_it_matters": "Isolating prompts from the provider's own staff while the model runs is the kind of control a bank's data and risk teams ask about before frontier models touch customer data.",
-          "caveats": "Alpha, with a small group of customers; not generally available. OpenAI hasn't named the hardware, the covered models or regions, or whether customers check attestation (the hardware's signed proof of what code is running) themselves. OpenAI's Private Safety Processing white paper describes Private Inference as covering eligible safety-inference workloads and says it doesn't automatically cover the initial API request.",
+          "what_changed": "Anthropic posted (25 Nov) how it migrated the Messages API, which also serves Claude Code and Cowork, from Python to Rust. Claude wrote a first version of the core request path in about a week. The hard part was verification: the Python API kept changing, model replies are nondeterministic, and engineers couldn't read customer requests. Anthropic turned the production API into the verifier: it ran requests through old and new code (shadowing), compared results, found where they differed, and automatically dispatched agents to fix the differences. Anthropic reports about 70% less CPU per request and about 20% lower median time to first token, with no downtime and no feature freeze. It also says that by May 2026 Claude was writing more than 80% of the code Anthropic merged.",
+          "why_it_matters": "This is the generator-verifier gap your validation work lives in: a worked design for trusting agent-written changes to a live system when test suites don't cover real-world edge cases.",
+          "caveats": "Anthropic-reported figures for its own system. Posted 25 Nov, first covered here. Shadowing on customer traffic needs privacy controls the post describes only for Anthropic's setup.",
           "links": [
             {
-              "label": "OpenAI: Private Intelligence",
-              "url": "https://openai.com/business/private-intelligence/"
+              "label": "Migrating our Messages API to Rust",
+              "url": "https://www.anthropic.com/research/migrating-api-to-rust"
             },
             {
-              "label": "OpenAI: register interest",
-              "url": "https://openai.com/form/private-intelligence-interest/"
-            },
-            {
-              "label": "The Next Web",
-              "url": "https://thenextweb.com/news/openai-private-inference-testing-customers"
-            },
-            {
-              "label": "OpenAI: Private Safety Processing white paper",
-              "url": "https://openaiassets.blob.core.windows.net/$web/pdf/c7284810-2252-462f-803e-075b0c95bccb/psp-whitepaper.pdf"
+              "label": "InfoWorld",
+              "url": "https://www.infoworld.com/article/4253460/anthropic-says-it-moved-its-claude-api-from-python-to-rust-with-no-downtime.html"
             }
           ]
         },
         {
-          "id": "langfuse-4-87-4-88-guardrails",
-          "headline": "Langfuse 4.87 and 4.88 add gateway guardrails that block, log or redact, and let admins turn off public trace sharing",
-          "takeaway": "MCP spans now record client capabilities and extensions.",
+          "id": "multilingual-decision-model-calibration",
+          "headline": "Guardrail and router models lose accuracy outside English faster than their confidence drops",
+          "takeaway": "A threshold set for 95% accuracy in English gives 90% in Tamil, across 25 open-weight decision models.",
           "tags": [
-            "Observability",
             "Guardrails",
-            "Langfuse"
+            "Calibration",
+            "Multilingual"
           ],
           "sources": [
-            "GitHub releases"
-          ],
-          "verdict": "Worth trying",
-          "what_changed": "Langfuse v4.87.0 (26 Nov, Sydney time) lets its AI gateway block or log requests whose last turn matches a guardrail, adds a guardrails management UI and a budget-reset action, and marks the evaluated observation in an eval's sample trace view. v4.88.0 (27 Nov) adds a redact guardrail action, lets organisations and self-hosted instances disable public trace and session sharing, records MCP (Model Context Protocol) client capabilities and extensions on MCP spans, and adds JWT (JSON Web Token) authentication for ClickHouse Cloud.",
-          "why_it_matters": "Turning off public trace sharing for the whole organisation is a simple control a bank would want before agent traces with customer data land in an observability tool.",
-          "caveats": "Guardrail features sit in Langfuse's AI gateway, which you have to route traffic through. Check which features are in the self-hosted open-source edition.",
-          "links": [
-            {
-              "label": "Release v4.88.0",
-              "url": "https://github.com/langfuse/langfuse/releases/tag/v4.88.0"
-            },
-            {
-              "label": "Release v4.87.0",
-              "url": "https://github.com/langfuse/langfuse/releases/tag/v4.87.0"
-            }
-          ]
-        },
-        {
-          "id": "phoenix-22-1-judge-alignment-skill",
-          "headline": "Arize Phoenix 22.1 adds px setup doctor and splits its evals skill, with judge alignment as its own skill",
-          "takeaway": "Also a single-span API endpoint; Arize separately showed a two-lane experiment compare view.",
-          "tags": [
-            "Evals",
-            "LLM-as-judge",
-            "Phoenix"
-          ],
-          "sources": [
-            "GitHub releases",
-            "X"
-          ],
-          "verdict": "Worth trying",
-          "what_changed": "Arize Phoenix v22.1.0 (26 Nov, Sydney time) adds GET /spans/{span_identifier} to fetch one span, a px project create command, and px setup doctor to diagnose connection problems. The phoenix-evals agent skill is split into three: evals, experiments and judge alignment. Code evaluators no longer crash on nan or inf values. Separately, Arize posted on X (27 Nov) that experiment compare now shows two lanes: a pinned baseline on the left and one candidate on the right, with evals, outputs and traces lined up per example.",
-          "why_it_matters": "A separate judge-alignment skill helps you check that an LLM-as-judge (a large language model grading outputs) agrees with human labels before you trust its scores.",
-          "caveats": "The two-lane compare view is from an X post and isn't listed in the 22.1.0 notes, so it may need a newer build.",
-          "links": [
-            {
-              "label": "Release arize-phoenix-v22.1.0",
-              "url": "https://github.com/Arize-ai/phoenix/releases/tag/arize-phoenix-v22.1.0"
-            },
-            {
-              "label": "Arize Phoenix on X",
-              "url": "https://x.com/ArizePhoenix/status/2126043377661854037"
-            }
-          ]
-        },
-        {
-          "id": "agenticppl-rollout-free-ranking",
-          "headline": "AgenticPPL: scoring a model's perplexity on a few command tokens ranks terminal agents without running them",
-          "takeaway": "Plain perplexity on the same traces ranks models backwards; the author reports a +0.788 rank correlation on held-out models.",
-          "tags": [
-            "Evals",
-            "Agents",
-            "Benchmarks"
-          ],
-          "sources": [
-            "Blog",
-            "GitHub",
-            "Hugging Face"
+            "Hugging Face papers",
+            "arXiv"
           ],
           "verdict": "Worth reading",
-          "what_changed": "Wenhao Chai's post (25 Nov) scores fixed Terminus-2 terminal-agent trajectories with one forward pass per model, instead of running the agent. Plain perplexity (how surprised a model is by the text) on full traces ranks models backwards against Terminal-Bench 2.1. Measuring it only on commands written after reading terminal output, and capping each token's cost, gives Spearman rank correlations of +0.890 on the development set and +0.788 on held-out models, against -0.292 and -0.495 for plain perplexity. The toolkit and data are open.",
-          "why_it_matters": "A cheap pre-screen that ranks candidate models on agent traces you already have could cut how many full agent eval runs you need.",
-          "caveats": "A blog post and code, not peer-reviewed. Results are the author's, for one agent harness and one benchmark; the rules were found partly by automated search.",
+          "what_changed": "A Nanyang Technological University paper (on Hugging Face daily papers, 26 Nov) tests 25 top-ranked open-weight decision models: language models fine-tuned to return a probability per option, which routers and guardrails threshold directly. Across 17 tasks in 14 languages, every model loses accuracy in every language, from about 2 points in high-resource languages to 8 in Tamil, while confidence falls only half as much. Losses depend on the language and base model, not leaderboard rank. A few thousand target-language examples narrow large gaps but don't close them. Test sets translated by an LLM understate the gap compared with human translation.",
+          "why_it_matters": "If your bank's guardrails or routers set thresholds on English evals, customers writing in other languages get weaker protection than your numbers show; calibrate per language.",
+          "caveats": "Preprint, not peer reviewed; open-weight models only, so commercial guardrail APIs aren't covered.",
           "links": [
             {
-              "label": "Blog: AgenticPPL",
-              "url": "https://wenhaochai.com/blogs/agentic-ppl.html"
+              "label": "Paper page",
+              "url": "https://huggingface.co/papers/2611.33307"
             },
             {
-              "label": "wenhaochai/AgenticPPL",
-              "url": "https://github.com/wenhaochai/AgenticPPL"
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2611.33307"
+            }
+          ]
+        },
+        {
+          "id": "os-omni-computer-use-benchmark",
+          "headline": "OS-Omni: computer-use agents tested on long workflows across six platforms, including desktop-to-phone handoffs",
+          "takeaway": "Tasks average 67.54 steps; the best agent tested, Claude Opus 5.5, succeeds 68.5% of the time versus 77.3% for humans.",
+          "tags": [
+            "Benchmarks",
+            "Computer use",
+            "Agents"
+          ],
+          "sources": [
+            "Hugging Face papers",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "OS-Omni (paper published 24 Nov, on Hugging Face daily papers 27 Nov) is a live benchmark covering Windows, Ubuntu, macOS, iOS, Android and the web. Version 1 has 48 tasks per platform plus 12 workflows pairing a desktop with an Android phone, using controlled apps with persistent state such as accounts, carts, budgets and calendars. It has reproducible setup, trajectory logging and evaluators that check the final state. Human studies put tasks at 67.54 interaction steps, against 15.0 for OSWorld references. The authors report Claude Opus 5.5 as the strongest agent at 68.5% average success, 8.8 points below the 77.3% human reference.",
+          "why_it_matters": "Final-state evaluators on stateful apps (budgets, carts, accounts) are close to what you'd need to evaluate a banking computer-use agent; the harness is a template.",
+          "caveats": "Author-run results on v1 only; later waves of 300 tasks are planned. Repo is new (about 100 stars).",
+          "links": [
+            {
+              "label": "Paper page",
+              "url": "https://huggingface.co/papers/2611.34232"
+            },
+            {
+              "label": "OS-Copilot/OS-Omni",
+              "url": "https://github.com/OS-Copilot/OS-Omni"
             }
           ]
         }
@@ -263,75 +227,76 @@
       "name": "Agent Engineering & Frameworks",
       "cards": [
         {
-          "id": "loopforge-0-4-3-native-sandboxes",
-          "headline": "Tencent LoopForge 0.4.3 adds native sandboxes with per-machine repository caches",
-          "takeaway": "Feishu and DingTalk chat bots can trigger work, with writes confirmed on the web.",
+          "id": "pydantic-ai-2-76",
+          "headline": "Pydantic AI 2.76: compaction keeps the full conversation, and read_file offsets become 1-indexed",
+          "takeaway": "Check before upgrading: offset=N calls now start one line earlier, and Gemini 2.5 requests warn.",
           "tags": [
-            "Orchestration",
-            "Sandboxing",
-            "Human approval"
+            "Pydantic AI",
+            "Compaction",
+            "Breaking change"
           ],
           "sources": [
             "GitHub releases"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "Tencent's LoopForge, a self-hosted workflow tool that runs CodeBuddy, Codex and Claude Code with scripts and human approval gates, released v0.4.3 (27 Nov, Sydney time). New: native sandboxes with per-machine repository caches; Feishu and DingTalk chat bots with proactive notifications, web-confirmed writes and data retention; grouped schedule jobs; simpler usage statistics with fixed cost accounting; and a Gorilla WebSocket update for advisory GO-2026-6278. The release pins its container image by digest.",
-          "why_it_matters": "Chat-triggered agent runs where writes still need a web confirmation is a reasonable approval pattern to borrow for internal agent workflows.",
-          "caveats": "Chat integrations are Feishu and DingTalk only, aimed at Chinese workplaces. Read the upgrade notes in CHANGELOG.md before upgrading.",
+          "verdict": "Worth trying",
+          "what_changed": "Pydantic AI v2.76.0 (27 Nov, Sydney time). result.conversation now keeps every message a run adds when a capability (SummarizingCompaction, RelevanceCompaction) trims history mid-run, so the next run summarizes the full history rather than the last summary. FileSystemToolset read_file offset is now 1-indexed: pass N + 1 where you passed N, and offset=0 raises. Requests to gemini-2.5-pro and gemini-2.5-flash emit DeprecatedModelWarning, which fails code that turns warnings into errors. Nested agent runs record pydantic_ai.root_conversation_id on spans, so sub-agent cost rolls up to the outer conversation. Also: per-tool ui_visibility to keep tool results from the client, OpenSandbox volumes, and /computer-use desktop sandboxes in Pax, its terminal agent.",
+          "why_it_matters": "Sub-agent cost roll-up and hidden tool results are both things your evaluations and audits need; the offset change is the kind of silent behaviour shift a regression suite should catch.",
+          "caveats": "Several compatibility notes; read them before upgrading. Realtime UpdateTools breaks exhaustive matches over RealtimeInput.",
           "links": [
             {
-              "label": "Release v0.4.3",
-              "url": "https://github.com/Tencent/LoopForge/releases/tag/v0.4.3"
+              "label": "Release v2.76.0",
+              "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.76.0"
             }
           ]
         },
         {
-          "id": "openbot-1-2-0-cloud-move",
-          "headline": "OpenBot 1.2.0 lets self-hosted bots move to OpenBot Cloud, and lets operators pause computers",
-          "takeaway": "29 database migrations, none dropping a table or column; rolling upgrades with no downtime.",
+          "id": "instructor-1-18",
+          "headline": "Instructor 1.18 fixes streaming and retries, and protects request logs",
+          "takeaway": "Release notes list streaming, retry, cache and batch fixes, plus a security change that protects request logs.",
           "tags": [
-            "Self-hosted agents",
-            "Migrations",
-            "Governance"
+            "Instructor",
+            "Structured outputs",
+            "Logging"
           ],
           "sources": [
-            "GitHub releases"
+            "GitHub releases",
+            "X"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "CopilotKit's OpenBot, a self-hostable bot platform, shipped v1.2.0 (26 Nov, Sydney time). It adds moving a self-hosted installation to OpenBot Cloud: moved routines, check-ins and goals stay held until the move's check passes, so a failed move no longer leaves them running in both places. People can use their own AI connection, kept outside the organisation's vault. Operators can stop an organisation's, a person's or a single computer's computers, and sign-out now ends the browser session at a hosted OpenBot.",
-          "why_it_matters": "An operator-level stop for agent compute, and records of which app started each bot run, are controls worth copying for internal agent platforms.",
-          "caveats": "Long, dense release notes; the cloud move is for teams willing to send data to OpenBot Cloud.",
+          "verdict": "Worth trying",
+          "what_changed": "567-labs/instructor v1.18.0 (27 Nov, Sydney time). The notes list fixes for streaming (request-local routing across providers), retries (custom-policy terminal hooks, measured HTTP attempts), cache key collisions, batch jobs and token limits, plus usage accounting that keeps Anthropic thinking totals. A security change protects request logs, and new typed decision models are added. Maintainer Jason Liu (jxnlco) posted on X before the release that raw response logging would be opt-in (unverified: the release notes don't say so).",
+          "why_it_matters": "If you log LLM calls in a regulated setting, logging raw responses by default is a data-handling risk; check your config after upgrading.",
+          "caveats": "The opt-in detail comes from the maintainer's post; the release notes describe it only as protecting request logs. Large refactor release.",
           "links": [
             {
-              "label": "Release v1.2.0",
-              "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.2.0"
-            }
-          ]
-        },
-        {
-          "id": "deepagents-0-7-42",
-          "headline": "LangChain deepagents 0.7.42 makes glob pass through interrupts; deepagents-code flags partial cost totals",
-          "takeaway": "Small fixes; the coding CLI no longer mixes unpriced usage into cost rows.",
-          "tags": [
-            "LangChain",
-            "Deep Agents",
-            "Cost"
-          ],
-          "sources": [
-            "GitHub releases"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "deepagents 0.7.42 (26 Nov, Sydney time) fixes glob so interrupts and parent commands pass through, replaces lone surrogates in stored file text with U+FFFD, and removes the retiring Baseten Nemotron 3 Ultra model id. deepagents-code 0.2.15, the companion coding CLI, flags partial cost totals in its status bar and keeps unpriced usage out of priced cost rows.",
-          "why_it_matters": "Interrupts that reach the parent are what make human-in-the-loop approval work reliably inside tool calls.",
-          "caveats": "Minor patch releases; top-up item.",
-          "links": [
-            {
-              "label": "Release deepagents==0.7.42",
-              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.42"
+              "label": "Release v1.18.0",
+              "url": "https://github.com/567-labs/instructor/releases/tag/v1.18.0"
             },
             {
-              "label": "Release deepagents-code==0.2.15",
-              "url": "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.15"
+              "label": "Jason Liu on X",
+              "url": "https://x.com/jxnlco/status/2126054694003024241"
+            }
+          ]
+        },
+        {
+          "id": "openbot-1-2-1",
+          "headline": "OpenBot 1.2.1 ends Google sign-in for Gemini and adds account deletion with audit pseudonyms",
+          "takeaway": "Upgrade deletes saved Google sign-ins; Gemini then needs an API key.",
+          "tags": [
+            "OpenBot",
+            "Data deletion",
+            "Audit trail"
+          ],
+          "sources": [
+            "GitHub releases"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "CopilotKit OpenBot v1.2.1 (27 Nov, Sydney time) runs six zero-downtime migrations. Google sign-in for Gemini ends: the upgrade deletes saved Google sign-ins and Gemini connects with an API key only. Account deletion requests are tracked through to completion; a deleted person's messages in shared conversations stay with no sender, and the audit trail may replace their id with a pseudonym and strip name and address, deleting such entries after 180 days. New bots use the LangGraph (TypeScript) engine by default.",
+          "why_it_matters": "Pseudonymising audit entries on deletion is one way to reconcile right-to-erasure with an append-only audit log, a tension any bank agent platform has.",
+          "caveats": "Incremental release of a tool covered on 27 Nov (1.2.0). The 180-day audit pass index can take a while on large audit trails.",
+          "links": [
+            {
+              "label": "Release v1.2.1",
+              "url": "https://github.com/CopilotKit/OpenBot/releases/tag/v1.2.1"
             }
           ]
         }
@@ -342,86 +307,81 @@
       "name": "Models & Major Releases",
       "cards": [
         {
-          "id": "krafton-raon-1-mini",
-          "headline": "KRAFTON releases Raon-1 mini: a 30B-A4B mixture-of-experts model under Apache 2.0",
-          "takeaway": "Trained from scratch; six reasoning-effort levels and tool calling.",
+          "id": "tencent-dfly2-deepseek-drafter",
+          "headline": "Tencent releases DFly2, a speculative-decoding drafter that reuses DeepSeek-V4.1-Flash's sparse attention",
+          "takeaway": "Reports 81% more throughput than DSpark on SWE 64K workloads at matched per-user speed.",
+          "tags": [
+            "Inference",
+            "Speculative decoding",
+            "DeepSeek"
+          ],
+          "sources": [
+            "Hugging Face",
+            "arXiv"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Tencent's AngelSlim team published a DFly2 drafter for DeepSeek-V4.1-Flash on Hugging Face (Apache 2.0, 26 Nov, Sydney time), with the DFly2 paper. Speculative decoding has a small drafter propose tokens that the main model checks, for a lossless speedup. DFly2's three draft layers each read the KV (key-value) cache and the positions already selected by a paired DeepSeek Sparse Attention layer in the target, so the drafter keeps no cache of its own and runs no indexer. The team reports that at matched per-user decode speed it delivers 28% more throughput than DSpark on short text, and 62% and 81% more on CodeSpan 64K and SWE 64K, measured on NVIDIA H20 GPUs.",
+          "why_it_matters": "Long-context coding-agent traffic is where serving cost bites; if you self-host DeepSeek-class sparse models, this is a drop-in throughput lever to benchmark.",
+          "caveats": "Tencent-measured, against baselines it trained itself on the same recipe. Works only with natively sparse targets and must be deployed alongside DeepSeek-V4.1-Flash.",
+          "links": [
+            {
+              "label": "AngelSlim/DS-V4.1-Flash-DFly2-B6",
+              "url": "https://huggingface.co/AngelSlim/DS-V4.1-Flash-DFly2-B6"
+            },
+            {
+              "label": "DFly2 paper",
+              "url": "https://arxiv.org/abs/2611.34776"
+            }
+          ]
+        },
+        {
+          "id": "sage-med-preview",
+          "headline": "Shanghai AI Lab releases Sage-Med-Preview, a 35B medical multimodal model with 3B active parameters",
+          "takeaway": "Team reports a 58.26 average on 31 public medical multimodal benchmarks.",
           "tags": [
             "Open weights",
-            "MoE",
-            "Korean"
+            "Medical AI",
+            "MoE"
+          ],
+          "sources": [
+            "Hugging Face",
+            "arXiv"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Shanghai Artificial Intelligence Laboratory published Sage-Med-Preview on Hugging Face (27 Nov, Sydney time), built on Intern-S2-Preview as a mixture-of-experts (MoE) model with 35B total and 3B active parameters. It covers medical question answering, image understanding, report generation and visual grounding. The team reports a 58.26 average across 31 public medical multimodal benchmarks, ahead of the general models it compares, and evaluation on 238 clinical tasks including private benchmarks from 14 hospitals and institutions.",
+          "why_it_matters": "A domain-specialist small-active model beating general models on its own benchmarks is the pattern banks weigh for regulated domains; the evaluation design is the useful part.",
+          "caveats": "Team-reported scores; private hospital benchmarks can't be reproduced. The model card doesn't state a licence. Preview release.",
+          "links": [
+            {
+              "label": "internlm/Sage-Med-Preview",
+              "url": "https://huggingface.co/internlm/Sage-Med-Preview"
+            },
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2611.34575"
+            }
+          ]
+        },
+        {
+          "id": "gigaam-v4-speech",
+          "headline": "GigaAM-v4: an MIT-licensed Russian and English speech model with streaming down to 160 ms",
+          "takeaway": "238M parameters; reports call-centre word error rate of 6.71% against 25.96% for Whisper large-v3.",
+          "tags": [
+            "Speech recognition",
+            "Open weights",
+            "Streaming"
           ],
           "sources": [
             "Hugging Face"
           ],
-          "verdict": "Worth reading",
-          "what_changed": "KRAFTON AI, the South Korean games company's AI arm, published Raon-1 mini on Hugging Face (25 Nov, Sydney time): a 30B-A4B MoE (mixture of experts: 28.8 billion parameters in total, 4.3 billion active per token), trained from scratch and released under Apache 2.0. It has built-in thinking with six reasoning-effort levels (none to max) chosen per request, plus tool calling. KRAFTON reports 96.7 on AIME 2026, 86.0 on GPQA Diamond, 64.9 on MultiChallenge and 55.9 on BrowseComp Plus. It is trained on seven languages and strongest in Korean.",
-          "why_it_matters": "Another permissively licensed open-weight model with per-request reasoning effort, which is useful when comparing cost against quality on agent tasks.",
-          "caveats": "All scores are KRAFTON's own. It needs custom code to load; there is no independent evaluation yet.",
-          "links": [
-            {
-              "label": "KRAFTON/Raon-1-mini",
-              "url": "https://huggingface.co/KRAFTON/Raon-1-mini"
-            }
-          ]
-        },
-        {
-          "id": "ant-ming-image-0-2-design",
-          "headline": "Ant Group open-sources Ming-Image-0.2-Design, a 6B text-to-image model for UI and design drafts",
-          "takeaway": "MIT licence; Ant says it ranks first among open-weight models on Artificial Analysis's image leaderboard.",
-          "tags": [
-            "Open weights",
-            "Image generation",
-            "UI design"
-          ],
-          "sources": [
-            "Hugging Face",
-            "GitHub",
-            "X"
-          ],
           "verdict": "Monitor only",
-          "what_changed": "Ant Group's inclusionAI released Ming-Image-0.2-Design on 26 Nov (Sydney time) under the MIT licence: a 6B DiT (diffusion transformer) model for e-commerce images, UI design drafts and text-heavy posters. The model card says it was #1 among open-weight models overall on AA-Image-T2I v2.1 as of 25 Nov, and Ant Ling's X account gives a score of 1,095 Elo and says Ming-Image-0.2-Design-Layer, which splits designs into editable layers, will be open-sourced next week.",
-          "why_it_matters": "Mostly relevant if you prototype UI mock-ups; it shows Chinese labs releasing competitive design models under permissive licences.",
-          "caveats": "The leaderboard rank is preliminary and comes from Ant's own model card. The validated setup needs one 80 GiB GPU. The Layer model isn't released yet.",
+          "what_changed": "ai-sage published GigaAM-v4 on Hugging Face (MIT licence, 27 Nov, Sydney time): a speech foundation model pretrained on 7 million hours of unlabelled audio and trained on 58,000 hours of labelled speech. It supports full-context and streaming modes (160, 320 and 640 ms) with RNN-T and CTC decoding heads (two standard speech-recognition output types). On its in-house call-centre set, the card reports 6.71% Russian word error rate for the RNN-T model versus 25.96% for Whisper large-v3.",
+          "why_it_matters": "Call-centre transcription is a core bank use case; the streaming latency options and card format show what to ask of any speech vendor.",
+          "caveats": "Results are mainly Russian, and the call-centre set is in-house. Limited relevance unless you work with Russian audio.",
           "links": [
             {
-              "label": "inclusionAI/Ming-Image-0.2-Design",
-              "url": "https://huggingface.co/inclusionAI/Ming-Image-0.2-Design"
-            },
-            {
-              "label": "inclusionAI/Ming-Image",
-              "url": "https://github.com/inclusionAI/Ming-Image"
-            },
-            {
-              "label": "Ant Ling on X",
-              "url": "https://x.com/AntLingAGI/status/2125916926048358827"
-            }
-          ]
-        },
-        {
-          "id": "qwen-audio-3-1-languages",
-          "headline": "Qwen-Audio-3.1 widens language coverage of its speech recognition, speech synthesis and realtime voice APIs",
-          "takeaway": "ASR covers 59 languages and 8 dialects; API-only, prices unchanged.",
-          "tags": [
-            "Speech",
-            "Multilingual",
-            "Qwen"
-          ],
-          "sources": [
-            "X",
-            "AlphaSignal"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "Alibaba's Qwen team posted on X (26 Nov, Sydney time) that Qwen-Audio-3.1 now has wider multilingual support with a focus on Chinese dialects. According to AlphaSignal's write-up, ASR (automatic speech recognition) covers 59 languages and 8 Chinese dialects, up from 30 languages and 16 dialects at launch, so the published dialect count fell; Alibaba hasn't explained why. TTS (text to speech) covers 65 languages and 6 dialects, and Realtime covers 53 languages and 6 dialects. All three are hosted API endpoints on Qwen Cloud and Alibaba Model Studio.",
-          "why_it_matters": "Low relevance for your work unless you test voice agents; noted to keep coverage of Chinese labs even.",
-          "caveats": "No new benchmarks were published, and quality on the newly added languages isn't independently checked. API-only, with no open weights. The language counts come from a secondary write-up of Qwen's announcement.",
-          "links": [
-            {
-              "label": "Qwen on X",
-              "url": "https://x.com/Alibaba_Qwen/status/2125798914490249411"
-            },
-            {
-              "label": "AlphaSignal",
-              "url": "https://alphasignal.ai/news/alibaba-s-qwen-audio-3-1-expands-to-65-languages-across-three-voice-apis"
+              "label": "ai-sage/GigaAM-v4",
+              "url": "https://huggingface.co/ai-sage/GigaAM-v4"
             }
           ]
         }
@@ -432,81 +392,212 @@
       "name": "AI Industry, Policy & Banking",
       "cards": [
         {
-          "id": "western-downs-data-centre-epa",
-          "headline": "Federal EPA clears Anthropic-backed $32 billion Western Downs data centre in Queensland",
-          "takeaway": "No further federal environmental assessment needed; council and state approvals are still pending.",
+          "id": "au-digital-duty-of-care-passes",
+          "headline": "Australia passes the Digital Duty of Care: AI chatbots must protect users from serious harm",
+          "takeaway": "Penalties up to 5% of global revenue or A$109.2 million; the main duty starts 12 months after Royal Assent.",
           "tags": [
             "Australia",
-            "Data centres",
-            "Anthropic"
+            "Regulation",
+            "Chatbots"
+          ],
+          "sources": [
+            "Australian Government",
+            "Reuters"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Parliament passed the Online Safety Amendment (Digital Duty of Care) Bill on 25 Nov; the communications department announced it on 27 Nov. Online services, explicitly including AI chatbots as well as games, apps and social media, must protect Australians from seriously harmful material and conduct and ensure their features don't harm users, with added protections for under-18s. The eSafety Commissioner gets expanded powers. Breaches can draw penalties of up to 5% of global revenue or A$109.2 million, whichever is greater, and individuals and groups can take legal action. Industry group DIGI, which represents internet companies, said the law \"remains too vague\" and that the regulator's powers raise privacy issues; the Australia Institute, which campaigned for it, said the penalties give platforms an incentive to act (Reuters).",
+          "why_it_matters": "Customer-facing bank chatbots may fall under 'online services'; a private right of action makes harm-testing evidence from your evals more valuable.",
+          "caveats": "Main duty takes effect 12 months after Royal Assent. Rules and guidance on what counts as compliance aren't out yet. Passed 25 Nov; first covered here.",
+          "links": [
+            {
+              "label": "Digital Duty of Care law passed",
+              "url": "https://www.infrastructure.gov.au/department/media/news/digital-duty-care-law-passed"
+            },
+            {
+              "label": "Reuters (via Investing.com)",
+              "url": "https://www.investing.com/news/stock-market-news/australia-passes-law-forcing-internet-platforms-to-take-down-harmful-content-5049860"
+            }
+          ]
+        },
+        {
+          "id": "truelayer-papa-johns-agentic-pay-by-bank",
+          "headline": "UK's first agentic Pay by Bank payment runs through the FCA sandbox with Lloyds and NatWest APIs",
+          "takeaway": "The bank sets a spending limit no agent can exceed; authorisation stays in the bank app.",
+          "tags": [
+            "Banking",
+            "Agentic payments",
+            "Open banking"
+          ],
+          "sources": [
+            "TrueLayer",
+            "Tech.eu"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "TrueLayer and Papa Johns completed what they call the UK's first agentic Pay by Bank payment (27 Nov). The Papa Johns AI agent takes the order and pays from a bank account the customer linked through open banking. When linking, the customer sets a spending limit with their bank that no agent can exceed, and authorisation happens in the bank app, so the agent never sees credentials. It was the first use of Lloyds' and NatWest's variable recurring payment APIs for agentic payments, run in the FCA's Supercharged Sandbox; TrueLayer presented findings at the regulator's showcase on 26 Nov.",
+          "why_it_matters": "Bank-enforced limits plus in-app approval is a concrete control design for agent payments, and the kind of flow you may be asked to validate.",
+          "caveats": "A pilot with one retailer, described by the companies involved. Not a general launch.",
+          "links": [
+            {
+              "label": "TrueLayer announcement",
+              "url": "https://truelayer.com/newsroom/announcements/papa-johns-truelayer-agentic-pay-by-bank/"
+            },
+            {
+              "label": "Tech.eu",
+              "url": "https://tech.eu/2026/11/27/papa-johns-pizza-order-first-uk-cardless-payment-by-ai-agent"
+            }
+          ]
+        },
+        {
+          "id": "accc-ai-shopping-agents-warning",
+          "headline": "ACCC tells shoppers to set spending limits and approval points before letting AI agents buy",
+          "takeaway": "Also says businesses should check their own AI systems are fit for purpose.",
+          "tags": [
+            "Australia",
+            "Consumer protection",
+            "AI agents"
+          ],
+          "sources": [
+            "ACCC",
+            "Internet Retailing"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "Australia's consumer watchdog warned (27 Nov) about using AI assistants for Black Friday shopping. ACCC chair Gina Cass-Gottlieb said AI results can be wrong and that consumers should check what personal information an agent can access, control how much it can spend, and set the points where it must get their approval. The ACCC also warned of AI-cloned storefronts and faked brand or celebrity ads, and reminded businesses that they are liable under consumer law for misleading information or manipulative practices by their AI tools, and must test those tools.",
+          "why_it_matters": "The regulator's checklist (data access, spend limits, approval points) is effectively a control framework for consumer-facing agents in Australia.",
+          "caveats": "Guidance, not a new rule; the release names no business as in breach. It says an ACCC update on agentic AI and agentic commerce is due in coming months.",
+          "links": [
+            {
+              "label": "ACCC media release",
+              "url": "https://www.accc.gov.au/media-release/think-and-check-before-letting-ai-shop-on-your-behalf"
+            },
+            {
+              "label": "Internet Retailing",
+              "url": "https://internetretailing.com.au/be-cautious-using-ai-for-black-friday-shopping-accc-warns/"
+            }
+          ]
+        },
+        {
+          "id": "nvidia-halts-southeast-asia-servers",
+          "headline": "Nvidia reportedly pauses AI server shipments to Malaysia, Singapore, Thailand and Indonesia",
+          "takeaway": "The FT reports the pause follows tighter US rules on Chinese access to compute through overseas data centres.",
+          "tags": [
+            "Export controls",
+            "Compute",
+            "Nvidia"
+          ],
+          "sources": [
+            "Reuters",
+            "The Verge"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "The Financial Times reported (26 Nov) that Nvidia told its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand and Indonesia, as relayed by The Verge and Reuters. It follows a US Commerce Department rule effective 19 Nov that requires licences for large amounts of compute in overseas data centres and for shipments of advanced chips to those four countries and Brazil, with exceptions for qualifying US companies (Reuters). Nvidia did not immediately respond to Reuters.",
+          "why_it_matters": "Regional GPU capacity and pricing in Southeast Asia, close to Australia, can shift if the pause holds.",
+          "caveats": "Based on media reports; we found no Nvidia statement. How long the pause lasts isn't known. Also in our 27 Nov Markets issue.",
+          "links": [
+            {
+              "label": "Reuters (via Yahoo Finance)",
+              "url": "https://finance.yahoo.com/news/exclusive-us-chip-curbs-distillation-071923947.html"
+            },
+            {
+              "label": "The Verge",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1043079/now-nvidias-stopped-sending-chips-to-southeast-asia-too"
+            }
+          ]
+        },
+        {
+          "id": "reuters-zai-glm-5-5-delay",
+          "headline": "Reuters: Z.AI's GLM-5.5 misses its November target as US curbs and anti-distillation measures bite",
+          "takeaway": "Moonshot reportedly expects its gap between major releases could grow from six months to a year or more.",
+          "tags": [
+            "China",
+            "Open weights",
+            "Export controls"
+          ],
+          "sources": [
+            "Reuters"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Reuters reported (26 Nov), citing people familiar with the matter, that Z.AI (Zhipu AI) planned to release its next flagship, GLM-5.5, designed with roughly 3 trillion parameters, this month but has not. One source said it was held up partly by increasingly effective safeguards against distillation (training on a stronger model's answers) and that a US Commerce Department rule effective 19 Nov, which requires licences for large amounts of compute in overseas data centres, could push launch into Q1 2027 or later. Moonshot AI expects the interval between major releases could double from six months to a year or longer if it loses overseas compute access. Z.AI did not immediately respond.",
+          "why_it_matters": "Fewer or slower Chinese open-weight frontier releases would narrow the low-cost options you can self-host or evaluate.",
+          "caveats": "Unnamed sources; no company confirmation. Release plans can change.",
+          "links": [
+            {
+              "label": "Reuters (via Yahoo Finance)",
+              "url": "https://finance.yahoo.com/news/exclusive-us-chip-curbs-distillation-071923947.html"
+            }
+          ]
+        },
+        {
+          "id": "talkie-blocked-australia",
+          "headline": "AI companion app Talkie blocks Australian and UK web users after Apple pulls it",
+          "takeaway": "Follows an ABC investigation into its interactions with children; Australian regulators are looking at it.",
+          "tags": [
+            "Australia",
+            "Child safety",
+            "Chatbots"
           ],
           "sources": [
             "ABC News"
           ],
-          "verdict": "Worth reading",
-          "what_changed": "The National Environmental Protection Agency (EPA) decided the proposed Western Downs Digital Park near Dalby, about 250 km west of Brisbane, is unlikely to significantly affect matters of national environmental significance, so it needs no further federal assessment (ABC, 26 Nov). The decision took about two months. The project, by developer Zerra DC, is the largest proposed in Australia, with energy capacity roughly equal to a quarter of Queensland's daily electricity use. Anthropic signed a deal on the hub in September and hopes to start using it in 2027.",
-          "why_it_matters": "Onshore frontier-model capacity in Australia could matter for the data-residency questions banks raise about using offshore models.",
-          "caveats": "Council and state approvals are still needed; Anthropic's use of the site from 2027 is a plan, not a commitment of capacity to customers.",
+          "verdict": "Monitor only",
+          "what_changed": "Talkie began showing Australian and UK website visitors a 'not available in your region' message (27 Nov), days after Apple removed the app from its App Store globally. ABC News reports this followed a joint investigation with the Bureau of Investigative Journalism into the chatbot's inappropriate interactions with children and its handling of their data, and that Australian regulators are now looking at its operations.",
+          "why_it_matters": "Shows how quickly app stores and regulators act on chatbot child-safety findings, the same week the Duty of Care law passed.",
+          "caveats": "Reported by ABC, a party to the investigation. No regulator action has been announced.",
           "links": [
             {
               "label": "ABC News",
-              "url": "https://www.abc.net.au/news/2026-11-26/western-downs-digital-park-federal-environmental-approval/107428970"
+              "url": "https://www.abc.net.au/news/2026-11-27/talkie-ai-app-blocked-taken-off-apple-store/107433834"
             }
           ]
         },
         {
-          "id": "swiss-ncsc-ai-agent-attacks",
-          "headline": "Swiss NCSC confirms its first cyberattacks carried out with AI agents, including on critical infrastructure",
-          "takeaway": "Five confirmed cases so far; two of the three attacks on critical infrastructure succeeded, with no major disruption, the agency's director said.",
+          "id": "sap-weighs-job-cuts",
+          "headline": "SAP weighs at least 10,000 job cuts as it reshapes for AI, Bloomberg reports",
+          "takeaway": "SAP says no decisions have been made on further measures.",
           "tags": [
-            "Security",
-            "Regulators",
-            "Agents"
+            "Enterprise software",
+            "Jobs",
+            "SAP"
           ],
           "sources": [
-            "Swiss NCSC",
-            "swissinfo.ch"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "Switzerland's National Cyber Security Centre (NCSC, also called BACS) said (published 24 Nov, Swiss time) that it has received its first reports of attacks on organisations and critical-infrastructure operators, across at least two sectors, carried out with AI agents. Attackers used agentic offensive frameworks: agents that search for weaknesses, choose attack tools, assess results and plan next steps. They exploited standard or easily guessed passwords and known weaknesses in internet-facing systems. Its 24 Nov notice said that in every case known to it, the victim's systems were compromised. On 26 Nov, director Florian Schütz told Swiss public radio SRF there are five confirmed cases; three targeted critical infrastructure and two of those succeeded, with no major disruptions, and it is unclear who was behind them (swissinfo.ch). The NCSC expects more fast, successful attacks and advises patching internet-facing systems within 24 hours and using MFA or passkeys.",
-          "why_it_matters": "A second national cyber agency now describes the same pattern as the UK NCSC: old weaknesses exploited faster. That backs patch speed and password hygiene as the controls to check first.",
-          "caveats": "Few details: victims and attackers aren't named. Published 24 Nov (Swiss time), so slightly older than most items here.",
-          "links": [
-            {
-              "label": "Swiss NCSC",
-              "url": "https://www.bacs.admin.ch/en/26-ki-agenten-1-en"
-            },
-            {
-              "label": "swissinfo.ch",
-              "url": "https://www.swissinfo.ch/eng/swiss-ai/switzerland-reports-first-ai-based-cyberattacks-on-critical-infrastructure/92440400"
-            }
-          ]
-        },
-        {
-          "id": "canada-ai-compute-access-fund",
-          "headline": "Canada adds C$700 million to its AI Compute Access Fund, taking it to C$1 billion",
-          "takeaway": "Covers up to 80% of compute costs bought from Canadian-owned providers.",
-          "tags": [
-            "Policy",
-            "Compute",
-            "Sovereign AI"
-          ],
-          "sources": [
-            "Government of Canada",
-            "BetaKit"
+            "CNBC",
+            "Bloomberg"
           ],
           "verdict": "Monitor only",
-          "what_changed": "Canada's AI Minister Evan Solomon announced the next phase of the AI Compute Access Fund (26 Nov, Toronto time): a C$700 million top-up bringing it to C$1 billion. The first new call is for health and life sciences, and 45 more companies get over C$52 million. BetaKit reports the fund will cover up to 80% of eligible costs for compute from Canadian-owned providers, up from 67%, against 50% for other cloud providers.",
-          "why_it_matters": "A model of sovereign-compute subsidies that Australia's own data-centre and AI policy debate is likely to point to.",
-          "caveats": "Not Australian or banking-specific. The 80% and 50% rates come from BetaKit's report; Canada's release points to the program guide for details.",
+          "what_changed": "Bloomberg reported (26 Nov), citing people familiar with the matter, that SAP is preparing a plan to eliminate at least 10,000 positions as it reshapes its software business for AI. SAP told CNBC that 'roles and functions will naturally change over time' and that 'no decisions have been made regarding any further measures'.",
+          "why_it_matters": "A large enterprise software vendor tying headcount to AI is a signal for vendor-risk and roadmap conversations at a bank that runs its software.",
+          "caveats": "Unconfirmed plan reported from unnamed sources; it may change after talks with employee representatives.",
           "links": [
             {
-              "label": "Government of Canada news release",
-              "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/11/government-of-canada-boosts-the-ai-compute-access-fund-with-700-million-expansion.html"
+              "label": "CNBC",
+              "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html"
+            }
+          ]
+        },
+        {
+          "id": "kimi-for-science-credits",
+          "headline": "Moonshot offers researchers up to $20,000 in Kimi API credits",
+          "takeaway": "First cohort applications close 8 Dec.",
+          "tags": [
+            "Moonshot",
+            "Research",
+            "API credits"
+          ],
+          "sources": [
+            "Kimi",
+            "X"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "Moonshot AI opened Kimi for Science (announced on X, 27 Nov, Sydney time). Selected researchers in the natural sciences, engineering and related fields get up to $20,000 in Kimi API credits (about 7 billion tokens), plus technical support and early access to new models. Applicants describe their research, data sources, workflow and how they will evaluate results. Credits are for model usage, not cash.",
+          "why_it_matters": "Mainly for academic researchers; relevant to you only as a free way to evaluate Kimi models on a research project.",
+          "caveats": "Amounts depend on review; eligibility is research teams, not companies.",
+          "links": [
+            {
+              "label": "Kimi for Science",
+              "url": "https://www.kimi.ai/news/kimi-for-science-program"
             },
             {
-              "label": "BetaKit",
-              "url": "https://betakit.com/feds-will-now-pay-80-percent-of-costs-under-ai-compute-access-fund-if-purchased-from-a-sovereign-provider/"
+              "label": "Kimi on X",
+              "url": "https://x.com/Kimi_Moonshot/status/2126154696947871760"
             }
           ]
         }
@@ -517,86 +608,114 @@
       "name": "Papers Worth Reading",
       "cards": [
         {
-          "id": "specengineeringbench",
-          "headline": "SpecEngineeringBench: coding agents write tests that pass and cover code, but expose only about a quarter of seeded defects",
-          "takeaway": "100 instances from 78 Python repos; seven frontier coding agents tested.",
+          "id": "nvidia-model-driven-context",
+          "headline": "NVIDIA: letting models manage their own context beats harness compaction at tight budgets",
+          "takeaway": "GPT 6.1 goes from 21% to 56% on OfficeQA Pro v2 at a 32K budget; Kimi uses up to 41% fewer input tokens.",
+          "tags": [
+            "Context engineering",
+            "Compaction",
+            "Agent harness"
+          ],
+          "sources": [
+            "Hugging Face papers",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "An NVIDIA paper (25 Nov) compares harness-driven compaction, where the harness summarises history when the window fills, with model-driven context management, where the model decides when and what to compact through a context API. Tested in NVIDIA's open-source harness on document research and ML engineering at budgets from 8K to 512K tokens. Models that use the API well reach higher accuracy, often with fewer tokens: GPT 6.1 goes from 21% to 56% at a 32K budget on OfficeQA Pro v2. Models differ widely in how often and how aggressively they compact, and prompt changes shift that timing. Reusing the KV (key-value) cache of the unchanged suffix after an edit cut prefill compute by up to 15% per request.",
+          "why_it_matters": "Compaction is a hidden variable in every long agent run you evaluate; this shows it can swing scores by more than model choice, so log and control it in your evals.",
+          "caveats": "Author-run results; model-driven compaction is harder to reproduce and audit than a fixed harness rule, a point raised in the paper's comments.",
+          "links": [
+            {
+              "label": "Paper page",
+              "url": "https://huggingface.co/papers/2611.34147"
+            },
+            {
+              "label": "NVIDIA-NeMo/labs-OO-Agents",
+              "url": "https://github.com/NVIDIA-NeMo/labs-OO-Agents"
+            }
+          ]
+        },
+        {
+          "id": "counterfactual-sql-rewards",
+          "headline": "Text-to-SQL rewards checked on one database pay out for 54% of reward hacks; hidden database copies cut it to 1.9%",
+          "takeaway": "Also an honest null: the stricter reward didn't improve in-domain accuracy in a 3-seed comparison.",
+          "tags": [
+            "Reward hacking",
+            "Text-to-SQL",
+            "Verifiers"
+          ],
+          "sources": [
+            "Hugging Face papers",
+            "GitHub"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "A paper (25 Nov) shows that rewarding a text-to-SQL query when its result matches the reference on one database pays wrong queries that match by luck. Running the final query on a few hidden, code-generated copies of the database and paying only if all match lowers buggy queries paid in full from 29.5% to 16.8% and reward hacks from 54.1% to 1.9%, rejecting 0 of 2,847 correct queries. In GRPO (a reinforcement learning method) training on a 3.35B model with three seeds, the stricter reward did not improve in-domain accuracy (8.4% vs 11.7%) but gained 1.6 points on Spider, and one seed reversed both results.",
+          "why_it_matters": "The same check applies to evaluating SQL-writing agents on bank data: a single test database can make a wrong query look right.",
+          "caveats": "Small team, synthetic audit questions and a small model; single-seed comparisons are explicitly shown to mislead.",
+          "links": [
+            {
+              "label": "Paper page",
+              "url": "https://huggingface.co/papers/2611.34363"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/RishiiGamer2201/counterfactual-sql-rewards"
+            }
+          ]
+        },
+        {
+          "id": "autoresearch-harness-study",
+          "headline": "Autoresearch agents: keeping separate records of past attempts beats a rolling summary",
+          "takeaway": "Context folding was best in all six settings, up to 19.2% over a truncation baseline.",
+          "tags": [
+            "Agent harness",
+            "Memory",
+            "Skills"
+          ],
+          "sources": [
+            "Hugging Face papers",
+            "arXiv"
+          ],
+          "verdict": "Worth reading",
+          "what_changed": "An HKUST paper isolates harness choices for long-running, self-improving research agents on MLE-Bench and KernelBench with gpt-oss-120b, gpt-6-luna and gpt-6-sol. For context, keeping individually accessible records of past attempts beats a rolling summary, with context folding best in all six settings and up to 19.2% over a recency-truncation baseline. For skills, discarding lessons that stay unused works better on average than consolidating them or promoting them to standing rules.",
+          "why_it_matters": "Direct evidence for how to structure memory and skills in long agent runs, the same design question as Claude Code skills and compaction.",
+          "caveats": "Published 20 Nov, surfaced on Hugging Face this week; tested on ML-engineering and kernel tasks, not business workflows.",
+          "links": [
+            {
+              "label": "Paper page",
+              "url": "https://huggingface.co/papers/2611.28244"
+            },
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2611.28244"
+            }
+          ]
+        },
+        {
+          "id": "coding-agents-visual-reasoning",
+          "headline": "Coding agents that write rendering code beat video models at visual reasoning tasks",
+          "takeaway": "Codex, Claude Code and Gemini CLI score 0.89 to 0.92, each more than 0.22 above the best video model.",
           "tags": [
             "Coding agents",
-            "Testing",
+            "Visual reasoning",
             "Benchmarks"
           ],
           "sources": [
-            "arXiv",
-            "Hugging Face"
+            "Hugging Face papers",
+            "arXiv"
           ],
-          "verdict": "Worth reading",
-          "what_changed": "SpecEngineeringBench (arXiv, 24 Nov) asks coding agents to decide what to test, without being given an issue, an entry point or files to inspect. It has 100 instances from 78 open-source Python repositories, each with several recorded defects. Across seven frontier coding agents, the authors report a 91.47% Head Pass Rate (tests valid on the current code) and 80.48% coverage of the changed code, but only a 26.36% Fail-to-Pass Rate (tests that catch the defect). Localisation recall falls from 78.11% at file level to 51.29% at function level.",
-          "why_it_matters": "A direct warning for agent-written test suites: high pass rates and coverage don't mean defects are caught, so measure defect exposure in your own validation.",
-          "caveats": "Python only; the authors measured it themselves, and the abstract doesn't name the seven agents.",
+          "verdict": "Monitor only",
+          "what_changed": "A Carnegie Mellon paper (25 Nov) gives coding agents and video generation models the same visual reasoning tasks, inputs and rule-based evaluator on VBVR-Pro-Bench (500 instances). Instead of generating pixels, the agent writes a program that renders the answer video. Codex with gpt-6-astra scores 0.923, Claude Code with Fable 5.1 0.894 and Gemini CLI with Gemini 3.1 Pro 0.893, each more than 0.22 above the strongest video model.",
+          "why_it_matters": "Another case where routing a task through code an agent can verify beats native generation, a useful framing for agent design reviews.",
+          "caveats": "One benchmark with symbolic ground truth, which favours code; one attempt per instance.",
           "links": [
             {
-              "label": "arXiv 2611.32973",
-              "url": "https://arxiv.org/abs/2611.32973"
+              "label": "Paper page",
+              "url": "https://huggingface.co/papers/2611.34813"
             },
             {
-              "label": "Hugging Face paper page",
-              "url": "https://huggingface.co/papers/2611.32973"
-            }
-          ]
-        },
-        {
-          "id": "nightwatch-cua-perception",
-          "headline": "NightWatch: a 0.8B watcher model keeps computer-use agents in sync with screens that change on their own",
-          "takeaway": "Cuts wasted time 53% on OSWorld with task success on par, the authors report.",
-          "tags": [
-            "Computer use",
-            "Agents",
-            "Latency"
-          ],
-          "sources": [
-            "arXiv",
-            "Hugging Face"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "'Don't Sleep, Keep Watch' (arXiv, 21 Nov; trending on Hugging Face this week) argues computer-use agents act on stale screenshots because large VLMs (vision-language models) are slow. NightWatch pairs any agent with NightWatch-0.8B, a small model that watches the screen continuously, without changing the agent's model, prompt or actions. The authors report 33% less non-reasoning wall-clock time and 53% less wasted time on OSWorld-Verified with task success on par, and success on DynaCU-Bench rising from 39.5% to 44.2%.",
-          "why_it_matters": "Stale-state actions are a real failure mode when you validate browser or desktop agents; a cheap watcher is a pattern you could test.",
-          "caveats": "Authors' own results on two benchmarks; submitted 21 Nov but only featured on Hugging Face this week.",
-          "links": [
-            {
-              "label": "arXiv 2611.28947",
-              "url": "https://arxiv.org/abs/2611.28947"
-            },
-            {
-              "label": "Hugging Face paper page",
-              "url": "https://huggingface.co/papers/2611.28947"
-            }
-          ]
-        },
-        {
-          "id": "cot-proxy-distillation",
-          "headline": "CoT-Proxy: distil an agent from a closed model's actions alone, without its hidden chain of thought",
-          "takeaway": "Qwen3-4B on AppWorld rises from 7% to 18% from actions alone, and to 35% with short reasoning summaries.",
-          "tags": [
-            "Distillation",
-            "Agents",
-            "Reasoning"
-          ],
-          "sources": [
-            "arXiv",
-            "Hugging Face"
-          ],
-          "verdict": "Worth reading",
-          "what_changed": "CoT-Proxy (arXiv, 24 Nov) fine-tunes a student on a teacher's agent trajectories with the reasoning block left empty, using a KL (Kullback-Leibler divergence) loss against its own past outputs to limit drift. The policy carries over when thinking is turned back on, which the authors call cross-format transfer. Distilling Qwen3.6-27B's actions raises Qwen3-4B on AppWorld from 7% to 18% and Qwen3-32B from 12% to 25%. Adding CoT-proxies, short summaries of the teacher's reasoning, lifts Qwen3-4B to 35%.",
-          "why_it_matters": "Suggests a route to small, in-house agent models trained on traces from closed frontier models, if licence terms allow.",
-          "caveats": "Authors' results on one benchmark. Check model terms of service before distilling from closed APIs.",
-          "links": [
-            {
-              "label": "arXiv 2611.33148",
-              "url": "https://arxiv.org/abs/2611.33148"
-            },
-            {
-              "label": "Hugging Face paper page",
-              "url": "https://huggingface.co/papers/2611.33148"
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2611.34813"
             }
           ]
         }
@@ -607,75 +726,86 @@
       "name": "Repos Worth Trying",
       "cards": [
         {
-          "id": "plannotator-0-29-5",
-          "headline": "Plannotator 0.29.5 saves reply drafts across linked computers and adds voice dictation for review comments",
-          "takeaway": "Decision mode is now on by default, with answers kept as drafts until you press Send.",
+          "id": "rtk-token-proxy",
+          "headline": "rtk: a Rust CLI proxy that compresses command output before your coding agent reads it",
+          "takeaway": "Apache 2.0, 88,000+ stars; 131 stars on GitHub's Rust trending page today.",
           "tags": [
-            "Code review",
-            "Agents",
-            "Human in the loop"
-          ],
-          "sources": [
-            "GitHub releases"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "Plannotator, a tool for reviewing and annotating coding agents' plans and diffs, released v0.29.5 (27 Nov, Sydney time). Reply drafts on threads that live on another linked computer are now saved there and sync across windows and a phone. You can dictate answers and review comments by voice. Code review settings merge into one Reviews page, and an open review stays open after its pull request merges. The release has 44 PRs, 13 from outside contributors.",
-          "why_it_matters": "Reviewing agent plans from a phone, with nothing sent until you press Send, fits how you read.",
-          "caveats": "Incremental release of a tool covered in recent issues (0.29.2 and 0.29.3); what's new here is cross-computer drafts and dictation.",
-          "links": [
-            {
-              "label": "Release v0.29.5",
-              "url": "https://github.com/backnotprop/plannotator/releases/tag/v0.29.5"
-            }
-          ]
-        },
-        {
-          "id": "ollama-0-40-19-rc0",
-          "headline": "Ollama 0.40.19 release candidate speeds up Inkling 2 on short histories",
-          "takeaway": "Prerelease only; also compacts Engram history buffers in the MLX runner and updates llama-server.",
-          "tags": [
-            "Ollama",
-            "Local inference",
-            "Open weights"
-          ],
-          "sources": [
-            "GitHub releases"
-          ],
-          "verdict": "Monitor only",
-          "what_changed": "Ollama v0.40.19-rc0 (27 Nov, Sydney time) lists three changes: faster short histories, draft proposals and conversation snapshots for Inkling 2; compacted Engram history buffers in the MLX runner; and a llama-server update.",
-          "why_it_matters": "If you run open-weight models locally through Ollama, this is the next build to test once it leaves release-candidate status.",
-          "caveats": "Release candidate. The notes are three one-line pull-request titles, with no benchmarks or speed figures.",
-          "links": [
-            {
-              "label": "Release v0.40.19-rc0",
-              "url": "https://github.com/ollama/ollama/releases/tag/v0.40.19-rc0"
-            }
-          ]
-        },
-        {
-          "id": "kimi-code-2-8-1",
-          "headline": "Kimi Code 2.8.1 closes cancelled Gemini and Vertex AI requests at once and keeps their token usage",
-          "takeaway": "Patch release; also fixes unloaded_tool session errors when tools change or a session resumes.",
-          "tags": [
-            "Kimi Code",
+            "Token cost",
             "Coding agents",
-            "Cost"
+            "CLI"
           ],
           "sources": [
-            "GitHub releases"
+            "GitHub",
+            "GitHub trending"
           ],
-          "verdict": "Monitor only",
-          "what_changed": "Moonshot AI's @moonshot-ai/kimi-code 2.8.1 and desktop 1.5.1 (26 Nov, Sydney time): cancelling a Gemini or Vertex AI request now closes the connection immediately and keeps the token usage of the cancelled request, and unloaded_tool session errors when tools change or a session resumes are fixed. New since our 26 Nov card on 2.8.0.",
-          "why_it_matters": "Token usage that survives a cancel matters if you track the cost of agent runs across model providers.",
-          "caveats": "Small patch release; top-up item.",
+          "verdict": "Worth trying",
+          "what_changed": "rtk-ai/rtk (Apache 2.0, 88,041 stars) compresses test runs, diffs, logs and builds for 100+ commands before an agent reads them, and claims up to 90% less command output at under 25 ms per command; rtk gain reports savings. It also offers pipelines, such as handing heavy reads to a cheaper model. It was on GitHub's Rust trending page on 28 Nov, and dev-1.3.0 release candidates are shipping daily.",
+          "why_it_matters": "Fits your weekly token budget directly: shrinking test and diff output is where Claude Code and Codex sessions burn context.",
+          "caveats": "Savings figures are the project's own. Compressed output can hide details an agent needs; check failures still show their stack traces. A paid Pro tier exists.",
           "links": [
             {
-              "label": "Release @moonshot-ai/kimi-code@2.8.1",
-              "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai/kimi-code%402.8.1"
+              "label": "rtk-ai/rtk",
+              "url": "https://github.com/rtk-ai/rtk"
             },
             {
-              "label": "Release kimi-code-desktop@1.5.1",
-              "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.5.1"
+              "label": "GitHub trending (Rust)",
+              "url": "https://github.com/trending/rust?since=daily"
+            }
+          ]
+        },
+        {
+          "id": "multica-agent-task-board",
+          "headline": "Multica 0.13 adds issue blockers that wake coding agents when dependencies finish",
+          "takeaway": "A self-hostable task board where Claude Code, Codex and other CLIs pick up issues like teammates.",
+          "tags": [
+            "Multi-agent",
+            "Task board",
+            "Self-hosted"
+          ],
+          "sources": [
+            "GitHub releases",
+            "GitHub trending"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "multica-ai/multica (58,197 stars, source-available) is a workspace where you assign issues to AI coding agents, which pick them up, report progress, raise blockers and hand work back for review, using the agent CLIs you already run. v0.13.0 (25 Nov, Sydney time) adds issue blockers and automatic dependency wakeups. It was on GitHub's Go trending page on 28 Nov with 134 stars that day.",
+          "why_it_matters": "A ready-made way to run several agents on dependent tasks with a human review step, worth comparing with your own orchestration.",
+          "caveats": "Source-available rather than open source; check the licence before internal use. Untested here.",
+          "links": [
+            {
+              "label": "Release v0.13.0",
+              "url": "https://github.com/multica-ai/multica/releases/tag/v0.13.0"
+            },
+            {
+              "label": "multica-ai/multica",
+              "url": "https://github.com/multica-ai/multica"
+            }
+          ]
+        },
+        {
+          "id": "opensandbox-runtime",
+          "headline": "OpenSandbox: self-hosted sandboxes for agents, from Docker locally to Firecracker on Kubernetes",
+          "takeaway": "Apache 2.0; Pydantic AI 2.76 now forwards volumes to its sandbox backend.",
+          "tags": [
+            "Sandbox",
+            "Kubernetes",
+            "Agent infrastructure"
+          ],
+          "sources": [
+            "GitHub",
+            "GitHub trending"
+          ],
+          "verdict": "Monitor only",
+          "what_changed": "opensandbox-group/OpenSandbox (Apache 2.0, 17,982 stars), an Agentic AI Foundation project, gives agents isolated environments to run code and commands, manage files and operate browsers or desktops, through one sandbox API from local Docker to Kubernetes. The README reports Firecracker sandbox creation at 64 ms P50 serially and 125.4 ms P99 at 10 concurrent, with pause and resume. It was on GitHub's Go trending page on 28 Nov.",
+          "why_it_matters": "Self-hosting agent sandboxes on your own infrastructure is usually a requirement inside a bank; this is one of the open options to evaluate.",
+          "caveats": "Performance numbers are the project's own. Trending listing, not a new release.",
+          "links": [
+            {
+              "label": "opensandbox-group/OpenSandbox",
+              "url": "https://github.com/opensandbox-group/OpenSandbox"
+            },
+            {
+              "label": "GitHub trending (Go)",
+              "url": "https://github.com/trending/go?since=daily"
             }
           ]
         }
